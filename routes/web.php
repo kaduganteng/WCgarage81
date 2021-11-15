@@ -19,3 +19,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/test',function(){return "hello"; })->middleware('SuperAdmin');
+Route::get('/admin','DashboardController@index')->name('dashboard');
