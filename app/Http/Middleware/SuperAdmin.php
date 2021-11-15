@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Support\Facades\Auth;
 
 class SuperAdmin
 {
@@ -15,7 +16,7 @@ class SuperAdmin
      */
     public function handle($request, Closure $next)
     {
-        if(auth()->check() && $request->user()->role_id == '1'){
+        if(auth()->check() && Auth::user()->role_id == '1'){
             return $next($request);
         }
         abort('404');
