@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Garage 81</title>
 
         <!-- Fonts -->
         <link href="#.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -85,6 +85,7 @@
                     <a href="#">Documentation</a>
                     <a href="#">Caffe</a>
                     <a href="#">Franchise</a>
+                    <a href="#">Contact</a>
                 </div>
             </div>
         </div>

@@ -19,12 +19,12 @@
   <body class="hold-transition login-page">
   <div class="login-box">
     <div class="login-logo">
-      <a href="../../index2.html"><b>Admin</b>81</a>
+      <a href="/"><b>Garage  </b>81</a>
     </div>
     <!-- /.login-logo -->
     <div class="card">
       <div class="card-body login-card-body">
-        <p class="login-box-msg">Login in to start your session</p>
+        <p class="login-box-msg">Silahkan Login, untuk mengakses laman Admin!</p>
   
         <form action="{{ route ('login') }}" method="post">
           @csrf
@@ -61,11 +61,6 @@
             <!-- /.col -->
             <div class="text-center mb-3">
               <button type="submit" class="btn btn-primary btn-block" ><i class="bi bi-box-arrow-in-down-right"></i>         LogIn</button>
-              @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
             </div>
             
             <!-- /.col -->
