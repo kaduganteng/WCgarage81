@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
 
 <div class="preloader flex-column justify-content-center align-items-center">
-  <img class="animation__shake" src="adminlte/img/logo.jfif" alt="AdminLTELogo" height="60" width="60">
+  <img class="animation__shake" src="adminlte/img/download.jfif" alt="AdminLTELogo" height="60" width="60">
 </div>
 
 

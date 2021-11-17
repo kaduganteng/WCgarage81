@@ -11,12 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'Landingportalcontroller@index')->name('landing');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/test',function(){return "hello"; })->middleware('SuperAdmin');
 Route::get('/admin','DashboardController@index')->name('dashboard');
+
