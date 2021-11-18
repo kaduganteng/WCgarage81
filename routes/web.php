@@ -23,9 +23,12 @@ Route::get('/admin','DashboardController@index')->name('dashboard');
 
 Route::get('/caffe','CaffeController@ds')->name('dscaffe');
 Route::get('/menucaffe','CaffeController@index')->name('menucaffe');
+Route::get('/menucaffe2','CaffeController@index2')->name('menucaffe2');
+
 
 Route::get('/fcaise','FrenchaiseController@ds')->name('fcaise');
 Route::get('/menufcaise','FrenchaiseController@index')->name('menufcaise');
+
 
 Route::get('/statistik','StatistikController@index')->name('statistik');
 

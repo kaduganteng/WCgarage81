@@ -21,4 +21,9 @@ class CaffeController extends Controller
     {
         return view('admin.caffe.index');
     }
+
+    public function index2()
+    {
+        return view('admin.caffe.index2');
+    }
 }

@@ -183,7 +183,13 @@
               <li class="nav-item">
                 <a href="{{ route('menucaffe') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Caffe 81 </p>
+                  <p>Caffe 81 Bandung</p>
+                </a> 
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('menucaffe2') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Caffe 81 Cimahi</p>
                 </a>
               </li>
               <li class="nav-item">
