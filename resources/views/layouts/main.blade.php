@@ -131,7 +131,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="#" style="color:rgb(255, 255, 255);" class="nav-link {{(Request::is('admin/homeadmin') || Request::is('admin/homeadmin/*') ? 'active' : '')}}">
+            <a href="{{ route('dashboard') }}" style="color:rgb(255, 255, 255);" class="nav-link {{(Request::is('admin/homeadmin') || Request::is('admin/homeadmin/*') ? 'active' : '')}}">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Dashboard
@@ -140,19 +140,19 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#"" style="color:rgb(255, 255, 255);" class="nav-link {{(Request::is('admin/homeadmin') || Request::is('admin/homeadmin/*') ? 'active' : '')}}">
+              <a href="{{ route('dashboard') }}" style="color:rgb(255, 255, 255);" class="nav-link {{(Request::is('admin/homeadmin') || Request::is('admin/homeadmin/*') ? 'active' : '')}}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Portal Garage </p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" style="color:rgb(255, 255, 255);" class="nav-link {{(Request::is('admin/homeadmin') || Request::is('admin/homeadmin/*') ? 'active' : '')}}">
+                <a href="{{ route('dscaffe') }}" style="color:rgb(255, 255, 255);" class="nav-link {{(Request::is('admin/homeadmin') || Request::is('admin/homeadmin/*') ? 'active' : '')}}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Caffe Garage 81</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" style="color:rgb(255, 255, 255);" class="nav-link {{(Request::is('admin/homeadmin') || Request::is('admin/homeadmin/*') ? 'active' : '')}}">
+                <a href="{{ route('fcaise') }}" style="color:rgb(255, 255, 255);" class="nav-link {{(Request::is('admin/homeadmin') || Request::is('admin/homeadmin/*') ? 'active' : '')}}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Frendchaise</p>
                 </a>
@@ -181,33 +181,21 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="../forms/general.html" class="nav-link">
+                <a href="{{ route('menucaffe') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Caffe 81 Jalan Bali</p>
+                  <p>Caffe 81 </p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../forms/advanced.html" class="nav-link">
+                <a href="{{ route('menufcaise') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Caffe 81 Cimahi</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../forms/editors.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Frenchise 1</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../forms/validation.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Frenchise 2</p>
+                  <p>Frenchise Garage</p>
                 </a>
               </li>
             </ul>
           </li>
           <li class="nav-item">
-            <a href="# style="color:rgb(255, 255, 255);" class="nav-link {{(Request::is('statistik/data') || Request::is('statistik/data*') ? 'active' : '')}}">
+            <a href="{{ route('statistik') }}" style="color:rgb(255, 255, 255);" class="nav-link {{(Request::is('statistik/data') || Request::is('statistik/data*') ? 'active' : '')}}">
               <i class="nav-icon fas fa-table"></i>
               <p>
                 Statistik Pengunjung
