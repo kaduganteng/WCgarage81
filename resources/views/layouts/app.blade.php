@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Tasty &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
+    <title> Web Garage 81 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
     <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -54,7 +54,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 text-center logo-wrap">
-                        <div id="fh5co-logo"><a href="index.html">Tasty<span>.</span></a></div>
+                        <div id="fh5co-logo"><a href="index.html">Garage 81<span>.</span></a></div>
                     </div>
                     <div class="col-xs-12 text-center menu-1 menu-wrap">
                         <ul>
@@ -86,8 +86,8 @@
                     <div class="col-md-12 text-center">
                         <div class="display-t js-fullheight">
                             <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-                                <h1>The Best Coffee <em>&amp;</em> Restaurant <em>in</em> Brooklyn</h1>
-                                <h2>Brought to you by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>
+                                <h1>The Best Coffee <em>&amp;</em> Restaurant <em>in</em> Bandung</h1>
+                                <h2>Brought to you by <a href="http://freehtml5.co/" target="_blank">Garage 81</a></h2>
                             </div>
                         </div>
                     </div>
