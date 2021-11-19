@@ -18,19 +18,28 @@ Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');
 // Route::get('/test',function(){return "hello"; })->middleware('SuperAdmin');
 
-// Route BackEnd
-Route::get('/admin','DashboardController@index')->name('dashboard');
+// Route BackEnd//
 
-Route::get('/caffe','CaffeController@ds')->name('dscaffe');
-Route::get('/menucaffe','CaffeController@index')->name('menucaffe');
-Route::get('/menucaffe2','CaffeController@index2')->name('menucaffe2');
+Route::get('/admin', 'DashboardController@index')->name('dashboard');
 
-
-Route::get('/fcaise','FrenchaiseController@ds')->name('fcaise');
-Route::get('/menufcaise','FrenchaiseController@index')->name('menufcaise');
+Route::get('/kategorimenu', 'KategoriMenuController@index')->name('kategorimenu');
+Route::get('/kategor.create', 'KategoriMenuController@create')->name('kategorimenu.create');
+Route::post('/kategor.store', 'KategoriMenuController@store')->name('kategorimenu.store');
+Route::get('/kategor.delete.{id}', 'KategoriMenuController@destroy')->name('kategorimenu.destroy');
 
 
-Route::get('/statistik','StatistikController@index')->name('statistik');
+
+
+Route::get('/caffe', 'CaffeController@ds')->name('dscaffe');
+Route::get('/menucaffe', 'CaffeController@index')->name('menucaffe')->middleware('SuperAdmin');
+Route::get('/menucaffe2', 'CaffeController@index2')->name('menucaffe2')->middleware('SuperAdmin');;
+
+
+Route::get('/fcaise', 'FrenchaiseController@ds')->name('fcaise')->middleware('SuperAdmin');;
+Route::get('/menufcaise', 'FrenchaiseController@index')->name('menufcaise')->middleware('SuperAdmin');;
+
+
+Route::get('/statistik', 'StatistikController@index')->name('statistik');
 
 
 

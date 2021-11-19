@@ -19,7 +19,7 @@ class CaffeController extends Controller
 
     public function index()
     {
-        return view('admin.caffe.index');
+        return view('admin.caffe.menubdg.index');
     }
 
     public function index2()

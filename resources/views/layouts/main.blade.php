@@ -171,6 +171,16 @@
             </a>
           </li>
           <li class="nav-header">DAFTAR MENU</li>
+
+          <li class="nav-item">
+            <a href="{{ route('kategorimenu') }}" style="color:rgb(255, 255, 255);" class="nav-link {{(Request::is('statistik/data') || Request::is('statistik/data*') ? 'active' : '')}}">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+               Kategori Menu Caffe 81
+                
+              </p>
+            </a>
+          </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
