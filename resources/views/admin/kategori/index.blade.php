@@ -2,7 +2,6 @@
 @section('tittle','Admin Garage 81')
 @section('content')
 
-
 <!-- ISI CONTENT ADMIN -->
 <div class="content">
 
@@ -11,9 +10,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <a href="{{ route('kategorimenu') }}">
-            <h1>Homepage Kategori Menu Caffe</h1>
-          </a>
+          <h1>Homepage</h1>
         </div>
 
       </div>
@@ -73,6 +70,7 @@
                       <th>Nama Kategori</th>
                       <th>Opsi</th>
                     </tr>
+
                   </thead>
                   <tbody>
                     @php
@@ -81,14 +79,11 @@
                     @foreach ($kategori as $k)
                     <tr>
                       <td>{{ $no++}}</td>
-                      <td>{{ $k->nama_kategori }}</td>
+                      <td>{{ $k->nama_kategori}}</td>
                       <td>
-
-                        <a href="{{ route('kategorimenu.destroy',$k->id)}}">
-                          <button class="btn btn-danger delete">Hapus</button>
-                        </a>
+                        <a href="{{ route('kategorimenu.destroy',$k->id) }}">
+                          <button class="btn btn-danger">Hapus Kategori</button></a>
                       </td>
-
                     </tr>
 
                     @endforeach

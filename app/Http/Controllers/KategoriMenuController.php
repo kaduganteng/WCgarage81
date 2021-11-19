@@ -25,12 +25,12 @@ class KategoriMenuController extends Controller
         $ktg = KategoriMenu::create([
             'nama_kategori' => $request->kategori,
         ]);
-        return redirect()->back()->with('Kategori Berhasil Ditambahkan');
+        return redirect()->back();
     }
 
     public function destroy($id)
     {
         $destroy = KategoriMenu::destroy($id);
-        return redirect()->back()->with('Kategori Berhasil Dihapus');
+        return redirect()->back();
     }
 }
