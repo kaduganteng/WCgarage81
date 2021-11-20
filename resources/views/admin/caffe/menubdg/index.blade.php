@@ -10,7 +10,9 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Homepage</h1>
+          <a href="{{ route('menucaffe') }}">
+            <h1>Homepage Menu Caffe Garage 81 Bandung </h1>
+          </a>
         </div>
 
       </div>
@@ -21,7 +23,7 @@
   <section class="content">
     <div class="card">
       <div class="card-header">
-        <h3 class="card-title">Daftar Menu</h3>
+        <h3 class="card-title">Daftar Menu Caffe</h3>
 
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -39,7 +41,7 @@
             <!-- /.card -->
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Caffe Garage Bandung euy</h3>
+                <h3 class="card-title">Caffe Garage Bandung</h3>
 
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 150px;">
@@ -55,7 +57,8 @@
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 150px;">
                     <div class="input-group-append">
-                      <button href></button>
+                      <a href="{{ route('menucaffe.create') }}">
+                        <button class="btn btn-primary btn-round">Tambah Menu </button></a>
                     </div>
                   </div>
                 </div>
@@ -65,12 +68,13 @@
                 <table class="table table-hover text-nowrap">
                   <thead>
                     <tr>
-                      <th>ID</th>
+                      <th>No</th>
                       <th>Foto Menu</th>
                       <th>Kategori</th>
                       <th>Nama</th>
                       <th>Keterangan</th>
                       <th>Harga</th>
+                      <th>Opsi</th>
                     </tr>
                   </thead>
                   <tbody>

@@ -31,12 +31,19 @@ Route::get('/kategor.delete.{id}', 'KategoriMenuController@destroy')->name('kate
 
 
 Route::get('/caffe', 'CaffeController@ds')->name('dscaffe');
-Route::get('/menucaffe', 'CaffeController@index')->name('menucaffe')->middleware('SuperAdmin');
-Route::get('/menucaffe2', 'CaffeController@index2')->name('menucaffe2')->middleware('SuperAdmin');;
+Route::get('/menucaffe', 'CaffeController@index')->name('menucaffe');
+Route::get('/menucaffe.create', 'CaffeController@create')->name('menucaffe.create');
+Route::post('/menucaffe.store', 'CaffeController@store')->name('menucaffe.store');
 
 
-Route::get('/fcaise', 'FrenchaiseController@ds')->name('fcaise')->middleware('SuperAdmin');;
-Route::get('/menufcaise', 'FrenchaiseController@index')->name('menufcaise')->middleware('SuperAdmin');;
+
+
+
+Route::get('/menucaffe2', 'CaffeController@index2')->name('menucaffe2');
+
+
+Route::get('/fcaise', 'FrenchaiseController@ds')->name('fcaise');
+Route::get('/menufcaise', 'FrenchaiseController@index')->name('menufcaise');
 
 
 Route::get('/statistik', 'StatistikController@index')->name('statistik');

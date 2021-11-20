@@ -15,10 +15,11 @@ class CreateMenubdgTable extends Migration
     {
         Schema::create('menubdg', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('foto');
             $table->string('kategori_menu');
-            $table->string('nama_menu1');
-            $table->string('keterangan1');
-            $table->string('harga1');
+            $table->string('nama');
+            $table->string('keterangan');
+            $table->string('harga');
             $table->timestamps();
         });
     }

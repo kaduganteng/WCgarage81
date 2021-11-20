@@ -66,7 +66,7 @@
                 <table class="table table-hover text-nowrap">
                   <thead>
                     <tr>
-                      <th>ID</th>
+                      <th>No</th>
                       <th>Nama Kategori</th>
                       <th>Opsi</th>
                     </tr>
