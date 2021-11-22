@@ -10,7 +10,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <a href="{{ route('menucaffe') }}">
+          <a href="{{ route('menubdg') }}">
             <h1>Homepage Menu Caffe Garage 81 Bandung </h1>
           </a>
         </div>
@@ -57,7 +57,7 @@
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 150px;">
                     <div class="input-group-append">
-                      <a href="{{ route('menucaffe.create') }}">
+                      <a href="{{ route('menubdg.create') }}">
                         <button class="btn btn-primary btn-round">Tambah Menu </button></a>
                     </div>
                   </div>
@@ -78,6 +78,25 @@
                     </tr>
                   </thead>
                   <tbody>
+                    @php
+                    $no = 1;
+                    @endphp
+                    @foreach ($menubdg as $m)
+                    <tr>
+                      <td>{{ $no++}}</td>
+                      <td>{{ $m ->foto}}</td>
+                      <td>{{ $m ->kategori_id }}</td>
+                      <td>{{ $m ->nama }}</td>
+                      <td>{{ $m ->keterangan }}</td>
+                      <td>{{ $m ->harga }}</td>
+                      <td>
+                        <a href="{{ route('menubdg.destroy',$m->id) }}">
+                          <button class="btn btn-danger">Hapus Menu</button></a>
+                        <a href="{{  route('menubdg.update',$m->id) }}"><button class="btn btn-success">Edit
+                            Menu</button></a>
+                      </td>
+                    </tr>
+                    @endforeach
 
                   </tbody>
                 </table>

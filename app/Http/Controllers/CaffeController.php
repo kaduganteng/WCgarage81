@@ -22,7 +22,10 @@ class CaffeController extends Controller
 
     public function index()
     {
-        return view('admin.caffe.menubdg.index');
+        $menubdg = Menucaffebdg::get();
+        return view('admin.caffe.menubdg.index', [
+            'menubdg' => $menubdg
+        ]);
     }
     public function create()
     {
@@ -37,9 +40,9 @@ class CaffeController extends Controller
 
     public function store(Request $request)
     {
-        $mnu = Menucaffebdg::create([
+        $menubdg = Menucaffebdg::create([
             'foto' => $request->foto,
-            'kategori_menu' => $request->kategorimenu,
+            'kategori_id' => $request->kategori_id,
             'nama' => $request->nama,
             'keterangan' => $request->keterangan,
             'harga' => $request->harga
@@ -47,7 +50,20 @@ class CaffeController extends Controller
         return redirect()->back()->with('success', 'Berhasil di Input');
     }
 
-
+    public function destroy($id)
+    {
+        $destroy = Menucaffebdg::destroy($id);
+        return redirect()->back();
+    }
+    public function edit($id)
+    {
+        $databdg = Menucaffebdg::select('menubdg.*', 'kategori_menu.nama_kategori')->where('menubdg.id', $id)->join('kategori_menu', 'kategori_menu.id', '=', 'menubdg.katefori_id')->first();
+        $kategori = KategoriMenu::all();
+        return view('admin.caffe.menubdg.form', [
+            'databdg' => $databdg,
+            'kategori' => $kategori
+        ]);
+    }
 
 
     // caffe cimahi

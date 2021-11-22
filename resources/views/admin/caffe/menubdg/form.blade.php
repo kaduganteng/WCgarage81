@@ -10,7 +10,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <a href="{{ route('menucaffe') }}">
+          <a href="{{ route('menubdg') }}">
             <h1>Homepage Menu Caffe Garage 81 Bandung </h1>
           </a>
 
@@ -42,7 +42,7 @@
           </div>
           <!-- /.card-header -->
           <!-- form start -->
-          <form action="{{ route('menucaffe.store')}}" method="POST">
+          <form action="{{ route('menubdg.store')}}" method="POST">
             @csrf
             <div class="card-body">
               <div class="form-group">
@@ -59,8 +59,8 @@
               </div>
               <div class="form-group">
                 <div class="form-group">
-                  <label for="exampleInputEmail1"> Pilih Kategori</label>
-                  <select name="kategori">
+                  <label for="exampleInputEmail1">Pilih Kategori</label>
+                  <select name="kategori_id">
                     @if(!empty(@$data->kategori_id))
                     <option value="{{@$data->kategori_id}}" {{!empty($data->
                       nama_kategori)?'selected':''}}>{{$data->nama_kategori}}</option>

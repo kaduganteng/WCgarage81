@@ -31,15 +31,16 @@ Route::get('/kategor.delete.{id}', 'KategoriMenuController@destroy')->name('kate
 
 
 Route::get('/caffe', 'CaffeController@ds')->name('dscaffe');
-Route::get('/menucaffe', 'CaffeController@index')->name('menucaffe');
-Route::get('/menucaffe.create', 'CaffeController@create')->name('menucaffe.create');
-Route::post('/menucaffe.store', 'CaffeController@store')->name('menucaffe.store');
+Route::get('/menubdg', 'CaffeController@index')->name('menubdg');
+Route::get('/menubdg.create', 'CaffeController@create')->name('menubdg.create');
+Route::post('/menubdg.store', 'CaffeController@store')->name('menubdg.store');
+Route::get('/menubdg.delete.{id}', 'CaffeController@destroy')->name('menubdg.destroy');
+Route::post('/menubdg.update.{id}', 'CaffeController@edit')->name('menubdg.update');
 
 
 
 
-
-Route::get('/menucaffe2', 'CaffeController@index2')->name('menucaffe2');
+Route::get('/menucmh', 'CaffeController@index2')->name('menucmh');
 
 
 Route::get('/fcaise', 'FrenchaiseController@ds')->name('fcaise');
