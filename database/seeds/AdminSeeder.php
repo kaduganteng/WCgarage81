@@ -16,16 +16,14 @@ class AdminSeeder extends Seeder
             'email' => 'rayhanjundi77@gmail.com',
             'password' => Hash::make('admin123'),
             'role_id' => 1
-       ]);
+        ]);
 
 
-       DB::table('users')->insert([
-        'name' => 'Admin1',
-        'email' => 'rayhanjundi3@gmail.com',
-        'password' => Hash::make('administrator'),
-        'role_id' => 2
-       ]);
-
-   
+        DB::table('users')->insert([
+            'name' => 'Admin1',
+            'email' => 'rayhanjundi3@gmail.com',
+            'password' => Hash::make('administrator'),
+            'role_id' => 2
+        ]);
     }
 }

@@ -1,7 +1,8 @@
 @extends('layouts.main')
 @section('tittle','Admin Garage 81')
 @section('content')
-
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <!-- ISI CONTENT ADMIN -->
 <div class="content">
 
@@ -42,47 +43,47 @@
           </div>
           <!-- /.card-header -->
           <!-- form start -->
-          <form action="{{ route('menubdg.store')}}" method="POST">
+          <form action="{{ empty($databdg) ?  route('menubdg.store'): route('menubdg.update',$databdg->id)}}"
+            method="POST" enctype="multipart/form-data">
             @csrf
             <div class="card-body">
               <div class="form-group">
                 <label for="exampleInputFile">Masukan Foto Menu</label>
                 <div class="input-group">
-                  <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="foto" name="foto">
-                    <label class="custom-file-label" for="foto">Pilih file</label>
-                  </div>
-                  <div class="input-group-append">
-                    <span class="input-group-text">Upload</span>
-                  </div>
+                  <input type="file" class="form-control" name="foto_menu" id="foto_menu">
                 </div>
               </div>
               <div class="form-group">
                 <div class="form-group">
                   <label for="exampleInputEmail1">Pilih Kategori</label>
-                  <select name="kategori_id">
-                    @if(!empty(@$data->kategori_id))
-                    <option value="{{@$data->kategori_id}}" {{!empty($data->
-                      nama_kategori)?'selected':''}}>{{$data->nama_kategori}}</option>
-                    @endif
-                    @foreach($kategori as $k)
-                    <option value="{{$k->id}}">{{$k->nama_kategori}}</option>
-                    @endforeach
-                  </select>
+                  <div class="input-group">
+                    <select name="kategori_id">
+                      @if(!empty(@$databdg->kategori_id))
+                      <option value="{{@$databdg->kategori_id}}" {{!empty($databdg->
+                        nama_kategori)?'selected':''}}>{{$databdg->nama_kategori}}</option>
+                      @endif
+                      @foreach($kategori as $k)
+                      <option value="{{$k->id}}">{{$k->nama_kategori}}</option>
+                      @endforeach
+                    </select>
+                  </div>
+
                 </div>
               </div>
               <div class="form-group">
                 <label for="exampleInputName">Nama Menu</label>
-                <input type="text" class="form-control" name="nama" id="nama" placeholder="Masukan nama menu">
+                <input type="text" class="form-control" name="nama" id="nama" value="{{ @$databdg->nama }}"
+                  placeholder="Masukan nama menu">
               </div>
               <div class="form-group">
                 <label for="exampleInputName">Keterangan</label>
                 <input type="text" class="form-control" name="keterangan" id="keterangan"
-                  placeholder="Tambahkan keterangan menu">
+                  value="{{ @$databdg->keterangan }}" placeholder="Tambahkan keterangan menu">
               </div>
               <div class="form-group">
                 <label for="exampleInputName">Harga Menu</label>
-                <input type="text" class="form-control" name="harga" id="harga" placeholder="Masukan Harga">
+                <input type="text" class="form-control" name="harga" id="harga" value="{{ @$databdg->harga }}"
+                  placeholder="Masukan Harga">
               </div>
               <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -92,7 +93,9 @@
             <!-- /.card-body -->
 
             <div class="card-footer">
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary">
+                <ion-icon name="save-outline"></ion-icon>Selesai
+              </button>
             </div>
           </form>
         </div>

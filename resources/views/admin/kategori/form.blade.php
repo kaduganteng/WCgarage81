@@ -57,7 +57,9 @@
 
                         <div class="card-footer">
 
-                            <button type="submit" class="btn btn-primary">Selesai</button>
+                            <button type="submit" class="btn btn-primary">
+                                <ion-icon name="save-outline"></ion-icon>Selesai
+                            </button>
                         </div>
                     </form>
                 </div>

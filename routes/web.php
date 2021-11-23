@@ -36,7 +36,8 @@ Route::get('/menubdg', 'CaffeController@index')->name('menubdg');
 Route::get('/menubdg.create', 'CaffeController@create')->name('menubdg.create');
 Route::post('/menubdg.store', 'CaffeController@store')->name('menubdg.store');
 Route::get('/menubdg.delete.{id}', 'CaffeController@destroy')->name('menubdg.destroy');
-Route::post('/menubdg.update.{id}', 'CaffeController@edit')->name('menubdg.update');
+Route::get('/menubdg.edit.{id}', 'CaffeController@edit')->name('menubdg.edit');
+Route::post('/menubdg.update.{id}', 'CaffeController@update')->name('menubdg.update');
 
 //  Menu Cimahi
 
