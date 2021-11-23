@@ -15,7 +15,7 @@ class CreateMenubdgTable extends Migration
     {
         Schema::create('menubdg', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('foto');
+            $table->string('foto_menu')->nullable();
             $table->string('kategori_id');
             $table->string('nama');
             $table->string('keterangan');

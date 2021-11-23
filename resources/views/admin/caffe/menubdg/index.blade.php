@@ -1,7 +1,8 @@
 @extends('layouts.main')
 @section('tittle','Admin Garage 81')
 @section('content')
-
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <!-- ISI CONTENT ADMIN -->
 <div class="content">
 
@@ -58,7 +59,9 @@
                   <div class="input-group input-group-sm" style="width: 150px;">
                     <div class="input-group-append">
                       <a href="{{ route('menubdg.create') }}">
-                        <button class="btn btn-primary btn-round">Tambah Menu </button></a>
+                        <button class="btn btn-primary btn-round">
+                          <ion-icon name="add-circle-outline"></ion-icon>Tambah Menu
+                        </button></a>
                     </div>
                   </div>
                 </div>
@@ -84,16 +87,22 @@
                     @foreach ($menubdg as $m)
                     <tr>
                       <td>{{ $no++}}</td>
-                      <td>{{ $m ->foto}}</td>
+                      <td>
+                        <img src="{{ asset('upload/'.$m->foto_menu) }}" height="10%" width="10%" alt="">
+                      </td>
                       <td>{{ $m ->kategori_id }}</td>
                       <td>{{ $m ->nama }}</td>
                       <td>{{ $m ->keterangan }}</td>
                       <td>{{ $m ->harga }}</td>
                       <td>
                         <a href="{{ route('menubdg.destroy',$m->id) }}">
-                          <button class="btn btn-danger">Hapus Menu</button></a>
-                        <a href="{{  route('menubdg.update',$m->id) }}"><button class="btn btn-success">Edit
-                            Menu</button></a>
+                          <button class="btn btn-danger">
+                            <ion-icon name="close-circle-outline"></ion-icon>
+                          </button></a>
+
+                        <a href="{{  route('menubdg.edit',$m->id) }}"><button class="btn btn-success">
+                            <ion-icon name="create-outline"></ion-icon>
+                          </button></a>
                       </td>
                     </tr>
                     @endforeach

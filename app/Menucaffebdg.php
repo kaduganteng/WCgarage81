@@ -8,7 +8,7 @@ class Menucaffebdg extends Model
 {
     protected $table = "menubdg";
     protected $fillable = [
-        'foto',
+        'foto_menu',
         'kategori_id',
         'nama',
         'keterangan',

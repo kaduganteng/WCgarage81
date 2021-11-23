@@ -40,14 +40,19 @@ class CaffeController extends Controller
 
     public function store(Request $request)
     {
+        $foto_menu = $request->file('foto_menu');
+        $nama_file = time() . "_" . $foto_menu->getClientOriginalName();
+        // tujuan upload
+        $tujuan = 'upload/';
+        $foto_menu->move($tujuan, $nama_file);
         $menubdg = Menucaffebdg::create([
-            'foto' => $request->foto,
+            'foto_menu' => $nama_file,
             'kategori_id' => $request->kategori_id,
             'nama' => $request->nama,
             'keterangan' => $request->keterangan,
             'harga' => $request->harga
         ]);
-        return redirect()->back()->with('success', 'Berhasil di Input');
+        return redirect()->back();
     }
 
     public function destroy($id)
@@ -57,14 +62,25 @@ class CaffeController extends Controller
     }
     public function edit($id)
     {
-        $databdg = Menucaffebdg::select('menubdg.*', 'kategori_menu.nama_kategori')->where('menubdg.id', $id)->join('kategori_menu', 'kategori_menu.id', '=', 'menubdg.katefori_id')->first();
+        $databdg = Menucaffebdg::select('menubdg.*', 'kategori_menu.nama_kategori')->where('menubdg.id', $id)->join('kategori_menu', 'kategori_menu.id', '=', 'menubdg.kategori_id')->first();
         $kategori = KategoriMenu::all();
         return view('admin.caffe.menubdg.form', [
             'databdg' => $databdg,
             'kategori' => $kategori
         ]);
     }
+    public function update(Request $request, $id)
+    {
+        $menubdg = Menucaffebdg::findOrFail($id)->update([
+            'foto' => $request->foto,
+            'kategori_id' => $request->kategori_id,
+            'nama' => $request->nama,
+            'keterangan' => $request->keterangan,
+            'harga' => $request->harga
 
+        ]);
+        return redirect()->route('menubdg');
+    }
 
     // caffe cimahi
     public function index2()

@@ -1,7 +1,8 @@
 @extends('layouts.main')
 @section('tittle','Admin Garage 81')
 @section('content')
-
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <!-- ISI CONTENT ADMIN -->
 <div class="content">
 
@@ -56,7 +57,9 @@
                   <div class="input-group input-group-sm" style="width: 150px;">
                     <div class="input-group-append">
                       <a href="{{ route('kategorimenu.create') }}">
-                        <button class="btn btn-primary btn-round">Tambah Kategori</button></a>
+                        <button class="btn btn-primary btn-round">
+                          Tambah Kategori
+                        </button></a>
                     </div>
                   </div>
                 </div>
@@ -82,7 +85,9 @@
                       <td>{{ $k->nama_kategori}}</td>
                       <td>
                         <a href="{{ route('kategorimenu.destroy',$k->id) }}">
-                          <button class="btn btn-danger">Hapus Kategori</button></a>
+                          <button class="btn btn-danger">
+                            <ion-icon name="close-circle-outline"></ion-icon>
+                          </button></a>
                       </td>
                     </tr>
 
@@ -94,59 +99,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="modal fade" id="modal-secondary">
-        <div class="modal-dialog">
-          <div class="modal-content bg-secondary">
-            <div class="modal-header">
-              <h4 class="modal-title">Masukan Menu Baru</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <form id="form" method="post">
-              @csrf()
-              <div class="modal-body">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">ID</label>
-                  <input type="text" class="form-control" name="nama_barang" id="nama_barang"
-                    placeholder="Masukan Nama Barang">
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Kategori</label>
-                  <input type="text" class="form-control" name="sn" id="sn" placeholder="Masukan Nomor Serial ">
-                </div>
-
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Nama</label>
-                  <input type="text" class="form-control" name="merk" id="merk" placeholder="Masukan Merk ">
-                </div>
-
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Keterangan</label>
-                  <input type="text" class="form-control" name="merk" id="merk" placeholder="Masukan Merk ">
-                </div>
-
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Harga</label>
-                  <input type="text" class="form-control" name="merk" id="merk" placeholder="Masukan Merk ">
-                </div>
-
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Masukan Gambar Menu</label>
-                  <input type="file" class="form-control" name="suratpinjam" id="suratpinjam">
-                </div>
-              </div>
-              <div class="modal-footer justify-content-between">
-
-                <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-outline-light">Submit</button>
-              </div>
-            </form>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
       </div>
       <!-- /.card-body -->
       <div class="card-footer">
