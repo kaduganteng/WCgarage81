@@ -87,7 +87,9 @@
                     @foreach ($menubdg as $m)
                     <tr>
                       <td>{{ $no++}}</td>
-                      <td>{{ $m ->foto}}</td>
+                      <td>
+                        <img src="{{ asset('upload/'.$m->foto_menu) }}" height="10%" width="10%" alt="">
+                      </td>
                       <td>{{ $m ->kategori_id }}</td>
                       <td>{{ $m ->nama }}</td>
                       <td>{{ $m ->keterangan }}</td>
@@ -97,6 +99,7 @@
                           <button class="btn btn-danger">
                             <ion-icon name="close-circle-outline"></ion-icon>
                           </button></a>
+
                         <a href="{{  route('menubdg.edit',$m->id) }}"><button class="btn btn-success">
                             <ion-icon name="create-outline"></ion-icon>
                           </button></a>

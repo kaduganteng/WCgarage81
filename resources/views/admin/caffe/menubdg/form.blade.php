@@ -57,7 +57,7 @@
                 <div class="form-group">
                   <label for="exampleInputEmail1">Pilih Kategori</label>
                   <div class="input-group">
-                    <select name="kategori_id">
+                    <select name="kategori_id" class="form-control">
                       @if(!empty(@$databdg->kategori_id))
                       <option value="{{@$databdg->kategori_id}}" {{!empty($databdg->
                         nama_kategori)?'selected':''}}>{{$databdg->nama_kategori}}</option>
@@ -67,7 +67,6 @@
                       @endforeach
                     </select>
                   </div>
-
                 </div>
               </div>
               <div class="form-group">

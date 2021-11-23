@@ -40,23 +40,18 @@ class CaffeController extends Controller
 
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'foto_menu' => 'required'
-        ]);
         $foto_menu = $request->file('foto_menu');
         $nama_file = time() . "_" . $foto_menu->getClientOriginalName();
-
-        //    folder tujuan upload
-        $tujuan_upload = 'upload/';
-        $foto_menu->move($tujuan_upload, $nama_file);
+        // tujuan upload
+        $tujuan = 'upload/';
+        $foto_menu->move($tujuan, $nama_file);
         $menubdg = Menucaffebdg::create([
-            'foto_menu' => $tujuan_upload . $nama_file,
+            'foto_menu' => $nama_file,
             'kategori_id' => $request->kategori_id,
             'nama' => $request->nama,
             'keterangan' => $request->keterangan,
             'harga' => $request->harga
         ]);
-
         return redirect()->back();
     }
 
