@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'Landingportalcontroller@index')->name('landing');
+
 
 Auth::routes();
 
@@ -55,3 +55,5 @@ Route::get('/statistik', 'StatistikController@index')->name('statistik');
 
 
 // Route FrontEnd
+Route::get('/', 'Landingportalcontroller@index')->name('landing');
+Route::get('/cafe81', 'Cafe81Controller@index')->name('cafe81');

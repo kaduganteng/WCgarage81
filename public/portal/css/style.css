@@ -203,7 +203,7 @@ figure {
 }
 
 .scrolled .fh5co-nav ul li a {
-    color: rgba(0, 0, 0, 0.7);
+    color: rgba(218, 16, 16, 0.7);
 }
 
 .fh5co-nav ul li a:hover,
@@ -242,17 +242,18 @@ figure {
     position: absolute;
     top: 30px;
     left: 0;
+    background-color: #000000;
+    border: 0.5px solid #ffffff;
     z-index: 1000;
     display: none;
     float: none;
-    min-width: 160px;
+    min-width: 170px;
     padding: 10px 10px;
     margin: 0;
     list-style: none;
-    font-style: 16px;
+    font-style: 20px;
+    font-display: #dd0606;
     text-align: left;
-    background-color: #ea272d;
-    border: 0.5px solid #ffffff;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
 }
@@ -279,6 +280,10 @@ figure {
     line-height: 1.2;
     text-transform: none;
     letter-spacing: 0;
+}
+
+.menu {
+    background-color: rgb(27, 211, 110);
 }
 
 .dropdown-menu>li>a:hover,
@@ -1339,6 +1344,13 @@ figure {
     font-size: 24px;
     margin-bottom: 20px;
     line-height: 1.5;
+}
+
+.h2tagline {
+    font-size: 25px;
+    margin-top: 10px;
+    line-height: 1.5;
+    color: #d43f3a;
 }
 
 .fh5co-blog .blog-text h3 a {

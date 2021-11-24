@@ -54,7 +54,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 text-center logo-wrap">
-                        <div id="fh5co-logo"><a href="index.html"><span>. </span> Portal Management<span> .</span></a></div>
+                        <div id="fh5co-logo"><a href="{{ route('landing') }}"><span>. </span> Portal Management<span> .</span></a></div>
                     </div>
                     <div class="col-xs-12 text-center menu-1 menu-wrap">
                         <ul>
@@ -65,13 +65,12 @@
                                 <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Garasi 81</a></li>
-                                    <li><a href="#">Cafe Garage 81</a></li>
+                                    <li><a href="{{ route('cafe81') }}">Caffe</a></li>
                                     <li><a href="#">Franchise</a></li>
                                 </ul>
                             </li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -79,22 +78,7 @@
             </div>
             <!-- </div> -->
         </nav>
-
-        <header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url(images/hero_1.jpeg);" data-stellar-background-ratio="0.5">
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <div class="display-t js-fullheight">
-                            <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-                                <h1>Portal Management </h1>
-                                <h1> Garage 81 </h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+    </div>
         <div class="body">
             @yield('section')
         </div>
