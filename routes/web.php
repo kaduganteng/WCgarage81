@@ -42,11 +42,20 @@ Route::post('/menubdg.update.{id}', 'CaffeController@update')->name('menubdg.upd
 //  Menu Cimahi
 
 Route::get('/menucmh', 'CaffeController@index2')->name('menucmh');
+Route::get('/menucmh.create', 'CaffeController@create2')->name('menucmh.create');
+Route::post('/menucmh.store', 'CaffeController@store2')->name('menucmh.store');
+Route::get('/menucmh.delete.{id}', 'CaffeController@destroy2')->name('menucmh.destroy');
+Route::get('/menucmh.edit.{id}', 'CaffeController@edit2')->name('menucmh.edit');
+Route::post('/menucmh.update.{id}', 'CaffeController@update2')->name('menucmh.update');
+
 
 //  Frenchaise
 
 Route::get('/fcaise', 'FrenchaiseController@ds')->name('fcaise');
-Route::get('/menufcaise', 'FrenchaiseController@index')->name('menufcaise');
+Route::get('/kopiportal', 'FrenchaiseController@index')->name('kopiportal');
+Route::get('/kopiportal.create', 'FrenchaiseController@create')->name('kopiportal.create');
+Route::post('/kopiportal.store', 'FrenchaiseController@store')->name('kopiportal.store');
+
 
 //  Route Statistik
 
