@@ -30,8 +30,6 @@ Route::post('/kategor.store', 'KategoriMenuController@store')->name('kategorimen
 Route::get('/kategor.delete.{id}', 'KategoriMenuController@destroy')->name('kategorimenu.destroy');
 
 //  Menu Bandung
-
-Route::get('/caffe', 'CaffeController@ds')->name('dscaffe');
 Route::get('/menubdg', 'CaffeController@index')->name('menubdg');
 Route::get('/menubdg.create', 'CaffeController@create')->name('menubdg.create');
 Route::post('/menubdg.store', 'CaffeController@store')->name('menubdg.store');
@@ -51,7 +49,6 @@ Route::post('/menucmh.update.{id}', 'CaffeController@update2')->name('menucmh.up
 
 //  Frenchaise
 
-Route::get('/fcaise', 'FrenchaiseController@ds')->name('fcaise');
 Route::get('/kopiportal', 'FrenchaiseController@index')->name('kopiportal');
 Route::get('/kopiportal.create', 'FrenchaiseController@create')->name('kopiportal.create');
 Route::post('/kopiportal.store', 'FrenchaiseController@store')->name('kopiportal.store');

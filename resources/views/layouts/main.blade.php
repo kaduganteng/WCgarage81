@@ -139,34 +139,9 @@
                 <i class="nav-icon fas fa-th"></i>
                 <p>
                   Dashboard
-                  <i class="right fas fa-angle-left"></i>
                 </p>
               </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="{{ route('dashboard') }}" style="color:rgb(255, 255, 255);"
-                    class="nav-link {{(Request::is('admin/homeadmin') || Request::is('admin/homeadmin/*') ? 'active' : '')}}">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Portal Garage </p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="{{ route('dscaffe') }}" style="color:rgb(255, 255, 255);"
-                    class="nav-link {{(Request::is('admin/homeadmin') || Request::is('admin/homeadmin/*') ? 'active' : '')}}">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Caffe Garage 81</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="{{ route('fcaise') }}" style="color:rgb(255, 255, 255);"
-                    class="nav-link {{(Request::is('admin/homeadmin') || Request::is('admin/homeadmin/*') ? 'active' : '')}}">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Frendchaise</p>
-                  </a>
-                </li>
 
-
-              </ul>
             </li>
             <li class="nav-item">
               <a href="#" style="color:rgb(255, 255, 255);"
