@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\KategoriMenu;
 use App\Menucaffebdg;
+use App\Menucaffecmh;
 use Illuminate\Http\Request;
+use DB;
 
 class CaffeController extends Controller
 {
@@ -16,12 +18,24 @@ class CaffeController extends Controller
 
     public function ds()
     {
-        return view('admin.caffe.dscaffe');
+        $stok = Menucaffebdg::select("kategori_menu.nama_kategori", DB::raw("count(menubdg.id) as jml"))
+
+            ->join('kategori_menu', 'menubdg.kategori_id', '=', 'kategori_menu.id')->groupBy('kategori_menu.nama_kategori')->get();
+
+        $stok2 = Menucaffecmh::select("kategori_menu.nama_kategori", DB::raw("count(menucmh.id) as jml"))
+
+            ->join('kategori_menu', 'menucmh.kategori_id', '=', 'kategori_menu.id')->groupBy('kategori_menu.nama_kategori')->get();
+
+        return view('admin.dashboard.dscaffe', [
+            'stok' => $stok,
+            'stok2' => $stok2
+        ]);
     }
     // caffe bandung
 
     public function index()
     {
+
         $menubdg = Menucaffebdg::get();
         return view('admin.caffe.menubdg.index', [
             'menubdg' => $menubdg
@@ -85,6 +99,69 @@ class CaffeController extends Controller
     // caffe cimahi
     public function index2()
     {
-        return view('admin.caffe.index2');
+        $menucmh = Menucaffecmh::get();
+        return view(
+            'admin.caffe.menucmh.index',
+            [
+                'menucmh' => $menucmh
+            ]
+        );
+    }
+
+    public function create2()
+    {
+        $kategori = KategoriMenu::all();
+        return view(
+            'admin.caffe.menucmh.form',
+            [
+                'kategori' => $kategori
+            ]
+        );
+    }
+
+    public function store2(Request $request)
+    {
+        $foto_menu = $request->file('foto_menu');
+        $nama_file = time() . "_" . $foto_menu->getClientOriginalName();
+        // tujuan upload
+        $tujuan = 'upload/';
+        $foto_menu->move($tujuan, $nama_file);
+        $menucmh = Menucaffecmh::create([
+            'foto_menu' => $nama_file,
+            'kategori_id' => $request->kategori_id,
+            'nama' => $request->nama,
+            'keterangan' => $request->keterangan,
+            'harga' => $request->harga
+        ]);
+        return redirect()->back();
+    }
+
+    public function destroy2($id)
+    {
+        $destroy = Menucaffecmh::destroy($id);
+        return redirect()->back();
+    }
+
+    public function edit2($id)
+    {
+        $datacmh = Menucaffecmh::select('menucmh.*', 'kategori_menu.nama_kategori')->where('menucmh.id', $id)->join('kategori_menu', 'kategori_menu.id', '=', 'menucmh.kategori_id')->first();
+        $kategori = KategoriMenu::all();
+        return view('admin.caffe.menucmh.form', [
+            'datacmh' => $datacmh,
+            'kategori' => $kategori
+        ]);
+    }
+
+    public function update2(Request $request, $id)
+    {
+        $menucmh = Menucaffecmh::findOrFail($id)->update([
+            'foto' => $request->foto,
+            'kategori_id' => $request->kategori_id,
+            'nama' => $request->nama,
+            'keterangan' => $request->keterangan,
+            'harga' => $request->harga
+
+        ]);
+        return redirect()->route('menucmh');
     }
 }

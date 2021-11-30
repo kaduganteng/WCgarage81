@@ -212,9 +212,9 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="{{ route('menufcaise') }}" class="nav-link">
+                  <a href="{{ route('kopiportal') }}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Frenchise Garage</p>
+                    <p>Kopi Portal</p>
                   </a>
                 </li>
               </ul>
