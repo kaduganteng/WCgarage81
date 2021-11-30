@@ -6,6 +6,7 @@ use App\KategoriMenu;
 use App\Menucaffebdg;
 use App\Menucaffecmh;
 use Illuminate\Http\Request;
+use DB;
 
 class CaffeController extends Controller
 {
@@ -17,12 +18,24 @@ class CaffeController extends Controller
 
     public function ds()
     {
-        return view('admin.dashboard.dscaffe');
+        $stok = Menucaffebdg::select("kategori_menu.nama_kategori", DB::raw("count(menubdg.id) as jml"))
+
+            ->join('kategori_menu', 'menubdg.kategori_id', '=', 'kategori_menu.id')->groupBy('kategori_menu.nama_kategori')->get();
+
+        $stok2 = Menucaffecmh::select("kategori_menu.nama_kategori", DB::raw("count(menucmh.id) as jml"))
+
+            ->join('kategori_menu', 'menucmh.kategori_id', '=', 'kategori_menu.id')->groupBy('kategori_menu.nama_kategori')->get();
+
+        return view('admin.dashboard.dscaffe', [
+            'stok' => $stok,
+            'stok2' => $stok2
+        ]);
     }
     // caffe bandung
 
     public function index()
     {
+
         $menubdg = Menucaffebdg::get();
         return view('admin.caffe.menubdg.index', [
             'menubdg' => $menubdg
