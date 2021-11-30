@@ -24,7 +24,15 @@ body {
     align-items: center;
 }
 
+.h1judul {
+    font-size: 20px;
+    color: #4cae4c;
+    line-height: 2.5px;
+}
+
 .slider {
+    margin-top: 6em;
+    border-style: none;
     border-style: 0;
     width: 1900px;
     height: 600px;
@@ -90,6 +98,10 @@ body {
     background-color: #fc0000;
 }
 
+.auto-btn:hover {
+    background-color: #fc0000;
+}
+
 #radio1:checked~.first {
     margin-left: 70%;
 }
@@ -127,38 +139,38 @@ body {
 }
 
 .navigation-auto div {
-    border: 2px solid #f10707;
+    border: 2px solid rgb(255, 255, 255);
     padding: 5px;
     border-radius: 10px;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .navigation-auto div:not(:last-child) {
     margin-right: 40px;
 }
 
-#radio1:checked .navigation-auto .auto-btn1 {
-    background-color: #ad2121;
+#radio1:checked~.navigation-auto .auto-btn1 {
+    background-color: #fc0000;
 }
 
-#radio2:checked .navigation-auto .auto-btn2 {
-    background-color: #ad2121;
+#radio2:checked~.navigation-auto .auto-btn2 {
+    background-color: #fc0000;
 }
 
-#radio3:checked .navigation-auto .auto-btn3 {
-    background-color: #ad2121;
+#radio3:checked~.navigation-auto .auto-btn3 {
+    background-color: #fc0000;
 }
 
-#radio4:checked .navigation-auto .auto-btn4 {
-    background-color: #ad2121;
+#radio4:checked~.navigation-auto .auto-btn4 {
+    background-color: #fc0000;
 }
 
-#radio4:checked .navigation-auto .auto-btn5 {
-    background-color: #ad2121;
+#radio5:checked~.navigation-auto .auto-btn5 {
+    background-color: #fc0000;
 }
 
-#radio4:checked .navigation-auto .auto-btn6 {
-    background-color: #ad2121;
+#radio6:checked~.navigation-auto .auto-btn6 {
+    background-color: #fc0000;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2),
@@ -224,9 +236,9 @@ h4,
 h5,
 h6,
 figure {
-    color: #000;
+    color: rgb(228, 228, 228);
     font-family: "Cormorant Garamond", Georgia, serif;
-    font-weight: 400;
+    font-weight: 600;
     margin: 0 0 20px 0;
 }
 
