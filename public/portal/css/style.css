@@ -20,6 +20,145 @@ body {
     line-height: 1.7;
     color: rgba(255, 255, 255, 0.3);
     background: #000 url(../images/broken_noise.png) repeat;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    border-style: 0;
+    width: 1900px;
+    height: 600px;
+    overflow: visible;
+    overflow-x: hidden;
+}
+
+.slides {
+    width: 1000px;
+    height: 520px;
+    place-content: center;
+    margin-left: -700px;
+    margin-top: 40px;
+    display: flex;
+    scroll-behavior: smooth;
+    scroll-snap-align: unset;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 1s;
+    display: flex;
+}
+
+.slide img {
+    width: 900px;
+    height: 550px;
+    display: flex;
+    border-radius: 10%;
+    place-content: center;
+    margin-inline: 5%;
+}
+
+
+/* css untuk manual slide navigasi */
+
+.navigation-manual {
+    position: absolute;
+    width: 880px;
+    margin-top: 50px;
+    margin-left: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background-color: #fc0000;
+}
+
+#radio1:checked~.first {
+    margin-left: 70%;
+}
+
+#radio2:checked~.first {
+    margin-left: -10%;
+}
+
+#radio3:checked~.first {
+    margin-left: -175%;
+}
+
+#radio4:checked~.first {
+    margin-left: -345%;
+}
+
+#radio5:checked~.first {
+    margin-left: -520%;
+}
+
+#radio6:checked~.first {
+    margin-left: -660%;
+}
+
+
+/* css untuk otomatis slide navigasi */
+
+.navigation-auto {
+    position: absolute;
+    width: 880px;
+    margin-top: 570px;
+    margin-left: 2280px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div {
+    border: 2px solid #f10707;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked .navigation-auto .auto-btn1 {
+    background-color: #ad2121;
+}
+
+#radio2:checked .navigation-auto .auto-btn2 {
+    background-color: #ad2121;
+}
+
+#radio3:checked .navigation-auto .auto-btn3 {
+    background-color: #ad2121;
+}
+
+#radio4:checked .navigation-auto .auto-btn4 {
+    background-color: #ad2121;
+}
+
+#radio4:checked .navigation-auto .auto-btn5 {
+    background-color: #ad2121;
+}
+
+#radio4:checked .navigation-auto .auto-btn6 {
+    background-color: #ad2121;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2),
@@ -766,35 +905,41 @@ figure {
     border: none;
     z-index: 1;
     margin-bottom: 0;
+    height: 500px;
+    width: 700px;
 }
 
-#fh5co-slider-wrwap .flexslider .slides {
+#fh5co-slider-wrwap .flexslider {
     position: relative;
 }
 
-#fh5co-slider-wrwap .flexslider .slides li {
-    border-radius: 5%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
-    height: 600px !important;
+#fh5co-slider-wrwap .flexslider {
+    place-content: center;
+    border-radius: 20%;
+    height: 500px;
+    width: 700px;
+    background-repeat: none;
+    background-size: 50%;
+    background-position: center;
+    margin-right: 0px;
     position: relative;
 }
 
 #fh5co-slider-wrwap .flexslider .flex-control-nav {
-    top: -30px !important;
+    top: -50px !important;
     z-index: 1000;
     right: 0;
     float: right;
     width: auto;
+    align-content: center;
 }
 
 #fh5co-slider-wrwap .flexslider .flex-control-nav li {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 #fh5co-slider-wrwap .flexslider .flex-control-nav li a {
-    background: #ea272d;
+    background: #ffffff;
     box-shadow: none;
     width: 12px;
     height: 12px;
