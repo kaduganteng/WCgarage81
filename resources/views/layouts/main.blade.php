@@ -22,6 +22,7 @@
 
 
 <body class="hold-transition sidebar-mini">
+  @include('sweetalert::alert')
   <!-- Site wrapper -->
   <div class="wrapper">
     <!-- Navbar -->
@@ -144,12 +145,12 @@
 
             </li>
             <li class="nav-item">
-              <a href="#" style="color:rgb(255, 255, 255);"
+              <a href="{{ route('galeri') }}" style="color:rgb(255, 255, 255);"
                 class="nav-link {{(Request::is('konten/index') || Request::is('konten/index/*') ? 'active' : '')}}">
 
                 <i class="nav-icon fas fa-tree"></i>
                 <p>
-                  Konten Garage 81
+                  Gallery Garage 81
                 </p>
               </a>
             </li>

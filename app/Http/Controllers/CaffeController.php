@@ -147,4 +147,13 @@ class CaffeController extends Controller
         ]);
         return redirect()->route('menucmh');
     }
+
+    public function tampilkanSession(Request $request)
+    {
+        if ($request->session()->has('nama')) {
+            echo $request->session()->get('nama');
+        } else {
+            echo 'Tidak ada data dalam session.';
+        }
+    }
 }

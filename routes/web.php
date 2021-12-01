@@ -47,6 +47,9 @@ Route::get('/menucmh.edit.{id}', 'CaffeController@edit2')->name('menucmh.edit');
 Route::post('/menucmh.update.{id}', 'CaffeController@update2')->name('menucmh.update');
 
 
+// Konten
+Route::get('/galeri', 'GaleriController@index')->name('galeri');
+
 //  Frenchaise
 
 Route::get('/kopiportal', 'FrenchaiseController@index')->name('kopiportal');
