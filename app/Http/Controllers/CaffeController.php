@@ -6,6 +6,7 @@ use App\KategoriMenu;
 use App\Menucaffebdg;
 use App\Menucaffecmh;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 
 class CaffeController extends Controller
@@ -49,12 +50,14 @@ class CaffeController extends Controller
             'keterangan' => $request->keterangan,
             'harga' => $request->harga
         ]);
+        Alert::success('Sukses !', 'Data Berhasil Di Tambahkan');
         return redirect()->back();
     }
 
     public function destroy($id)
     {
         $destroy = Menucaffebdg::destroy($id);
+        Alert::warning('Data Berhasil Dihapus !', 'Data Yang Berhasil Di Hapus Tidak Dapat Dikembalikan');
         return redirect()->back();
     }
     public function edit($id)
@@ -76,6 +79,7 @@ class CaffeController extends Controller
             'harga' => $request->harga
 
         ]);
+        Alert::success('Sukses !', 'Data Berhasil Di Edit');
         return redirect()->route('menubdg');
     }
 
@@ -116,12 +120,14 @@ class CaffeController extends Controller
             'keterangan' => $request->keterangan,
             'harga' => $request->harga
         ]);
+        Alert::success('Sukses !', 'Data Berhasil Di Tambahkan');
         return redirect()->back();
     }
 
     public function destroy2($id)
     {
         $destroy = Menucaffecmh::destroy($id);
+        Alert::warning('Data Berhasil Dihapus !', 'Data Yang Berhasil Di Hapus Tidak Dapat Dikembalikan');
         return redirect()->back();
     }
 
@@ -129,6 +135,7 @@ class CaffeController extends Controller
     {
         $datacmh = Menucaffecmh::select('menucmh.*', 'kategori_menu.nama_kategori')->where('menucmh.id', $id)->join('kategori_menu', 'kategori_menu.id', '=', 'menucmh.kategori_id')->first();
         $kategori = KategoriMenu::all();
+
         return view('admin.caffe.menucmh.form', [
             'datacmh' => $datacmh,
             'kategori' => $kategori
@@ -145,10 +152,11 @@ class CaffeController extends Controller
             'harga' => $request->harga
 
         ]);
+        Alert::success('Sukses !', 'Data Berhasil Di Edit');
         return redirect()->route('menucmh');
     }
 
-    public function tampilkanSession(Request $request)
+    public function  tampilkanSession(Request $request)
     {
         if ($request->session()->has('nama')) {
             echo $request->session()->get('nama');

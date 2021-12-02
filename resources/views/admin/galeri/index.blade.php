@@ -33,7 +33,7 @@
                     <div class="card-tools">
                         <div class="input-group input-group-sm" style="width: 150px;">
                             <div class="input-group-append">
-                                <a href="#">
+                                <a href="{{ route('galeri.create') }}">
                                     <button class="btn btn-success btn-round">
                                         <ion-icon name="add-circle-outline"></ion-icon>Tambah Foto
                                     </button></a>
@@ -43,12 +43,16 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
+                        @foreach ($galeri as $g)
                         <div class="col-sm-2">
-                            <a href="https://via.placeholder.com/1200/FFFFFF.png?text=1" data-toggle="lightbox"
-                                data-title="sample 1 - white" data-gallery="gallery">
-                                <img src="# " class="img-fluid mb-2" alt="white sample" />
+                            <a href="{{ $g->foto_galeri }}" data-toggle="lightbox" data-title="sample 1 - white"
+                                data-gallery="gallery">
+                                <img src="{{ asset('upload/'. $g->foto_galeri) }}" class="img-fluid mb-2"
+                                    alt="white sample" />
                             </a>
                         </div>
+                        @endforeach
+
 
                     </div>
                 </div>

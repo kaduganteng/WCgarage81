@@ -47,14 +47,23 @@ Route::get('/menucmh.edit.{id}', 'CaffeController@edit2')->name('menucmh.edit');
 Route::post('/menucmh.update.{id}', 'CaffeController@update2')->name('menucmh.update');
 
 
-// Konten
+// Galeri
 Route::get('/galeri', 'GaleriController@index')->name('galeri');
+Route::get('/galeri.create', 'GaleriController@create')->name('galeri.create');
+Route::post('/galeri.store', 'GaleriController@store')->name('galeri.store');
+
+
 
 //  Frenchaise
 
 Route::get('/kopiportal', 'FrenchaiseController@index')->name('kopiportal');
 Route::get('/kopiportal.create', 'FrenchaiseController@create')->name('kopiportal.create');
 Route::post('/kopiportal.store', 'FrenchaiseController@store')->name('kopiportal.store');
+Route::get('/kopiportal.delete{id}', 'FrenchaiseController@destroy')->name('kopiportal.destroy');
+Route::get('/kopiportal.edit{id}', 'FrenchaiseController@edit')->name('kopiportal.edit');
+Route::post('/kopiportal.update{id}', 'FrenchaiseController@update')->name('kopiportal.update');
+
+
 
 
 //  Route Statistik

@@ -95,12 +95,12 @@
                                             <td>{{ $kp->keterangan }}</td>
                                             <td>{{ $kp->harga }}</td>
                                             <td>
-                                                <a href="{{ route('menucmh.destroy',$kp->id) }}">
+                                                <a href="{{ route('kopiportal.destroy',$kp->id) }}">
                                                     <button class="btn btn-danger">
                                                         <ion-icon name="close-circle-outline"></ion-icon>
                                                     </button></a>
 
-                                                <a href="{{  route('menucmh.edit',$kp->id) }}"><button
+                                                <a href="{{  route('kopiportal.edit',$kp->id) }}"><button
                                                         class="btn btn-success">
                                                         <ion-icon name="create-outline"></ion-icon>
                                                     </button></a>
