@@ -62,12 +62,24 @@ body {
 }
 
 .slide img {
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
     width: 900px;
     height: 550px;
-    display: flex;
+    display: block;
     border-radius: 10%;
     place-content: center;
     margin-inline: 5%;
+}
+
+.slide img:hover {
+    -webkit-transform: all 0.1s ease-in-out;
+    -moz-transform: all 0.1s ease-in-out;
+    -o-transform: all 0.1s ease-in-out;
+    -ms-transform: all 0.1s ease-in-out;
+    transform: all 0.1s ease-in-out;
 }
 
 
@@ -171,6 +183,51 @@ body {
 
 #radio6:checked~.navigation-auto .auto-btn6 {
     background-color: #fc0000;
+}
+
+
+/* card untuk produk */
+
+.produk {
+    margin-top: 70px;
+    display: grid;
+    padding: 15px;
+    text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-inline: 20px;
+    border: 0px solid #a45d5d;
+}
+
+.produk h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    color: #ffc069;
+}
+
+.produk p {
+    font-weight: 200;
+    letter-spacing: 1px;
+    font-size: 0.8em;
+    color: #a45d5d;
+}
+
+.produk img {
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    width: 300px;
+    height: 200px;
+    border-radius: 7%;
+}
+
+.produk img:hover {
+    -webkit-transform: scale(1.2) rotate(0deg);
+    -moz-transform: scale(1.2) rotate(0deg);
+    -o-transform: scale(1.2) rotate(0deg);
+    -ms-transform: scale(1.2) rotate(0deg);
+    transform: scale(1.2) rotate(0deg)
 }
 
 @media (-webkit-min-device-pixel-ratio: 2),
@@ -342,7 +399,7 @@ figure {
 .fh5co-nav ul li>a {
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .fh5co-nav ul li a {
@@ -360,7 +417,7 @@ figure {
 .fh5co-nav ul li a:hover,
 .fh5co-nav ul li a:focus,
 .fh5co-nav ul li a:active {
-    color: #ea272d;
+    color: #ffc069;
 }
 
 .dropdown-menu a:hover,
@@ -1890,7 +1947,7 @@ figure {
 .fh5co-nav-toggle {
     width: 25px;
     height: 25px;
-    cursor: pointer;
+    cursor: none;
     text-decoration: none;
     top: 25px !important;
 }

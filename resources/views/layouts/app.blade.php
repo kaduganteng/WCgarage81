@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Portal</title>
+    <title>Portal Manajemen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
     <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="portal/css/bootstrap.css">
     <!-- Flexslider  -->
     <link rel="stylesheet" href="portal/css/flexslider.css">
+    
 
     <!-- Theme style  -->
     <link rel="stylesheet" href="portal/css/style.css">
@@ -54,20 +55,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 text-center logo-wrap">
-                        <div id="fh5co-logo"><a href="{{ route('landing') }}"><span>. </span> Portal Management <span> .</span></a></div>
+                        <div id="fh5co-logo"><a href="{{ route('landing') }}"><span>. </span> Portal Manajemen <span> .</span></a></div>
                     </div>
                     <div class="col-xs-12 text-center menu-1 menu-wrap">
                         <ul>
                             <li class="active"><a href="{{ route('landing') }}">Home</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                Our Product
-                                <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="{{ route('cafe81') }}">Caffe</a></li>
-                                    <li><a href="#">Franchise</a></li>
-                                </ul>
                             </li>
                             <li><a href="#">About</a></li>
                             <li><a href="#">Contact</a></li>

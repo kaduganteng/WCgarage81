@@ -1,13 +1,12 @@
 @extends('layouts.app')
 @section('section')
-<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url(images/hero_1.jpeg);" data-stellar-background-ratio="0.5">
+<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url(../images/frn.png);" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
             <div class="col-md-12 text-center">
                 <div class="display-t js-fullheight">
                     <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-                        <h1>Portal Management </h1>
-                        <div class="h2tagline">
-                        <h2>" We Are The Best "</h2>
+                        <h1>Portal Manajemen</h1>
+                        <h2>Garage 81 | Garasi 81 | Kopi Portal | Wild Wolf Roastery</h2>
                         </div>
                     </div>
                 </div>
@@ -77,44 +76,44 @@ setInterval(function(){
     }
 }, 5000);
 </script>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
+<div class="container">
+<section class="produk">
+    <div class="produk">
+        <div class="icon">
+        <a href="{{ route('landing') }}">
+        <img src="/images/frn.png">
+        </div>
+        <h2>Garasi 81 Bandung</h2>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum hic fuga tempore cum dignissimos dicta!
+        </p>
+    </a>
+    </div>
+    <div class="produk">
+       <div class="icon">
+        <a href="{{ route('landing') }}">
+        <img src="/images/cmh.png">
+        </div>
+        <h2>Garasi 81 Cimahi</h2>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum hic fuga tempore cum dignissimos dicta!
+        </p>
+    </a>
+    </div>
+    <div class="produk">
+        <div class="icon">
+        <a href="{{ route('landing') }}">
+        <img src="/images/prt.png">
+        </div>
+        <h2>Kopi Portal</h2>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum hic fuga tempore cum dignissimos dicta!
+        </p>
+    </a>
+    </div>
+    </section>
+    </div>
+</div>
 
 
 
