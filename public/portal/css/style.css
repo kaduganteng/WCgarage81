@@ -107,11 +107,11 @@ body {
 }
 
 .manual-btn:hover {
-    background-color: #fc0000;
+    background-color: #a45d5d;
 }
 
 .auto-btn:hover {
-    background-color: #fc0000;
+    background-color: #a45d5d;
 }
 
 #radio1:checked~.first {
@@ -162,27 +162,27 @@ body {
 }
 
 #radio1:checked~.navigation-auto .auto-btn1 {
-    background-color: #fc0000;
+    background-color: #a45d5d;
 }
 
 #radio2:checked~.navigation-auto .auto-btn2 {
-    background-color: #fc0000;
+    background-color: #a45d5d;
 }
 
 #radio3:checked~.navigation-auto .auto-btn3 {
-    background-color: #fc0000;
+    background-color: #a45d5d;
 }
 
 #radio4:checked~.navigation-auto .auto-btn4 {
-    background-color: #fc0000;
+    background-color: #a45d5d;
 }
 
 #radio5:checked~.navigation-auto .auto-btn5 {
-    background-color: #fc0000;
+    background-color: #a45d5d;
 }
 
 #radio6:checked~.navigation-auto .auto-btn6 {
-    background-color: #fc0000;
+    background-color: #a45d5d;
 }
 
 
@@ -206,17 +206,18 @@ body {
 }
 
 .produk p {
-    font-weight: 200;
+    text-align: justify-center;
+    font-weight: 100;
     letter-spacing: 1px;
-    font-size: 0.8em;
-    color: #a45d5d;
+    font-size: 1em;
+    color: #d9d9d9;
 }
 
 .produk img {
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     width: 300px;
     height: 200px;
     border-radius: 7%;
@@ -228,6 +229,24 @@ body {
     -o-transform: scale(1.2) rotate(0deg);
     -ms-transform: scale(1.2) rotate(0deg);
     transform: scale(1.2) rotate(0deg)
+}
+
+.gmaps {
+    border-radius: 20%;
+    margin-left: 12%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    align-content: center;
+}
+
+.mapsh2 {
+    display: grid;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.mapsh2 h2 {
+    color: #ffc069;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2),
@@ -725,6 +744,7 @@ figure {
 }
 
 .fh5co-section {
+    margin-top: 20px;
     padding: 7em 0;
 }
 
@@ -739,9 +759,11 @@ figure {
     font-size: 20px;
     line-height: 1.5;
     align-items: baseline;
+    text-align: justify;
 }
 
 .section-heading {
+    margin-top: 60px;
     width: 100%;
     float: left;
     margin-bottom: 50px;
@@ -754,7 +776,7 @@ figure {
 .section-heading h2 {
     font-family: "Satisfy", cursive;
     font-size: 35px;
-    color: rgb(238, 195, 1);
+    color: #ffc069;
 }
 
 #fh5co-about .img-wrap img {
@@ -1128,7 +1150,7 @@ figure {
     list-style: none;
     display: -moz-inline-stack;
     display: inline-block;
-    zoom: 1;
+    zoom: 2;
     *display: inline;
 }
 
@@ -1137,7 +1159,7 @@ figure {
     display: inline-block;
     zoom: 1;
     *display: inline;
-    color: #ea272d;
+    color: #f0ad4e;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -1458,7 +1480,7 @@ figure {
 @media screen and (max-width: 768px) {
     #fh5co-blog .fh5co-heading,
     #fh5co-contact .fh5co-heading {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
 }
 
@@ -1765,6 +1787,7 @@ figure {
 
 #fh5co-footer .copyright .block {
     display: block;
+    text-align: center;
 }
 
 .contact-info {

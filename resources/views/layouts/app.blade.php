@@ -59,10 +59,10 @@
                     </div>
                     <div class="col-xs-12 text-center menu-1 menu-wrap">
                         <ul>
-                            <li class="active"><a href="{{ route('landing') }}">Home</a></li>
-                            </li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li class="active">
+                            <li><a href="{{ route('landing') }}">Home</a></li>
+                            <li><a href="{{ route('aboutportal') }}">About</a></li>
+                            <li><a href="{{ route('contactportal') }}">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -78,7 +78,10 @@
             <div class="container">
                 <div class="row row-pb-md">
                     <div class="col-md-4 fh5co-widget">
-                        <div class="col-md-2 col-md-push-1 fh5co-widget">
+                        <h4>Portal</h4>
+                        <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
+                    </div>
+                    <div class="col-md-2 col-md-push-1 fh5co-widget">
                         <h4>Links</h4>
                         <ul class="fh5co-footer-links">
                             <li><a href="#">Home</a></li>
@@ -87,7 +90,7 @@
                             <li><a href="#">Gallery</a></li>
                         </ul>
                     </div>
-                    </div>
+
                     <div class="col-md-2 col-md-push-1 fh5co-widget">
                         <h4>Categories</h4>
                         <ul class="fh5co-footer-links">
@@ -110,17 +113,18 @@
                     </div>
 
                 </div>
+
                 <div class="row copyright">
                     <div class="col-md-12 text-center">
                         <p>
-                            <small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small>
+                            <small class="block">@ Copyright Portal Manajemen 2021 @</small>
+                            <small class="block">Designed by BKK Corp</a></small>
                         </p>
                         <p>
                             <ul class="fh5co-social-icons">
                                 <li><a href="#"><i class="icon-twitter2"></i></a></li>
                                 <li><a href="#"><i class="icon-facebook2"></i></a></li>
-                                <li><a href="#"><i class="icon-linkedin2"></i></a></li>
-                                <li><a href="#"><i class="icon-dribbble2"></i></a></li>
+                                <li><a href="#"><i class="icon-instagram2"></i></a></li>
                             </ul>
                         </p>
                     </div>

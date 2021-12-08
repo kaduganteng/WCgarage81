@@ -6,7 +6,7 @@
                 <div class="display-t js-fullheight">
                     <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
                         <h1>Portal Manajemen</h1>
-                        <h2>Garage 81 | Garasi 81 | Kopi Portal | Wild Wolf Roastery</h2>
+                        <h2>Garasi 81 | Garage 81 | Kopi Portal </h2>
                         </div>
                     </div>
                 </div>
@@ -80,7 +80,7 @@ setInterval(function(){
 <section class="produk">
     <div class="produk">
         <div class="icon">
-        <a href="{{ route('landing') }}">
+        <a href="{{ route('cafe81') }}">
         <img src="/images/frn.png">
         </div>
         <h2>Garasi 81 Bandung</h2>
@@ -112,6 +112,14 @@ setInterval(function(){
     </a>
     </div>
     </section>
+    </div>
+</div>
+<div class="mapsh2">
+    <h2> Lokasi Kami </h2>
+</div>
+<div class="container">
+    <div class="gmaps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7921.6054720103775!2d107.6169909!3d-6.9141736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e71d2ba0ef41%3A0x3b67257e4e181cce!2sGarasi%2081%20Bandung!5e0!3m2!1sid!2sid!4v1638942961908!5m2!1sid!2sid" width="900" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 </div>
 

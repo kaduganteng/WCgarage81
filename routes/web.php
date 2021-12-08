@@ -74,4 +74,6 @@ Route::get('/statistik', 'StatistikController@index')->name('statistik');
 
 // Route FrontEnd
 Route::get('/', 'Landingportalcontroller@index')->name('landing');
+Route::get('/about', 'AboutController@index')->name('aboutportal');
+Route::get('/contact', 'ContactController@index')->name('contactportal');
 Route::get('/cafe81', 'Cafe81Controller@index')->name('cafe81');
