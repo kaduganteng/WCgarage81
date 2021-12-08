@@ -55,7 +55,7 @@
           @endforeach
 
         </div>
-        <h3>Caffe Cimahi</h3>
+        <h3>Caffe </h3>
         <p>--------------------------------------</p>
         <div class="row">
           @foreach ($stok2 as $k)

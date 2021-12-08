@@ -10,7 +10,9 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="adminlte/plugins/fontawesome-free/css/all.min.css">
   <!-- Ekko Lightbox -->
-  <link rel="stylesheet" href="dist/css/lightbox.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+ 
   <!-- Theme style -->
   <link rel="stylesheet" href="adminlte/css/adminlte.min.css">
 </head>
@@ -42,14 +44,14 @@
     </div>
     <div class="card-body">
         <div class="col-12">
-            <div class="card card-info">
+            <div class="card ">
                 <div class="card-header">
                     <h4 class="card-title">Gallery</h4>
                     <div class="card-tools">
                         <div class="input-group input-group-sm" style="width: 150px;">
                             <div class="input-group-append">
                                 <a href="{{ route('galeri.create') }}">
-                                    <button class="btn btn-success btn-round">
+                                    <button class="btn btn-info btn-round">
                                         <ion-icon name="add-circle-outline"></ion-icon>Tambah Foto
                                     </button></a>
                             </div>
@@ -61,11 +63,12 @@
 
                         @foreach ($galeri as $g)
                         <div class="item col-sm-2">
-                            <a href="{{ asset('upload/'. $g->foto_galeri ) }}"  data-lightbox="gallery1"  
-                               data-tittle="ggblg" data-gallery="gallery">
-                                <img src="{{ asset('upload/'. $g->foto_galeri) }}" class="img-fluid mb-2"
-                                    alt="white sample" />
-                            </a>
+                           
+                            <a href="{{ asset('upload/'. $g->foto_galeri ) }}"  class="fancybox"  
+                                data-fancybox="ggblg" data-gallery="gallery"  height="50px" width="50px" >
+                                 <img src="{{ asset('upload/'. $g->foto_galeri) }}" class="img-fluid mb-2"
+                                     alt="white sample" width="200px" height="200px"/>
+                          
                         </div>
                         @endforeach
 
@@ -88,8 +91,8 @@
 <script src="adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="adminlte/js/adminlte.min.js"></script>
-<!-- Ekko Lightbox -->
-<script src="dist/js/lightbox-plus-jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="adminlte/js/demo.js"></script>
 

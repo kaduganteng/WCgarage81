@@ -76,8 +76,9 @@
               </div>
               <div class="form-group">
                 <label for="exampleInputName">Keterangan</label>
-                <input type="text" class="form-control" name="keterangan" id="keterangan"
-                  value="{{ @$databdg->keterangan }}" placeholder="Tambahkan keterangan menu">
+                <textarea name="keterangan" id="keterangan" cols="30" rows="10">{{ empty($databdg)? '' : $databdg->keterangan }}</textarea>
+                {{-- <input type="text" class="form-control" name="keterangan" id="keterangan"
+                  value="{{ @$databdg->keterangan }}" placeholder="Tambahkan keterangan menu"> --}}
               </div>
               <div class="form-group">
                 <label for="exampleInputName">Harga Menu</label>
@@ -109,5 +110,15 @@
 
   </section>
 </div>
+
+@endsection
+@section('scripts')
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#keterangan' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
 
 @endsection

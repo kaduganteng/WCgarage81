@@ -3,6 +3,17 @@
 @section('content')
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<style>
+  .btn{
+    transition: 1s;
+
+  }
+.btn:hover {
+transform: rotate( 360deg);
+border-radius: 50;
+}
+</style>
 <!-- ISI CONTENT ADMIN -->
 <div class="content">
 
@@ -23,7 +34,7 @@
     <div class="card">
       <div class="card-header">
         <h3 class="card-title">Daftar Kategori</h3>
-
+      
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
             <i class="fas fa-minus"></i>
@@ -32,10 +43,20 @@
             <i class="fas fa-times"></i>
           </button>
         </div>
+        <div class="card-tools">
+          <div class="input-group input-group-sm" style="width: 150px;">
+            <div class="input-group-append">
+              <a href="{{ route('kategorimenu.create') }}">
+                <button class="btn btn-info btn-round">
+                  Tambah Kategori
+                </button></a>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="card-body">
         <div class="row">
-          <div class="col-12">
+          <div class="col-lg-12">
 
             <!-- /.card -->
             <div class="card">
@@ -53,16 +74,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="card-tools">
-                  <div class="input-group input-group-sm" style="width: 150px;">
-                    <div class="input-group-append">
-                      <a href="{{ route('kategorimenu.create') }}">
-                        <button class="btn btn-primary btn-round">
-                          Tambah Kategori
-                        </button></a>
-                    </div>
-                  </div>
-                </div>
+               
               </div>
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0">
@@ -85,7 +97,7 @@
                       <td>{{ $k->nama_kategori}}</td>
                       <td>
                         <a href="{{ route('kategorimenu.destroy',$k->id) }}">
-                          <button class="btn btn-danger">
+                          <button class="btn btn-danger" class="btn">
                             <ion-icon name="close-circle-outline"></ion-icon>
                           </button></a>
                       </td>

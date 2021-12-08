@@ -3,6 +3,20 @@
 @section('content')
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<style>
+    .btn{
+      transition: 1s;
+  
+    }
+  .btn:hover {
+  transform: rotate( 360deg);
+  border-radius: 50%;
+  }
+  </style>
 <!-- ISI CONTENT ADMIN -->
 <div class="content">
 
@@ -34,6 +48,16 @@
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
+                <div class="card-tools">
+                    <div class="input-group input-group-sm" style="width: 150px;">
+                        <div class="input-group-append">
+                            <a href="{{ route('kopiportal.create') }}">
+                                <button class="btn btn-info btn-round">
+                                    <ion-icon name="add-circle-outline"></ion-icon>Tambah Menu
+                                </button></a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="card-body">
                 <div class="row">
@@ -56,16 +80,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-tools">
-                                    <div class="input-group input-group-sm" style="width: 150px;">
-                                        <div class="input-group-append">
-                                            <a href="{{ route('kopiportal.create') }}">
-                                                <button class="btn btn-primary btn-round">
-                                                    <ion-icon name="add-circle-outline"></ion-icon>Tambah Menu
-                                                </button></a>
-                                        </div>
-                                    </div>
-                                </div>
+                               
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body table-responsive p-0">
@@ -88,8 +103,10 @@
                                         <tr>
                                             <td>{{ $no++}}</td>
                                             <td>
-                                                <img src="{{ asset('upload/'.$kp->foto_menu) }}" height="10%"
-                                                    width="10%" alt="">
+                                                <a href="{{ asset('upload/'. $kp->foto_menu ) }}"  class="fancybox"  
+                                                    data-fancybox="ggblg" data-gallery="gallery"  height="50px" width="50px" >
+                                                     <img src="{{ asset('upload/'. $kp->foto_menu) }}" class="img-fluid mb-2"
+                                                         alt="white sample" width="100px" height="100px"/>
                                             </td>
                                             <td>{{ $kp->nama }}</td>
                                             <td>{{ $kp->keterangan }}</td>

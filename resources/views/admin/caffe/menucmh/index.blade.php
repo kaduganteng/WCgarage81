@@ -3,6 +3,21 @@
 @section('content')
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<style>
+  .btn{
+    transition: 1s;
+
+  }
+.btn:hover {
+transform: rotate( 360deg);
+border-radius: 50%;
+}
+</style>
 <!-- ISI CONTENT ADMIN -->
 <div class="content">
 
@@ -34,6 +49,16 @@
             <i class="fas fa-times"></i>
           </button>
         </div>
+         <div class="card-tools">
+                  <div class="input-group input-group-sm" style="width: 150px;">
+                    <div class="input-group-append">
+                      <a href="{{ route('menucmh.create') }}">
+                        <button class="btn btn-info btn-round">
+                          <ion-icon name="add-circle-outline"></ion-icon>Tambah Menu
+                        </button></a>
+                    </div>
+                  </div>
+                </div>
       </div>
       <div class="card-body">
         <div class="row">
@@ -55,16 +80,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="card-tools">
-                  <div class="input-group input-group-sm" style="width: 150px;">
-                    <div class="input-group-append">
-                      <a href="{{ route('menucmh.create') }}">
-                        <button class="btn btn-primary btn-round">
-                          <ion-icon name="add-circle-outline"></ion-icon>Tambah Menu
-                        </button></a>
-                    </div>
-                  </div>
-                </div>
+               
               </div>
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0">
@@ -88,7 +104,10 @@
                     <tr>
                       <td>{{ $no++}}</td>
                       <td>
-                        <img src="{{ asset('upload/'.$m->foto_menu) }}" height="10%" width="10%" alt="">
+                        <a href="{{ asset('upload/'. $m->foto_menu ) }}"  class="fancybox"  
+                          data-fancybox="ggblg" data-gallery="gallery"  height="50px" width="50px" >
+                           <img src="{{ asset('upload/'. $m->foto_menu) }}" class="img-fluid mb-2"
+                               alt="white sample" width="100px" height="100px"/>
                       </td>
                       <td>{{ $m ->kategori_id }}</td>
                       <td>{{ $m ->nama }}</td>
@@ -96,11 +115,11 @@
                       <td>{{ $m ->harga }}</td>
                       <td>
                         <a href="{{ route('menucmh.destroy',$m->id) }}">
-                          <button class="btn btn-danger">
+                          <button class="btn btn-danger" class="btn">
                             <ion-icon name="close-circle-outline"></ion-icon>
                           </button></a>
 
-                        <a href="{{  route('menucmh.edit',$m->id) }}"><button class="btn btn-success">
+                        <a href="{{  route('menucmh.edit',$m->id) }}"><button class="btn btn-success" class="btn">
                             <ion-icon name="create-outline"></ion-icon>
                           </button></a>
                       </td>
@@ -116,7 +135,7 @@
         </div>
       </div>
       <!-- /.card-body -->
-      <div class="card-footer">
+       <div class="card-footer">
         Footer
       </div>
       <!-- /.card-footer-->
