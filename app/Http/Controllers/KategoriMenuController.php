@@ -11,14 +11,14 @@ class KategoriMenuController extends Controller
     public function index()
     {
         $kategorimenu = KategoriMenu::get();
-        return view('admin.kategori.index', [
+        return view('admin.kategori.kategoribdg.index', [
             'kategori' => $kategorimenu
         ]);
     }
 
     public function create()
     {
-        return view('admin.kategori.form');
+        return view('admin.kategori.kategoribdg.form');
     }
 
     public function store(Request $request)
