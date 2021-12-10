@@ -10,14 +10,15 @@
 <!-- ISI CONTENT ADMIN -->
 <div class="content">
   <style>
-    .btn{
+    .btn {
       transition: 1s;
-  
+
     }
-  .btn:hover {
-  transform: rotate( 360deg);
-  border-radius: 50%;
-  }
+
+    .btn:hover {
+      transform: rotate(360deg);
+      border-radius: 50%;
+    }
   </style>
 
   <!-- ISI JUDUL KONTEN    -->
@@ -79,7 +80,7 @@
                     </div>
                   </div>
                 </div>
-               
+
               </div>
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0">
@@ -103,11 +104,9 @@
                     <tr>
                       <td>{{ $no++}}</td>
                       <td>
-                        <a href="{{ asset('upload/'. $m->foto_menu ) }}"  class="fancybox"  
-                          data-fancybox="ggblg" data-gallery="gallery"  height="50px" width="50px" >
-                           <img src="{{ asset('upload/'. $m->foto_menu) }}" class="img-fluid mb-2"
-                               alt="white sample" width="100px" height="100px"/>
-                       </a>
+                        <a href="{{ asset('upload/'. $m->foto_menu ) }}" class="fancybox" data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
+                          <img src="{{ asset('upload/'. $m->foto_menu) }}" class="img-fluid mb-2" alt="white sample" width="100px" height="100px" />
+                        </a>
                       </td>
                       <td>{{ $m ->kategori_id }}</td>
                       <td>{{ $m ->nama }}</td>

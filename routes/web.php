@@ -52,6 +52,12 @@ Route::get('/galeri', 'GaleriController@index')->name('galeri');
 Route::get('/galeri.create', 'GaleriController@create')->name('galeri.create');
 Route::post('/galeri.store', 'GaleriController@store')->name('galeri.store');
 
+//Event
+Route::get('/event', 'EventController@index')->name('event');
+Route::get('/event.create', 'EventController@create')->name('event.create');
+Route::post('/event.store', 'EventController@store')->name('event.store');
+
+
 
 
 //  Frenchaise

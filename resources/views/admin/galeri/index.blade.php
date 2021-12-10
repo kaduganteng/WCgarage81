@@ -1,20 +1,21 @@
 @extends('layouts.main')
 @section('content')
+
 <head>
     <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="adminlte/plugins/fontawesome-free/css/all.min.css">
-  <!-- Ekko Lightbox -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
- 
-  <!-- Theme style -->
-  <link rel="stylesheet" href="adminlte/css/adminlte.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="adminlte/plugins/fontawesome-free/css/all.min.css">
+    <!-- Ekko Lightbox -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+
+    <!-- Theme style -->
+    <link rel="stylesheet" href="adminlte/css/adminlte.min.css">
 </head>
 
 
@@ -22,13 +23,13 @@
 
 
     <style type="text/css">
-    .item{
-        transition: .5s ease-in-out;
-    }
-    .item:hover {
-    filter: brightness(80%);
-}
+        .item {
+            transition: .5s ease-in-out;
+        }
 
+        .item:hover {
+            filter: brightness(80%);
+        }
     </style>
     <div class="card-header">
         <h3 class="card-title">Title</h3>
@@ -63,12 +64,10 @@
 
                         @foreach ($galeri as $g)
                         <div class="item col-sm-2">
-                           
-                            <a href="{{ asset('upload/'. $g->foto_galeri ) }}"  class="fancybox"  
-                                data-fancybox="ggblg" data-gallery="gallery"  height="50px" width="50px" >
-                                 <img src="{{ asset('upload/'. $g->foto_galeri) }}" class="img-fluid mb-2"
-                                     alt="white sample" width="200px" height="200px"/>
-                          
+
+                            <a href="{{ asset('upload/'. $g->foto_galeri ) }}" class="fancybox" data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
+                                <img src="{{ asset('upload/'. $g->foto_galeri) }}" class="img-fluid mb-2" alt="white sample" width="200px" height="200px" />
+
                         </div>
                         @endforeach
 
