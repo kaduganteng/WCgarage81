@@ -1,4 +1,4 @@
-@extends('layouts.cafebdg')
+@extends('layouts.kopiportal')
 @section('section')
 <header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url(images/hero_1.jpeg);" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
@@ -7,7 +7,7 @@
             <div class="col-md-12 text-center">
                 <div class="display-t js-fullheight">
                     <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-                        <h1>Garasi 81 Bandung</h1>
+                        <h1>Kopi Portal</h1>
                         <div class="h2tagline">
                         <h2>Cafe</h2>
                         </div>

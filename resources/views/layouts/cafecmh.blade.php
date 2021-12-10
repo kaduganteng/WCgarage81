@@ -60,9 +60,11 @@
                     <div class="col-xs-12 text-center menu-1 menu-wrap">
                         <ul>
                             <li class="active">
-                            <li><a href="{{ route('landing') }}">Home</a></li>
-                            <li><a href="{{ route('aboutportal') }}">Tentang Kami </a></li>
-                            <li><a href="{{ route('contactportal') }}">Kontak</a></li>
+                            <li><a href="{{ route('cafecmh') }}">Home</a></li>
+                            <li><a href="{{ route('cafecmh') }}">Menu</a></li>
+                            <li><a href="{{ route('cafecmh') }}">Galeri</a></li>
+                            <li><a href="{{ route('cafecmh') }}">Tentang  Kami</a></li>
+                            <li><a href="{{ route('cafecmh') }}">Kontak</a></li>
                         </ul>
                     </div>
                 </div>

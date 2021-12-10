@@ -5,7 +5,7 @@
             <div class="col-md-12 text-center">
                 <div class="display-t js-fullheight">
                     <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-                        <h1>Get In Touch</h1>
+                        <h1>Kontak</h1>
                         <h2>Garasi 81 | Garage 81 | Kopi Portal </h2>
                         </div>
                     </div>

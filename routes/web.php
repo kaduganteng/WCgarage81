@@ -77,3 +77,5 @@ Route::get('/', 'Landingportalcontroller@index')->name('landing');
 Route::get('/about', 'AboutController@index')->name('aboutportal');
 Route::get('/contact', 'ContactController@index')->name('contactportal');
 Route::get('/cafe81', 'Cafe81Controller@index')->name('cafe81');
+Route::get('/cafecmh', 'CafecmhController@index')->name('cafecmh');
+Route::get('/kopiportal', 'KopiportalController@index')->name('kopiprt');

@@ -14,6 +14,47 @@
         </div>
     </div>
 </header>
+<div class="judulproduk">
+    <h2> Produk Kami </h2>
+</div>
+<div class="container">
+<section class="produk">
+    <div class="produk">
+       <div class="icon">
+        <a href="{{ route('cafecmh') }}">
+        <img src="/images/cmh.png">
+        </div>
+        <h2>Garage 81 Cimahi</h2>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum hic fuga tempore cum dignissimos dicta!
+        </p>
+    </a>
+    </div>
+    <div class="produk">
+        <div class="icon">
+        <a href="{{ route('cafe81') }}">
+        <img src="/images/frn.png">
+        </div>
+        <h2>Garasi 81 Bandung</h2>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum hic fuga tempore cum dignissimos dicta!
+        </p>
+    </a>
+    </div>
+    <div class="produk">
+        <div class="icon">
+        <a href="{{ route('kopiprt') }}">
+        <img src="/images/prt.png">
+        </div>
+        <h2>Kopi Portal</h2>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum hic fuga tempore cum dignissimos dicta!
+        </p>
+    </a>
+    </div>
+    </section>
+    </div>
+</div>
 <div class="slider">
     <div class="slides">
 <!--radio button start-->
@@ -76,44 +117,6 @@ setInterval(function(){
     }
 }, 5000);
 </script>
-<div class="container">
-<section class="produk">
-    <div class="produk">
-        <div class="icon">
-        <a href="{{ route('cafe81') }}">
-        <img src="/images/frn.png">
-        </div>
-        <h2>Garasi 81 Bandung</h2>
-        <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum hic fuga tempore cum dignissimos dicta!
-        </p>
-    </a>
-    </div>
-    <div class="produk">
-       <div class="icon">
-        <a href="{{ route('landing') }}">
-        <img src="/images/cmh.png">
-        </div>
-        <h2>Garasi 81 Cimahi</h2>
-        <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum hic fuga tempore cum dignissimos dicta!
-        </p>
-    </a>
-    </div>
-    <div class="produk">
-        <div class="icon">
-        <a href="{{ route('landing') }}">
-        <img src="/images/prt.png">
-        </div>
-        <h2>Kopi Portal</h2>
-        <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum hic fuga tempore cum dignissimos dicta!
-        </p>
-    </a>
-    </div>
-    </section>
-    </div>
-</div>
 <div class="mapsh2">
     <h2> Lokasi Kami </h2>
 </div>
