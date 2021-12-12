@@ -36,6 +36,10 @@ Route::post('/menubdg.store', 'CaffeController@store')->name('menubdg.store');
 Route::get('/menubdg.delete.{id}', 'CaffeController@destroy')->name('menubdg.destroy');
 Route::get('/menubdg.edit.{id}', 'CaffeController@edit')->name('menubdg.edit');
 Route::post('/menubdg.update.{id}', 'CaffeController@update')->name('menubdg.update');
+Route::get('/menubdg.creategal', 'CaffeController@creategal')->name('menubdg.creategal');
+Route::post('/menubdg.storegal', 'CaffeController@storegal')->name('menubdg.storegal');
+
+
 
 //  Menu Cimahi
 
@@ -45,6 +49,9 @@ Route::post('/menucmh.store', 'CaffeController@store2')->name('menucmh.store');
 Route::get('/menucmh.delete.{id}', 'CaffeController@destroy2')->name('menucmh.destroy');
 Route::get('/menucmh.edit.{id}', 'CaffeController@edit2')->name('menucmh.edit');
 Route::post('/menucmh.update.{id}', 'CaffeController@update2')->name('menucmh.update');
+Route::get('/menucmh.creategal', 'CaffeController@creategal2')->name('menucmh.creategal2');
+Route::post('/menucmh.storegal', 'CaffeController@storegal2')->name('menucmh.storegal2');
+
 
 
 // Galeri
@@ -68,6 +75,8 @@ Route::post('/kopiportal.store', 'FrenchaiseController@store')->name('kopiportal
 Route::get('/kopiportal.delete{id}', 'FrenchaiseController@destroy')->name('kopiportal.destroy');
 Route::get('/kopiportal.edit{id}', 'FrenchaiseController@edit')->name('kopiportal.edit');
 Route::post('/kopiportal.update{id}', 'FrenchaiseController@update')->name('kopiportal.update');
+Route::get('/kopiportal.creategal', 'FrenchaiseController@creategal')->name('kopiportal.creategal');
+Route::post('/kopiportal.storegal', 'FrenchaiseController@storegal')->name('kopiportal.storegal');
 
 
 
@@ -84,4 +93,4 @@ Route::get('/about', 'AboutController@index')->name('aboutportal');
 Route::get('/contact', 'ContactController@index')->name('contactportal');
 Route::get('/cafe81', 'Cafe81Controller@index')->name('cafe81');
 Route::get('/cafecmh', 'CafecmhController@index')->name('cafecmh');
-Route::get('/kopiportal', 'KopiportalController@index')->name('kopiprt');
+Route::get('/koportal', 'KopiportalController@index')->name('kopiprt');

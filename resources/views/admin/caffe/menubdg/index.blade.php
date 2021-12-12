@@ -27,7 +27,7 @@
       <div class="row mb-2">
         <div class="col-sm-6">
           <a href="{{ route('menubdg') }}">
-            <h1>Homepage Menu Caffe Garage 81 Bandung </h1>
+            <h1>Caffe Garage 81 Bandung </h1>
           </a>
         </div>
 
@@ -36,30 +36,44 @@
   </section>
 
   <!-- ISI KONTEN    -->
-  <section class="content">
-    <div class="card">
-      <div class="card-header">
-        <h3 class="card-title">Daftar Menu Caffe</h3>
 
-        <div class="card-tools">
-          <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-            <i class="fas fa-minus"></i>
-          </button>
-          <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
-        <div class="card-tools">
-          <div class="input-group input-group-sm" style="width: 150px;">
-            <div class="input-group-append">
-              <a href="{{ route('menubdg.create') }}">
-                <button class="btn btn-info btn-round">
-                  <ion-icon name="add-circle-outline"></ion-icon>Tambah Menu
-                </button></a>
+  <div class="card-body">
+    <div class="col-12">
+      <div class="card ">
+        <div class="card-header">
+          <h4 class="card-title">Gallery</h4>
+          <div class="card-tools">
+            <div class="input-group input-group-sm" style="width: 150px;">
+              <div class="input-group-append">
+                <a href="{{ route('menubdg.creategal') }}">
+                  <button class="btn btn-info btn-round">
+                    <ion-icon name="add-circle-outline"></ion-icon>Tambah Foto
+                  </button></a>
+              </div>
             </div>
           </div>
         </div>
+        <div class="card-body">
+          <div class="row">
+
+            @foreach ($gbdg as $g)
+            <div class="item col-sm-2">
+
+              <a href="{{ asset('upload/'. $g->foto_bdg ) }}" class="fancybox" data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
+                <img src="{{ asset('upload/'. $g->foto_bdg) }}" class="img-fluid mb-2" alt="white sample" width="200px" height="200px" />
+              </a>
+            </div>
+            @endforeach
+
+
+          </div>
+        </div>
       </div>
+    </div>
+  </div>
+  <section class="content">
+    <div class="card">
+
       <div class="card-body">
         <div class="row">
           <div class="col-12">
@@ -67,7 +81,7 @@
             <!-- /.card -->
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Caffe Garage Bandung</h3>
+                <h3 class="card-title">Daftar MenuCaffe Garage Bandung</h3>
 
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 150px;">
@@ -77,6 +91,12 @@
                       <button type="submit" class="btn btn-default">
                         <i class="fas fa-search"></i>
                       </button>
+                    </div>
+                    <div class="input-group-append">
+                      <a href="{{ route('menubdg.create') }}">
+                        <button class="btn btn-info btn-round">
+                          <ion-icon name="add-circle-outline"></ion-icon>Tambah Menu
+                        </button></a>
                     </div>
                   </div>
                 </div>

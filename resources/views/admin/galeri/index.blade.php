@@ -49,14 +49,7 @@
                 <div class="card-header">
                     <h4 class="card-title">Gallery</h4>
                     <div class="card-tools">
-                        <div class="input-group input-group-sm" style="width: 150px;">
-                            <div class="input-group-append">
-                                <a href="{{ route('galeri.create') }}">
-                                    <button class="btn btn-info btn-round">
-                                        <ion-icon name="add-circle-outline"></ion-icon>Tambah Foto
-                                    </button></a>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
                 <div class="card-body">
@@ -67,7 +60,7 @@
 
                             <a href="{{ asset('upload/'. $g->foto_galeri ) }}" class="fancybox" data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
                                 <img src="{{ asset('upload/'. $g->foto_galeri) }}" class="img-fluid mb-2" alt="white sample" width="200px" height="200px" />
-
+                            </a>
                         </div>
                         @endforeach
 
@@ -75,6 +68,39 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="card ">
+            <div class="card-header">
+                <h3 class="card-title">Tambah Foto </h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form action="{{ route('galeri.store')}}" method="POST" enctype="multipart/form-data">
+                @csrf
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="exampleInputName">Masukan Nama Foto</label>
+                        <input type="text" class="form-control" name="nama" id="nama" placeholder="Masukan nama foto">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputFile">Masukan Foto Baru</label>
+                        <div class="input-group">
+                            <input type="file" class="form-control" name="foto_galeri" id="foto_galeri">
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+
+                    <button type="submit" class="btn btn-info">
+                        <ion-icon name="save-outline"></ion-icon>
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
     <!-- /.card-body -->

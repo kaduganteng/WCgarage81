@@ -12,9 +12,8 @@
       <div class="row mb-2">
         <div class="col-sm-6">
           <a href="{{ route('menubdg') }}">
-            <h1>Homepage Menu Caffe Garage 81 Bandung </h1>
+            <h1>Caffe Garage 81 Bandung </h1>
           </a>
-
         </div>
 
       </div>
@@ -43,8 +42,7 @@
           </div>
           <!-- /.card-header -->
           <!-- form start -->
-          <form action="{{ empty($databdg) ?  route('menubdg.store'): route('menubdg.update',$databdg->id)}}"
-            method="POST" enctype="multipart/form-data">
+          <form action="{{ empty($databdg) ?  route('menubdg.store'): route('menubdg.update',$databdg->id)}}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="card-body">
               <div class="form-group">
@@ -71,8 +69,7 @@
               </div>
               <div class="form-group">
                 <label for="exampleInputName">Nama Menu</label>
-                <input type="text" class="form-control" name="nama" id="nama" value="{{ @$databdg->nama }}"
-                  placeholder="Masukan nama menu">
+                <input type="text" class="form-control" name="nama" id="nama" value="{{ @$databdg->nama }}" placeholder="Masukan nama menu">
               </div>
               <div class="form-group">
                 <label for="exampleInputName">Keterangan</label>
@@ -82,8 +79,7 @@
               </div>
               <div class="form-group">
                 <label for="exampleInputName">Harga Menu</label>
-                <input type="text" class="form-control" name="harga" id="harga" value="{{ @$databdg->harga }}"
-                  placeholder="Masukan Harga">
+                <input type="text" class="form-control" name="harga" id="harga" value="{{ @$databdg->harga }}" placeholder="Masukan Harga">
               </div>
               <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -114,11 +110,11 @@
 @endsection
 @section('scripts')
 <script>
-    ClassicEditor
-        .create( document.querySelector( '#keterangan' ) )
-        .catch( error => {
-            console.error( error );
-        } );
+  ClassicEditor
+    .create(document.querySelector('#keterangan'))
+    .catch(error => {
+      console.error(error);
+    });
 </script>
 
 @endsection

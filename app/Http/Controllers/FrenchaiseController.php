@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\GaleriKopip;
 use App\Kopiportal;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -21,8 +22,10 @@ class FrenchaiseController extends Controller
     public function index()
     {
         $kopiportal = Kopiportal::get();
+        $gkopi = GaleriKopip::get();
         return view('admin.frenchaise.kopiportal.index', [
-            'kopiportal' => $kopiportal
+            'kopiportal' => $kopiportal,
+            'gkopi' => $gkopi
         ]);
     }
     public function create()
@@ -74,5 +77,25 @@ class FrenchaiseController extends Controller
         ]);
         Alert::success('Sukses !', 'Data Berhasil Di Edit');
         return redirect()->route('kopiportal');
+    }
+
+    public function creategal()
+    {
+        return view('admin.frenchaise.kopiportal.formgal');
+    }
+
+    public function storegal(Request $request)
+    {
+
+        $foto_kopip = $request->file('foto_kopip');
+        $nama_file = time() . "_" . $foto_kopip->getClientOriginalExtension();
+        $tujuan = 'upload/';
+        $foto_kopip->move($tujuan, $nama_file);
+        $gkopi = GaleriKopip::create([
+            'nama' => $request->nama,
+            'foto_kopip' => $nama_file
+        ]);
+        Alert::success('Sukses !', 'Data Berhasil Di Tambahkan');
+        return redirect()->back();
     }
 }

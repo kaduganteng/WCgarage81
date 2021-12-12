@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Galeribdg;
+use App\Galericmh;
 use App\KategoriMenu;
 use App\Menucaffebdg;
 use App\Menucaffecmh;
@@ -21,8 +23,10 @@ class CaffeController extends Controller
     {
 
         $menubdg = Menucaffebdg::get();
+        $gbdg = Galeribdg::get();
         return view('admin.caffe.menubdg.index', [
-            'menubdg' => $menubdg
+            'menubdg' => $menubdg,
+            'gbdg' => $gbdg
         ]);
     }
     public function create()
@@ -83,14 +87,37 @@ class CaffeController extends Controller
         return redirect()->route('menubdg');
     }
 
+
+    public function creategal()
+    {
+        return view('admin.caffe.menubdg.formgal');
+    }
+
+    public function storegal(Request $request)
+    {
+
+        $foto_bdg = $request->file('foto_bdg');
+        $nama_file = time() . "_" . $foto_bdg->getClientOriginalExtension();
+        $tujuan = 'upload/';
+        $foto_bdg->move($tujuan, $nama_file);
+        $gbdg = Galeribdg::create([
+            'nama' => $request->nama,
+            'foto_bdg' => $nama_file
+        ]);
+        Alert::success('Sukses !', 'Data Berhasil Di Tambahkan');
+        return redirect()->back();
+    }
+
     // caffe cimahi
     public function index2()
     {
         $menucmh = Menucaffecmh::get();
+        $gcmh = Galericmh::get();
         return view(
             'admin.caffe.menucmh.index',
             [
-                'menucmh' => $menucmh
+                'menucmh' => $menucmh,
+                'gcmh' => $gcmh
             ]
         );
     }
@@ -156,12 +183,23 @@ class CaffeController extends Controller
         return redirect()->route('menucmh');
     }
 
-    public function  tampilkanSession(Request $request)
+    public function creategal2()
     {
-        if ($request->session()->has('nama')) {
-            echo $request->session()->get('nama');
-        } else {
-            echo 'Tidak ada data dalam session.';
-        }
+        return view('admin.caffe.menucmh.formgal');
+    }
+
+    public function storegal2(Request $request)
+    {
+
+        $foto_cmh = $request->file('foto_cmh');
+        $nama_file = time() . "_" . $foto_cmh->getClientOriginalExtension();
+        $tujuan = 'upload/';
+        $foto_cmh->move($tujuan, $nama_file);
+        $gcmh = Galericmh::create([
+            'nama' => $request->nama,
+            'foto_bdg' => $nama_file
+        ]);
+        Alert::success('Sukses !', 'Data Berhasil Di Tambahkan');
+        return redirect()->back();
     }
 }

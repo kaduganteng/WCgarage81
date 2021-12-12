@@ -9,14 +9,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
 <style>
-  .btn{
+  .btn {
     transition: 1s;
 
   }
-.btn:hover {
-transform: rotate( 360deg);
-border-radius: 50%;
-}
+
+  .btn:hover {
+    transform: rotate(360deg);
+    border-radius: 50%;
+  }
 </style>
 <!-- ISI CONTENT ADMIN -->
 <div class="content">
@@ -36,30 +37,43 @@ border-radius: 50%;
   </section>
 
   <!-- ISI KONTEN    -->
+  <div class="card-body">
+    <div class="col-12">
+      <div class="card ">
+        <div class="card-header">
+          <h4 class="card-title">Gallery</h4>
+          <div class="card-tools">
+            <div class="input-group input-group-sm" style="width: 150px;">
+              <div class="input-group-append">
+                <a href="{{ route('menubdg.creategal') }}">
+                  <button class="btn btn-info btn-round">
+                    <ion-icon name="add-circle-outline"></ion-icon>Tambah Foto
+                  </button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+
+            @foreach ($gcmh as $g)
+            <div class="item col-sm-2">
+
+              <a href="{{ asset('upload/'. $g->foto_bdg ) }}" class="fancybox" data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
+                <img src="{{ asset('upload/'. $g->foto_bdg) }}" class="img-fluid mb-2" alt="white sample" width="200px" height="200px" />
+              </a>
+            </div>
+            @endforeach
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <section class="content">
     <div class="card">
-      <div class="card-header">
-        <h3 class="card-title">Daftar Menu Caffe</h3>
 
-        <div class="card-tools">
-          <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-            <i class="fas fa-minus"></i>
-          </button>
-          <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
-         <div class="card-tools">
-                  <div class="input-group input-group-sm" style="width: 150px;">
-                    <div class="input-group-append">
-                      <a href="{{ route('menucmh.create') }}">
-                        <button class="btn btn-info btn-round">
-                          <ion-icon name="add-circle-outline"></ion-icon>Tambah Menu
-                        </button></a>
-                    </div>
-                  </div>
-                </div>
-      </div>
       <div class="card-body">
         <div class="row">
           <div class="col-12">
@@ -78,9 +92,19 @@ border-radius: 50%;
                         <i class="fas fa-search"></i>
                       </button>
                     </div>
+                    <div class="card-tools">
+                      <div class="input-group input-group-sm" style="width: 150px;">
+                        <div class="input-group-append">
+                          <a href="{{ route('menucmh.create') }}">
+                            <button class="btn btn-info btn-round">
+                              <ion-icon name="add-circle-outline"></ion-icon>Tambah Menu
+                            </button></a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-               
+
               </div>
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0">
@@ -104,12 +128,10 @@ border-radius: 50%;
                     <tr>
                       <td>{{ $no++}}</td>
                       <td>
-                        <a href="{{ asset('upload/'. $m->foto_menu ) }}"  class="fancybox"  
-                          data-fancybox="ggblg" data-gallery="gallery"  height="50px" width="50px" >
-                           <img src="{{ asset('upload/'. $m->foto_menu) }}" class="img-fluid mb-2"
-                               alt="white sample" width="100px" height="100px"/>
+                        <a href="{{ asset('upload/'. $m->foto_menu ) }}" class="fancybox" data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
+                          <img src="{{ asset('upload/'. $m->foto_menu) }}" class="img-fluid mb-2" alt="white sample" width="100px" height="100px" />
                       </td>
-                      <td>{{ $m ->kategori_id }}</td>
+                      <td>{{ $m ->nama_kategori }}</td>
                       <td>{{ $m ->nama }}</td>
                       <td>{{ $m ->keterangan }}</td>
                       <td>{{ $m ->harga }}</td>
@@ -135,7 +157,7 @@ border-radius: 50%;
         </div>
       </div>
       <!-- /.card-body -->
-       <div class="card-footer">
+      <div class="card-footer">
         Footer
       </div>
       <!-- /.card-footer-->

@@ -8,15 +8,16 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 <style>
-    .btn{
-      transition: 1s;
-  
+    .btn {
+        transition: 1s;
+
     }
-  .btn:hover {
-  transform: rotate( 360deg);
-  border-radius: 50%;
-  }
-  </style>
+
+    .btn:hover {
+        transform: rotate(360deg);
+        border-radius: 50%;
+    }
+</style>
 <!-- ISI CONTENT ADMIN -->
 <div class="content">
 
@@ -35,30 +36,43 @@
     </section>
 
     <!-- ISI KONTEN    -->
-    <section class="content">
-        <div class="card">
-            <div class="card-header">
-                <h3 class="card-title">Daftar Menu Kopi Portal</h3>
-
-                <div class="card-tools">
-                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                        <i class="fas fa-minus"></i>
-                    </button>
-                    <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <div class="card-tools">
-                    <div class="input-group input-group-sm" style="width: 150px;">
-                        <div class="input-group-append">
-                            <a href="{{ route('kopiportal.create') }}">
-                                <button class="btn btn-info btn-round">
-                                    <ion-icon name="add-circle-outline"></ion-icon>Tambah Menu
-                                </button></a>
+    <div class="card-body">
+        <div class="col-12">
+            <div class="card ">
+                <div class="card-header">
+                    <h4 class="card-title">Gallery</h4>
+                    <div class="card-tools">
+                        <div class="input-group input-group-sm" style="width: 150px;">
+                            <div class="input-group-append">
+                                <a href="{{ route('kopiportal.creategal') }}">
+                                    <button class="btn btn-info btn-round">
+                                        <ion-icon name="add-circle-outline"></ion-icon>Tambah Foto
+                                    </button></a>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="card-body">
+                    <div class="row">
+
+                        @foreach ($gkopi as $g)
+                        <div class="item col-sm-2">
+
+                            <a href="{{ asset('upload/'. $g->foto_kopip ) }}" class="fancybox" data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
+                                <img src="{{ asset('upload/'. $g->foto_kopip) }}" class="img-fluid mb-2" alt="white sample" width="200px" height="200px" />
+                            </a>
+                        </div>
+                        @endforeach
+
+
+                    </div>
+                </div>
             </div>
+        </div>
+    </div>
+    <section class="content">
+        <div class="card">
+
             <div class="card-body">
                 <div class="row">
                     <div class="col-12">
@@ -70,17 +84,22 @@
 
                                 <div class="card-tools">
                                     <div class="input-group input-group-sm" style="width: 150px;">
-                                        <input type="text" name="table_search" class="form-control float-right"
-                                            placeholder="Search">
+                                        <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
 
                                         <div class="input-group-append">
                                             <button type="submit" class="btn btn-default">
                                                 <i class="fas fa-search"></i>
                                             </button>
                                         </div>
+                                        <div class="input-group-append">
+                                            <a href="{{ route('kopiportal.create') }}">
+                                                <button class="btn btn-info btn-round">
+                                                    <ion-icon name="add-circle-outline"></ion-icon>Tambah Menu
+                                                </button></a>
+                                        </div>
                                     </div>
                                 </div>
-                               
+
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body table-responsive p-0">
@@ -103,10 +122,8 @@
                                         <tr>
                                             <td>{{ $no++}}</td>
                                             <td>
-                                                <a href="{{ asset('upload/'. $kp->foto_menu ) }}"  class="fancybox"  
-                                                    data-fancybox="ggblg" data-gallery="gallery"  height="50px" width="50px" >
-                                                     <img src="{{ asset('upload/'. $kp->foto_menu) }}" class="img-fluid mb-2"
-                                                         alt="white sample" width="100px" height="100px"/>
+                                                <a href="{{ asset('upload/'. $kp->foto_menu ) }}" class="fancybox" data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
+                                                    <img src="{{ asset('upload/'. $kp->foto_menu) }}" class="img-fluid mb-2" alt="white sample" width="100px" height="100px" />
                                             </td>
                                             <td>{{ $kp->nama }}</td>
                                             <td>{{ $kp->keterangan }}</td>
@@ -117,8 +134,7 @@
                                                         <ion-icon name="close-circle-outline"></ion-icon>
                                                     </button></a>
 
-                                                <a href="{{  route('kopiportal.edit',$kp->id) }}"><button
-                                                        class="btn btn-success">
+                                                <a href="{{  route('kopiportal.edit',$kp->id) }}"><button class="btn btn-success">
                                                         <ion-icon name="create-outline"></ion-icon>
                                                     </button></a>
                                             </td>
