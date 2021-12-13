@@ -41,7 +41,7 @@
 
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form action="{{route('menucmh.storegal')}}" method="POST" enctype="multipart/form-data">
+                    <form action="{{route('menucmh.storegal2')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
@@ -51,7 +51,7 @@
                             <div class="form-group">
                                 <label for="exampleInputFile">Masukan Foto Baru</label>
                                 <div class="input-group">
-                                    <input type="file" class="form-control" name="foto_bdg" id="foto_bdg">
+                                    <input type="file" class="form-control" name="foto_cmh" id="foto_cmh    ">
                                 </div>
                             </div>
 

@@ -45,7 +45,7 @@
           <div class="card-tools">
             <div class="input-group input-group-sm" style="width: 150px;">
               <div class="input-group-append">
-                <a href="{{ route('menubdg.creategal') }}">
+                <a href="{{ route('menucmh.creategal2') }}">
                   <button class="btn btn-info btn-round">
                     <ion-icon name="add-circle-outline"></ion-icon>Tambah Foto
                   </button></a>
@@ -59,8 +59,8 @@
             @foreach ($gcmh as $g)
             <div class="item col-sm-2">
 
-              <a href="{{ asset('upload/'. $g->foto_bdg ) }}" class="fancybox" data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
-                <img src="{{ asset('upload/'. $g->foto_bdg) }}" class="img-fluid mb-2" alt="white sample" width="200px" height="200px" />
+              <a href="{{ asset('upload/'. $g->foto_cmh ) }}" class="fancybox" data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
+                <img src="{{ asset('upload/'. $g->foto_cmh) }}" class="img-fluid mb-2" alt="white sample" width="200px" height="200px" />
               </a>
             </div>
             @endforeach

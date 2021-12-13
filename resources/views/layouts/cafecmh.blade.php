@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="portal/css/bootstrap.css">
     <!-- Flexslider  -->
     <link rel="stylesheet" href="portal/css/flexslider.css">
-    
+
 
     <!-- Theme style  -->
     <link rel="stylesheet" href="portal/css/style.css">
@@ -62,8 +62,8 @@
                             <li class="active">
                             <li><a href="{{ route('cafecmh') }}">Home</a></li>
                             <li><a href="{{ route('cafecmh') }}">Menu</a></li>
-                            <li><a href="{{ route('cafecmh') }}">Galeri</a></li>
-                            <li><a href="{{ route('cafecmh') }}">Tentang  Kami</a></li>
+                            <li><a href="{{ route('cafecmh.galeri') }}">Galeri</a></li>
+                            <li><a href="{{ route('cafecmh') }}">Tentang Kami</a></li>
                             <li><a href="{{ route('cafecmh') }}">Kontak</a></li>
                         </ul>
                     </div>
@@ -73,67 +73,67 @@
             <!-- </div> -->
         </nav>
     </div>
-        <div class="body">
-            @yield('section')
-        </div>
-        <footer id="fh5co-footer" role="contentinfo" class="fh5co-section">
-            <div class="container">
-                <div class="row row-pb-md">
-                    <div class="col-md-4 fh5co-widget">
-                        <h4>Portal</h4>
-                        <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
-                    </div>
-                    <div class="col-md-2 col-md-push-1 fh5co-widget">
-                        <h4>Links</h4>
-                        <ul class="fh5co-footer-links">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Menu</a></li>
-                            <li><a href="#">Gallery</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-md-2 col-md-push-1 fh5co-widget">
-                        <h4>Categories</h4>
-                        <ul class="fh5co-footer-links">
-                            <li><a href="#">Landing Page</a></li>
-                            <li><a href="#">Real Estate</a></li>
-                            <li><a href="#">Personal</a></li>
-                            <li><a href="#">Business</a></li>
-                            <li><a href="#">e-Commerce</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-md-4 col-md-push-1 fh5co-widget">
-                        <h4>Contact Information</h4>
-                        <ul class="fh5co-footer-links">
-                            <li>198 West 21th Street, <br> Suite 721 New York NY 10016</li>
-                            <li><a href="tel://1234567920">+ 1235 2355 98</a></li>
-                            <li><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
-                            <li><a href="http://https://freehtml5.co">freehtml5.co</a></li>
-                        </ul>
-                    </div>
-
+    <div class="body">
+        @yield('section')
+    </div>
+    <footer id="fh5co-footer" role="contentinfo" class="fh5co-section">
+        <div class="container">
+            <div class="row row-pb-md">
+                <div class="col-md-4 fh5co-widget">
+                    <h4>Portal</h4>
+                    <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
+                </div>
+                <div class="col-md-2 col-md-push-1 fh5co-widget">
+                    <h4>Links</h4>
+                    <ul class="fh5co-footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Gallery</a></li>
+                    </ul>
                 </div>
 
-                <div class="row copyright">
-                    <div class="col-md-12 text-center">
-                        <p>
-                            <small class="block">@ Copyright Portal Manajemen 2021 @</small>
-                            <small class="block">Designed by BKK Corp</a></small>
-                        </p>
-                        <p>
-                            <ul class="fh5co-social-icons">
-                                <li><a href="#"><i class="icon-twitter2"></i></a></li>
-                                <li><a href="#"><i class="icon-facebook2"></i></a></li>
-                                <li><a href="#"><i class="icon-instagram2"></i></a></li>
-                            </ul>
-                        </p>
-                    </div>
+                <div class="col-md-2 col-md-push-1 fh5co-widget">
+                    <h4>Categories</h4>
+                    <ul class="fh5co-footer-links">
+                        <li><a href="#">Landing Page</a></li>
+                        <li><a href="#">Real Estate</a></li>
+                        <li><a href="#">Personal</a></li>
+                        <li><a href="#">Business</a></li>
+                        <li><a href="#">e-Commerce</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 col-md-push-1 fh5co-widget">
+                    <h4>Contact Information</h4>
+                    <ul class="fh5co-footer-links">
+                        <li>198 West 21th Street, <br> Suite 721 New York NY 10016</li>
+                        <li><a href="tel://1234567920">+ 1235 2355 98</a></li>
+                        <li><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
+                        <li><a href="http://https://freehtml5.co">freehtml5.co</a></li>
+                    </ul>
                 </div>
 
             </div>
-        </footer>
+
+            <div class="row copyright">
+                <div class="col-md-12 text-center">
+                    <p>
+                        <small class="block">@ Copyright Portal Manajemen 2021 @</small>
+                        <small class="block">Designed by BKK Corp</a></small>
+                    </p>
+                    <p>
+                    <ul class="fh5co-social-icons">
+                        <li><a href="#"><i class="icon-twitter2"></i></a></li>
+                        <li><a href="#"><i class="icon-facebook2"></i></a></li>
+                        <li><a href="#"><i class="icon-instagram2"></i></a></li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
     </div>
 
     <div class="gototop js-top">
