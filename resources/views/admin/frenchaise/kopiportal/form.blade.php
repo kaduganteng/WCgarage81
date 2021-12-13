@@ -43,9 +43,7 @@
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form
-                        action="{{ empty($dataportal) ?  route('kopiportal.store'): route('kopiportal.update',$dataportal->id)}}"
-                        method="POST" enctype="multipart/form-data">
+                    <form action="{{ empty($dataportal) ?  route('kopiportal.store'): route('kopiportal.update',$dataportal->id)}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
@@ -55,19 +53,37 @@
                                 </div>
                             </div>
                             <div class="form-group">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Pilih Kategori</label>
+                                    <div class="input-group">
+                                        <select name="kategori_id" class="form-control">
+                                            @if(!empty(@$databdg->kategori_id))
+                                            <option value="{{@$databdg->kategori_id}}" {{!empty($databdg->
+                                             nama_kategori)?'selected':''}}>{{$databdg->nama_kategori}}</option>
+                                            @endif
+                                            @foreach($kategori as $k)
+                                            <option value="{{$k->id}}">{{$k->nama_kategori}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
                                 <label for="exampleInputName">Nama Menu</label>
-                                <input type="text" class="form-control" name="nama" id="nama"
-                                    value="{{ @$dataportal->nama }}" placeholder="Masukan nama menu">
+                                <input type="text" class="form-control" name="nama" id="nama" value="{{ @$dataportal->nama }}" placeholder="Masukan nama menu">
                             </div>
                             <div class="form-group">
+
                                 <label for="exampleInputName">Keterangan</label>
-                                <input type="text" class="form-control" name="keterangan" id="keterangan"
-                                    value="{{ @$dataportal->keterangan }}" placeholder="Tambahkan keterangan menu">
+                                <textarea name="keterangan" id="keterangan" cols="30" rows="10">{{ empty($databdg)? '' : $databdg->keterangan }}</textarea>
+                                {{-- <input type="text" class="form-control" name="keterangan" id="keterangan"
+                                value="{{ @$databdg->keterangan }}" placeholder="Tambahkan keterangan menu"> --}}
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputName">Harga Menu</label>
-                                <input type="text" class="form-control" name="harga" id="harga"
-                                    value="{{ @$dataportal->harga }}" placeholder="Masukan Harga">
+                                <input type="text" class="form-control" name="harga" id="harga" value="{{ @$dataportal->harga }}" placeholder="Masukan Harga">
                             </div>
                             <div class="form-check">
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -94,5 +110,15 @@
 
     </section>
 </div>
+
+@endsection
+@section('scripts')
+<script>
+    ClassicEditor
+        .create(document.querySelector('#keterangan'))
+        .catch(error => {
+            console.error(error);
+        });
+</script>
 
 @endsection

@@ -22,12 +22,26 @@ Auth::routes();
 
 Route::get('/admin', 'DashboardController@index')->name('dashboard');
 
-//  Kategori menu
+//  Kategori menu Bandung
 
 Route::get('/kategorimenu', 'KategoriMenuController@index')->name('kategorimenu');
 Route::get('/kategor.create', 'KategoriMenuController@create')->name('kategorimenu.create');
 Route::post('/kategor.store', 'KategoriMenuController@store')->name('kategorimenu.store');
 Route::get('/kategor.delete.{id}', 'KategoriMenuController@destroy')->name('kategorimenu.destroy');
+
+// Kategori menu Cimahi
+
+Route::get('/kategorimenucmh', 'KategoriMenuController@index2')->name('kategorimenucmh');
+Route::get('/kategoricmh.create', 'KategoriMenuController@create2')->name('kategoricmh.create');
+Route::post('/kategoricmh.store', 'KategoriMenuController@store2')->name('kategoricmh.store');
+Route::get('/kategoricmh.delete.{id}', 'KategoriMenuController@destroy2')->name('kategoricmh.destroy');
+
+// Kategori menu kopi
+
+Route::get('/kategorimenukopi', 'KategoriMenuController@index3')->name('kategorimenukopi');
+Route::get('/kategorikopi.create', 'KategoriMenuController@create3')->name('kategorikopi.create');
+Route::post('/kategorikopi.store', 'KategoriMenuController@store3')->name('kategorikopi.store');
+Route::get('/kategorikopi.delete.{id}', 'KategoriMenuController@destroy3')->name('kategorikopi.destroy');
 
 //  Menu Bandung
 Route::get('/menubdg', 'CaffeController@index')->name('menubdg');

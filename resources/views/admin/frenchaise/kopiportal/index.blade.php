@@ -126,6 +126,7 @@
                                                     <img src="{{ asset('upload/'. $kp->foto_menu) }}" class="img-fluid mb-2" alt="white sample" width="100px" height="100px" />
                                             </td>
                                             <td>{{ $kp->nama }}</td>
+                                            <td>{{ $kp->kategori_id}}</td>
                                             <td>{{ $kp->keterangan }}</td>
                                             <td>{{ $kp->harga }}</td>
                                             <td>

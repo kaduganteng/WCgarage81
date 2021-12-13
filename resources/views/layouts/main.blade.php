@@ -209,13 +209,13 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="/#" class="nav-link">
+                    <a href="{{ route('kategorimenucmh') }}" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Caffe 81 Cimahi</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="/#" class="nav-link">
+                    <a href="{{route('kategorimenukopi')}}" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Kopi Portal</p>
                     </a>

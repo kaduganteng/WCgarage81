@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\GaleriKopip;
+use App\Katagorikopi;
 use App\Kopiportal;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -30,7 +31,13 @@ class FrenchaiseController extends Controller
     }
     public function create()
     {
-        return view('admin.frenchaise.kopiportal.form');
+        $kategori = Katagorikopi::all();
+        return view(
+            'admin.frenchaise.kopiportal.form',
+            [
+                'kategori' => $kategori
+            ]
+        );
     }
 
     public function store(Request $request)
