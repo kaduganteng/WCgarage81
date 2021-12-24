@@ -102,9 +102,16 @@ Route::get('/statistik', 'StatistikController@index')->name('statistik');
 
 
 // Route FrontEnd
+
 Route::get('/', 'Landingportalcontroller@index')->name('landing');
 Route::get('/about', 'AboutController@index')->name('aboutportal');
 Route::get('/contact', 'ContactController@index')->name('contactportal');
+
+//Route Caffe Bandung
 Route::get('/cafe81', 'Cafe81Controller@index')->name('cafe81');
+Route::get('/cafebdg.menu', 'Cafe81Controller@menubdg')->name('menubdg');
+//Route Caffe Cimahi 
 Route::get('/cafecmh', 'CafecmhController@index')->name('cafecmh');
+Route::get('/cafecmh.menu', 'CafecmhController@menucmh')->name('menucmh');
+
 Route::get('/koportal', 'KopiportalController@index')->name('kopiprt');

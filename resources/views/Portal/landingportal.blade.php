@@ -1,6 +1,15 @@
 @extends('layouts.app')
 @section('section')
-<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url(../images/frn.png);" data-stellar-background-ratio="0.5">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+
+</head>
+
+
+<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner"
+    style="background-image: url(../images/frn.png);" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="col-md-12 text-center">
         <div class="display-t js-fullheight">
@@ -66,15 +75,17 @@
         <input type="radio" name="radio-btn" id="radio6">
         <!--radio button end-->
         <!--slide image mulai-->
-        <div class="slide first">
-            <img src="/images/prt.png" alt="">
+        <div class="slide first lg">
             <div class="container">
                 <div class="slide">
-                    <img src="/images/nkg.png" alt="">
-                    <img src="/images/prt.png" alt="">
-                    <img src="/images/frn.png" alt="">
-                    <img src="/images/cmh.png" alt="">
-                    <img src="/images/prt.png" alt="">
+                    @foreach ($galeri as $g)
+                    <a href="{{ asset('upload/'. $g->foto_galeri ) }}" class="fancybox" data-fancybox="ggblg"
+                        data-gallery="gallery" height="50px" width="50px">
+                        <img src="{{ asset('upload/'. $g->foto_galeri) }}" class="img-fluid mb-2" alt="white sample"
+                            width="200px" height="200px" />
+                    </a>
+                    @endforeach
+
                 </div>
             </div>
         </div>
@@ -122,10 +133,15 @@
 </div>
 <div class="container">
     <div class="gmaps">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7921.6054720103775!2d107.6169909!3d-6.9141736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e71d2ba0ef41%3A0x3b67257e4e181cce!2sGarasi%2081%20Bandung!5e0!3m2!1sid!2sid!4v1638942961908!5m2!1sid!2sid" width="900" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7921.6054720103775!2d107.6169909!3d-6.9141736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e71d2ba0ef41%3A0x3b67257e4e181cce!2sGarasi%2081%20Bandung!5e0!3m2!1sid!2sid!4v1638942961908!5m2!1sid!2sid"
+            width="900" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 </div>
 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
 
 @endsection
