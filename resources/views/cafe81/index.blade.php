@@ -1,7 +1,11 @@
 @extends('layouts.cafebdg')
 @section('section')
+<<<<<<< HEAD
+<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url(images/hero_1.jpeg);" data-stellar-background-ratio="0.5">
+=======
 <header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner"
     style="background-image: url(images/hero_1.jpeg);" data-stellar-background-ratio="0.5">
+>>>>>>> ef4aa12a4fbe48a4bf94982e0dbf26c055af4243
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
@@ -10,7 +14,20 @@
                     <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
                         <h1>Garage 81 Bandung</h1>
                         <div class="h2tagline">
-                            <h2>Cafe</h2>
+                        <h2>Cafe</h2>
+                        
+    <header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner"
+        style="background-image: url(images/hero_1.jpeg);" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="display-t js-fullheight">
+                        <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
+                            <h1>Our Product</h1>
+                            <div class="h2tagline">
+                                <h2>Cafe</h2>
+                            </div>
                         </div>
                     </div>
                 </div>

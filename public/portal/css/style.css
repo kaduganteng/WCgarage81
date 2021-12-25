@@ -206,7 +206,7 @@ body {
 }
 
 .produk h2 {
-    font-size: 1.5em;
+    font-size: 1.4em;
     margin-bottom: 10px;
     margin-top: 20px;
     color: #ffc069;
@@ -255,6 +255,10 @@ body {
 .mapsh2 h2 {
     margin-top: 70px;
     color: #ffc069;
+}
+
+.menuspesial {
+    margin-top: 200px;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2),
@@ -653,7 +657,7 @@ figure {
 #fh5co-header .display-tc h2,
 .fh5co-cover .display-tc h2 {
     font-size: 30px;
-    line-height: 1.5;
+    line-height: 1.1;
     margin-bottom: 30px;
     font-style: italic;
 }
@@ -765,7 +769,7 @@ figure {
 .fh5co-section p {
     color: #ffffff;
     font-size: 20px;
-    line-height: 1.5;
+    line-height: 1.1;
     align-items: baseline;
     text-align: justify;
 }
@@ -828,8 +832,8 @@ figure {
 #fh5co-featured-menu .fh5co-item-wrap,
 #fh5co-gallery .fh5co-item-wrap,
 #fh5co-reservation-form .fh5co-item-wrap {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 #fh5co-featured-menu .fh5co-item,
@@ -837,7 +841,6 @@ figure {
 #fh5co-reservation-form .fh5co-item {
     float: left;
     width: 100%;
-    background: rgb(102, 102, 102);
 }
 
 #fh5co-featured-menu .fh5co-item.margin_top,
@@ -864,9 +867,9 @@ figure {
 #fh5co-featured-menu .fh5co-item .fh5co-price,
 #fh5co-gallery .fh5co-item .fh5co-price,
 #fh5co-reservation-form .fh5co-item .fh5co-price {
-    font-style: 20px;
+    font-style: 30px;
     color: #fee856;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-size: 30px;
     display: block;
 }
@@ -875,6 +878,18 @@ figure {
 #fh5co-gallery .fh5co-item img,
 #fh5co-reservation-form .fh5co-item img {
     margin-bottom: 30px;
+    border-end-end-radius: 7%;
+    border-top-left-radius: 7%;
+    border-top-right-radius: 7%;
+    border-end-start-radius: 7%;
+}
+
+.fh5co-item img:hover {
+    -webkit-transform: scale(1.1) rotate(0deg);
+    -moz-transform: scale(1.1) rotate(0deg);
+    -o-transform: scale(1.1) rotate(0deg);
+    -ms-transform: scale(1.1) rotate(0deg);
+    transform: scale(1.1) rotate(0deg)
 }
 
 #fh5co-gallery .fh5co-gallery_item {
@@ -989,7 +1004,7 @@ figure {
 
 #fh5co-slider-wrwap {
     height: 500px !important;
-    background: no-repeat center center;
+    background: url(../images/loader.gif) no-repeat center center;
 }
 
 #fh5co-slider-wrwap .btn {
@@ -1013,32 +1028,37 @@ figure {
 }
 
 #fh5co-slider-wrwap .flexslider {
-    place-content: center;
-    border-radius: 20%;
-    height: 500px;
-    width: 700px;
-    background-repeat: none;
-    background-size: 50%;
-    background-position: center;
-    margin-right: 0px;
+    border: none;
+    z-index: 1;
+    margin-bottom: 0;
+}
+
+#fh5co-slider-wrwap .flexslider .slides {
+    position: relative;
+}
+
+#fh5co-slider-wrwap .flexslider .slides li {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    height: 600px !important;
     position: relative;
 }
 
 #fh5co-slider-wrwap .flexslider .flex-control-nav {
-    top: -50px !important;
+    top: -30px !important;
     z-index: 1000;
     right: 0;
     float: right;
     width: auto;
-    align-content: center;
 }
 
 #fh5co-slider-wrwap .flexslider .flex-control-nav li {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 #fh5co-slider-wrwap .flexslider .flex-control-nav li a {
-    background: #ffffff;
+    background: #e6937a;
     box-shadow: none;
     width: 12px;
     height: 12px;
@@ -1067,7 +1087,7 @@ figure {
 }
 
 #fh5co-slider-wrwap .flexslider .slider-text-bg .desc {
-    margin-top: 5em;
+    margin-top: 9em;
     padding: 2em;
     background: transparent;
 }
@@ -1079,17 +1099,12 @@ figure {
 }
 
 #fh5co-slider-wrwap .flexslider .slider-text-bg .desc h2 {
-    text-decoration: none;
-    border-bottom: 2px solid #ea272d;
-    display: inline-block;
-    margin-bottom: 1em;
-    color: rgb(255, 255, 255) !important;
+    color: #fff !important;
 }
 
 @media screen and (max-width: 768px) {
     #fh5co-slider-wrwap .flexslider .slider-text-bg .desc p {
         display: none;
-        font-size: 14px !important;
     }
 }
 
@@ -1121,7 +1136,7 @@ figure {
 #fh5co-content-section,
 #fh5co-contact,
 #fh5co-footer {
-    padding: 10em 0;
+    padding: 7em 0;
     clear: both;
 }
 
@@ -1205,7 +1220,7 @@ figure {
 }
 
 #fh5co-started .fh5co-heading p {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 1.1);
     font-size: 20px;
 }
 
@@ -1587,13 +1602,13 @@ figure {
 .fh5co-blog .blog-text h3 {
     font-size: 24px;
     margin-bottom: 20px;
-    line-height: 1.5;
+    line-height: 1.1;
 }
 
 .h2tagline {
     font-size: 25px;
     margin-top: 10px;
-    line-height: 1.5;
+    line-height: 1.1;
     color: #d43f3a;
 }
 
@@ -1739,7 +1754,7 @@ figure {
 .fh5co-team>div p,
 .fh5co-team blockquote p {
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.1;
     color: #555555;
 }
 
@@ -1871,7 +1886,7 @@ figure {
 }
 
 #fh5co-offcanvas a:hover {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 1.1);
 }
 
 #fh5co-offcanvas ul {
