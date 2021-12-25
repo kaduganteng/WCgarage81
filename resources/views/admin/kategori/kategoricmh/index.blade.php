@@ -3,18 +3,6 @@
 @section('content')
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-<style>
-    .btn {
-        transition: 1s;
-
-    }
-
-    .btn:hover {
-        transform: rotate(360deg);
-        border-radius: 50;
-    }
-</style>
 <!-- ISI CONTENT ADMIN -->
 <div class="content">
 
@@ -46,12 +34,9 @@
                 </div>
                 <div class="card-tools">
                     <div class="input-group input-group-sm" style="width: 150px;">
-                        <div class="input-group-append">
-                            <a href="{{ route('kategoricmh.create') }}">
-                                <button class="btn btn-info btn-round">
-                                    Tambah Kategori
-                                </button></a>
-                        </div>
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+                            Tambah kategori
+                        </button>
                     </div>
                 </div>
             </div>
@@ -66,7 +51,8 @@
 
                                 <div class="card-tools">
                                     <div class="input-group input-group-sm" style="width: 150px;">
-                                        <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+                                        <input type="text" name="table_search" class="form-control float-right"
+                                            placeholder="Search">
 
                                         <div class="input-group-append">
                                             <button type="submit" class="btn btn-default">
@@ -120,7 +106,29 @@
             <!-- /.card-footer-->
         </div>
         <!-- /.card -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Masukan Kategori Baru</h5>
+                    </div>
+                    <div class="modal-body">
+                        <form action="{{ route('kategoricmh.store')}}" method="POST">
+                            @csrf
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="kategori" id="kategori"
+                                    placeholder="Masukan Kategori Baru">
+                            </div>
 
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>
+                        <button type="sumbit" class="btn btn-info">Simpan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 </div>
 
