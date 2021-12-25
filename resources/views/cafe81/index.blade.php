@@ -8,7 +8,7 @@
             <div class="col-md-12 text-center">
                 <div class="display-t js-fullheight">
                     <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-                        <h1>Garage 81 Cimahi</h1>
+                        <h1>Garage 81 Bandung</h1>
                         <div class="h2tagline">
                             <h2>Cafe</h2>
                         </div>
