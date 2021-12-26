@@ -110,51 +110,51 @@
                 <aside id="fh5co-slider-wrwap">
                     <div class="flexslider">
                         <ul class="slides">
-                            <li style="background-image: url(images/jagon.jpg);">
+                            <li style="background-image: url(images/kentang.jpg);">
                                 <div class="overlay-gradient"></div>
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-md-6 col-md-offset-0 col-md-pull-3 slider-text slider-text-bg">
+                                        <div class="col-md-12 col-md-offset-0 col-md-pull-10 slider-text slider-text-bg">
                                             <div class="slider-text-inner">
                                                 <div class="desc">
                                                     <h2>Crab <em>with</em> Curry Sources</h2>
                                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt eveniet quae, numquam magnam doloribus eligendi ratione rem, consequatur quos natus voluptates est totam magni! Nobis a temporibus,
                                                         ipsum repudiandae dolorum.</p>
-                                                    <p><a href="#" class="btn btn-primary btn-outline">Learn More</a></p>
+                                                    <p><a href="#" class="btn btn-primary btn-outline">Lihat</a></p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </li>
-                            <li style="background-image: url(images/kenang.jpg);">
+                            <li style="background-image: url(images/jagong.jpg);">
                                 <div class="overlay-gradient"></div>
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-md-6 col-md-offset-0 col-md-pull-3 slider-text slider-text-bg">
+                                        <div class="col-md-12 col-md-offset-0 col-md-pull-10 slider-text slider-text-bg">
                                             <div class="slider-text-inner">
                                                 <div class="desc">
                                                     <h2>Tuna <em>&amp;</em> Roast Beef</h2>
                                                     <p>Ink is a free html5 bootstrap and a multi-purpose template perfect for any type of websites. A combination of a minimal and modern design template. The features are big slider on homepage, smooth
                                                         animation, product listing and many more</p>
-                                                    <p><a href="#" class="btn btn-primary btn-outline">Learn More</a></p>
+                                                    <p><a href="#" class="btn btn-primary btn-outline">Lihat</a></p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </li>
-                            <li style="background-image: url(images/ayalada.jpg);">
+                            <li style="background-image: url(images/ayamlada.jpg);">
                                 <div class="overlay-gradient"></div>
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-md-6 col-md-offset-0 col-md-pull-3 slider-text slider-text-bg">
+                                        <div class="col-md-12 col-md-offset-0 col-md-pull-10 slider-text slider-text-bg">
                                             <div class="slider-text-inner">
                                                 <div class="desc">
                                                     <h2>Egg <em>with</em> Mushroom</h2>
                                                     <p>Ink is a free html5 bootstrap and a multi-purpose template perfect for any type of websites. A combination of a minimal and modern design template. The features are big slider on homepage, smooth
                                                         animation, product listing and many more</p>
-                                                    <p><a href="#" class="btn btn-primary btn-outline">Learn More</a></p>
+                                                    <p><a href="#" class="btn btn-primary btn-outline">Lihat</a></p>
                                                 </div>
                                             </div>
                                         </div>

@@ -40,7 +40,7 @@ body {
     overflow-x: hidden;
 }
 
-.slides {
+.slidas {
     width: 1000px;
     height: 520px;
     place-content: center;
@@ -944,7 +944,7 @@ figure {
 }
 
 #fh5co-featured-testimony .fh5co-heading h2 {
-    color: #fff;
+    color: #ffc069;
     font-family: "Satisfy", cursive;
 }
 
@@ -998,8 +998,7 @@ figure {
 
 #fh5co-slider .fh5co-heading h2 {
     font-family: "Satisfy", cursive;
-    font-size: 35px;
-    color: rgb(238, 195, 1);
+    color: #ffc069;
 }
 
 #fh5co-slider-wrwap {
@@ -1019,8 +1018,6 @@ figure {
     border: none;
     z-index: 1;
     margin-bottom: 0;
-    height: 500px;
-    width: 700px;
 }
 
 #fh5co-slider-wrwap .flexslider {
@@ -1042,6 +1039,7 @@ figure {
     background-size: cover;
     background-position: top center;
     height: 600px !important;
+    border-radius: 7%;
     position: relative;
 }
 
@@ -1058,7 +1056,7 @@ figure {
 }
 
 #fh5co-slider-wrwap .flexslider .flex-control-nav li a {
-    background: #e6937a;
+    background: #ea272d;
     box-shadow: none;
     width: 12px;
     height: 12px;
@@ -1094,12 +1092,12 @@ figure {
 
 @media screen and (max-width: 992px) {
     #fh5co-slider-wrwap .flexslider .slider-text-bg .desc {
-        background: #000;
+        background: none;
     }
 }
 
 #fh5co-slider-wrwap .flexslider .slider-text-bg .desc h2 {
-    color: #fff !important;
+    color: #ec4848;
 }
 
 @media screen and (max-width: 768px) {
@@ -2137,16 +2135,16 @@ figure {
 }
 
 .btn-primary {
-    background: #ea272d;
+    background: #ffffff;
     color: #fff;
-    border: 2px solid #ea272d;
+    border: 2px solid #00c90a;
 }
 
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-    background: #ec3e44 !important;
-    border-color: #ec3e44 !important;
+    background: #ffc069 !important;
+    border-color: #a45d5d !important;
 }
 
 .btn-primary.btn-outline {
@@ -2159,14 +2157,14 @@ figure {
     text-transform: uppercase;
     font-size: 14px !important;
     letter-spacing: 1px;
-    border: 2px solid #ea272d;
+    border: 2px solid #a45d5d;
 }
 
 .btn-primary.btn-outline:hover,
 .btn-primary.btn-outline:focus,
 .btn-primary.btn-outline:active {
-    background: #ea272d;
-    color: #fff;
+    background: #a45d5d;
+    color: rgb(0, 0, 0);
 }
 
 .btn-success {
