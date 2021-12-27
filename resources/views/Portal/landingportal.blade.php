@@ -1,13 +1,6 @@
 @extends('layouts.app')
 @section('section')
-
-<head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
-
-</head>
-
-
+<header>
 <header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner"
     style="background-image: url(../images/frn.png);" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
@@ -65,7 +58,7 @@
 </div>
 </div>
 <div class="slider">
-    <div class="slides">
+    <div class="slidas">
         <!--radio button start-->
         <input type="radio" name="radio-btn" id="radio1">
         <input type="radio" name="radio-btn" id="radio2">
