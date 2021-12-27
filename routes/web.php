@@ -110,8 +110,11 @@ Route::get('/contact', 'ContactController@index')->name('contactportal');
 //Route Caffe Bandung
 Route::get('/cafe81', 'Cafe81Controller@index')->name('cafe81');
 Route::get('/cafebdg.menu', 'Cafe81Controller@menubdg')->name('menubdgfe');
+Route::get('/cafebdg.galeri', 'Cafe81Controller@galeribdg')->name('galeribdgfe');
+
 //Route Caffe Cimahi 
 Route::get('/cafecmh', 'CafecmhController@index')->name('cafecmh');
 Route::get('/cafecmh.menu', 'CafecmhController@menucmh')->name('menucmhfe');
 
 Route::get('/koportal', 'KopiportalController@index')->name('kopiprt');
+Route::get('/koportal.menu', 'KopiportalController@menuportal')->name('menukopiprt');
