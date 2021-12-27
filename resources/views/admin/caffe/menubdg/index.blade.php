@@ -46,7 +46,6 @@
 
             @foreach ($gbdg as $g)
             <div class="item col-sm-2">
-
               <a href="{{ asset('upload/'. $g->foto_bdg ) }}" class="fancybox" data-fancybox="ggblg"
                 data-gallery="gallery" height="50px" width="50px">
                 <img src="{{ asset('upload/'. $g->foto_bdg) }}" class="img-fluid mb-2" alt="white sample" width="200px"

@@ -27,11 +27,11 @@ class Cafe81Controller extends Controller
     }
     public function galeribdg()
     {
-        $galeribdgfe = Galeribdg::get();
+        $galeribdg = Galeribdg::get();
         return view(
             'cafe81.galeribdg',
             [
-                'galeribdgfe' => $galeribdgfe
+                'galeribdg' => $galeribdg
             ]
         );
     }

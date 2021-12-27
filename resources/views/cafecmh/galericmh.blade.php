@@ -1,4 +1,4 @@
-@extends('layouts.cafebdg')
+@extends('layouts.cafecmh')
 @section('section')
 
 <head>
@@ -38,7 +38,7 @@
         <div id="fh5co-featured-menu" class="fh5co-section">
             <div class="container">
                 <div class="row">
-                    @foreach ($galeribdg as $g)
+                    @foreach ($galericmh as $g)
                     <div class="item col-sm-2">
                         <a href="{{ asset('upload/'. $g->foto_bdg ) }}" class="fancybox" data-fancybox="ggblg"
                             data-gallery="gallery" height="100px" width="100px">

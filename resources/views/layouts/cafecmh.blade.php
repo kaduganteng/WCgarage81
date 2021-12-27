@@ -65,7 +65,7 @@
                             <li class="active">
                             <li><a href="{{ route('cafecmh') }}">Home</a></li>
                             <li><a href="{{ route('menucmhfe') }}">Menu</a></li>
-                            <li><a href="{{ route('cafecmh') }}">Galeri</a></li>
+                            <li><a href="{{ route('galericmhfe') }}">Galeri</a></li>
                             <li><a href="{{ route('cafecmh') }}">Tentang Kami</a></li>
                             <li><a href="{{ route('cafecmh') }}">Kontak</a></li>
                         </ul>
