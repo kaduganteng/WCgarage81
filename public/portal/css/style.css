@@ -775,7 +775,7 @@ figure {
 }
 
 .section-heading {
-    margin-top: 60px;
+    margin-top: 30px;
     width: 100%;
     float: left;
     margin-bottom: 50px;
@@ -804,7 +804,7 @@ figure {
 
 @media screen and (max-width: 992px) {
     #fh5co-about .img-wrap img {
-        max-width: 50%;
+        max-width: 70%;
     }
 }
 
@@ -1508,7 +1508,8 @@ figure {
 #fh5co-blog .fh5co-heading h2,
 #fh5co-contact .fh5co-heading h2 {
     font-family: "Satisfy", cursive;
-    color: #fff;
+    color: #ffc069;
+    text-align: center;
 }
 
 .fh5co-blog {
@@ -1554,7 +1555,7 @@ figure {
     transition: 0.3s;
 }
 
-.fh5co-blog .blog-text span {
+.fh5co-blog .blog-text span .p {
     display: inline-block;
     margin-bottom: 20px;
     font-size: 14px !important;
@@ -1564,7 +1565,7 @@ figure {
 .fh5co-blog .blog-text .stuff {
     margin: 0;
     padding: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(248, 11, 11, 0.05);
     padding-top: 20px;
 }
 
@@ -1572,7 +1573,7 @@ figure {
     list-style: none;
     display: inline-block;
     margin-left: 10px;
-    color: #fff;
+    color: #e24040;
 }
 
 .fh5co-blog .blog-text .stuff li:first-child {
@@ -1591,7 +1592,7 @@ figure {
 .fh5co-blog .blog-text .stuff li i {
     margin-top: 7px;
     margin-right: 5px;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(211, 58, 58, 0.877);
     float: left;
     font-size: 14px;
     padding-right: 5px;
@@ -1611,7 +1612,8 @@ figure {
 }
 
 .fh5co-blog .blog-text h3 a {
-    color: white;
+    color: #d43f3a;
+    text-align: center;
 }
 
 .fh5co-portfolio {
