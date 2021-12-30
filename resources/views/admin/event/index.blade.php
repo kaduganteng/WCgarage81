@@ -7,7 +7,8 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="adminlte/plugins/fontawesome-free/css/all.min.css">
     <!-- Ekko Lightbox -->
@@ -43,24 +44,29 @@
             </button>
         </div>
     </div>
-
     <div class="card-body">
         <div class="col-12">
             <div class="card ">
                 <div class="card-header">
-                    <h4 class="card-title">Gallery Event</h4>
+                    <h4 class="card-title">Gallery</h4>
                     <div class="card-tools">
 
+                        <button type="button" class="btn btn-info" data-toggle="modal"
+                            data-target="#exampleModalgaleri">
+                            Tambah Foto
+                        </button>
                     </div>
                 </div>
                 <div class="card-body">
                     <div class="row">
 
-                        @foreach ($event as $e)
+                        @foreach ($event as $g)
                         <div class="item col-sm-2">
 
-                            <a href="{{ asset('upload/'. $e->foto_event ) }}" class="fancybox" data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
-                                <img src="{{ asset('upload/'. $e->foto_event) }}" class="img-fluid mb-2" alt="white sample" width="200px" height="200px" />
+                            <a href="{{ asset('upload/'. $g->foto_event ) }}" class="fancybox" data-fancybox="ggblg"
+                                data-gallery="gallery" height="50px" width="50px">
+                                <img src="{{ asset('upload/'. $g->foto_event) }}" class="img-fluid mb-2"
+                                    alt="white sample" width="200px" height="200px" />
                             </a>
                         </div>
                         @endforeach
@@ -71,19 +77,24 @@
             </div>
         </div>
     </div>
-    <div class="card-body">
-        <div class="card ">
-            <div class="card-header">
-                <h3 class="card-title">Tambah Foto </h3>
+    <!-- /.card-body -->
+    <div class="card-footer">
+        Footer
+    </div>
+    <!-- /.card-footer-->
+</div>
+<div class="modal fade" id="exampleModalgaleri" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Masukan Foto Baru</h5>
             </div>
-            <!-- /.card-header -->
-            <!-- form start -->
-            <form action="{{ route('event.store')}}" method="POST" enctype="multipart/form-data">
-                @csrf
-                <div class="card-body">
+            <div class="modal-body">
+                <form action="{{route('event.store')}}" method="POST" enctype="multipart/form-data">
+                    @csrf
                     <div class="form-group">
                         <label for="exampleInputName">Masukan Nama Foto</label>
-                        <input type="text" class="form-control" name="nama" id="nama" placeholder="Masukan nama foto">
+                        <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama foto">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputFile">Masukan Foto Baru</label>
@@ -91,26 +102,16 @@
                             <input type="file" class="form-control" name="foto_event" id="foto_event">
                         </div>
                     </div>
+                    <button type="sumbit" class="btn btn-info">Simpan</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
 
-                </div>
-                <!-- /.card-body -->
-
-                <div class="card-footer">
-
-                    <button type="submit" class="btn btn-primary">
-                        <ion-icon name="save-outline"></ion-icon>
-                    </button>
-                </div>
-            </form>
+            </div>
         </div>
     </div>
-    <!-- /.card-body -->
-    <div class="card-footer">
-        Footer
-    </div>
-    <!-- /.card-footer-->
 </div>
-
 <!-- jQuery -->
 <script src="adminlte/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap -->
