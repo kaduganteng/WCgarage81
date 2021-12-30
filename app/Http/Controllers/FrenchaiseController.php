@@ -22,11 +22,13 @@ class FrenchaiseController extends Controller
 
     public function index()
     {
+        $kategori = Katagorikopi::all();
         $kopiportal = Kopiportal::get();
         $gkopi = GaleriKopip::get();
         return view('admin.frenchaise.kopiportal.index', [
             'kopiportal' => $kopiportal,
-            'gkopi' => $gkopi
+            'gkopi' => $gkopi,
+            'kategori' => $kategori
         ]);
     }
     public function create()

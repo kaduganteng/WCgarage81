@@ -115,7 +115,7 @@
               {{ Auth::user()->name }} <span class="caret"></span>
             </a>
           </div>
-        </div>
+        </div>\
 
         <!-- SidebarSearch Form -->
         <div class="form-inline">
@@ -173,7 +173,7 @@
               <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-edit"></i>
                 <p>
-                  Caffe Garage 81
+                  Menu
                   <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
@@ -202,7 +202,7 @@
               <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-edit"></i>
                 <p>
-                  Kategori Menu Caffe 81
+                  Kategori
                   <i class="fas fa-angle-left right"></i>
                 </p>
               </a>

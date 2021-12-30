@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateKopiportalTable extends Migration
+class CreateSaranTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateKopiportalTable extends Migration
      */
     public function up()
     {
-        Schema::create('kopiportal', function (Blueprint $table) {
+        Schema::create('saran', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('foto_menu')->nullable();
-            $table->string('kategori_id');
             $table->string('nama');
-            $table->string('keterangan');
-            $table->string('harga');
+            $table->string('email');
+            $table->string('saran');
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ class CreateKopiportalTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kopiportal');
+        Schema::dropIfExists('saran');
     }
 }

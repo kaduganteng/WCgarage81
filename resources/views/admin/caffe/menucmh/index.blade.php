@@ -120,7 +120,7 @@
                       </td>
                       <td>{{ $m ->nama_kategori }}</td>
                       <td>{{ $m ->nama }}</td>
-                      <td>{{ $m ->keterangan }}</td>
+                      <td>{!! $m ->keterangan !!}</td>
                       <td>{{ $m ->harga }}</td>
                       <td>
                         <a href="{{ route('menucmh.destroy',$m->id) }}">

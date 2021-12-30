@@ -119,12 +119,12 @@
                                 <input type="text" class="form-control" name="kategori" id="kategori"
                                     placeholder="Masukan Kategori Baru">
                             </div>
-
+                            <button type="sumbit" class="btn btn-info">Simpan</button>
                         </form>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>
-                        <button type="sumbit" class="btn btn-info">Simpan</button>
+
                     </div>
                 </div>
             </div>

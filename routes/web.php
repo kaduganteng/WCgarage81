@@ -106,6 +106,9 @@ Route::get('/statistik', 'StatistikController@index')->name('statistik');
 Route::get('/', 'Landingportalcontroller@index')->name('landing');
 Route::get('/about', 'AboutController@index')->name('aboutportal');
 Route::get('/contact', 'ContactController@index')->name('contactportal');
+Route::post('/contact.store', 'ContactController@store')->name('contactportal.store');
+Route::get('/contact.delete.{id}', 'ContactController@destroy')->name('contactportal.destroy');
+
 
 //Route Caffe Bandung
 Route::get('/cafe81', 'Cafe81Controller@index')->name('cafe81');

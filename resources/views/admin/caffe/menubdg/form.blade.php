@@ -42,7 +42,8 @@
           </div>
           <!-- /.card-header -->
           <!-- form start -->
-          <form action="{{ empty($databdg) ?  route('menubdg.store'): route('menubdg.update',$databdg->id)}}" method="POST" enctype="multipart/form-data">
+          <form action="{{ empty($databdg) ?  route('menubdg.store'): route('menubdg.update',$databdg->id)}}"
+            method="POST" enctype="multipart/form-data">
             @csrf
             <div class="card-body">
               <div class="form-group">
@@ -69,17 +70,20 @@
               </div>
               <div class="form-group">
                 <label for="exampleInputName">Nama Menu</label>
-                <input type="text" class="form-control" name="nama" id="nama" value="{{ @$databdg->nama }}" placeholder="Masukan nama menu">
+                <input type="text" class="form-control" name="nama" id="nama" value="{{ @$databdg->nama }}"
+                  placeholder="Masukan nama menu">
               </div>
               <div class="form-group">
                 <label for="exampleInputName">Keterangan</label>
-                <textarea name="keterangan" id="keterangan" cols="30" rows="10">{{ empty($databdg)? '' : $databdg->keterangan }}</textarea>
+                <textarea name="keterangan" id="keterangan" cols="30"
+                  rows="10">{{ empty($databdg)? '' : $databdg->keterangan }}</textarea>
                 {{-- <input type="text" class="form-control" name="keterangan" id="keterangan"
                   value="{{ @$databdg->keterangan }}" placeholder="Tambahkan keterangan menu"> --}}
               </div>
               <div class="form-group">
                 <label for="exampleInputName">Harga Menu</label>
-                <input type="text" class="form-control" name="harga" id="harga" value="{{ @$databdg->harga }}" placeholder="Masukan Harga">
+                <input type="text" class="form-control" name="harga" id="harga" value="{{ @$databdg->harga }}"
+                  placeholder="Masukan Harga">
               </div>
               <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
