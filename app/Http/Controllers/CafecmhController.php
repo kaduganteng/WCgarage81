@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Galericmh;
 use App\Menucaffecmh;
 use Illuminate\Http\Request;
 
@@ -20,5 +21,14 @@ class CafecmhController extends Controller
                 'menucmh' => $menucmh
             ]
         );
+    }
+
+    public function galericmh()
+    {
+        $galericmh = Galericmh::get();
+        return view('cafecmh.galericmh', [
+
+            'galericmh' => $galericmh
+        ]);
     }
 }

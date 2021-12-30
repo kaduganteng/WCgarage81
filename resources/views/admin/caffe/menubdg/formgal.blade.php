@@ -46,7 +46,8 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="exampleInputName">Masukan Nama Foto</label>
-                                <input type="text" class="form-control" name="nama" id="nama" placeholder="Masukan nama foto">
+                                <input type="text" class="form-control" name="nama" id="nama"
+                                    placeholder="Masukan nama foto">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputFile">Masukan Foto Baru</label>
@@ -57,9 +58,7 @@
 
                         </div>
                         <!-- /.card-body -->
-
                         <div class="card-footer">
-
                             <button type="submit" class="btn btn-primary">
                                 <ion-icon name="save-outline"></ion-icon>Selesai
                             </button>

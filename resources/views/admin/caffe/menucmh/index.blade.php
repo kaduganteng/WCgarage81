@@ -8,17 +8,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
-<style>
-  .btn {
-    transition: 1s;
-
-  }
-
-  .btn:hover {
-    transform: rotate(360deg);
-    border-radius: 50%;
-  }
-</style>
 <!-- ISI CONTENT ADMIN -->
 <div class="content">
 
@@ -44,12 +33,9 @@
           <h4 class="card-title">Gallery</h4>
           <div class="card-tools">
             <div class="input-group input-group-sm" style="width: 150px;">
-              <div class="input-group-append">
-                <a href="{{ route('menubdg.creategal') }}">
-                  <button class="btn btn-info btn-round">
-                    <ion-icon name="add-circle-outline"></ion-icon>Tambah Foto
-                  </button></a>
-              </div>
+              <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalgaleri">
+                Tambah Foto
+              </button>
             </div>
           </div>
         </div>
@@ -59,8 +45,10 @@
             @foreach ($gcmh as $g)
             <div class="item col-sm-2">
 
-              <a href="{{ asset('upload/'. $g->foto_bdg ) }}" class="fancybox" data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
-                <img src="{{ asset('upload/'. $g->foto_bdg) }}" class="img-fluid mb-2" alt="white sample" width="200px" height="200px" />
+              <a href="{{ asset('upload/'. $g->foto_cmh ) }}" class="fancybox" data-fancybox="ggblg"
+                data-gallery="gallery" height="50px" width="50px">
+                <img src="{{ asset('upload/'. $g->foto_cmh) }}" class="img-fluid mb-2" alt="white sample" width="200px"
+                  height="200px" />
               </a>
             </div>
             @endforeach
@@ -94,12 +82,9 @@
                     </div>
                     <div class="card-tools">
                       <div class="input-group input-group-sm" style="width: 150px;">
-                        <div class="input-group-append">
-                          <a href="{{ route('menucmh.create') }}">
-                            <button class="btn btn-info btn-round">
-                              <ion-icon name="add-circle-outline"></ion-icon>Tambah Menu
-                            </button></a>
-                        </div>
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalmenu">
+                          Tambah Menu
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -128,8 +113,10 @@
                     <tr>
                       <td>{{ $no++}}</td>
                       <td>
-                        <a href="{{ asset('upload/'. $m->foto_menu ) }}" class="fancybox" data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
-                          <img src="{{ asset('upload/'. $m->foto_menu) }}" class="img-fluid mb-2" alt="white sample" width="100px" height="100px" />
+                        <a href="{{ asset('upload/'. $m->foto_menu ) }}" class="fancybox" data-fancybox="ggblg"
+                          data-gallery="gallery" height="50px" width="50px">
+                          <img src="{{ asset('upload/'. $m->foto_menu) }}" class="img-fluid mb-2" alt="white sample"
+                            width="100px" height="100px" />
                       </td>
                       <td>{{ $m ->nama_kategori }}</td>
                       <td>{{ $m ->nama }}</td>
@@ -166,5 +153,110 @@
 
   </section>
 </div>
+{{-- Modla Galeri Cimahi --}}
+<div class="modal fade" id="exampleModalgaleri" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Masukan Foto Baru</h5>
+      </div>
+      <div class="modal-body">
+        <form action="{{route('menucmh.storegal2')}}" method="POST" enctype="multipart/form-data">
+          @csrf
+          <div class="form-group">
+            <label for="exampleInputName">Masukan Nama Foto</label>
+            <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama foto">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputFile">Masukan Foto Baru</label>
+            <div class="input-group">
+              <input type="file" class="form-control" name="foto_menu" id="foto_menu">
+            </div>
+          </div>
+          <button type="sumbit" class="btn btn-info">Simpan</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{{-- Modal Menu Cimahi --}}
+<div class="modal fade" id="exampleModalmenu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Masukan Menu </h5>
+      </div>
+      <div class="modal-body">
+        <form action="{{ empty($datacmh) ?  route('menucmh.store'): route('menucmh.update',$datacmh->id)}}"
+          method="POST" enctype="multipart/form-data">
+          @csrf
+
+          <div class="form-group">
+            <label for="exampleInputFile">Masukan Foto Menu</label>
+            <div class="input-group">
+              <input type="file" class="form-control" name="foto_menu" id="foto_menu">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Pilih Kategori</label>
+              <div class="input-group">
+                <select name="kategori_id" class="form-control">
+                  @if(!empty(@$datacmh->kategori_id))
+                  <option value="{{@$datacmh->kategori_id}}" {{!empty($datacmh->
+                    nama_kategori)?'selected':''}}>{{$datacmh->nama_kategori}}</option>
+                  @endif
+                  @foreach($kategori as $k)
+                  <option value="{{$k->id}}">{{$k->nama_kategori}}</option>
+                  @endforeach
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputName">Nama Menu</label>
+            <input type="text" class="form-control" name="nama" id="nama" value="{{ @$datacmh->nama }}"
+              placeholder="Masukan nama menu">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputName">Keterangan</label>
+            <textarea name="keterangan" id="keterangan" cols="30"
+              rows="10">{{ empty($datacmh)? '' : $datacmh->keterangan }}</textarea>
+            {{-- <input type="text" class="form-control" name="keterangan" id="keterangan"
+              value="{{ @$datacmh->keterangan }}" placeholder="Tambahkan keterangan menu"> --}}
+          </div>
+          <div class="form-group">
+            <label for="exampleInputName">Harga Menu</label>
+            <input type="text" class="form-control" name="harga" id="harga" value="{{ @$datacmh->harga }}"
+              placeholder="Masukan Harga">
+          </div>
+
+          <button type="submit" class="btn btn-info">
+            Selesai
+          </button>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+@endsection
+@section('scripts')
+<script>
+  ClassicEditor
+    .create(document.querySelector('#keterangan'))
+    .catch(error => {
+      console.error(error);
+    });
+</script>
 
 @endsection

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Galeribdg;
 use App\Galericmh;
+use App\Katagoricimahi;
 use App\KategoriMenu;
 use App\Menucaffebdg;
 use App\Menucaffecmh;
@@ -21,12 +22,13 @@ class CaffeController extends Controller
 
     public function index()
     {
-
+        $kategori = KategoriMenu::all();
         $menubdg = Menucaffebdg::get();
         $gbdg = Galeribdg::get();
         return view('admin.caffe.menubdg.index', [
             'menubdg' => $menubdg,
-            'gbdg' => $gbdg
+            'gbdg' => $gbdg,
+            'kategori' => $kategori
         ]);
     }
     public function create()
@@ -111,13 +113,15 @@ class CaffeController extends Controller
     // caffe cimahi
     public function index2()
     {
+        $kategori = Katagoricimahi::all();
         $menucmh = Menucaffecmh::get();
         $gcmh = Galericmh::get();
         return view(
             'admin.caffe.menucmh.index',
             [
                 'menucmh' => $menucmh,
-                'gcmh' => $gcmh
+                'gcmh' => $gcmh,
+                'kategori' => $kategori
             ]
         );
     }

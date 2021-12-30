@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Galeribdg;
+use App\GaleriModel;
 use Illuminate\Http\Request;
 use App\Menucaffebdg;
 
@@ -10,7 +11,9 @@ use App\Menucaffebdg;
 class Cafe81Controller extends Controller
 {
     public function index()
+
     {
+
         return view('cafe81.index');
     }
 
@@ -21,5 +24,15 @@ class Cafe81Controller extends Controller
             'menubdg' => $menubdg,
 
         ]);
+    }
+    public function galeribdg()
+    {
+        $galeribdg = Galeribdg::get();
+        return view(
+            'cafe81.galeribdg',
+            [
+                'galeribdg' => $galeribdg
+            ]
+        );
     }
 }
