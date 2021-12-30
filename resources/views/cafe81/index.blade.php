@@ -1,11 +1,7 @@
 @extends('layouts.cafebdg')
 @section('section')
-<<<<<<< HEAD
+<header>
 <header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url(images/hero_1.jpeg);" data-stellar-background-ratio="0.5">
-=======
-<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner"
-    style="background-image: url(images/hero_1.jpeg);" data-stellar-background-ratio="0.5">
->>>>>>> ef4aa12a4fbe48a4bf94982e0dbf26c055af4243
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
