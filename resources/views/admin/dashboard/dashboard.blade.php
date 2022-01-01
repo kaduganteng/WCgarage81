@@ -11,12 +11,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 </head>
-
 <style>
-  .jumlah {
-    display: flex;
+  .contenta {
+    float: left;
   }
 </style>
+
 <!-- ISI CONTENT ADMIN -->
 <div class="container">
 
@@ -33,7 +33,7 @@
   </section>
 
   <!-- ISI KONTEN    -->
-  <div class="jumlah">
+  <div class="container">
     <section class="content">
 
       <div class="card-body">
@@ -163,10 +163,32 @@
               </div>
               <!-- /.card-body -->
             </div>
-
           </div>
         </div>
+        <div class="card contenta">
+          <div class="card-header">
+            <h3 class="card-title">Masukan Saran Pengunjung</h3>
 
+            <div class="card-tools">
+              <div class="input-group input-group-sm" style="width: 150px;">
+                <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                <div class="input-group-append">
+                  <button type="submit" class="btn btn-default">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body table-responsive p-0">
+            <table class="table table-hover text-nowrap">
+            </table>
+          </div>
+          <!-- /.card-body -->
+        </div>
       </div>
       <!-- /.card-body -->
       <div class="card-footer">

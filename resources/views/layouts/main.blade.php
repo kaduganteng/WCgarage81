@@ -116,16 +116,19 @@
             </a>
           </div>
         </div>
-        <div class="nav-item">
-          <a href="{{ route('dashboard') }}" style="color:rgb(255, 255, 255);"
-            class="nav-link {{(Request::is('admin/homeadmin') || Request::is('admin/homeadmin/*') ? 'active' : '')}}">
-            <i class="nav-icon fas fa-th"></i>
-            <p>
-              Dashboard
-            </p>
-          </a>
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-item">
+            <a href="{{ route('dashboard') }}" style="color:rgb(255, 255, 255);"
+              class="nav-link {{(Request::is('admin/homeadmin') || Request::is('admin/homeadmin/*') ? 'active' : '')}}">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Dashboard
+              </p>
+            </a>
 
-        </div>
+          </li>
+        </ul>
+
         <!-- SidebarSearch Form -->
         <div class="form-inline">
           <div class="input-group" data-widget="sidebar-search">
@@ -143,34 +146,9 @@
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-            <li class="nav-header">DASHBOARD DAN GALERI </li>
-
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-tree"></i>
-                <p>
-                  Gallery
-                  <i class="fas fa-angle-left right"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="{{ route('galeri') }}" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Gallery Portal</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="{{ route('event') }}" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Event </p>
-                  </a>
-                </li>
-              </ul>
-            </li>
             <li class="nav-header">MENU DAN KATEGORI</li>
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="#" class="nav-link" style="color:rgb(255, 255, 255);">
                 <i class="nav-icon fas fa-edit"></i>
                 <p>
                   Menu
@@ -199,7 +177,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="#" class="nav-link" style="color:rgb(255, 255, 255);">
                 <i class="nav-icon fas fa-edit"></i>
                 <p>
                   Kategori
@@ -227,15 +205,40 @@
                 </li>
               </ul>
             </li>
+            <li class="nav-header">KOMUNITAS</li>
             <li class="nav-item">
-              <a href="{{ route('statistik') }}" style="color:rgb(255, 255, 255);"
-                class="nav-link {{(Request::is('statistik/data') || Request::is('statistik/data*') ? 'active' : '')}}">
+              <a href="#" class="nav-link" style="color:rgb(255, 255, 255);">
+                <i class="nav-icon fas fa-tree"></i>
+                <p>
+                  Gallery
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{ route('galeri') }}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Gallery Portal</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{ route('event') }}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Event </p>
+                  </a>
+                </li>
+              </ul>
+            <li class="nav-item">
+              <a href="{{ route('statistik') }}" style="color:rgb(255, 255, 255);" class="nav-link">
                 <i class="nav-icon fas fa-table"></i>
                 <p>
-                  Statistik Pengunjung
+                  Masukan Customer
 
                 </p>
               </a>
+            </li>
+            </li>
+
     </aside>
 
     <!-- Content Wrapper. Contains page content -->
