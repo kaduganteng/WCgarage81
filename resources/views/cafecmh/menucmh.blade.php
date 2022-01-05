@@ -43,17 +43,14 @@
                             <a href="{{ asset('upload/' . $m->foto_menu) }}" class="fancybox" data-fancybox="ggblg"
                                 data-gallery="gallery" height="50px" width="50px">
                                 <img src="{{ asset('upload/' . $m->foto_menu) }}" class="img-fluid mb-2"
-                                    alt="white sample" width="100px" height="100px" />
+                                    alt="white sample" width="250px" height="200px" />
                                 <h3>{{ $m->nama }}</h3>
                                 <span class="fh5co-price">{{ $m->harga }}</sup></span>
-                                <p>{!! $m->keterangan !!}</p>
-
+                                <p style="justify-items: ">{!! $m->keterangan !!}</p>
                         </div>
-
                     </div>
                     @endforeach
-
-
+                   
                 </div>
             </div>
         </div>

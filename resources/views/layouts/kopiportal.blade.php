@@ -67,7 +67,6 @@
                             <li><a href="{{ route('menukopiprt') }}">Menu</a></li>
                             <li><a href="{{ route('galeriportalfe') }}">Galeri</a></li>
                             <li><a href="{{ route('kopiprt') }}">Tentang Kami</a></li>
-                            <li><a href="{{ route('kopiprt') }}">Kontak</a></li>
                         </ul>
                     </div>
                 </div>

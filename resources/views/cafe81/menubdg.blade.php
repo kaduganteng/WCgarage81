@@ -61,10 +61,13 @@
                                     </div>
                                 </div>
                                 <div class="menuspesial">
-                                    @foreach ($menubdg as $m)
+                                   
 
 
-                                    <div class="fh5co-item">
+                                    <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap">         
+                                        @foreach ($menubdg as $m)
+                                        <div class="fh5co-item animate-box"> 
+                                   
                                         <a href="{{ asset('upload/' . $m->foto_menu) }}" class="fancybox"
                                             data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
                                             <img src="{{ asset('upload/' . $m->foto_menu) }}" class="img-fluid mb-2"
@@ -73,10 +76,12 @@
                                             <span class="fh5co-price">{{ $m->harga }}</sup></span>
                                             <p>{!! $m->keterangan !!}</p>
                                         </a>
+                                        </div>
+                                        @endforeach
                                     </div>
 
 
-                                    @endforeach
+                               
                                 </div>
                             </div>
                         </div>
