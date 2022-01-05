@@ -6,7 +6,6 @@ use App\Kopiportal;
 use Illuminate\Http\Request;
 use App\Menucaffebdg;
 use App\Menucaffecmh;
-use App\SaranModel;
 use DB;
 
 class DashboardController extends Controller
@@ -37,13 +36,13 @@ class DashboardController extends Controller
 
         $stok3 = Kopiportal::select(DB::raw("count(kopiportal.id) as jml"))->get();
 
-        $saran = SaranModel::get();
+
 
         return view('admin.dashboard.dashboard', [
             'stok' =>  $stok,
             'stok2' => $stok2,
             'stok3' => $stok3,
-            'saran' => $saran
+
         ]);
     }
 }

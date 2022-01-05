@@ -97,7 +97,7 @@ Route::post('/kopiportal.storegal', 'FrenchaiseController@storegal')->name('kopi
 
 //  Route Statistik
 
-Route::get('/statistik', 'StatistikController@index')->name('statistik');
+Route::get('/saran', 'SaranController@index')->name('saran');
 
 
 

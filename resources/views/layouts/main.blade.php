@@ -229,7 +229,7 @@
                 </li>
               </ul>
             <li class="nav-item">
-              <a href="{{ route('statistik') }}" style="color:rgb(255, 255, 255);" class="nav-link">
+              <a href="{{ route('saran') }}" style="color:rgb(255, 255, 255);" class="nav-link">
                 <i class="nav-icon fas fa-table"></i>
                 <p>
                   Masukan Customer

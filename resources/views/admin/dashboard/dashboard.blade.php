@@ -12,13 +12,14 @@
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 </head>
 <style>
-  .contenta {
-    float: left;
+  .row {
+    display: flex;
+    flex-direction: row;
   }
 </style>
 
 <!-- ISI CONTENT ADMIN -->
-<div class="container">
+<div class="container-fluid">
 
   <!-- ISI JUDUL KONTEN    -->
   <section class="content-header">
@@ -34,171 +35,125 @@
 
   <!-- ISI KONTEN    -->
   <div class="container">
-    <section class="content">
 
-      <div class="card-body">
-        <div class="row">
-          @foreach ($stok as $s)
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box">
-              <div class="inner">
-                <h3>{{ $s->jml }}</h3>
-                <h5>Caffe Bandung</h5>
+
+
+    <div class="card-body">
+      <div class="row">
+        @foreach ($stok as $s)
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-success shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-1">
+                  <div class="text-x font-weight-bold text-success text-uppercase mb-1">
+                    Caffe Bandung</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $s->jml }} Menu </div>
+                  <a href="{{ route('menubdg') }}"><button type="button"
+                      class="btn btn-success mt-3 btn-sm shadow-sm"><i class="fas fa-info-circle"></i>
+                      Detail</button></a>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-fw fa-chart-bar fa-3x text-success"></i>
+                </div>
               </div>
-              <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-              </div>
-              <a href="{{ route('menubdg') }}" class="small-box-footer">Lebih banyak <i
-                  class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          @endforeach
-
         </div>
+        @endforeach
 
-        <div class="row">
-          @foreach ($stok2 as $c)
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box">
-              <div class="inner">
-                <h3>{{ $c->jml }}</h3>
-                <h5>Caffe Cimahi</h5>
+
+
+
+        @foreach ($stok2 as $c)
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-info shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-1">
+                  <div class="text-x font-weight-bold text-info text-uppercase mb-1">
+                    Caffe Cimahi</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $c->jml }} Menu </div>
+                  <a href="{{ route('menucmh') }}"><button type="button" class="btn btn-info mt-3 btn-sm shadow-sm"><i
+                        class="fas fa-info-circle"></i>
+                      Detail</button></a>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-fw fa-chart-bar fa-3x text-info"></i>
+                </div>
               </div>
-              <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-              </div>
-              <a href="{{ route('menucmh') }}" class="small-box-footer">Lebih banyak<i
-                  class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          @endforeach
-
         </div>
+        @endforeach
 
 
-        <div class="row">
-          @foreach ($stok3 as $k)
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box">
-              <div class="inner">
-                <h3>{{ $k->jml }}</h3>
 
-                <h5>Kopi Portal</h5>
+
+        @foreach ($stok3 as $k)
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-1">
+                  <div class="text-x font-weight-bold text-primary text-uppercase mb-1">
+                    Kopi Portal</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $k->jml }} Menu </div>
+                  <a href="{{ route('kopiportal') }}"><button type="button"
+                      class="btn btn-primary mt-3 btn-sm shadow-sm"><i class="fas fa-info-circle"></i>
+                      Detail</button></a>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-fw fa-chart-bar fa-3x text-primary"></i>
+                </div>
               </div>
-              <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-              </div>
-              <a href="{{ route('kopiportal') }}" class="small-box-footer">Lebih banyak<i
-                  class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          @endforeach
+        </div>
+        @endforeach
 
+      </div>
+    </div>
+
+
+
+  </div>
+  <div class="row">
+
+    <!-- Area Chart -->
+    <div class="col-xl-8 col-md-7">
+      <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0"><i>View Menu yang sering Dilihat</i></h6>
+        </div>
+        <!-- Card Body -->
+        <div class="card-body">
+          <div class="chart-area">
+            <canvas id="myAreaChart"></canvas>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+
+    <!-- Pie Chart -->
+    <div class="col-xl-4 col-md-5">
+      <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 ">KETERANGAN</h6>
+        </div>
+        <!-- Card Body -->
+        <div class="card-body">
+          <p>Data yang tampil di dashboard merupakan data jumlah menu yang tersedia di dalam web, bukan data stok barang
+            atau apapun yang bersangkutan dengan inventori</b>.</p>
+        </div>
+      </div>
+    </div>
   </div>
 
 
-  <section class="content">
-    <div class="card">
 
-      <div class="card-body">
-        <div class="row">
-          <div class="col-md-8">
-            <!-- /.card -->
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">Masukan Saran Pengunjung</h3>
-
-                <div class="card-tools">
-                  <div class="input-group input-group-sm" style="width: 150px;">
-                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
-                    <div class="input-group-append">
-                      <button type="submit" class="btn btn-default">
-                        <i class="fas fa-search"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body table-responsive p-0">
-                <table class="table table-hover text-nowrap">
-                  <thead>
-                    <tr>
-                      <th>No</th>
-                      <th>Nama Pengunjung</th>
-                      <th>Email</th>
-                      <th>Masukan Saran</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    @php
-                    $no = 1;
-                    @endphp
-                    @foreach ($saran as $s)
-                    <tr>
-                      <td>{{ $no++}}</td>
-                      <td>{{ $s ->nama }}</td>
-                      <td>{{ $s ->email }}</td>
-                      <td>{{ $s ->saran }}</td>
-
-                      <td>
-                        <a href="{{ route('contactportal.destroy',$s->id) }}">
-                          <button class="btn btn-danger" class="btn">
-                            <ion-icon name="close-circle-outline"></ion-icon>
-                          </button></a>
-                      </td>
-                    </tr>
-                    @endforeach
-
-                  </tbody>
-                </table>
-              </div>
-              <!-- /.card-body -->
-            </div>
-          </div>
-        </div>
-        <div class="card contenta">
-          <div class="card-header">
-            <h3 class="card-title">Masukan Saran Pengunjung</h3>
-
-            <div class="card-tools">
-              <div class="input-group input-group-sm" style="width: 150px;">
-                <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
-                <div class="input-group-append">
-                  <button type="submit" class="btn btn-default">
-                    <i class="fas fa-search"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <!-- /.card-header -->
-          <div class="card-body table-responsive p-0">
-            <table class="table table-hover text-nowrap">
-            </table>
-          </div>
-          <!-- /.card-body -->
-        </div>
-      </div>
-      <!-- /.card-body -->
-      <div class="card-footer">
-        Footer
-      </div>
-      <!-- /.card-footer-->
-    </div>
-    <!-- /.card -->
-
-  </section>
 
   <!-- /.card -->
 
