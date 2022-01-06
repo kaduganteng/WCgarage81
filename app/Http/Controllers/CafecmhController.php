@@ -10,7 +10,13 @@ class CafecmhController extends Controller
 {
     public function index()
     {
-        return view('cafecmh.indexcmh');
+        $menucmh = Menucaffecmh::get();
+        return view(
+            'cafecmh.indexcmh',
+            [
+                'menucmh' => $menucmh
+            ]
+        );
     }
     public function menucmh()
     {

@@ -77,6 +77,9 @@ Route::post('/galeri.store', 'GaleriController@store')->name('galeri.store');
 Route::get('/event', 'EventController@index')->name('event');
 Route::get('/event.create', 'EventController@create')->name('event.create');
 Route::post('/event.store', 'EventController@store')->name('event.store');
+Route::get('/event.delete.{id}', 'EventController@destroy')->name('event.destroy');
+Route::get('/event.edit.{id}', 'EventController@edit')->name('event.edit');
+Route::post('/event.update.{id}', 'EventController@update')->name('event.update');
 
 
 

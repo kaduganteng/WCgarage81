@@ -10,7 +10,10 @@ class KopiportalController extends Controller
 {
     public function index()
     {
-        return view('kopiportal.indexportal');
+        $menuportal = Kopiportal::get();
+        return view('kopiportal.indexportal', [
+            'menuportal' => $menuportal
+        ]);
     }
     public function menuportal()
     {

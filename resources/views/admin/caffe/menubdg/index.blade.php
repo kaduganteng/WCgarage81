@@ -126,9 +126,9 @@
                             <ion-icon name="close-circle-outline"></ion-icon>
                           </button></a>
 
-                        <a href="{{  route('menubdg.edit',$m->id) }}"><button class="btn btn-success" class="btn">
-                            <ion-icon name="create-outline"></ion-icon>
-                          </button></a>
+                        <button class="btn btn-success" class="btn" data-toggle="modal" data-target="#exampleModalmenu">
+                          <ion-icon name="create-outline"></ion-icon>
+                        </button></a>
                       </td>
                     </tr>
                     @endforeach

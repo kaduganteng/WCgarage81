@@ -13,8 +13,10 @@ class Cafe81Controller extends Controller
     public function index()
 
     {
-
-        return view('cafe81.index');
+        $menubdg = Menucaffebdg::get();
+        return view('cafe81.index', [
+            'menubdg' => $menubdg
+        ]);
     }
 
     public function menubdg()

@@ -81,10 +81,10 @@
                                         <tr>
                                             <td>{{ $no++}}</td>
                                             <td>
-                                                <a href="{{ asset('upload/'. $m->foto_event ) }}" class="fancybox"
+                                                <a href="{{ asset('upload/'. $e->foto_event ) }}" class="fancybox"
                                                     data-fancybox="ggblg" data-gallery="gallery" height="50px"
                                                     width="50px">
-                                                    <img src="{{ asset('upload/'. $m->foto_event) }}"
+                                                    <img src="{{ asset('upload/'. $e->foto_event) }}"
                                                         class="img-fluid mb-2" alt="white sample" width="100px"
                                                         height="100px" />
                                             </td>
@@ -93,7 +93,7 @@
                                             <td>{!! $e->rkegiatan !!}</td>
 
                                             <td>
-                                                <a href="{{ route('event.destroy',$e->id) }}">
+                                                {{-- <a href="{{ route('event.destroy',$e->id) }}">
                                                     <button class="btn btn-danger" class="btn">
                                                         <ion-icon name="close-circle-outline"></ion-icon>
                                                     </button></a>
@@ -101,7 +101,7 @@
                                                 <a href="{{  route('event.edit',$e->id) }}"><button
                                                         class="btn btn-success" class="btn">
                                                         <ion-icon name="create-outline"></ion-icon>
-                                                    </button></a>
+                                                    </button></a> --}}
                                             </td>
                                         </tr>
                                         @endforeach
@@ -132,22 +132,24 @@
                 <h5 class="modal-title" id="exampleModalLabel">Tambahkan Event disini </h5>
             </div>
             <div class="modal-body">
-                <form action="{{ empty($event) ?  route('event.store'): route('event.update',$event->id)}}"
+                <form action="{{ empty($event) ?  route('event.store'): route('event.update',@$event->id)}}"
                     method="POST" enctype="multipart/form-data">
                     @csrf
 
                     <div class="form-group">
                         <label for="exampleInputFile">Masukan Foto Kegiatan</label>
                         <div class="input-group">
-                            <input type="file" class="form-control" name="foto_menu" id="foto_menu">
+                            <input type="file" class="form-control" name="foto_event" id="foto_event">
                         </div>
                     </div>
                     <div class="form-group">
+                        <label for="exampleInputFile">Tanggal Kegiatan</label>
+                        <input type="date" class="form-control" name="tgl_event" id="tgl_event">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputName">Nama Event</label>
                         <input type="text" class="form-control" name="nama" id="nama" value="{{ @$event->nama }}"
-                            placeholder="Masukan nama menu">
+                            placeholder="Masukan nama Event">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputName">Rincian Kegiatan</label>

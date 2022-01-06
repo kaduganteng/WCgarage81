@@ -39,13 +39,14 @@
             <div class="container">
                 <div class="row">
                     @foreach ($galeribdg as $g)
-                    <div class="item col-sm-2">
+                    <div class="col-md-3 col-sm-3 fh5co-gallery_item">
                         <a href="{{ asset('upload/'. $g->foto_bdg ) }}" class="fancybox" data-fancybox="ggblg"
-                            data-gallery="gallery" height="100px" width="100px">
-                            <img src="{{ asset('upload/'. $g->foto_bdg) }}" class="img-fluid mb-2" alt="white sample"
-                                width="300px" height="1000px" />
+                            data-gallery="gallery" height="50px" width="50px">
+                            <img src="{{ asset('upload/'. $g->foto_bdg) }}" class="img-fluid mb-2" alt="white sample" />
                         </a>
+
                     </div>
+
                     @endforeach
 
 

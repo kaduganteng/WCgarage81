@@ -29,9 +29,9 @@ class EventController extends Controller
         $tujuan = 'upload/';
         $foto_event->move($tujuan, $nama_file);
         $event = Event::create([
+            'foto_event' => $nama_file,
             'tgl_event' => $request->tgl_event,
             'nama' => $request->nama,
-            'foto_event' => $nama_file,
             'rinciankegiatan' => $request->rkegiatan
         ]);
         Alert::success('Sukses !', 'Data Berhasil Di Tambahkan');
@@ -45,7 +45,7 @@ class EventController extends Controller
     }
     public function edit($id)
     {
-        $event = Event::select('event.*', $id)->first();
+        $event = Event::select('event.*')->where('event.id', $id);
         return view('admin.caffe.event.index', [
             'event' => $event
         ]);
