@@ -146,7 +146,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputName">Nama Event</label>
-                        <input type="text" class="form-control" name="nama" id="nama" value="{{ @$datacmh->nama }}"
+                        <input type="text" class="form-control" name="nama" id="nama" value="{{ @$event->nama }}"
                             placeholder="Masukan nama menu">
                     </div>
                     <div class="form-group">

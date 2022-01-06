@@ -1,6 +1,5 @@
 @extends('layouts.cafebdg')
 @section('section')
-<title>Caffe Bandung </title>
 
 <head>
     <meta charset="utf-8">
