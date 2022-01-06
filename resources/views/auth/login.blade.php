@@ -27,7 +27,7 @@
 
         <form action="{{ route ('login') }}" method="post">
           @csrf
-          <div class="input-group mb-3">
+          <div class="input-group mb-4">
             <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name"
               value="{{ old('name') }}" required autofocus placeholder="Masukan ID">
 

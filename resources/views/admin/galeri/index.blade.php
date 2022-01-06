@@ -99,7 +99,7 @@
                     <div class="form-group">
                         <label for="exampleInputFile">Masukan Foto Baru</label>
                         <div class="input-group">
-                            <input type="file" class="form-control" name="foto_bdg" id="foto_bdg">
+                            <input type="file" class="form-control" name="foto_galeri" id="foto_galeri">
                         </div>
                     </div>
                     <button type="sumbit" class="btn btn-info">Simpan</button>
