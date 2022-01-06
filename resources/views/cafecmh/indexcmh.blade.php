@@ -171,9 +171,7 @@
 <!--Menu Terlaris Garage 81-->
 <!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!--Instagram-->
-<div
-  loading="lazy"
-  data-mc-src="d2cb3992-e907-4a6d-ab81-b89a77391ada#instagram"></div>
+<div data-mc-src="d2cb3992-e907-4a6d-ab81-b89a77391ada#instagram"></div>
         
 <script 
   src="https://cdn2.woxo.tech/a.js#61cd5af958bb730016c7f4e2" 

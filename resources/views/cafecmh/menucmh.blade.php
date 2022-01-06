@@ -28,7 +28,7 @@
                     <div class="col-md-12 fh5co-heading animate-box">
                         <h2>Our Delicous Menu</h2>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-9">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit
                                     itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam
                                     voluptates corporis et tempora consequuntur ipsam, itaque, nesciunt similique
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     @foreach ($menucmh as $m)
-                    <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap">
+                    <div class="col-md-3 col-sm-5 col-xs-5 col-xxs-12 fh5co-item-wrap">
                         <div class="fh5co-item animate-box">
 
                             <a href="{{ asset('upload/' . $m->foto_menu) }}" class="fancybox" data-fancybox="ggblg"
@@ -47,6 +47,7 @@
                                 <h3>{{ $m->nama }}</h3>
                                 <span class="fh5co-price">{{ $m->harga }}</sup></span>
                                 <p style="justify-items: ">{!! $m->keterangan !!}</p>
+                            </a>
                         </div>
                     </div>
                     @endforeach
