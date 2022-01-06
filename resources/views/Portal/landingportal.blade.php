@@ -121,16 +121,60 @@
         }
     }, 5000);
 </script>
-<div class="mapsh2">
-    <h2> Lokasi Kami </h2>
-</div>
-<div class="container">
-    <div class="gmaps">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7921.6054720103775!2d107.6169909!3d-6.9141736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e71d2ba0ef41%3A0x3b67257e4e181cce!2sGarasi%2081%20Bandung!5e0!3m2!1sid!2sid!4v1638942961908!5m2!1sid!2sid"
-            width="900" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<!--Acara Garage 81-->
+<div id="fh5co-blog" class="fh5co-section">
+    <div class="container">
+        <div class="row animate-box">
+            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+                <h2>Events</h2>
+                <p>Lorem ipsum dolor sit amet, couatur. Aliquam quaerat pariatur repellendus veniam nemo, saepe, culpa eius aspernatur cumque suscipit quae nobis illo tempora. Eum veniam necessitatibus, blanditiis
+                    facilis quidem dolore! Dolorem, molestiae.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="fh5co-blog animate-box">
+                    <a href="#" class="blog-bg" style="background-image: url(images/mobile.jpg);"></a>
+                    <div class="blog-text">
+                        <span class="posted_on">Feb. 15th 2022</span>
+                        <h3><a href="#">Turnamen Mobile Legend</a></h3>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <ul class="stuff">
+                            <li><a href="#"><i class="icon-arrow-right22"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="fh5co-blog animate-box">
+                    <a href="#" class="blog-bg" style="background-image: url(images/live.jpg);"></a>
+                    <div class="blog-text">
+                        <span class="posted_on">Jan. 11th 2022</span>
+                        <h3><a href="#">Live Music</a></h3>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <ul class="stuff">
+                            <li><a href="#"><i class="icon-arrow-right22"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="fh5co-blog animate-box">
+                    <a href="#" class="blog-bg" style="background-image: url(images/signature.jpg);"></a>
+                    <div class="blog-text">
+                        <span class="posted_on">Jan 5th 2022</span>
+                        <h3><a href="#">Garage Gathering Community</a></h3>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <ul class="stuff">
+                            <li><a href="#"><i class="icon-arrow-right22"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+<!--Acara Garage 81-->
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

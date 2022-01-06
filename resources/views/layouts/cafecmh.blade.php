@@ -158,6 +158,17 @@
     <!-- Main -->
     <script src="portal/js/main.js"></script>
 
+    <script>
+        Zoomerang
+            .config({
+                maxHeight: 600,
+                maxWidth: 900,
+                bgColor: '#000',
+                bgOpacity: .85
+            })
+            .listen('[data-trigger="zoomerang"]')
+    </script>
+    
 </body>
 
 </html>

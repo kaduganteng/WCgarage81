@@ -903,7 +903,7 @@ figure {
     float: left;
     margin-bottom: 20px;
     background-size: cover;
-    cursor: zoom-in;
+    cursor: unset;
 }
 
 #fh5co-gallery .fh5co-bg-img {

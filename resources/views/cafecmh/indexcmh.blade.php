@@ -168,64 +168,7 @@
         </div>
     </div>
 </div>
-
-
 <!--Menu Terlaris Garage 81-->
-<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<!--Acara Garage 81-->
-<div id="fh5co-blog" class="fh5co-section">
-    <div class="container">
-        <div class="row animate-box">
-            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-                <h2>Events</h2>
-                <p>Lorem ipsum dolor sit amet, couatur. Aliquam quaerat pariatur repellendus veniam nemo, saepe, culpa eius aspernatur cumque suscipit quae nobis illo tempora. Eum veniam necessitatibus, blanditiis
-                    facilis quidem dolore! Dolorem, molestiae.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="fh5co-blog animate-box">
-                    <a href="#" class="blog-bg" style="background-image: url(images/mobile.jpg);"></a>
-                    <div class="blog-text">
-                        <span class="posted_on">Feb. 15th 2022</span>
-                        <h3><a href="#">Turnamen Mobile Legend</a></h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                        <ul class="stuff">
-                            <li><a href="#"><i class="icon-arrow-right22"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="fh5co-blog animate-box">
-                    <a href="#" class="blog-bg" style="background-image: url(images/live.jpg);"></a>
-                    <div class="blog-text">
-                        <span class="posted_on">Jan. 11th 2022</span>
-                        <h3><a href="#">Live Music</a></h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                        <ul class="stuff">
-                            <li><a href="#"><i class="icon-arrow-right22"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="fh5co-blog animate-box">
-                    <a href="#" class="blog-bg" style="background-image: url(images/signature.jpg);"></a>
-                    <div class="blog-text">
-                        <span class="posted_on">Jan 5th 2022</span>
-                        <h3><a href="#">Garage Gathering Community</a></h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                        <ul class="stuff">
-                            <li><a href="#"><i class="icon-arrow-right22"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--Acara Garage 81-->
 <!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!--Instagram-->
 <div

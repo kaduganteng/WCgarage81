@@ -1,20 +1,7 @@
 @extends('layouts.cafecmh')
 @section('section')
-
-<head>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-</head>
-<style>
-    img {
-        width: 1000px;
-    }
-</style>
 <header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner"
-    style="background-image: url(images/hero_1.jpeg);" data-stellar-background-ratio="0.5">
+    style="background-image: url(images/hero_1.jpg);" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
@@ -33,30 +20,69 @@
 </header>
 
 <body>
-    <div class="container">
-        <div id="fh5co-featured-menu" class="fh5co-section">
-            <div class="container">
-                <div class="row">
-                    @foreach ($galericmh as $g)
-                    <div class="item col-sm-2">
-                        <a href="{{ asset('upload/'. $g->foto_bdg ) }}" class="fancybox" data-fancybox="ggblg"
-                            data-gallery="gallery" height="100px" width="100px">
-                            <img src="{{ asset('upload/'. $g->foto_bdg) }}" class="img-fluid mb-2" alt="white sample"
-                                width="300px" height="1000px" />
-                        </a>
+    <div id="fh5co-gallery" class="fh5co-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 fh5co-heading animate-box">
+                    <h2>Galeri</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam,
+                                itaque, nesciunt similique commodi omnis. Ad magni perspiciatis, voluptatum repellat.</p>
+                        </div>
                     </div>
-                    @endforeach
+                </div>
 
 
+                <div class="col-md-3 col-sm-3 fh5co-gallery_item">
+                    <div class="fh5co-bg-img" style="background-image: url(images/nasgor.jpg);" data-trigger="zoomerang"></div>
+                    <div class="fh5co-bg-img" style="background-image: url(images/signature.jpg);" data-trigger="zoomerang"></div>
+                </div>
+                <div class="col-md-6 col-sm-6 fh5co-gallery_item">
+                    <div class="fh5co-bg-img fh5co-gallery_big" style="background-image: url(images/spageti.jpg);" data-trigger="zoomerang"></div>
+                </div>
+                <div class="col-md-3 col-sm-3 fh5co-gallery_item">
+                    <div class="fh5co-bg-img" style="background-image: url(images/jagong.jpg);" data-trigger="zoomerang"></div>
+                    <div class="fh5co-bg-img" style="background-image: url(images/mobile.jpg);" data-trigger="zoomerang"></div>
+                </div>
+
+                <div class="col-md-3 col-sm-3 fh5co-gallery_item">
+                    <div class="fh5co-bg-img" style="background-image: url(images/nkg.png);" data-trigger="zoomerang"></div>
+                    <div class="fh5co-bg-img" style="background-image: url(images/kentang.jpg);" data-trigger="zoomerang"></div>
+                </div>
+                <div class="col-md-3 col-sm-3 fh5co-gallery_item">
+                    <div class="fh5co-bg-img" style="background-image: url(images/nasgor.jpg);" data-trigger="zoomerang"></div>
+                    <div class="fh5co-bg-img" style="background-image: url(images/kentang.jpg);" data-trigger="zoomerang"></div>
+                </div>
+                <div class="col-md-6 col-sm-6 fh5co-gallery_item">
+                    <div class="fh5co-bg-img fh5co-gallery_big" style="background-image: url(images/spageti.jpg);" data-trigger="zoomerang"></div>
+                </div>
+
+                <div class="col-md-3 col-sm-3 fh5co-gallery_item">
+                    <div class="fh5co-bg-img" style="background-image: url(images/prt.png);" data-trigger="zoomerang"></div>
+                    <div class="fh5co-bg-img" style="background-image: url(images/signature.jpg);" data-trigger="zoomerang"></div>
+                </div>
+                <div class="col-md-6 col-sm-6 fh5co-gallery_item">
+                    <div class="fh5co-bg-img fh5co-gallery_big" style="background-image: url(images/nkg.png);" data-trigger="zoomerang"></div>
+                </div>
+                <div class="col-md-3 col-sm-3 fh5co-gallery_item">
+                    <div class="fh5co-bg-img" style="background-image: url(images/nasgor.jpg);" data-trigger="zoomerang"></div>
+                    <div class="fh5co-bg-img" style="background-image: url(images/nasgor.jpg);" data-trigger="zoomerang"></div>
+                </div>
+
+                <div class="col-md-3 col-sm-3 fh5co-gallery_item">
+                    <div class="fh5co-bg-img" style="background-image: url(images/nasgor.jpg);" data-trigger="zoomerang"></div>
+                    <div class="fh5co-bg-img" style="background-image: url(images/nasgor.jpg);" data-trigger="zoomerang"></div>
+                </div>
+                <div class="col-md-3 col-sm-3 fh5co-gallery_item">
+                    <div class="fh5co-bg-img" style="background-image: url(images/nasgor.jpg);" data-trigger="zoomerang"></div>
+                    <div class="fh5co-bg-img" style="background-image: url(images/nasgor.jpg);" data-trigger="zoomerang"></div>
+                </div>
+                <div class="col-md-6 col-sm-6 fh5co-gallery_item">
+                    <div class="fh5co-bg-img fh5co-gallery_big" style="background-image: url(images/nasgor.jpg);" data-trigger="zoomerang"></div>
                 </div>
             </div>
         </div>
     </div>
 </body>
-<script src="adminlte/plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap -->
-<script src="adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE App -->
-<script src="adminlte/js/adminlte.min.js"></script>
-<script src="dist/js/lightbox-plus-jquery.min.js"></script>
 @endsection
