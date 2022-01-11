@@ -66,27 +66,31 @@ class CaffeController extends Controller
         Alert::warning('Data Berhasil Dihapus !', 'Data Yang Berhasil Di Hapus Tidak Dapat Dikembalikan');
         return redirect()->back();
     }
-    public function edit($id)
+    // public function edit($id)
+    // {
+    //     $databdg = Menucaffebdg::select('menubdg.*', 'kategori_menu.nama_kategori')->where('menubdg.id', $id)->join('kategori_menu', 'kategori_menu.id', '=', 'menubdg.kategori_id')->first();
+    //     $kategori = KategoriMenu::all();
+    //     return view('admin.caffe.menubdg.form', [
+    //         'databdg' => $databdg,
+    //         'kategori' => $kategori
+    //     ]);
+    // }
+    public function edit(Request $request, $id)
     {
-        $databdg = Menucaffebdg::select('menubdg.*', 'kategori_menu.nama_kategori')->where('menubdg.id', $id)->join('kategori_menu', 'kategori_menu.id', '=', 'menubdg.kategori_id')->first();
-        $kategori = KategoriMenu::all();
-        return view('admin.caffe.menubdg.form', [
-            'databdg' => $databdg,
-            'kategori' => $kategori
-        ]);
-    }
-    public function update(Request $request, $id)
-    {
-        $menubdg = Menucaffebdg::findOrFail($id)->update([
-            'foto' => $request->foto,
-            'kategori_id' => $request->kategori_id,
-            'nama' => $request->nama,
-            'keterangan' => $request->keterangan,
-            'harga' => $request->harga
+        if ($request->isMethod('post')) {
+            $m = $request->all();
 
-        ]);
-        Alert::success('Sukses !', 'Data Berhasil Di Edit');
-        return redirect()->route('menubdg');
+            $menubdg = Menucaffebdg::findOrFail($id)->update([
+                'foto' => $request->foto,
+                'kategori_id' => $request->kategori_id,
+                'nama' => $request->nama,
+                'keterangan' => $request->keterangan,
+                'harga' => $request->harga
+
+            ]);
+            Alert::success('Sukses !', 'Data Berhasil Di Edit');
+            return redirect()->route('menubdg');
+        }
     }
 
 
@@ -162,30 +166,24 @@ class CaffeController extends Controller
         return redirect()->back();
     }
 
-    public function edit2($id)
+    public function edit2(Request $request, $id)
     {
-        $datacmh = Menucaffecmh::select('menucmh.*', 'kategori_menu.nama_kategori')->where('menucmh.id', $id)->join('kategori_menu', 'kategori_menu.id', '=', 'menucmh.kategori_id')->first();
-        $kategori = KategoriMenu::all();
+        if ($request->isMethod('post')) {
+            $m = $request->all();
 
-        return view('admin.caffe.menucmh.form', [
-            'datacmh' => $datacmh,
-            'kategori' => $kategori
-        ]);
+            $menucmh = Menucaffecmh::findOrFail($id)->update([
+                'foto' => $request->foto,
+                'kategori_id' => $request->kategori_id,
+                'nama' => $request->nama,
+                'keterangan' => $request->keterangan,
+                'harga' => $request->harga
+
+            ]);
+            Alert::success('Sukses !', 'Data Berhasil Di Edit');
+            return redirect()->route('menucmh');
+        }
     }
 
-    public function update2(Request $request, $id)
-    {
-        $menucmh = Menucaffecmh::findOrFail($id)->update([
-            'foto' => $request->foto,
-            'kategori_id' => $request->kategori_id,
-            'nama' => $request->nama,
-            'keterangan' => $request->keterangan,
-            'harga' => $request->harga
-
-        ]);
-        Alert::success('Sukses !', 'Data Berhasil Di Edit');
-        return redirect()->route('menucmh');
-    }
 
     public function creategal2()
     {

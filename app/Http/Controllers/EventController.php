@@ -43,23 +43,20 @@ class EventController extends Controller
         Alert::warning('Data Berhasil Dihapus !', 'Data Yang Berhasil Di Hapus Tidak Dapat Dikembalikan');
         return redirect()->back();
     }
-    public function edit($id)
-    {
-        $event = Event::select('event.*')->where('event.id', $id);
-        return view('admin.caffe.event.index', [
-            'event' => $event
-        ]);
-    }
-    public function update(Request $request, $id)
-    {
-        $event = Event::findOrFail($id)->update([
-            'tgl_event' => $request->tgl_event,
-            'nama' => $request->nama,
-            'foto_event' => $request->foto_event,
-            'rinciankegiatan' => $request->rkegiatan
 
-        ]);
-        Alert::success('Sukses !', 'Data Berhasil Di Edit');
-        return redirect()->route('menubdg');
+    public function edit(Request $request, $id)
+    {
+        if ($request->isMethod('post')) {
+            $e = $request->all();
+            $event = Event::findOrFail($id)->update([
+                'tgl_event' => $request->tgl_event,
+                'nama' => $request->nama,
+                'foto_event' => $request->foto_event,
+                'rinciankegiatan' => $request->rkegiatan
+
+            ]);
+            Alert::success('Sukses !', 'Data Berhasil Di Edit');
+            return redirect()->route('menubdg');
+        }
     }
 }

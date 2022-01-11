@@ -33,7 +33,7 @@ Route::get('/kategor.delete.{id}', 'KategoriMenuController@destroy')->name('kate
 
 Route::get('/kategorimenucmh', 'KategoriMenuController@index2')->name('kategorimenucmh');
 Route::get('/kategoricmh.create', 'KategoriMenuController@create2')->name('kategoricmh.create');
-Route::post('/kategoricmh.store', 'KategoriMenuController@store2')->name('kategoricmh.store');
+Route::post('/kategoricmh.store', 'KategoriMenuController@index2')->name('kategoricmh.store');
 Route::get('/kategoricmh.delete.{id}', 'KategoriMenuController@destroy2')->name('kategoricmh.destroy');
 
 // Kategori menu kopi
@@ -48,8 +48,7 @@ Route::get('/menubdg', 'CaffeController@index')->name('menubdg');
 Route::get('/menubdg.create', 'CaffeController@create')->name('menubdg.create');
 Route::post('/menubdg.store', 'CaffeController@store')->name('menubdg.store');
 Route::get('/menubdg.delete.{id}', 'CaffeController@destroy')->name('menubdg.destroy');
-Route::get('/menubdg.edit.{id}', 'CaffeController@edit')->name('menubdg.edit');
-Route::post('/menubdg.update.{id}', 'CaffeController@update')->name('menubdg.update');
+Route::match(['get', 'post'], '/editbdg{id}', 'CaffeController@edit');
 Route::get('/menubdg.creategal', 'CaffeController@creategal')->name('menubdg.creategal');
 Route::post('/menubdg.storegal', 'CaffeController@storegal')->name('menubdg.storegal');
 
@@ -61,8 +60,7 @@ Route::get('/menucmh', 'CaffeController@index2')->name('menucmh');
 Route::get('/menucmh.create', 'CaffeController@create2')->name('menucmh.create');
 Route::post('/menucmh.store', 'CaffeController@store2')->name('menucmh.store');
 Route::get('/menucmh.delete.{id}', 'CaffeController@destroy2')->name('menucmh.destroy');
-Route::get('/menucmh.edit.{id}', 'CaffeController@edit2')->name('menucmh.edit');
-Route::post('/menucmh.update.{id}', 'CaffeController@update2')->name('menucmh.update');
+Route::match(['get', 'post'], '/editcmh{id}', 'CaffeController@edit2');
 Route::get('/menucmh.creategal', 'CaffeController@creategal2')->name('menucmh.creategal2');
 Route::post('/menucmh.storegal', 'CaffeController@storegal2')->name('menucmh.storegal2');
 
@@ -90,8 +88,7 @@ Route::get('/kopiportal', 'FrenchaiseController@index')->name('kopiportal');
 Route::get('/kopiportal.create', 'FrenchaiseController@create')->name('kopiportal.create');
 Route::post('/kopiportal.store', 'FrenchaiseController@store')->name('kopiportal.store');
 Route::get('/kopiportal.delete{id}', 'FrenchaiseController@destroy')->name('kopiportal.destroy');
-Route::get('/kopiportal.edit{id}', 'FrenchaiseController@edit')->name('kopiportal.edit');
-Route::post('/kopiportal.update{id}', 'FrenchaiseController@update')->name('kopiportal.update');
+Route::match(['get', 'post'], '/editkopi{id}', 'FrenchaiseController@edit');
 Route::get('/kopiportal.creategal', 'FrenchaiseController@creategal')->name('kopiportal.creategal');
 Route::post('/kopiportal.storegal', 'FrenchaiseController@storegal')->name('kopiportal.storegal');
 
