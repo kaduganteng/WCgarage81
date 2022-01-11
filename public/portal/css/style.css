@@ -56,7 +56,7 @@ body {
 }
 
 .slide {
-    width: 20%;
+    width: 30%;
     transition: 1s;
     display: flex;
 }
@@ -71,15 +71,14 @@ body {
     display: block;
     border-radius: 10%;
     place-content: center;
-    margin-inline: 5%;
+    padding-inline: 3%;
+    cursor: auto;
 }
 
-.slide img:hover {
-    -webkit-transform: all 0.1s ease-in-out;
-    -moz-transform: all 0.1s ease-in-out;
-    -o-transform: all 0.1s ease-in-out;
-    -ms-transform: all 0.1s ease-in-out;
-    transform: all 0.1s ease-in-out;
+@media screen and (max-width: 900px) {
+    .slide img .slide .slidas .slider {
+        position: fixed;
+    }
 }
 
 
@@ -119,23 +118,23 @@ body {
 }
 
 #radio2:checked~.first {
-    margin-left: -10%;
+    margin-left: -25%;
 }
 
 #radio3:checked~.first {
-    margin-left: -175%;
+    margin-left: -200%;
 }
 
 #radio4:checked~.first {
-    margin-left: -345%;
+    margin-left: -385%;
 }
 
 #radio5:checked~.first {
-    margin-left: -520%;
+    margin-left: -560%;
 }
 
 #radio6:checked~.first {
-    margin-left: -660%;
+    margin-left: -730%;
 }
 
 
@@ -1163,6 +1162,21 @@ figure {
 .fh5co-social-icons {
     margin: 0;
     padding: 0;
+}
+
+.fh5co-social-icons img {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.fh5co-social-icons img:hover {
+    -webkit-transform: scale(1.2) rotate(0deg);
+    -moz-transform: scale(1.2) rotate(0deg);
+    -o-transform: scale(1.2) rotate(0deg);
+    -ms-transform: scale(1.2) rotate(0deg);
+    transform: scale(1.2) rotate(0deg)
 }
 
 .fh5co-social-icons li {

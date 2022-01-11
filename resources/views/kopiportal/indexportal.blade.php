@@ -134,7 +134,7 @@
                                                     <div class="desc">
                                                         <h2>{{ $menu->nama }}</h2>
                                                         <p>{!!$menu->keterangan !!}</p>
-                                                        <p><a href="{{ route('menuportalfe') }}"
+                                                        <p><a href="{{ route('menuportal') }}"
                                                                 class="btn btn-primary btn-outline">Lihat</a></p>
                                                     </div>
 
