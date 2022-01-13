@@ -113,7 +113,12 @@ class CaffeController extends Controller
         Alert::success('Sukses !', 'Data Berhasil Di Tambahkan');
         return redirect()->back();
     }
-
+    public function destroygal($id)
+    {
+        $destroy = Galeribdg::destroy($id);
+        Alert::warning('Gambar Berhasil Dihapus !', 'Gambar Yang Berhasil Di Hapus Tidak Dapat Dikembalikan');
+        return redirect()->back();
+    }
     // caffe cimahi
     public function index2()
     {
@@ -202,6 +207,12 @@ class CaffeController extends Controller
             'foto_bdg' => $nama_file
         ]);
         Alert::success('Sukses !', 'Data Berhasil Di Tambahkan');
+        return redirect()->back();
+    }
+    public function destroygal2($id)
+    {
+        $destroy = Galericmh::destroy($id);
+        Alert::warning('Gambar Berhasil Dihapus !', 'Gambar Yang Berhasil Di Hapus Tidak Dapat Dikembalikan');
         return redirect()->back();
     }
 }

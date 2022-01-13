@@ -106,4 +106,10 @@ class FrenchaiseController extends Controller
         Alert::success('Sukses !', 'Data Berhasil Di Tambahkan');
         return redirect()->back();
     }
+    public function destroygal($id)
+    {
+        $destroy = GaleriKopip::destroy($id);
+        Alert::warning('Gambar Berhasil Dihapus !', 'Gambar Yang Berhasil Di Hapus Tidak Dapat Dikembalikan');
+        return redirect()->back();
+    }
 }

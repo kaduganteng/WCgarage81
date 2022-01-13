@@ -51,6 +51,11 @@
                                         <img src="{{ asset('upload/' . $g->foto_cmh) }}" class="img-fluid mb-2"
                                             alt="white sample" width="200px" height="200px" />
                                     </a>
+                                    <a href="{{ route('menucmh.destroygal', $g->id) }}">
+                                        <button class="btn btn-danger">
+                                            <ion-icon name="trash-outline"></ion-icon>
+                                        </button>
+                                    </a>
                                 </div>
                             @endforeach
 
@@ -130,10 +135,10 @@
                                                     <td>
                                                         <a href="{{ route('menucmh.destroy', $m->id) }}">
                                                             <button class="btn btn-danger" class="btn">
-                                                                <ion-icon name="close-circle-outline"></ion-icon>
+                                                                <ion-icon name="trash-outline"></ion-icon>
                                                             </button></a>
 
-                                                        <button type="button" class="btn btn-info" data-toggle="modal"
+                                                        <button type="button" class="btn btn-success" data-toggle="modal"
                                                             data-target="#exampleModaledit{{ $m->id }}">
                                                             <ion-icon name="create-outline"></ion-icon>
                                                         </button>

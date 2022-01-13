@@ -52,6 +52,11 @@
                                         <img src="{{ asset('upload/' . $g->foto_bdg) }}" class="img-fluid mb-2"
                                             alt="white sample" width="200px" height="200px" />
                                     </a>
+                                    <a href="{{ route('menubdg.destroygal', $g->id) }}">
+                                        <button class="btn btn-danger">
+                                            <ion-icon name="trash-outline"></ion-icon>
+                                        </button>
+                                    </a>
                                 </div>
                             @endforeach
 
@@ -128,7 +133,7 @@
                                                     <td>
                                                         <a href="{{ route('menubdg.destroy', $m->id) }}">
                                                             <button class="btn btn-danger" class="btn">
-                                                                <ion-icon name="close-circle-outline"></ion-icon>
+                                                                <ion-icon name="trash-outline"></ion-icon>
                                                             </button></a>
 
                                                         <button type="button" class="btn btn-success" data-toggle="modal"

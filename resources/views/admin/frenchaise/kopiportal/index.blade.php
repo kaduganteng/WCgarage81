@@ -55,6 +55,11 @@
                                         <img src="{{ asset('upload/' . $g->foto_kopip) }}" class="img-fluid mb-2"
                                             alt="white sample" width="200px" height="200px" />
                                     </a>
+                                    <a href="{{ route('kopiportal.destroygal', $g->id) }}">
+                                        <button class="btn btn-danger">
+                                            <ion-icon name="trash-outline"></ion-icon>
+                                        </button>
+                                    </a>
                                 </div>
                             @endforeach
 
@@ -134,13 +139,14 @@
                                                     <td>
                                                         <a href="{{ route('kopiportal.destroy', $kp->id) }}">
                                                             <button class="btn btn-danger">
-                                                                <ion-icon name="close-circle-outline"></ion-icon>
+                                                                <ion-icon name="trash-outline"></ion-icon>
                                                             </button></a>
-
                                                         <button type="button" class="btn btn-success" data-toggle="modal"
-                                                            data-target="#exampleModaledit{{ $kp->id }}">
+                                                            data-target="#exampleModaledit {{ $kp->id }}">
                                                             <ion-icon name="create-outline"></ion-icon>
-                                                        </button></a>
+
+                                                        </button>
+
                                                     </td>
                                                 </tr>
                                             @endforeach
@@ -213,46 +219,66 @@
                     <h5 class="modal-title" id="exampleModalLabel">Masukan Menu </h5>
                 </div>
                 <div class="modal-body">
-                    <form action="{{ route('kopiportal.store') }}" method="POST" enctype="multipart/form-data">
+                    <form
+                        action="{{ empty($dataportal) ? route('kopiportal.store') : route('kopiportal.update', $dataportal->id) }}"
+                        method="POST" enctype="multipart/form-data">
                         @csrf
-
-                        <div class="form-group">
-                            <label for="exampleInputFile">Masukan Foto Menu</label>
-                            <div class="input-group">
-                                <input type="file" class="form-control" name="foto_menu" id="foto_menu">
-                            </div>
-                        </div>
-                        <div class="form-group">
+                        <div class="card-body">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Pilih Kategori</label>
+                                <label for="exampleInputFile">Masukan Foto Menu</label>
                                 <div class="input-group">
-                                    <select name="kategori_id" class="form-control">
-                                        @foreach ($kategori as $k)
-                                            <option value="{{ $k->id }}">{{ $k->nama_kategori }}</option>
-                                        @endforeach
-                                    </select>
+                                    <input type="file" class="form-control" name="foto_menu" id="foto_menu">
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputName">Nama Menu</label>
-                            <input type="text" class="form-control" name="nama" id="nama" placeholder="Masukan nama menu">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputName">Keterangan</label>
-                            <textarea name="keterangan" id="keterangan" cols="30" rows="10"></textarea>
-                            {{-- <input type="text" class="form-control" name="keterangan" id="keterangan"
-              value="{{ @$dataportal->keterangan }}" placeholder="Tambahkan keterangan menu"> --}}
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputName">Harga Menu</label>
-                            <input type="text" class="form-control" name="harga" id="harga" placeholder="Masukan Harga">
-                        </div>
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Pilih Kategori</label>
+                                    <div class="input-group">
+                                        <select name="kategori_id" class="form-control">
+                                            @if (!empty(@$databdg->kategori_id))
+                                                <option value="{{ @$databdg->kategori_id }}"
+                                                    {{ !empty($databdg->nama_kategori) ? 'selected' : '' }}>
+                                                    {{ $databdg->nama_kategori }}</option>
+                                            @endif
+                                            @foreach ($kategori as $k)
+                                                <option value="{{ $k->id }}">{{ $k->nama_kategori }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
 
-                        <button type="submit" class="btn btn-info">
-                            Selesai
-                        </button>
 
+                            <div class="form-group">
+                                <label for="exampleInputName">Nama Menu</label>
+                                <input type="text" class="form-control" name="nama" id="nama"
+                                    value="{{ @$dataportal->nama }}" placeholder="Masukan nama menu">
+                            </div>
+                            <div class="form-group">
+
+                                <label for="exampleInputName">Keterangan</label>
+                                <textarea name="keterangan" id="keterangan" cols="30"
+                                    rows="10">{{ empty($databdg) ? '' : $databdg->keterangan }}</textarea>
+                                {{-- <input type="text" class="form-control" name="keterangan" id="keterangan"
+                                value="{{ @$databdg->keterangan }}" placeholder="Tambahkan keterangan menu"> --}}
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputName">Harga Menu</label>
+                                <input type="text" class="form-control" name="harga" id="harga"
+                                    value="{{ @$dataportal->harga }}" placeholder="Masukan Harga">
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">
+                                <ion-icon name="save-outline"></ion-icon>Selesai
+                            </button>
+                        </div>
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -270,7 +296,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Edit Menu </h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Masukan Menu </h5>
                     </div>
                     <div class="modal-body">
                         <form action="{{ url('/editkopi' . $kp->id) }}" method="POST" enctype="multipart/form-data">
@@ -287,10 +313,10 @@
                                         <label for="exampleInputEmail1">Pilih Kategori</label>
                                         <div class="input-group">
                                             <select name="kategori_id" class="form-control">
-                                                @if (!empty(@$dataportal->kategori_id))
-                                                    <option value="{{ @$dataportal->kategori_id }}"
-                                                        {{ !empty($dataportal->nama_kategori) ? 'selected' : '' }}>
-                                                        {{ $dataportal->nama_kategori }}</option>
+                                                @if (!empty(@$kp->kategori_id))
+                                                    <option value="{{ @$kp->kategori_id }}"
+                                                        {{ !empty($kp->nama_kategori) ? 'selected' : '' }}>
+                                                        {{ $kp->nama_kategori }}</option>
                                                 @endif
                                                 @foreach ($kategori as $k)
                                                     <option value="{{ $k->id }}">{{ $k->nama_kategori }}</option>

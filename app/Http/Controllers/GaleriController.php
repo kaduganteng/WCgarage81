@@ -5,13 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Galerimodel;
 use RealRashid\SweetAlert\Facades\Alert;
+
 class GaleriController extends Controller
 {
     public function index()
     {
         $galeri = Galerimodel::get();
-        return view('admin.galeri.index',[
-            'galeri'=> $galeri
+        return view('admin.galeri.index', [
+            'galeri' => $galeri
         ]);
     }
 
@@ -32,6 +33,12 @@ class GaleriController extends Controller
             'foto_galeri' => $nama_file
         ]);
         Alert::success('Sukses !', 'Data Berhasil Di Tambahkan');
+        return redirect()->back();
+    }
+    public function destroy($id)
+    {
+        $destroy = Galerimodel::destroy($id);
+        Alert::warning('Gambar Berhasil Dihapus !', 'Gambar Yang Berhasil Di Hapus Tidak Dapat Dikembalikan');
         return redirect()->back();
     }
 }

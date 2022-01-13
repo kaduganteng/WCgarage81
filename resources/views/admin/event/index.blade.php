@@ -228,7 +228,7 @@
 @section('scripts')
     <script>
         ClassicEditor
-            .create(document.querySelector('#keterangan'))
+            .create(document.querySelector('#rkegiatan'))
             .catch(error => {
                 console.error(error);
             });

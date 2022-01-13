@@ -51,6 +51,7 @@ Route::get('/menubdg.delete.{id}', 'CaffeController@destroy')->name('menubdg.des
 Route::match(['get', 'post'], '/editbdg{id}', 'CaffeController@edit');
 Route::get('/menubdg.creategal', 'CaffeController@creategal')->name('menubdg.creategal');
 Route::post('/menubdg.storegal', 'CaffeController@storegal')->name('menubdg.storegal');
+Route::get('/menubdg.deletegal.{id}', 'CaffeController@destroygal')->name('menubdg.destroygal');
 
 
 
@@ -63,6 +64,7 @@ Route::get('/menucmh.delete.{id}', 'CaffeController@destroy2')->name('menucmh.de
 Route::match(['get', 'post'], '/editcmh{id}', 'CaffeController@edit2');
 Route::get('/menucmh.creategal', 'CaffeController@creategal2')->name('menucmh.creategal2');
 Route::post('/menucmh.storegal', 'CaffeController@storegal2')->name('menucmh.storegal2');
+Route::get('/menucmh.deletegal.{id}', 'CaffeController@destroygal2')->name('menucmh.destroygal');
 
 
 
@@ -70,6 +72,7 @@ Route::post('/menucmh.storegal', 'CaffeController@storegal2')->name('menucmh.sto
 Route::get('/galeri', 'GaleriController@index')->name('galeri');
 Route::get('/galeri.create', 'GaleriController@create')->name('galeri.create');
 Route::post('/galeri.store', 'GaleriController@store')->name('galeri.store');
+Route::get('/galeri.delete.{id}', 'GaleriController@destroy')->name('galeri.destroy');
 
 //Event
 Route::get('/event', 'EventController@index')->name('event');
@@ -91,6 +94,7 @@ Route::get('/kopiportal.delete{id}', 'FrenchaiseController@destroy')->name('kopi
 Route::match(['get', 'post'], '/editkopi{id}', 'FrenchaiseController@edit');
 Route::get('/kopiportal.creategal', 'FrenchaiseController@creategal')->name('kopiportal.creategal');
 Route::post('/kopiportal.storegal', 'FrenchaiseController@storegal')->name('kopiportal.storegal');
+Route::get('/kopiportal.deletegal.{id}', 'FrenchaiseController@destroygal')->name('kopiportal.destroygal');
 
 
 
