@@ -346,9 +346,6 @@
                 console.error(error);
             });
     </script>
-
-@endsection
-@section('scripts')
     <script>
         ClassicEditor
             .create(document.querySelector('#keteranganedit'))

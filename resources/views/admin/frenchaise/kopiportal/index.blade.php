@@ -55,11 +55,10 @@
                                         <img src="{{ asset('upload/' . $g->foto_kopip) }}" class="img-fluid mb-2"
                                             alt="white sample" width="200px" height="200px" />
                                     </a>
-                                    <a href="{{ route('kopiportal.destroygal', $g->id) }}">
+                                    <a href="{{ route('kopiportal.destroygal') }}">
                                         <button class="btn btn-danger">
-                                            <ion-icon name="trash-outline"></ion-icon>
-                                        </button>
-                                    </a>
+                                            <ion-icon class="trash-outline">
+                                        </button></a>
                                 </div>
                             @endforeach
 
@@ -144,7 +143,6 @@
                                                         <button type="button" class="btn btn-success" data-toggle="modal"
                                                             data-target="#exampleModaledit {{ $kp->id }}">
                                                             <ion-icon name="create-outline"></ion-icon>
-
                                                         </button>
 
                                                     </td>
@@ -180,28 +178,17 @@
                 <div class="modal-body">
                     <form action="{{ route('kopiportal.storegal') }}" method="POST" enctype="multipart/form-data">
                         @csrf
-                        <div class="card-body">
-                            <div class="form-group">
-                                <label for="exampleInputName">Masukan Nama Foto</label>
-                                <input type="text" class="form-control" name="nama" id="nama"
-                                    placeholder="Masukan nama foto">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputFile">Masukan Foto Baru</label>
-                                <div class="input-group">
-                                    <input type="file" class="form-control" name="foto_kopip" id="foto_bdg">
-                                </div>
-                            </div>
-
+                        <div class="form-group">
+                            <label for="exampleInputName">Masukan Nama Foto</label>
+                            <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama foto">
                         </div>
-                        <!-- /.card-body -->
-
-                        <div class="card-footer">
-
-                            <button type="submit" class="btn btn-primary">
-                                <ion-icon name="save-outline"></ion-icon>
-                            </button>
+                        <div class="form-group">
+                            <label for="exampleInputFile">Masukan Foto Baru</label>
+                            <div class="input-group">
+                                <input type="file" class="form-control" name="foto_kopip" id="foto_kopip">
+                            </div>
                         </div>
+                        <button type="sumbit" class="btn btn-info">Simpan</button>
                     </form>
                 </div>
                 <div class="modal-footer">

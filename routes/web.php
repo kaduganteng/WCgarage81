@@ -33,7 +33,7 @@ Route::get('/kategor.delete.{id}', 'KategoriMenuController@destroy')->name('kate
 
 Route::get('/kategorimenucmh', 'KategoriMenuController@index2')->name('kategorimenucmh');
 Route::get('/kategoricmh.create', 'KategoriMenuController@create2')->name('kategoricmh.create');
-Route::post('/kategoricmh.store', 'KategoriMenuController@index2')->name('kategoricmh.store');
+Route::post('/kategoricmh.store', 'KategoriMenuController@store2')->name('kategoricmh.store');
 Route::get('/kategoricmh.delete.{id}', 'KategoriMenuController@destroy2')->name('kategoricmh.destroy');
 
 // Kategori menu kopi
@@ -95,6 +95,7 @@ Route::match(['get', 'post'], '/editkopi{id}', 'FrenchaiseController@edit');
 Route::get('/kopiportal.creategal', 'FrenchaiseController@creategal')->name('kopiportal.creategal');
 Route::post('/kopiportal.storegal', 'FrenchaiseController@storegal')->name('kopiportal.storegal');
 Route::get('/kopiportal.deletegal.{id}', 'FrenchaiseController@destroygal')->name('kopiportal.destroygal');
+
 
 
 

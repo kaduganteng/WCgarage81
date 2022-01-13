@@ -128,7 +128,7 @@
                                                                 class="img-fluid mb-2" alt="white sample" width="100px"
                                                                 height="100px" />
                                                     </td>
-                                                    <td>{{ $m->nama_kategori }}</td>
+                                                    <td>{{ $m->kategori_id }}</td>
                                                     <td>{{ $m->nama }}</td>
                                                     <td>{!! $m->keterangan !!}</td>
                                                     <td>{{ $m->harga }}</td>
@@ -302,7 +302,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputName">Keterangan</label>
-                                    <textarea name="keterangan" id="keterangan" cols="30"
+                                    <textarea name="keterangan" id="keteranganedit" cols="30"
                                         rows="10">{{ empty($m) ? '' : $m->keterangan }}</textarea>
                                     {{-- <input type="text" class="form-control" name="keterangan" id="keterangan"
                                                     value="{{ @$m->keterangan }}" placeholder="Tambahkan keterangan menu"> --}}
@@ -342,6 +342,8 @@
     @endforeach
 
 
+    </div>
+@endsection
 @section('scripts')
     <script>
         ClassicEditor
@@ -350,25 +352,13 @@
                 console.error(error);
             });
     </script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#keteranganedit'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
 
-@endsection
-
-</div>
-<div class="modal-footer">
-    <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
-
-</div>
-</div>
-</div>
-</div>
-@endsection
-@section('scripts')
-<script>
-    ClassicEditor
-        .create(document.querySelector('#keterangan'))
-        .catch(error => {
-            console.error(error);
-        });
-</script>
 
 @endsection

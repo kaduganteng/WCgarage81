@@ -204,7 +204,7 @@ class CaffeController extends Controller
         $foto_cmh->move($tujuan, $nama_file);
         $gcmh = Galericmh::create([
             'nama' => $request->nama,
-            'foto_bdg' => $nama_file
+            'foto_cmh' => $nama_file
         ]);
         Alert::success('Sukses !', 'Data Berhasil Di Tambahkan');
         return redirect()->back();
