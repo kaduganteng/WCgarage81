@@ -139,7 +139,7 @@
                                                         <button type="button" class="btn btn-success" data-toggle="modal"
                                                             data-target="#exampleModaledit{{ $m->id }}">
                                                             <ion-icon name="create-outline"></ion-icon>
-                                                        </button></a>
+                                                        </button>
                                                     </td>
                                                 </tr>
                                             @endforeach
@@ -304,7 +304,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputName">Keterangan</label>
-                                <textarea name="keterangan" id="keteranganedit" cols="30"
+                                <textarea name="keterangan" id="keteranganedit{{ $m->id }}" cols="30"
                                     rows="10">{{ empty($m) ? '' : $m->keterangan }}</textarea>
                                 {{-- <input type="text" class="form-control" name="keterangan" id="keterangan"
             value="{{ @$m->keterangan }}" placeholder="Tambahkan keterangan menu"> --}}
@@ -348,7 +348,7 @@
     </script>
     <script>
         ClassicEditor
-            .create(document.querySelector('#keteranganedit'))
+            .create(document.querySelector('#keteranganedit{{ $m->id }}'))
             .catch(error => {
                 console.error(error);
             });

@@ -55,10 +55,11 @@
                                         <img src="{{ asset('upload/' . $g->foto_kopip) }}" class="img-fluid mb-2"
                                             alt="white sample" width="200px" height="200px" />
                                     </a>
-                                    <a href="{{ route('kopiportal.destroygal') }}">
+                                    <a href="{{ route('kopiportal.destroygal', $g->id) }}">
                                         <button class="btn btn-danger">
-                                            <ion-icon class="trash-outline">
-                                        </button></a>
+                                            <ion-icon name="trash-outline"></ion-icon>
+                                        </button>
+                                    </a>
                                 </div>
                             @endforeach
 
@@ -131,8 +132,8 @@
                                                                 class="img-fluid mb-2" alt="white sample" width="100px"
                                                                 height="100px" />
                                                     </td>
-                                                    <td>{{ $kp->nama }}</td>
                                                     <td>{{ $kp->kategori_id }}</td>
+                                                    <td>{{ $kp->nama }}</td>
                                                     <td>{!! $kp->keterangan !!}</td>
                                                     <td>{{ $kp->harga }}</td>
                                                     <td>
@@ -141,7 +142,7 @@
                                                                 <ion-icon name="trash-outline"></ion-icon>
                                                             </button></a>
                                                         <button type="button" class="btn btn-success" data-toggle="modal"
-                                                            data-target="#exampleModaledit {{ $kp->id }}">
+                                                            data-target="#exampleModaledit{{ $kp->id }}">
                                                             <ion-icon name="create-outline"></ion-icon>
                                                         </button>
 
@@ -300,10 +301,10 @@
                                         <label for="exampleInputEmail1">Pilih Kategori</label>
                                         <div class="input-group">
                                             <select name="kategori_id" class="form-control">
-                                                @if (!empty(@$kp->kategori_id))
-                                                    <option value="{{ @$kp->kategori_id }}"
-                                                        {{ !empty($kp->nama_kategori) ? 'selected' : '' }}>
-                                                        {{ $kp->nama_kategori }}</option>
+                                                @if (!empty(@$dataportal->kategori_id))
+                                                    <option value="{{ @$dataportal->kategori_id }}"
+                                                        {{ !empty($dataportal->nama_kategori) ? 'selected' : '' }}>
+                                                        {{ $dataportal->nama_kategori }}</option>
                                                 @endif
                                                 @foreach ($kategori as $k)
                                                     <option value="{{ $k->id }}">{{ $k->nama_kategori }}</option>
@@ -322,7 +323,7 @@
                                 <div class="form-group">
 
                                     <label for="exampleInputName">Keterangan</label>
-                                    <textarea name="keterangan" id="keterangan" cols="30"
+                                    <textarea name="keterangan" id="keteranganedit{{ $kp->id }}" cols="30"
                                         rows="10">{{ empty($kp) ? '' : $kp->keterangan }}</textarea>
                                     {{-- <input type="text" class="form-control" name="keterangan" id="keterangan"
                                 value="{{ @$databdg->keterangan }}" placeholder="Tambahkan keterangan menu"> --}}
@@ -359,6 +360,13 @@
     <script>
         ClassicEditor
             .create(document.querySelector('#keterangan'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#keteranganedit{{ $kp->id }}'))
             .catch(error => {
                 console.error(error);
             });
