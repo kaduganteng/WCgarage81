@@ -277,7 +277,7 @@
                             <div class="form-group">
                                 <label for="exampleInputFile">Masukan Foto Menu</label>
                                 <div class="input-group">
-                                    <input type="file" class="form-control" name="foto_menu" id="foto_menu">
+                                    <input type="file" class="form-control" name="foto_menu" id="foto_menu" value="{{ @$m->foto_menu }}">
                                 </div>
                             </div>
                             <div class="form-group">

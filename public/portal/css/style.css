@@ -75,9 +75,9 @@ body {
     cursor: auto;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 280px) {
     .slide img .slide .slidas .slider {
-        position: fixed;
+        position: relative;
     }
 }
 

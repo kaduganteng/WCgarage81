@@ -136,43 +136,19 @@
                             facilis quidem dolore! Dolorem, molestiae.</p>
                     </div>
                 </div>
+                @foreach($event as $evn)
                 <div class="row">
                     <div class="col-md-4">
                         <div class="fh5co-blog animate-box">
-                            <a href="#" class="blog-bg" style="background-image: url(images/mobile.jpg);"></a>
+                            <a href="{{ asset('upload/' . $evn->foto_event) }}" class="fancybox blog-bg"
+                                data-fancybox="ggblg" data-gallery="event" height="150px" width="100px">
+                                <img src="{{ asset('upload/' . $evn->foto_event) }}" class="img-fluid mb-2 blog"
+                                alt="white sample" width="350px" height="200px" />
+                            </a>
                             <div class="blog-text">
-                                <span class="posted_on">Feb. 15th 2022</span>
-                                <h3><a href="#">Turnamen Mobile Legend</a></h3>
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                    there live the blind texts.</p>
-                                <ul class="stuff">
-                                    <li><a href="#"><i class="icon-arrow-right22"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="fh5co-blog animate-box">
-                            <a href="#" class="blog-bg" style="background-image: url(images/live.jpg);"></a>
-                            <div class="blog-text">
-                                <span class="posted_on">Jan. 11th 2022</span>
-                                <h3><a href="#">Live Music</a></h3>
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                    there live the blind texts.</p>
-                                <ul class="stuff">
-                                    <li><a href="#"><i class="icon-arrow-right22"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="fh5co-blog animate-box">
-                            <a href="#" class="blog-bg" style="background-image: url(images/signature.jpg);"></a>
-                            <div class="blog-text">
-                                <span class="posted_on">Jan 5th 2022</span>
-                                <h3><a href="#">Garage Gathering Community</a></h3>
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                    there live the blind texts.</p>
+                                <span class="posted_on">{{ $evn->tgl_event }}</span>
+                                <h3><a href="#">{{ $evn->nama }}</a></h3>
+                                <p>{!! $evn->rinciankegiatan !!}</p>
                                 <ul class="stuff">
                                     <li><a href="#"><i class="icon-arrow-right22"></i></a></li>
                                 </ul>
@@ -180,6 +156,7 @@
                         </div>
                     </div>
                 </div>
+                @endforeach
             </div>
         </div>
         <!--Acara Garage 81-->
