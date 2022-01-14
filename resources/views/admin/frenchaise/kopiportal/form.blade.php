@@ -94,8 +94,8 @@
                         <!-- /.card-body -->
 
                         <div class="card-footer">
-                            <button type="submit" class="btn btn-primary">
-                                <ion-icon name="save-outline"></ion-icon>Selesai
+                            <button type="submit" class="btn btn-info">
+                                <ion-icon name="save-outline"></ion-icon>
                             </button>
                         </div>
                     </form>

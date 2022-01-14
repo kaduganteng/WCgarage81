@@ -4,6 +4,17 @@
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <!-- ISI CONTENT ADMIN -->
+<style>
+    .btn {
+        transition: 1s;
+
+    }
+
+    .btn:hover {
+        transform: rotate(360deg);
+        border-radius: 50%;
+    }
+</style>
 <div class="content">
 
     <!-- ISI JUDUL KONTEN    -->
@@ -43,8 +54,7 @@
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form action="{{ empty($datacmh) ?  route('menucmh.store'): route('menucmh.update',$datacmh->id)}}"
-                        method="POST" enctype="multipart/form-data">
+                    <form action="{{ empty($datacmh) ?  route('menucmh.store'): route('menucmh.update',$datacmh->id)}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
@@ -71,8 +81,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputName">Nama Menu</label>
-                                <input type="text" class="form-control" name="nama" id="nama"
-                                    value="{{ @$datacmh->nama }}" placeholder="Masukan nama menu">
+                                <input type="text" class="form-control" name="nama" id="nama" value="{{ @$datacmh->nama }}" placeholder="Masukan nama menu">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputName">Keterangan</label>
@@ -82,9 +91,8 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputName">Harga Menu</label>
-                               
-                                <input type="text" class="form-control" name="harga" id="harga"
-                                    value="{{ @$datacmh->harga }}" placeholder="Masukan Harga">
+
+                                <input type="text" class="form-control" name="harga" id="harga" value="{{ @$datacmh->harga }}" placeholder="Masukan Harga">
                             </div>
                             <div class="form-check">
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -94,8 +102,8 @@
                         <!-- /.card-body -->
 
                         <div class="card-footer">
-                            <button type="submit" class="btn btn-primary">
-                                <ion-icon name="save-outline"></ion-icon>Selesai
+                            <button type="submit" class="btn btn-info">
+                                <ion-icon name="save-outline"></ion-icon>
                             </button>
                         </div>
                     </form>
@@ -119,10 +127,10 @@
 @section('scripts')
 <script>
     ClassicEditor
-        .create( document.querySelector( '#keterangan' ) )
-        .catch( error => {
-            console.error( error );
-        } );
+        .create(document.querySelector('#keterangan'))
+        .catch(error => {
+            console.error(error);
+        });
 </script>
 
 @endsection

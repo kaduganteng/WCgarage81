@@ -5,6 +5,17 @@
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <!-- ISI CONTENT ADMIN -->
+<style>
+    .btn {
+        transition: 1s;
+
+    }
+
+    .btn:hover {
+        transform: rotate(360deg);
+        border-radius: 50%;
+    }
+</style>
 <div class="content">
 
     <!-- ISI JUDUL KONTEN    -->
@@ -60,8 +71,8 @@
 
                         <div class="card-footer">
 
-                            <button type="submit" class="btn btn-primary">
-                                <ion-icon name="save-outline"></ion-icon>Selesai
+                            <button type="submit" class="btn btn-info">
+                                <ion-icon name="save-outline"></ion-icon>
                             </button>
                         </div>
                     </form>

@@ -30,6 +30,16 @@
         .item:hover {
             filter: brightness(80%);
         }
+
+        .btn {
+            transition: 1s;
+
+        }
+
+        .btn:hover {
+            transform: rotate(360deg);
+            border-radius: 50%;
+        }
     </style>
     <div class="card-header">
         <h3 class="card-title">Title</h3>
@@ -97,7 +107,7 @@
 
                 <div class="card-footer">
 
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-info">
                         <ion-icon name="save-outline"></ion-icon>
                     </button>
                 </div>
