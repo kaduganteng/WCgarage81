@@ -29,10 +29,34 @@ class EventController extends Controller
         $tujuan = 'upload/';
         $foto_event->move($tujuan, $nama_file);
         $event = Event::create([
+            'foto_event' => $nama_file,
+            'tgl_event' => $request->tgl_event,
             'nama' => $request->nama,
-            'foto_event' => $nama_file
+            'rinciankegiatan' => $request->rkegiatan
         ]);
         Alert::success('Sukses !', 'Data Berhasil Di Tambahkan');
         return redirect()->back();
+    }
+    public function destroy($id)
+    {
+        $destroy = Event::destroy($id);
+        Alert::warning('Data Berhasil Dihapus !', 'Data Yang Berhasil Di Hapus Tidak Dapat Dikembalikan');
+        return redirect()->back();
+    }
+
+    public function edit(Request $request, $id)
+    {
+        if ($request->isMethod('post')) {
+            $e = $request->all();
+            $event = Event::findOrFail($id)->update([
+                'tgl_event' => $request->tgl_event,
+                'nama' => $request->nama,
+                'foto_event' => $request->foto_event,
+                'rinciankegiatan' => $request->rkegiatan
+
+            ]);
+            Alert::success('Sukses !', 'Data Berhasil Di Edit');
+            return redirect()->route('menubdg');
+        }
     }
 }

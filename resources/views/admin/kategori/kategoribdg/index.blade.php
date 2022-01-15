@@ -4,17 +4,6 @@
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-<style>
-  .btn {
-    transition: 1s;
-
-  }
-
-  .btn:hover {
-    transform: rotate(360deg);
-    border-radius: 50;
-  }
-</style>
 <!-- ISI CONTENT ADMIN -->
 <div class="content">
 
@@ -46,8 +35,8 @@
         </div>
         <div class="card-tools">
           <div class="input-group input-group-sm" style="width: 150px;">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              Launch demo modal
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+              Tambah kategori
             </button>
           </div>
         </div>
@@ -79,7 +68,7 @@
                 <table class="table table-hover text-nowrap">
                   <thead>
                     <tr>
-                      <th>No</th>
+                      <th>ID Kategori</th>
                       <th>Nama Kategori</th>
                       <th>Opsi</th>
                     </tr>
@@ -96,7 +85,7 @@
                       <td>
                         <a href="{{ route('kategorimenu.destroy',$k->id) }}">
                           <button class="btn btn-danger" class="btn">
-                            <ion-icon name="close-circle-outline"></ion-icon>
+                            <ion-icon name="trash-outline"></ion-icon>
                           </button></a>
                       </td>
                     </tr>
@@ -124,15 +113,20 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h5 class="modal-title" id="exampleModalLabel">Masukan Kategori Baru</h5>
           </div>
           <div class="modal-body">
-            ...
+            <form action="{{ route('kategorimenu.store')}}" method="POST">
+              @csrf
+              <div class="form-group">
+                <input type="text" class="form-control" name="kategori" id="kategori" placeholder="Masukan Kategori Baru">
+              </div>
+              <button type="sumbit" class="btn btn-info">Simpan</button>
+            </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>
+
           </div>
         </div>
       </div>

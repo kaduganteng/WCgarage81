@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Kopiportal;
 use Illuminate\Http\Request;
 use App\Menucaffebdg;
 use App\Menucaffecmh;
@@ -27,17 +28,21 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $stok = Menucaffebdg::select("kategori_menu.nama_kategori", DB::raw("count(menubdg.id) as jml"))
+        $stok = Menucaffebdg::select(DB::raw("count(menubdg.id) as jml"))->get();
 
-            ->join('kategori_menu', 'menubdg.kategori_id', '=', 'kategori_menu.id')->groupBy('kategori_menu.nama_kategori')->get();
 
-        $stok2 = Menucaffecmh::select("kategori_menu.nama_kategori", DB::raw("count(menucmh.id) as jml"))
+        $stok2 = Menucaffecmh::select(DB::raw("count(menucmh.id) as jml"))->get();
 
-            ->join('kategori_menu', 'menucmh.kategori_id', '=', 'kategori_menu.id')->groupBy('kategori_menu.nama_kategori')->get();
+
+        $stok3 = Kopiportal::select(DB::raw("count(kopiportal.id) as jml"))->get();
+
+
 
         return view('admin.dashboard.dashboard', [
-            'stok' => $stok,
-            'stok2' => $stok2
+            'stok' =>  $stok,
+            'stok2' => $stok2,
+            'stok3' => $stok3,
+
         ]);
     }
 }

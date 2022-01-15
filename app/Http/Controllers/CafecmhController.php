@@ -11,21 +11,30 @@ class CafecmhController extends Controller
     public function index()
     {
         $menucmh = Menucaffecmh::get();
-        $gmch = Galericmh::get();
-        return view('cafecmh.indexcmh', [
-            'menucmh' => $menucmh
-
-        ]);
-    }
-
-    public function galeri()
-    {
-        $gcmh = Galericmh::get();
         return view(
-            'cafecmh.galeri',
+            'cafecmh.indexcmh',
             [
-                'gcmh' => $gcmh
+                'menucmh' => $menucmh
             ]
         );
+    }
+    public function menucmh()
+    {
+        $menucmh = Menucaffecmh::get();
+        return view(
+            'cafecmh.menucmh',
+            [
+                'menucmh' => $menucmh
+            ]
+        );
+    }
+
+    public function galericmh()
+    {
+        $galericmh = Galericmh::get();
+        return view('cafecmh.galericmh', [
+
+            'galericmh' => $galericmh
+        ]);
     }
 }

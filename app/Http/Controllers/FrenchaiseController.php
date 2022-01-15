@@ -22,11 +22,13 @@ class FrenchaiseController extends Controller
 
     public function index()
     {
+        $kategori = Katagorikopi::all();
         $kopiportal = Kopiportal::get();
         $gkopi = GaleriKopip::get();
         return view('admin.frenchaise.kopiportal.index', [
             'kopiportal' => $kopiportal,
-            'gkopi' => $gkopi
+            'gkopi' => $gkopi,
+            'kategori' => $kategori
         ]);
     }
     public function create()
@@ -50,6 +52,7 @@ class FrenchaiseController extends Controller
 
         $kopiportal = Kopiportal::create([
             'foto_menu' => $nama_file,
+            'kategori_id' => $request->kategori_id,
             'nama' => $request->nama,
             'keterangan' => $request->keterangan,
             'harga' => $request->harga
@@ -65,25 +68,23 @@ class FrenchaiseController extends Controller
         Alert::warning('Data Berhasil Dihapus !', 'Data Yang Berhasil Di Hapus Tidak Dapat Dikembalikan');
         return redirect()->back();
     }
-    public function edit($id)
+
+    public function edit(Request $request, $id)
     {
-        $dataportal = Kopiportal::select('kopiportal.*', $id);
-        return view('admin.frenchaise.kopiportal.form', [
-            'kopiportal' => $dataportal
-        ]);
-    }
-    public function update(Request $request, $id)
-    {
-        $kopiportal = Kopiportal::findOrFail($id)->update([
-            'foto_menu' => $request->foto,
-            'nama' => $request->nama,
-            'keterangan' => $request->keterangan,
-            'harga' => $request->harga
+        if ($request->isMethod('post')) {
+            $kp = $request->all();
+            $kopiportal = Kopiportal::findOrFail($id)->update([
+                'foto_menu' => $request->foto,
+                'kategori_id' => $request->kategori_id,
+                'nama' => $request->nama,
+                'keterangan' => $request->keterangan,
+                'harga' => $request->harga
 
 
-        ]);
-        Alert::success('Sukses !', 'Data Berhasil Di Edit');
-        return redirect()->route('kopiportal');
+            ]);
+            Alert::success('Sukses !', 'Data Berhasil Di Edit');
+            return redirect()->route('kopiportal');
+        }
     }
 
     public function creategal()
@@ -103,6 +104,12 @@ class FrenchaiseController extends Controller
             'foto_kopip' => $nama_file
         ]);
         Alert::success('Sukses !', 'Data Berhasil Di Tambahkan');
+        return redirect()->back();
+    }
+    public function destroygal($id)
+    {
+        $destroy = GaleriKopip::destroy($id);
+        Alert::warning('Gambar Berhasil Dihapus !', 'Gambar Yang Berhasil Di Hapus Tidak Dapat Dikembalikan');
         return redirect()->back();
     }
 }

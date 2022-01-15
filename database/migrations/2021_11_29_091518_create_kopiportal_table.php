@@ -16,6 +16,7 @@ class CreateKopiportalTable extends Migration
         Schema::create('kopiportal', function (Blueprint $table) {
             $table->increments('id');
             $table->string('foto_menu')->nullable();
+            $table->string('kategori_id');
             $table->string('nama');
             $table->string('keterangan');
             $table->string('harga');

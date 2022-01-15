@@ -1,20 +1,9 @@
 @extends('layouts.main')
-@section('tittle','Admin Garage 81')
+@section('tittle', 'Admin Garage 81')
 @section('content')
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-<style>
-    .btn {
-        transition: 1s;
-
-    }
-
-    .btn:hover {
-        transform: rotate(360deg);
-        border-radius: 50;
-    }
-</style>
 <!-- ISI CONTENT ADMIN -->
 <div class="content">
 
@@ -46,12 +35,9 @@
                 </div>
                 <div class="card-tools">
                     <div class="input-group input-group-sm" style="width: 150px;">
-                        <div class="input-group-append">
-                            <a href="{{ route('kategoricmh.create') }}">
-                                <button class="btn btn-info btn-round">
-                                    Tambah Kategori
-                                </button></a>
-                        </div>
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+                            Tambah kategori
+                        </button>
                     </div>
                 </div>
             </div>
@@ -82,7 +68,7 @@
                                 <table class="table table-hover text-nowrap">
                                     <thead>
                                         <tr>
-                                            <th>No</th>
+                                            <th>ID Kategori</th>
                                             <th>Nama Kategori</th>
                                             <th>Opsi</th>
                                         </tr>
@@ -94,12 +80,12 @@
                                         @endphp
                                         @foreach ($kategoricmh as $k)
                                         <tr>
-                                            <td>{{ $no++}}</td>
-                                            <td>{{ $k->nama_kategori}}</td>
+                                            <td>{{ $no++ }}</td>
+                                            <td>{{ $k->nama_kategori }}</td>
                                             <td>
-                                                <a href="{{ route('kategoricmh.destroy',$k->id) }}">
+                                                <a href="{{ route('kategoricmh.destroy', $k->id) }}">
                                                     <button class="btn btn-danger" class="btn">
-                                                        <ion-icon name="close-circle-outline"></ion-icon>
+                                                        <ion-icon name="trash-outline"></ion-icon>
                                                     </button></a>
                                             </td>
                                         </tr>
@@ -121,6 +107,30 @@
         </div>
         <!-- /.card -->
 
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Masukan Kategori Baru</h5>
+                    </div>
+                    <div class="modal-body">
+                        <form action="{{ route('kategoricmh.store') }}" method="POST">
+                            @csrf
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="kategori" id="kategori" placeholder="Masukan Kategori Baru">
+                            </div>
+                            <button type="sumbit" class="btn btn-info">Simpan</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 </div>
 

@@ -40,7 +40,7 @@ body {
     overflow-x: hidden;
 }
 
-.slides {
+.slidas {
     width: 1000px;
     height: 520px;
     place-content: center;
@@ -56,7 +56,7 @@ body {
 }
 
 .slide {
-    width: 20%;
+    width: 30%;
     transition: 1s;
     display: flex;
 }
@@ -71,15 +71,14 @@ body {
     display: block;
     border-radius: 10%;
     place-content: center;
-    margin-inline: 5%;
+    padding-inline: 3%;
+    cursor: auto;
 }
 
-.slide img:hover {
-    -webkit-transform: all 0.1s ease-in-out;
-    -moz-transform: all 0.1s ease-in-out;
-    -o-transform: all 0.1s ease-in-out;
-    -ms-transform: all 0.1s ease-in-out;
-    transform: all 0.1s ease-in-out;
+@media screen and (max-width: 280px) {
+    .slide img .slide .slidas .slider {
+        position: relative;
+    }
 }
 
 
@@ -119,23 +118,23 @@ body {
 }
 
 #radio2:checked~.first {
-    margin-left: -10%;
+    margin-left: -25%;
 }
 
 #radio3:checked~.first {
-    margin-left: -175%;
+    margin-left: -200%;
 }
 
 #radio4:checked~.first {
-    margin-left: -345%;
+    margin-left: -385%;
 }
 
 #radio5:checked~.first {
-    margin-left: -520%;
+    margin-left: -560%;
 }
 
 #radio6:checked~.first {
-    margin-left: -660%;
+    margin-left: -730%;
 }
 
 
@@ -206,7 +205,7 @@ body {
 }
 
 .produk h2 {
-    font-size: 1.5em;
+    font-size: 1.4em;
     margin-bottom: 10px;
     margin-top: 20px;
     color: #ffc069;
@@ -255,6 +254,10 @@ body {
 .mapsh2 h2 {
     margin-top: 70px;
     color: #ffc069;
+}
+
+.menuspesial {
+    margin-top: 200px;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2),
@@ -653,7 +656,7 @@ figure {
 #fh5co-header .display-tc h2,
 .fh5co-cover .display-tc h2 {
     font-size: 30px;
-    line-height: 1.5;
+    line-height: 1.1;
     margin-bottom: 30px;
     font-style: italic;
 }
@@ -765,13 +768,13 @@ figure {
 .fh5co-section p {
     color: #ffffff;
     font-size: 20px;
-    line-height: 1.5;
+    line-height: 1.1;
     align-items: baseline;
     text-align: justify;
 }
 
 .section-heading {
-    margin-top: 60px;
+    margin-top: 30px;
     width: 100%;
     float: left;
     margin-bottom: 50px;
@@ -800,7 +803,7 @@ figure {
 
 @media screen and (max-width: 992px) {
     #fh5co-about .img-wrap img {
-        max-width: 50%;
+        max-width: 70%;
     }
 }
 
@@ -821,15 +824,15 @@ figure {
 #fh5co-featured-menu .fh5co-heading h2,
 #fh5co-gallery .fh5co-heading h2,
 #fh5co-reservation-form .fh5co-heading h2 {
-    color: #fff;
+    color: #ffc069;
     font-family: "Satisfy", cursive;
 }
 
 #fh5co-featured-menu .fh5co-item-wrap,
 #fh5co-gallery .fh5co-item-wrap,
 #fh5co-reservation-form .fh5co-item-wrap {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 #fh5co-featured-menu .fh5co-item,
@@ -837,7 +840,6 @@ figure {
 #fh5co-reservation-form .fh5co-item {
     float: left;
     width: 100%;
-    background: rgb(102, 102, 102);
 }
 
 #fh5co-featured-menu .fh5co-item.margin_top,
@@ -864,9 +866,9 @@ figure {
 #fh5co-featured-menu .fh5co-item .fh5co-price,
 #fh5co-gallery .fh5co-item .fh5co-price,
 #fh5co-reservation-form .fh5co-item .fh5co-price {
-    font-style: 20px;
+    font-style: 30px;
     color: #fee856;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-size: 30px;
     display: block;
 }
@@ -875,6 +877,18 @@ figure {
 #fh5co-gallery .fh5co-item img,
 #fh5co-reservation-form .fh5co-item img {
     margin-bottom: 30px;
+    border-end-end-radius: 7%;
+    border-top-left-radius: 7%;
+    border-top-right-radius: 7%;
+    border-end-start-radius: 7%;
+}
+
+.fh5co-item img:hover {
+    -webkit-transform: scale(1.1) rotate(0deg);
+    -moz-transform: scale(1.1) rotate(0deg);
+    -o-transform: scale(1.1) rotate(0deg);
+    -ms-transform: scale(1.1) rotate(0deg);
+    transform: scale(1.1) rotate(0deg)
 }
 
 #fh5co-gallery .fh5co-gallery_item {
@@ -888,7 +902,7 @@ figure {
     float: left;
     margin-bottom: 20px;
     background-size: cover;
-    cursor: zoom-in;
+    cursor: unset;
 }
 
 #fh5co-gallery .fh5co-bg-img {
@@ -929,7 +943,7 @@ figure {
 }
 
 #fh5co-featured-testimony .fh5co-heading h2 {
-    color: #fff;
+    color: #ffc069;
     font-family: "Satisfy", cursive;
 }
 
@@ -983,13 +997,12 @@ figure {
 
 #fh5co-slider .fh5co-heading h2 {
     font-family: "Satisfy", cursive;
-    font-size: 35px;
-    color: rgb(238, 195, 1);
+    color: #ffc069;
 }
 
 #fh5co-slider-wrwap {
     height: 500px !important;
-    background: no-repeat center center;
+    background: url(../images/loader.gif) no-repeat center center;
 }
 
 #fh5co-slider-wrwap .btn {
@@ -1004,8 +1017,6 @@ figure {
     border: none;
     z-index: 1;
     margin-bottom: 0;
-    height: 500px;
-    width: 700px;
 }
 
 #fh5co-slider-wrwap .flexslider {
@@ -1013,32 +1024,38 @@ figure {
 }
 
 #fh5co-slider-wrwap .flexslider {
-    place-content: center;
-    border-radius: 20%;
-    height: 500px;
-    width: 700px;
-    background-repeat: none;
-    background-size: 50%;
-    background-position: center;
-    margin-right: 0px;
+    border: none;
+    z-index: 1;
+    margin-bottom: 0;
+}
+
+#fh5co-slider-wrwap .flexslider .slides {
+    position: relative;
+}
+
+#fh5co-slider-wrwap .flexslider .slides li {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    height: 600px !important;
+    border-radius: 7%;
     position: relative;
 }
 
 #fh5co-slider-wrwap .flexslider .flex-control-nav {
-    top: -50px !important;
+    top: -30px !important;
     z-index: 1000;
     right: 0;
     float: right;
     width: auto;
-    align-content: center;
 }
 
 #fh5co-slider-wrwap .flexslider .flex-control-nav li {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 #fh5co-slider-wrwap .flexslider .flex-control-nav li a {
-    background: #ffffff;
+    background: #ea272d;
     box-shadow: none;
     width: 12px;
     height: 12px;
@@ -1067,29 +1084,24 @@ figure {
 }
 
 #fh5co-slider-wrwap .flexslider .slider-text-bg .desc {
-    margin-top: 5em;
+    margin-top: 9em;
     padding: 2em;
     background: transparent;
 }
 
 @media screen and (max-width: 992px) {
     #fh5co-slider-wrwap .flexslider .slider-text-bg .desc {
-        background: #000;
+        background: none;
     }
 }
 
 #fh5co-slider-wrwap .flexslider .slider-text-bg .desc h2 {
-    text-decoration: none;
-    border-bottom: 2px solid #ea272d;
-    display: inline-block;
-    margin-bottom: 1em;
-    color: rgb(255, 255, 255) !important;
+    color: #ec4848;
 }
 
 @media screen and (max-width: 768px) {
     #fh5co-slider-wrwap .flexslider .slider-text-bg .desc p {
         display: none;
-        font-size: 14px !important;
     }
 }
 
@@ -1121,7 +1133,7 @@ figure {
 #fh5co-content-section,
 #fh5co-contact,
 #fh5co-footer {
-    padding: 10em 0;
+    padding: 7em 0;
     clear: both;
 }
 
@@ -1150,6 +1162,21 @@ figure {
 .fh5co-social-icons {
     margin: 0;
     padding: 0;
+}
+
+.fh5co-social-icons img {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.fh5co-social-icons img:hover {
+    -webkit-transform: scale(1.2) rotate(0deg);
+    -moz-transform: scale(1.2) rotate(0deg);
+    -o-transform: scale(1.2) rotate(0deg);
+    -ms-transform: scale(1.2) rotate(0deg);
+    transform: scale(1.2) rotate(0deg)
 }
 
 .fh5co-social-icons li {
@@ -1205,7 +1232,7 @@ figure {
 }
 
 #fh5co-started .fh5co-heading p {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 1.1);
     font-size: 20px;
 }
 
@@ -1495,7 +1522,8 @@ figure {
 #fh5co-blog .fh5co-heading h2,
 #fh5co-contact .fh5co-heading h2 {
     font-family: "Satisfy", cursive;
-    color: #fff;
+    color: #ffc069;
+    text-align: center;
 }
 
 .fh5co-blog {
@@ -1541,7 +1569,7 @@ figure {
     transition: 0.3s;
 }
 
-.fh5co-blog .blog-text span {
+.fh5co-blog .blog-text span .p {
     display: inline-block;
     margin-bottom: 20px;
     font-size: 14px !important;
@@ -1551,7 +1579,7 @@ figure {
 .fh5co-blog .blog-text .stuff {
     margin: 0;
     padding: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(248, 11, 11, 0.05);
     padding-top: 20px;
 }
 
@@ -1559,7 +1587,7 @@ figure {
     list-style: none;
     display: inline-block;
     margin-left: 10px;
-    color: #fff;
+    color: #e24040;
 }
 
 .fh5co-blog .blog-text .stuff li:first-child {
@@ -1578,7 +1606,7 @@ figure {
 .fh5co-blog .blog-text .stuff li i {
     margin-top: 7px;
     margin-right: 5px;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(211, 58, 58, 0.877);
     float: left;
     font-size: 14px;
     padding-right: 5px;
@@ -1587,18 +1615,19 @@ figure {
 .fh5co-blog .blog-text h3 {
     font-size: 24px;
     margin-bottom: 20px;
-    line-height: 1.5;
+    line-height: 1.1;
 }
 
 .h2tagline {
     font-size: 25px;
     margin-top: 10px;
-    line-height: 1.5;
+    line-height: 1.1;
     color: #d43f3a;
 }
 
 .fh5co-blog .blog-text h3 a {
-    color: white;
+    color: #d43f3a;
+    text-align: center;
 }
 
 .fh5co-portfolio {
@@ -1739,7 +1768,7 @@ figure {
 .fh5co-team>div p,
 .fh5co-team blockquote p {
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.1;
     color: #555555;
 }
 
@@ -1871,7 +1900,7 @@ figure {
 }
 
 #fh5co-offcanvas a:hover {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 1.1);
 }
 
 #fh5co-offcanvas ul {
@@ -2122,16 +2151,16 @@ figure {
 }
 
 .btn-primary {
-    background: #ea272d;
+    background: #ffffff;
     color: #fff;
-    border: 2px solid #ea272d;
+    border: 2px solid #00c90a;
 }
 
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-    background: #ec3e44 !important;
-    border-color: #ec3e44 !important;
+    background: #ffc069 !important;
+    border-color: #a45d5d !important;
 }
 
 .btn-primary.btn-outline {
@@ -2144,14 +2173,14 @@ figure {
     text-transform: uppercase;
     font-size: 14px !important;
     letter-spacing: 1px;
-    border: 2px solid #ea272d;
+    border: 2px solid #a45d5d;
 }
 
 .btn-primary.btn-outline:hover,
 .btn-primary.btn-outline:focus,
 .btn-primary.btn-outline:active {
-    background: #ea272d;
-    color: #fff;
+    background: #a45d5d;
+    color: rgb(0, 0, 0);
 }
 
 .btn-success {

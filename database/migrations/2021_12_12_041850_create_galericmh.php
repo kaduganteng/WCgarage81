@@ -29,6 +29,6 @@ class CreateGalericmh extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('galeribdg');
+        Schema::dropIfExists('galericmh');
     }
 }

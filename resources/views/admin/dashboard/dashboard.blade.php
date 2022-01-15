@@ -1,9 +1,25 @@
 @extends('layouts.main')
 @section('tittle','Admin Garage 81')
 @section('content')
-<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+<head>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+</head>
+<style>
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+</style>
+
 <!-- ISI CONTENT ADMIN -->
-<div class="content">
+<div class="container-fluid">
 
   <!-- ISI JUDUL KONTEN    -->
   <section class="content-header">
@@ -18,73 +34,127 @@
   </section>
 
   <!-- ISI KONTEN    -->
-  <section class="content">
-    <div class="card">
-      <div class="card-header">
-        <h3 class="card-title" style="text-align: center;">Data Stok Menu Caffe Garage 81</h3>
+  <div class="container">
 
-        <div class="card-tools">
-          <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-            <i class="fas fa-minus"></i>
-          </button>
-          <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
-      </div>
-      <div class="card-body">
-        <h3>Caffe Bandung</h3>
-        <p>--------------------------------------</p>
-        <div class="row">
-          @foreach ($stok as $s)
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-info">
-              <div class="inner">
-                <h3>{{ $s->jml }}</h3>
 
-                <p>{{ $s->nama_kategori}}</p>
+
+    <div class="card-body">
+      <div class="row">
+        @foreach ($stok as $s)
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-success shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-1">
+                  <div class="text-x font-weight-bold text-success text-uppercase mb-1">
+                    Caffe Bandung</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $s->jml }} Menu </div>
+                  <a href="{{ route('menubdg') }}"><button type="button" class="btn btn-success mt-3 btn-sm shadow-sm"><i class="fas fa-info-circle"></i>
+                      Detail</button></a>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-fw fa-chart-bar fa-3x text-success"></i>
+                </div>
               </div>
-              <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-              </div>
-              <a href="{{ route('menubdg') }}" class="small-box-footer">Lebih banyak <i
-                  class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          @endforeach
-
         </div>
-        <h3>Caffe </h3>
-        <p>--------------------------------------</p>
-        <div class="row">
-          @foreach ($stok2 as $k)
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3>{{ $k->jml }}</h3>
+        @endforeach
 
-                <p>{{ $k->nama_kategori}}</p>
+
+
+
+        @foreach ($stok2 as $c)
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-info shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-1">
+                  <div class="text-x font-weight-bold text-info text-uppercase mb-1">
+                    Caffe Cimahi</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $c->jml }} Menu </div>
+                  <a href="{{ route('menucmh') }}"><button type="button" class="btn btn-info mt-3 btn-sm shadow-sm"><i class="fas fa-info-circle"></i>
+                      Detail</button></a>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-fw fa-chart-bar fa-3x text-info"></i>
+                </div>
               </div>
-              <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-              </div>
-              <a href="{{ route('menubdg') }}" class="small-box-footer">Lebih banyak<i
-                  class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          @endforeach
-
         </div>
+        @endforeach
+
+
+
+
+        @foreach ($stok3 as $k)
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-1">
+                  <div class="text-x font-weight-bold text-primary text-uppercase mb-1">
+                    Kopi Portal</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $k->jml }} Menu </div>
+                  <a href="{{ route('kopiportal') }}"><button type="button" class="btn btn-primary mt-3 btn-sm shadow-sm"><i class="fas fa-info-circle"></i>
+                      Detail</button></a>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-fw fa-chart-bar fa-3x text-primary"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        @endforeach
+
       </div>
-      <!-- /.card-body -->
-      <div class="card-footer">
-        Footer
-      </div>
-      <!-- /.card-footer-->
     </div>
-    <!-- /.card -->
+
+
+
+  </div>
+  <div class="row">
+
+    <!-- Area Chart -->
+    <div class="col-xl-8 col-md-7">
+      <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0"><i>Statistik Web</i></h6>
+        </div>
+        <!-- Card Body -->
+        <div class="card-body">
+         
+          <div class="chart-area">
+
+            <canvas id="myAreaChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pie Chart -->
+    <div class="col-xl-4 col-md-5">
+      <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 ">KETERANGAN</h6>
+        </div>
+        <!-- Card Body -->
+        <div class="card-body">
+          <p>Data yang tampil di dashboard merupakan data jumlah menu yang tersedia di dalam web, bukan data stok barang
+            atau apapun yang bersangkutan dengan inventori</b>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- /.card -->
 
   </section>
 </div>
