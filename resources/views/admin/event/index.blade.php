@@ -84,7 +84,7 @@
                                             </td>
                                             <td>{{ $e->tgl_event }}</td>
                                             <td>{{ $e->nama }}</td>
-                                            <td>{!! $e->rkegiatan !!}</td>
+                                            <td>{!! $e->rinciankegiatan !!}</td>
 
                                             <td>
                                                 <a href="{{ route('event.destroy', $e->id) }}">
@@ -142,7 +142,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputName">Rincian Kegiatan</label>
-                        <textarea name="rkegiatan" id="rkegiatan" cols="30" rows="10"></textarea>
+                        <textarea name="rinciankegiatan" id="rkegiatan" cols="30" rows="10"></textarea>
                         {{-- <input type="text" class="form-control" name="keterangan" id="keterangan"
                             value="{{ @$datacmh->keterangan }}" placeholder="Tambahkan keterangan menu"> --}}
                     </div>
@@ -168,21 +168,24 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Edit Event Event disini </h5>
+                <h5 class="modal-title" id="exampleModalLabel">Edit Event  disini </h5>
             </div>
             <div class="modal-body">
                 <form action="" method="POST" enctype="multipart/form-data">
                     @csrf
-
+        <div class="card-body">
                     <div class="form-group">
                         <label for="exampleInputFile">Masukan Foto Kegiatan</label>
+                         <div class="input-group" >
+                              <img src="{{ asset('upload/' . $e->foto_event) }}" class="img-fluid mb-2" alt="white sample" width="100px" height="100px" />
+                            </div>
                         <div class="input-group">
-                            <input type="file" class="form-control" name="foto_event" id="foto_event">
+                            <input type="file" class="form-control" name="foto_event" id="foto_event" >
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputFile">Tanggal Kegiatan</label>
-                        <input type="date" class="form-control" name="tgl_event" id="tgl_event">
+                        <input type="date" class="form-control" name="tgl_event" id="tgl_event" value="{{ @$e->tgl_event }}">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputName">Nama Event</label>
@@ -190,14 +193,14 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputName">Rincian Kegiatan</label>
-                        <textarea name="rkegiatan" id="rkegiatan" cols="30" rows="10">{{ empty($e) ? '' : $e->rkegiatan }}</textarea>
+                        <textarea name="rinciankegiatan" id="rkegiatanedit{{ $e->id }}" cols="30" rows="10">{{ empty($e) ? '' : $e->rinciankegiatan }}</textarea>
                         {{-- <input type="text" class="form-control" name="keterangan" id="keterangan"
                             value="{{ @$datacmh->keterangan }}" placeholder="Tambahkan keterangan menu"> --}}
                     </div>
 
 
                     <button type="submit" class="btn btn-info">
-                        Selesai
+                       <ion-icon name="save-outline"></ion-icon>
                     </button>
 
                 </form>
@@ -208,6 +211,8 @@
             </div>
         </div>
     </div>
+</div>
+                  
 </div>
 @endforeach
 
@@ -220,5 +225,13 @@
             console.error(error);
         });
 </script>
-
+@foreach ($event as $e)
+    <script>
+ ClassicEditor
+        .create(document.querySelector('#rkegiatanedit{{ $e->id }}'))
+        .catch(error => {
+            console.error(error);
+        });
+    </script>
+@endforeach
 @endsection

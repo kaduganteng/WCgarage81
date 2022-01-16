@@ -267,7 +267,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Masukan Menu </h5>
+                <h5 class="modal-title" id="exampleModalLabel">Edit Menu </h5>
             </div>
             <div class="modal-body">
                 <form action="{{ url('/editkopi' . $kp->id) }}" method="POST" enctype="multipart/form-data">
@@ -275,12 +275,13 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label for="exampleInputFile">Masukan Foto Menu</label>
+                             <div class="input-group" >
+                              <img src="{{ asset('upload/' . $kp->foto_menu) }}" class="img-fluid mb-2" alt="white sample" width="100px" height="100px" />
+                            </div>
                             <div class="input-group">
                                 <input type="file" class="form-control" name="foto_menu" id="foto_menu">
                             </div>
-                             <div class="input-group">
-                              <img src="{{ asset('upload/' . $kp->foto_menu) }}" class="img-fluid mb-2" alt="white sample" width="100px" height="100px" />
-                            </div>
+                            
                         </div>
                         <div class="form-group">
                             <div class="form-group">
@@ -308,7 +309,7 @@
                         <div class="form-group">
 
                             <label for="exampleInputName">Keterangan</label>
-                            <textarea name="keterangan" id="keteranganedit" cols="30" rows="10">{{ empty($kp) ? '' : $kp->keterangan }}</textarea>
+                            <textarea name="keterangan" id="keteranganedit{{ $kp->id }}" cols="30" rows="10">{{ empty($kp) ? '' : $kp->keterangan }}</textarea>
                             {{-- <input type="text" class="form-control" name="keterangan" id="keteranganedit"
                                 value="{{ @$databdg->keterangan }}" placeholder="Tambahkan keterangan menu"> --}}
                         </div>
@@ -316,18 +317,14 @@
                             <label for="exampleInputName">Harga Menu</label>
                             <input type="text" class="form-control" name="harga" id="harga" value="{{ @$kp->harga }}" placeholder="Masukan Harga">
                         </div>
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                        </div>
-                    </div>
-                    <!-- /.card-body -->
-
-                    <div class="card-footer">
-                        <button type="submit" class="btn btn-primary">
-                            <ion-icon name="save-outline"></ion-icon>Selesai
+                      
+                        <button type="submit" class="btn btn-info">
+                            <ion-icon name="save-outline"></ion-icon>
                         </button>
                     </div>
+                  
+                   
+                   
                 </form>
             </div>
             <div class="modal-footer">
@@ -347,12 +344,15 @@
             console.error(error);
         });
 </script>
-<script>
+@foreach ($kopiportal as $kp)
+    <script>
     ClassicEditor
-        .create(document.querySelector('#keteranganedit'))
+        .create(document.querySelector('#keteranganedit{{ $kp->id }}'))
         .catch(error => {
             console.error(error);
         });
 </script>
+@endforeach
+
 
 @endsection

@@ -1,5 +1,12 @@
 @extends('layouts.app')
 @section('section')
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <header>
         <header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner"
             style="background-image: url(../images/frn.png);" data-stellar-background-ratio="0.5">
@@ -60,27 +67,30 @@
             </section>
         </div>
         </div>
+      
         <div class="slider">
-            <div class="slidas">
+
+            <div class="slidas">\
+                  @foreach ($galeri as $g)
                 <!--radio button start-->
                 <input type="radio" name="radio-btn" id="radio1">
                 <input type="radio" name="radio-btn" id="radio2">
                 <input type="radio" name="radio-btn" id="radio3">
                 <input type="radio" name="radio-btn" id="radio4">
                 <input type="radio" name="radio-btn" id="radio5">
-                <input type="radio" name="radio-btn" id="radio6">
+               
                 <!--radio button end-->
                 <!--slide image mulai-->
                 <div class="slide first lg">
                     <div class="container">
                         <div class="slide">
-                            @foreach ($galeri as $g)
+                            
                                 <a href="{{ asset('upload/' . $g->foto_galeri) }}" class="fancybox"
                                     data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
                                     <img src="{{ asset('upload/' . $g->foto_galeri) }}" class="img-fluid mb-2"
                                         alt="white sample" width="200px" height="200px" />
                                 </a>
-                            @endforeach
+                         
 
                         </div>
                     </div>
@@ -93,9 +103,10 @@
                     <div class="auto-btn3"></div>
                     <div class="auto-btn4"></div>
                     <div class="auto-btn5"></div>
-                    <div class="auto-btn6"></div>
+                 
                 </div>
                 <!--otomatis navigasi end-->
+                  @endforeach
             </div>
             <!--manual navigasi mulai-->
             <div class="navigation-manual">
@@ -104,14 +115,13 @@
                 <label for="radio3" class="manual-btn"></label>
                 <label for="radio4" class="manual-btn"></label>
                 <label for="radio5" class="manual-btn"></label>
-                <label for="radio6" class="manual-btn"></label>
+               
 
             </div>
             <!--manual navigasi end-->
         </div>
-        </div>
-        </div>
-        </div>
+         
+        
         <!-- image slider berakhir-->
 
         <script type="text/javascript">
@@ -136,8 +146,9 @@
                             facilis quidem dolore! Dolorem, molestiae.</p>
                     </div>
                 </div>
-                @foreach($event as $evn)
+                
                 <div class="row">
+                    @foreach($event as $evn)
                     <div class="col-md-4">
                         <div class="fh5co-blog animate-box">
                             <a href="{{ asset('upload/' . $evn->foto_event) }}" class="fancybox blog-bg"
@@ -155,15 +166,13 @@
                             </div>
                         </div>
                     </div>
+                    @endforeach
                 </div>
-                @endforeach
+                
             </div>
         </div>
         <!--Acara Garage 81-->
-
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+        
 
 
     @endsection
