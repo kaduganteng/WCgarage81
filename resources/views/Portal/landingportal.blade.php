@@ -138,12 +138,12 @@
                 </div>
                 @foreach($event as $evn)
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-sm-5 col-xs-5 col-xxs-12 fh5co-item-wrap">
                         <div class="fh5co-blog animate-box">
                             <a href="{{ asset('upload/' . $evn->foto_event) }}" class="fancybox blog-bg"
-                                data-fancybox="ggblg" data-gallery="event" height="150px" width="100px">
+                                data-fancybox="ggblg" data-gallery="event" height="50px" width="50px">
                                 <img src="{{ asset('upload/' . $evn->foto_event) }}" class="img-fluid mb-2 blog"
-                                alt="white sample" width="350px" height="200px" />
+                                alt="white sample" width="360px" height="340px" />
                             </a>
                             <div class="blog-text">
                                 <span class="posted_on">{{ $evn->tgl_event }}</span>
