@@ -210,7 +210,10 @@
 
                                 </p>
                             </a>
-                            <a href="{{ route('event') }}" class="nav-link" style="color:rgb(255, 255, 255);">
+                           
+                        </li>
+                        <li class="nav-item">
+                             <a href="{{ route('event') }}" class="nav-link" style="color:rgb(255, 255, 255);">
                                 <i class="nav-icon fas fa-calendar-week"></i>
                                 <p>
                                     Event Portal

@@ -47,16 +47,21 @@ class EventController extends Controller
     public function edit(Request $request, $id)
     {
         if ($request->isMethod('post')) {
-            $e = $request->all();
-            $event = Event::findOrFail($id)->update([
-                'tgl_event' => $request->tgl_event,
-                'nama' => $request->nama,
-                'foto_event' => $request->foto_event,
-                'rinciankegiatan' => $request->rkegiatan
+            $event = Event::findOrFail($id);
+            $awal = $event->foto_event;
+            $tujuan = 'upload/';
+            $dt = [
 
-            ]);
+                'tgl_event' => $request['tgl_event'],
+                'nama' => $request['nama'],
+                'foto_event' => $awal,
+                'rinciankegiatan' => $request['rinciankegiatan']
+            ];
+
+            $request->foto_event->move($tujuan, $awal);
+            $event->update($dt);
             Alert::success('Sukses !', 'Data Berhasil Di Edit');
-            return redirect()->route('menubdg');
+            return redirect()->route('event');
         }
     }
 }

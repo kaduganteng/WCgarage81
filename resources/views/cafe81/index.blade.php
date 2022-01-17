@@ -123,8 +123,10 @@
                         <div class="flexslider">
                             <ul class="slides">
                                 @foreach ($menubdg as $menu)
-                                <li style="background-image: {{ asset('upload/'. $menu->foto_menu ) }};">
-                                    <div class="overlay-gradient"></div>
+                                <li style="background-image: ;">
+                                    <div class="overlay-gradient">
+                                        <img src="{{ asset('upload/'. $menu->foto_menu ) }}" alt="">
+                                    </div>
                                     <div class="container-fluid">
                                         <div class="row">
                                             <div
