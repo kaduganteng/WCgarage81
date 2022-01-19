@@ -13,7 +13,7 @@
     </div><!-- /.container-fluid -->
   </section>
   <!-- ISI KONTEN    -->
-  <div class="col-xl-8 col-md-7">
+  <div class="col-xl-8 col-md-7 " style="justify-content: center">
     <div class="card shadow mb-4">
       <!-- Card Header - Dropdown -->
       <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">

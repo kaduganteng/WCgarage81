@@ -75,13 +75,25 @@ Route::post('/galeri.store', 'GaleriController@store')->name('galeri.store');
 Route::get('/galeri.delete.{id}', 'GaleriController@destroy')->name('galeri.destroy');
 
 //Event
+
+// Bandung
 Route::get('/event', 'EventController@index')->name('event');
 Route::get('/event.create', 'EventController@create')->name('event.create');
 Route::post('/event.store', 'EventController@store')->name('event.store');
 Route::get('/event.delete.{id}', 'EventController@destroy')->name('event.destroy');
-Route::get('/event.edit.{id}', 'EventController@edit')->name('event.edit');
-Route::post('/event.update.{id}', 'EventController@update')->name('event.update');
-
+Route::match(['get', 'post'], '/editeventbdg{id}', 'EventController@edit');
+//Cimahi
+Route::get('/eventcmh', 'EventController@indexcmh')->name('eventcmh');
+Route::get('/eventcmh.create', 'EventController@createcmh')->name('eventcmh.create');
+Route::post('/eventcmh.store', 'EventController@storecmh')->name('eventcmh.store');
+Route::get('/eventcmh.delete.{id}', 'EventController@destroycmh')->name('eventcmh.destroy');
+Route::match(['get', 'post'], '/editeventcmh{id}', 'EventController@editcmh');
+//Kopi
+Route::get('/eventkopi', 'EventController@indexkop')->name('eventkopi');
+Route::get('/eventkopi.create', 'EventController@createkopi')->name('eventkopi.create');
+Route::post('/eventkopi.store', 'EventController@storekopi')->name('eventkopi.store');
+Route::get('/eventkopi.delete.{id}', 'EventController@destroykopi')->name('eventkopi.destroy');
+Route::match(['get', 'post'], '/editeventkopi{id}', 'EventController@editkopi');
 
 
 

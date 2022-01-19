@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class   Event extends Model
+class Evenkopi extends Model
 {
-    protected $table = "event";
+    protected $table = "eventcmh";
     protected $fillable = [
         'tgl_event',
         'nama',
