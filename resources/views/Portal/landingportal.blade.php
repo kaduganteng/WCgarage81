@@ -1,12 +1,5 @@
 @extends('layouts.app')
 @section('section')
-
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <header>
         <header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner"
             style="background-image: url(../images/frn.png);" data-stellar-background-ratio="0.5">
@@ -148,13 +141,12 @@
                 </div>
                 
                 <div class="row">
-                    @foreach($event as $evn)
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-sm-5 col-xs-5 col-xxs-12 fh5co-item-wrap">
                         <div class="fh5co-blog animate-box">
                             <a href="{{ asset('upload/' . $evn->foto_event) }}" class="fancybox blog-bg"
-                                data-fancybox="ggblg" data-gallery="event" height="150px" width="100px">
+                                data-fancybox="ggblg" data-gallery="event" height="50px" width="50px">
                                 <img src="{{ asset('upload/' . $evn->foto_event) }}" class="img-fluid mb-2 blog"
-                                alt="white sample" width="350px" height="200px" />
+                                alt="white sample" width="360px" height="340px" />
                             </a>
                             <div class="blog-text">
                                 <span class="posted_on">{{ $evn->tgl_event }}</span>
