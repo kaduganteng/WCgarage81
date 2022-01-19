@@ -1,7 +1,6 @@
 @extends('layouts.cafebdg')
 @section('section')
-<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner"
-    style="background-image: url(images/hero_1.jpeg);" data-stellar-background-ratio="0.5">
+<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url(images/garasi81.jpg);" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
@@ -51,7 +50,7 @@
                 <div class="section-heading">
                     <h2>Menu Special</h2>
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-9">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit
                                 itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam
                                 voluptates corporis et tempora consequuntur ipsam,
@@ -157,9 +156,14 @@
     <!--Menu Terlaris Garage 81-->
     <!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!--Instagram-->
-    <div data-mc-src="29d00edc-e38a-4910-b28a-f4d5b32e8fa7#instagram"></div>
-
-    <script src="https://cdn2.woxo.tech/a.js#61cd5af958bb730016c7f4e2" async data-usrc>
+    <div class="container">
+    <div data-mc-src="29d00edc-e38a-4910-b28a-f4d5b32e8fa7#instagram">
+    </div>
+    </div>
+        
+    <script 
+    src="https://cdn2.woxo.tech/a.js#61cd5af958bb730016c7f4e2" 
+    async data-usrc>
     </script>
     <!--Instagram-->
 </body>

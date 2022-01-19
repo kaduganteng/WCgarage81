@@ -5,21 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Portal Manajemen</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
-    <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
-    <meta name="author" content="freehtml5.co" />
-
-    <meta property="og:title" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:site_name" content="" />
-    <meta property="og:description" content="" />
-    <meta name="twitter:title" content="" />
-    <meta name="twitter:image" content="" />
-    <meta name="twitter:url" content="" />
-    <meta name="twitter:card" content="" />
-
+  
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,500,600i,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
 
@@ -31,7 +17,6 @@
     <link rel="stylesheet" href="portal/css/bootstrap.css">
     <!-- Flexslider  -->
     <link rel="stylesheet" href="portal/css/flexslider.css">
-    
 
     <!-- Theme style  -->
     <link rel="stylesheet" href="portal/css/style.css">
@@ -47,8 +32,8 @@
 
 <body>
 
-    <div class="fh5co-loader"></div>
-
+    <div class="fh5co-loader">
+    </div>
     <div id="page">
         <nav class="fh5co-nav" role="navigation">
             <!-- <div class="top-menu"> -->
@@ -59,8 +44,7 @@
                     </div>
                     <div class="col-xs-12 text-center menu-1 menu-wrap">
                         <ul>
-                            <li class="active">
-                            <li><a href="{{ route('landing') }}">Home</a></li>
+                            <li class="active"><a href="{{ route('landing') }}">Home</a></li>
                             <li><a href="{{ route('aboutportal') }}">Tentang Kami </a></li>
                             <li><a href="{{ route('contactportal') }}">Kontak</a></li>
                         </ul>
@@ -70,10 +54,11 @@
             </div>
             <!-- </div> -->
         </nav>
-    </div>
-        <div class="body">
+
             @yield('section')
         </div>
+
+        <!--Footer-->
         <footer id="fh5co-footer" role="contentinfo" class="fh5co-section">
             <div class="container">
                 <div class="row row-pb-md">

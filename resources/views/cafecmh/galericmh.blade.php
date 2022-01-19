@@ -39,7 +39,7 @@
                     <div class="fh5co-bg-img" style="background-image: url(images/signature.jpg);" data-trigger="zoomerang"></div>
                 </div>
                 <div class="col-md-6 col-sm-6 fh5co-gallery_item">
-                    <div class="fh5co-bg-img fh5co-gallery_big" style="background-image: url(images/spageti.jpg);" data-trigger="zoomerang"></div>
+                    <div class="fh5co-bg-img fh5co-gallery_big" style="background-image: url(images/kucing.gif);" data-trigger="zoomerang"></div>
                 </div>
                 <div class="col-md-3 col-sm-3 fh5co-gallery_item">
                     <div class="fh5co-bg-img" style="background-image: url(images/jagong.jpg);" data-trigger="zoomerang"></div>

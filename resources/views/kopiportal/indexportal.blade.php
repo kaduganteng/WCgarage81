@@ -1,7 +1,6 @@
 @extends('layouts.kopiportal')
 @section('section')
-<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner"
-    style="background-image: url(images/hero_1.jpeg);" data-stellar-background-ratio="0.5">
+<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url(images/kpportal.jpg);" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
@@ -155,9 +154,14 @@
     <!--Menu Terlaris Garage 81-->
     <!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!--Instagram-->
-    <div data-mc-src="db82410c-6235-4909-8a89-6a19dd851b7b#instagram"></div>
+    <div class="container">
+    <div data-mc-src="db82410c-6235-4909-8a89-6a19dd851b7b#instagram">
+    </div>
+    </div>
 
-    <script src="https://cdn2.woxo.tech/a.js#61cd5af958bb730016c7f4e2" async data-usrc>
+    <script 
+      src="https://cdn2.woxo.tech/a.js#61cd5af958bb730016c7f4e2" 
+      async data-usrc>
     </script>
     <!--Instagram-->
 </body>

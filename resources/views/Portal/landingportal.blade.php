@@ -1,30 +1,29 @@
 @extends('layouts.app')
 @section('section')
-    <header>
-        <header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner"
-            style="background-image: url(../images/frn.png);" data-stellar-background-ratio="0.5">
-            <div class="overlay"></div>
+<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url(images/frn.png);" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
             <div class="col-md-12 text-center">
                 <div class="display-t js-fullheight">
                     <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
                         <h1>Portal Manajemen</h1>
-                        <h2>Garasi 81 | Garage 81 | Kopi Portal </h2>
+                        <h2>Garage 81 | Garasi 81 | Kopi Portal </a></h2>
                     </div>
                 </div>
             </div>
-            </div>
-            </div>
-            </div>
-        </header>
-        <div class="judulproduk">
-            <h2> Produk Kami </h2>
         </div>
+    </div>
+</header>
+<div class="animate-box">
         <div class="container">
+            <div class="judulproduk"> 
+                <h2> Produk Kami </h2>
             <section class="produk">
                 <div class="produk">
                     <div class="icon">
                         <a href="{{ route('cafecmh') }}">
-                            <img src="/images/cmh.png">
+                            <img src="/images/garagelogo.jpg">
                     </div>
                     <h2>Garage 81 Cimahi</h2>
                     <p>
@@ -36,7 +35,7 @@
                 <div class="produk">
                     <div class="icon">
                         <a href="{{ route('cafe81') }}">
-                            <img src="/images/frn.png">
+                            <img src="/images/garasi81logo.png">
                     </div>
                     <h2>Garasi 81 Bandung</h2>
                     <p>
@@ -48,7 +47,7 @@
                 <div class="produk">
                     <div class="icon">
                         <a href="{{ route('kopiprt') }}">
-                            <img src="/images/prt.png">
+                            <img src="/images/kopiprtlogo.jpg">
                     </div>
                     <h2>Kopi Portal</h2>
                     <p>
@@ -60,11 +59,10 @@
             </section>
         </div>
         </div>
-      
         <div class="slider">
 
-            <div class="slidas">\
-                  @foreach ($galeri as $g)
+            <div class="slidas">
+                 
                 <!--radio button start-->
                 <input type="radio" name="radio-btn" id="radio1">
                 <input type="radio" name="radio-btn" id="radio2">
@@ -77,13 +75,13 @@
                 <div class="slide first lg">
                     <div class="container">
                         <div class="slide">
-                            
+                            @foreach ($galeri as $g)
                                 <a href="{{ asset('upload/' . $g->foto_galeri) }}" class="fancybox"
                                     data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
                                     <img src="{{ asset('upload/' . $g->foto_galeri) }}" class="img-fluid mb-2"
                                         alt="white sample" width="200px" height="200px" />
                                 </a>
-                         
+                                @endforeach
 
                         </div>
                     </div>
@@ -96,10 +94,8 @@
                     <div class="auto-btn3"></div>
                     <div class="auto-btn4"></div>
                     <div class="auto-btn5"></div>
-                 
                 </div>
                 <!--otomatis navigasi end-->
-                  @endforeach
             </div>
             <!--manual navigasi mulai-->
             <div class="navigation-manual">
@@ -139,7 +135,7 @@
                             facilis quidem dolore! Dolorem, molestiae.</p>
                     </div>
                 </div>
-                
+                @foreach ($event as $evn)
                 <div class="row">
                     <div class="col-md-4 col-sm-5 col-xs-5 col-xxs-12 fh5co-item-wrap">
                         <div class="fh5co-blog animate-box">
@@ -160,7 +156,6 @@
                     </div>
                     @endforeach
                 </div>
-                
             </div>
         </div>
         <!--Acara Garage 81-->

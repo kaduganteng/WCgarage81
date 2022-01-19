@@ -68,14 +68,13 @@
                         </ul>
                     </div>
                 </div>
-
-            </div>
+             </div>  
+      </nav>
             <!-- </div> -->
-        </nav>
+         @yield('section')
     </div>
-    <div class="body">
-        @yield('section')
-    </div>
+
+    <!--Footer-->
     <footer id="fh5co-footer" role="contentinfo" class="fh5co-section">
         <div class="container">
             <div class="row row-pb-md">
@@ -150,18 +149,7 @@
     <script src="portal/js/jquery.flexslider-min.js"></script>
     <!-- Main -->
     <script src="portal/js/main.js"></script>
-
-    <script>
-        Zoomerang
-            .config({
-                maxHeight: 600,
-                maxWidth: 900,
-                bgColor: '#000',
-                bgOpacity: .85
-            })
-            .listen('[data-trigger="zoomerang"]')
-    </script>
-
+    
 </body>
 
 </html>

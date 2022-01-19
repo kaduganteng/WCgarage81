@@ -70,14 +70,13 @@
                         </ul>
                     </div>
                 </div>
-
-            </div>
-            <!-- </div> -->
+            </div>   
         </nav>
-    </div>
-    <div class="body">
+            <!-- </div> -->
         @yield('section')
     </div>
+     
+    <!--footer-->
     <footer id="fh5co-footer" role="contentinfo" class="fh5co-section">
         <div class="container">
             <div class="row row-pb-md">

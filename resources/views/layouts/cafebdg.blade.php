@@ -7,8 +7,7 @@
     <title>Portal Manajemen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
-    <meta name="keywords"
-        content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+    <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
     <meta name="author" content="freehtml5.co" />
 
     <meta property="og:title" content="" />
@@ -21,8 +20,7 @@
     <meta name="twitter:url" content="" />
     <meta name="twitter:card" content="" />
 
-    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,500,600i,700"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,500,600i,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
 
     <!-- Animate.css -->
@@ -70,14 +68,13 @@
                         </ul>
                     </div>
                 </div>
-
-            </div>
-            <!-- </div> -->
+            </div>   
         </nav>
+            <!-- </div> --> 
+            @yield('section')
     </div>
-    <div class="body">
-        @yield('section')
-    </div>
+       
+    <!--footer-->
     <footer id="fh5co-footer" role="contentinfo" class="fh5co-section">
         <div class="container">
             <div class="row row-pb-md">
