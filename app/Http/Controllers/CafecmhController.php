@@ -37,4 +37,7 @@ class CafecmhController extends Controller
             'galericmh' => $galericmh
         ]);
     }
+    public function tentangcmh(){
+        return view('cafecmh.tentangcmh');
+    }
 }

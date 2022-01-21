@@ -37,4 +37,7 @@ class Cafe81Controller extends Controller
             ]
         );
     }
+        public function tentangbdg(){
+        return view('cafe81.tentangbdg');
+    }
 }

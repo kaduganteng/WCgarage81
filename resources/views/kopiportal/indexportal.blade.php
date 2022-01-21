@@ -136,7 +136,7 @@
                                                         <p><a href="{{ route('menuportal') }}"
                                                                 class="btn btn-primary btn-outline">Lihat</a></p>
                                                     </div>
-
+                                                </div>
 
                                                 </div>
                                             </div>
