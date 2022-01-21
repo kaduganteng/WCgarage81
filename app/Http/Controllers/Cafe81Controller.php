@@ -14,7 +14,6 @@ class Cafe81Controller extends Controller
 
     { 
         $menubdg = Menucaffebdg::get();
-        visits($_POST)->increment();
         return view('cafe81.index', [
             'menubdg' => $menubdg
         ]);

@@ -133,7 +133,7 @@
                                                     <div class="desc">
                                                         <h2>{{ $menu->nama }}</h2>
                                                         <p>{!!$menu->keterangan !!}</p>
-                                                        <p><a href="{{ route('menuportal') }}"
+                                                        <p><a href="{{ route('kopiprt') }}"
                                                                 class="btn btn-primary btn-outline">Lihat</a></p>
                                                     </div>
                                                 </div>

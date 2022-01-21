@@ -16,7 +16,7 @@
     </div>
 </header>
 <div class="animate-box">
-        <div class="container-fluid">
+        <div class="container">
             <div class="judulproduk"> 
                 <h2> Produk Kami </h2>
             <section class="produk">

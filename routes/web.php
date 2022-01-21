@@ -74,6 +74,13 @@ Route::get('/galeri.create', 'GaleriController@create')->name('galeri.create');
 Route::post('/galeri.store', 'GaleriController@store')->name('galeri.store');
 Route::get('/galeri.delete.{id}', 'GaleriController@destroy')->name('galeri.destroy');
 
+//List Bandung
+Route::get('/listbdg', 'ListbandungController@index')->name('listbdg');
+Route::get('/listbdg.create', 'ListbandungControlle@create')->name('listbdg.create');
+Route::post('/listbdg.store', 'ListbandungController@store')->name('listbdg.store');
+Route::get('/listbdg.delete.{id}', 'ListbandungControlle@destroy')->name('listbdg.destroy');
+
+
 //Event
 
 // Bandung
