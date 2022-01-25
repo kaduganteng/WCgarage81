@@ -126,7 +126,27 @@
         </div>
         <!-- Card Body -->
         <div class="card-body">
-         
+         Data Pengunjung Web
+         <?php
+$filename = 'counter.txt';
+ 
+function counter(){		
+	global $filename;	
+ 
+	if(file_exists($filename)){		
+		$value = file_get_contents($filename);	
+	}else{		
+		$value = 0;		
+	}
+ 
+	file_put_contents($filename, ++$value);		
+}
+ 
+counter();	
+ 
+echo 'Total pengunjung: '.file_get_contents($filename);	
+?>
+        
           <div class="chart-area">
 
             <canvas id="myAreaChart"></canvas>
