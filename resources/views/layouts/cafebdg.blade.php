@@ -64,7 +64,7 @@
                             <li><a href="{{ route('cafe81') }}">Home</a></li>
                             <li><a href="{{ route('menubdgfe') }}">Menu</a></li>
                             <li><a href="{{ route('galeribdgfe') }}">Galeri</a></li>
-                            <li><a href="{{ route('cafe81') }}">Tentang Kami</a></li>
+                            <li><a href="{{ route('tentangbdg') }}">Tentang Kami</a></li>
                         </ul>
                     </div>
                 </div>

@@ -20,7 +20,7 @@
     <div class="container">
         <div class="row animate-box">
             <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-                <h2>Don't be shy, let's chat.</h2>
+                <h2>Lebih Dekat Dengan Kami</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae vitae cupiditate,
                     sequi quam ea id dolor reiciendis consectetur repudiandae. Rem quam, repellendus veniam ipsa fuga
                     maxime odio? Eaque!</p>
