@@ -12,7 +12,7 @@ class Cafe81Controller extends Controller
 {
     public function index()
 
-    { 
+    {   
         $menubdg = Menucaffebdg::get();
         return view('cafe81.index', [
             'menubdg' => $menubdg

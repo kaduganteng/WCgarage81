@@ -126,7 +126,8 @@
         </div>
         <!-- Card Body -->
         <div class="card-body">
-         
+         Data Pengunjung Web
+   
           <div class="chart-area">
 
             <canvas id="myAreaChart"></canvas>

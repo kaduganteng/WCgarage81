@@ -18,21 +18,13 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="adminlte/css/adminlte.min.css">
 </head>
+<style>
+.col-7 {
+   align-content: center;
+}
 
-
-<div class="card">
-
-
-    <style type="text/css">
-        .item {
-            transition: .5s ease-in-out;
-        }
-
-        .item:hover {
-            filter: brightness(80%);
-        }
-    </style>
-    <div class="card-header">
+</style>
+    {{-- <div class="card-header">
         <h3 class="card-title">Title</h3>
 
         <div class="card-tools">
@@ -43,10 +35,10 @@
                 <i class="fas fa-times"></i>
             </button>
         </div>
-    </div>
-    <div class="card-body">
-        <div class="col-12">
-            <div class="card ">
+    </div> --}}
+    <div class="card-body" style="align-content: center">
+        <div class="col-7" >
+            <div class="card shadow mb-4 ">
                 <div class="card-header">
                     <h4 class="card-title">List Menu</h4>
                     <div class="card-tools">
@@ -80,19 +72,17 @@
         </div>
     </div>
     <!-- /.card-body -->
-    <div class="card-footer">
-        Footer
-    </div>
+  
     <!-- /.card-footer-->
-</div>
-<div class="modal fade" id="exampleModallist" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
+
+    <div class="modal fade" id="exampleModallist" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+             <div class="modal-content">
+                <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Masukan Foto Baru</h5>
-            </div>
+                </div>
             <div class="modal-body">
-                <form action="{{ route('listbdg.store') }}" method="POST" enctype="multipart/form-data">
+                 <form action="{{ route('listbdg.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label for="exampleInputName">Masukan Nama Foto</label>
