@@ -1,6 +1,6 @@
 @extends('layouts.cafecmh')
 @section('section')
-<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url(images/cmh.png);" data-stellar-background-ratio="0.5">
+<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url(images/cmhindex.jpg);" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
@@ -23,7 +23,7 @@
     <div id="fh5co-about" class="fh5co-section">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-pull-4 img-wrap animate-box" data-animate-effect="fadeInLeft">
+                <div class="col-md-6 col-md-pull-0 img-wrap animate-box" data-animate-effect="fadeInLeft" class="img-responsive">
                     <img src="images/cmh.png">
                 </div>
                 <div class="col-md-5 col-md-push-1 animate-box">

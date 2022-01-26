@@ -1,5 +1,10 @@
 @extends('layouts.app')
 @section('section')
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
 <header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url(images/frn.png);" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
@@ -60,7 +65,7 @@
         </div>
         </div>
         <div class="slider">
-
+        <div class="animate-box">
             <div class="slidas">
                  
                 <!--radio button start-->
@@ -82,10 +87,10 @@
                                         alt="white sample" width="200px" height="200px" />
                                 </a>
                                 @endforeach
-
                         </div>
                     </div>
                 </div>
+            </div>
                 <!--slide image end-->
                 <!--otomatis navigasi mulai-->
                 <div class="navigation-auto">
@@ -104,8 +109,6 @@
                 <label for="radio3" class="manual-btn"></label>
                 <label for="radio4" class="manual-btn"></label>
                 <label for="radio5" class="manual-btn"></label>
-               
-
             </div>
             <!--manual navigasi end-->
         </div>
@@ -141,8 +144,8 @@
                         <div class="fh5co-blog animate-box">
                             <a href="{{ asset('upload/' . $evn->foto_event) }}" class="fancybox blog-bg"
                                 data-fancybox="ggblg" data-gallery="event" height="50px" width="50px">
-                                <img src="{{ asset('upload/' . $evn->foto_event) }}" class="img-fluid mb-2 blog"
-                                alt="white sample" width="360px" height="340px" />
+                                <img src="{{ asset('upload/' . $evn->foto_event) }}" class="img-fluid mb-0 blog"
+                                alt="white sample" width="360px" height="340px"/>
                             </a>
                             <div class="blog-text">
                                 <span class="posted_on">{{ $evn->tgl_event }}</span>

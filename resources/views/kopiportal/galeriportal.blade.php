@@ -1,19 +1,10 @@
 @extends('layouts.kopiportal')
 @section('section')
 
-<head>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-</head>
-<style>
-    img {
-        width: 1000px;
-    }
-</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
 <header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner"
     style="background-image: url(images/hero_1.jpeg);" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
@@ -33,7 +24,21 @@
     </div>
 </header>
 
-<body>
+<body>   
+        <div id="fh5co-gallery" class="fh5co-section">
+            <div class="container">
+                <div class="row">
+        <div class="col-md-12 fh5co-heading animate-box">
+            <h2>Galeri</h2>
+            <div class="row">
+                <div class="col-md-9">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam,
+                        itaque, nesciunt similique commodi omnis. Ad magni perspiciatis, voluptatum repellat.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
     <div class="container">
         <div id="fh5co-featured-menu" class="fh5co-section">
             <div class="container">
@@ -54,6 +59,8 @@
         </div>
     </div>
 </body>
+
+
 <script src="adminlte/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap -->
 <script src="adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>

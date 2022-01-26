@@ -22,7 +22,7 @@ class ListbandungController extends Controller
         $nama_file = time() . "_" . $foto_list->getClientOriginalExtension();
         $tujuan = 'upload/';
         $foto_list->move($tujuan, $nama_file);
-        $list = ListmenuModel::create([
+        $listmenu = ListmenuModel::create([
             'nama' => $request->nama,
             'foto_list' => $nama_file
         ]);

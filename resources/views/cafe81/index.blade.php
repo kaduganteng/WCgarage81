@@ -23,7 +23,7 @@
     <div id="fh5co-about" class="fh5co-section">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-pull-4 img-wrap animate-box" data-animate-effect="fadeInLeft">
+                <div class="col-md-6 col-md-pull-0 img-wrap animate-box" data-animate-effect="fadeInLeft">
                     <img src="images/frn.png">
                 </div>
                 <div class="col-md-5 col-md-push-1 animate-box">
@@ -61,7 +61,7 @@
                 <div class="menuspesial">
                     <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
                         <div class="fh5co-item">
-                            <a href="{{ route('cafecmh') }}">
+                            <a href="{{ route('cafe81') }}">
                                 <img src="images/ayamlada.jpg" class="img-responsive">
                                 <h3>Nasi Ayam Lada Hitam</h3>
                                 <span class="fh5co-price">Rp.20.000</span>
@@ -71,7 +71,7 @@
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-15 fh5co-item-wrap animate-box">
                         <div class="fh5co-item margin_top">
-                            <a href="{{ route('cafecmh') }}">
+                            <a href="{{ route('cafe81') }}">
                                 <img src="images/jagong.jpg" class="img-responsive">
                                 <h3>Beef Hot Pot</h3>
                                 <span class="fh5co-price">Rp.27.000</span>
@@ -82,7 +82,7 @@
                     <div class="clearfix visible-sm-block visible-xs-block"></div>
                     <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
                         <div class="fh5co-item">
-                            <a href="{{ route('cafecmh') }}">
+                            <a href="{{ route('cafe81') }}">
                                 <img src="images/nasgor.jpg" class="img-responsive">
                                 <h3>Nasi Goreng</h3>
                                 <span class="fh5co-price">Rp.30.000</span>
@@ -92,7 +92,7 @@
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
                         <div class="fh5co-item margin_top">
-                            <a href="{{ route('cafecmh') }}">
+                            <a href="{{ route('cafe81') }}">
                                 <img src="images/spageti.jpg" class="img-responsive">
                                 <h3>Spagheti BBQ</h3>
                                 <span class="fh5co-price">Rp.25.000</span>

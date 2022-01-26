@@ -19,7 +19,7 @@
 <div id="fh5co-about" class="fh5co-section">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-md-pull-4 img-wrap animate-box" data-animate-effect="fadeInLeft">
+            <div class="col-md-6 col-md-pull-0 img-wrap animate-box" data-animate-effect="fadeInLeft">
                 <img src="images/prt.png" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
             </div>
 <div class="col-md-5 col-md-push-1 animate-box">
