@@ -20,10 +20,11 @@
         </div>
     </div>
 </header>
-<div class="animate-box">
         <div class="container">
             <div class="judulproduk"> 
+                <div class="section-heading">
                 <h2> Produk Kami </h2>
+                </div>
             <section class="produk">
                 <div class="produk">
                     <div class="icon">
@@ -64,6 +65,36 @@
             </section>
         </div>
         </div>
+<!--Visi Misi Portal-->
+    <div id="fh5co-about" class="fh5co-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 col-md-push-0 animate-box" data-animate-effect="fadeInLeft">
+                <div class="section-heading">
+                <h2>Latar Belakang</h2>
+                <p>Portal Manajemen adalah perusahaan yang bergerak di bidang kuliner khususnya di bisnis Kopi. Yang mempunyai beberapa 
+                    cabang maupun franchise yang berlokasi di beberapa titik Kota Bandung, Portal Manajemen menaungi beberapa cafe yang diantaranya 
+                    seperti Garagae 81, Garasi 81 dan Kopi Portal. 
+
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, exercitationem. Corrupti provident quo maxime a doloribus quia modi eius vel fugiat. Ex distinctio facilis incidunt voluptate eaque ducimus omnis saepe.</p>
+                </p>
+            </div>
+            </div>
+    <div class="col-md-5 col-md-push-1 animate-box">
+    <div class="section-heading">
+        <h2>Visi & Misi</h2>
+        <h3>Visi</h3>
+        <p>Memanage Cafe dan Franchise yang dinaungi Portal Manajemen agar kedepannya bisa lebih maju dan bersaing dengan yang lainnya.</p>
+        <h3>Misi</h3>
+        <p>* Terus berinovasi dari setiap waktunya untuk terus berkembang</p>
+        <p>* Membuat promosi yang lebih unik dari sebelumnya</p>
+        <p>* Membuat karyawan yang harmonis di dalam pekerjaan</p>
+    </div>
+    </div>
+        </div>
+            </div>
+                </div>
+<!--Visi Misi Portal-->
         <div class="slider">
         <div class="animate-box">
             <div class="slidas">
