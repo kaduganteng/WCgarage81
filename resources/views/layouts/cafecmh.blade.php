@@ -64,23 +64,22 @@
                             <li><a href="{{ route('cafecmh') }}">Home</a></li>
                             <li><a href="{{ route('menucmhfe') }}">Menu</a></li>
                             <li><a href="{{ route('galericmhfe') }}">Galeri</a></li>
-                            <li><a href="{{ route('cafecmh') }}">Tentang Kami</a></li>
+                            <li><a href="{{ route('tentangcmh') }}">Tentang Kami</a></li>
                         </ul>
                     </div>
                 </div>
-
-            </div>
+             </div>  
+      </nav>
             <!-- </div> -->
-        </nav>
+         @yield('section')
     </div>
-    <div class="body">
-        @yield('section')
-    </div>
+
+    <!--Footer-->
     <footer id="fh5co-footer" role="contentinfo" class="fh5co-section">
         <div class="container">
             <div class="row row-pb-md">
                 <div class="col-md-4 fh5co-widget">
-                    <h4>Portal</h4>
+                    <h4>Portal Manajemen</h4>
                     <p>Jl. Bali No.3, Merdeka, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 40113</p>
                 </div>
                 <div class="col-md-2 col-md-push-1 fh5co-widget">
@@ -150,18 +149,7 @@
     <script src="portal/js/jquery.flexslider-min.js"></script>
     <!-- Main -->
     <script src="portal/js/main.js"></script>
-
-    <script>
-        Zoomerang
-            .config({
-                maxHeight: 600,
-                maxWidth: 900,
-                bgColor: '#000',
-                bgOpacity: .85
-            })
-            .listen('[data-trigger="zoomerang"]')
-    </script>
-
+    
 </body>
 
 </html>

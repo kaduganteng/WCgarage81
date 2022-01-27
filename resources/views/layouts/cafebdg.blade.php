@@ -7,8 +7,7 @@
     <title>Portal Manajemen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
-    <meta name="keywords"
-        content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+    <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
     <meta name="author" content="freehtml5.co" />
 
     <meta property="og:title" content="" />
@@ -21,8 +20,7 @@
     <meta name="twitter:url" content="" />
     <meta name="twitter:card" content="" />
 
-    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,500,600i,700"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,500,600i,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
 
     <!-- Animate.css -->
@@ -66,23 +64,22 @@
                             <li><a href="{{ route('cafe81') }}">Home</a></li>
                             <li><a href="{{ route('menubdgfe') }}">Menu</a></li>
                             <li><a href="{{ route('galeribdgfe') }}">Galeri</a></li>
-                            <li><a href="{{ route('cafe81') }}">Tentang Kami</a></li>
+                            <li><a href="{{ route('tentangbdg') }}">Tentang Kami</a></li>
                         </ul>
                     </div>
                 </div>
-
-            </div>
-            <!-- </div> -->
+            </div>   
         </nav>
+            <!-- </div> --> 
+            @yield('section')
     </div>
-    <div class="body">
-        @yield('section')
-    </div>
+       
+    <!--footer-->
     <footer id="fh5co-footer" role="contentinfo" class="fh5co-section">
         <div class="container">
             <div class="row row-pb-md">
                 <div class="col-md-4 fh5co-widget">
-                    <h4>Portal</h4>
+                    <h4>Portal Manajemen</h4>
                     <p>Jl. Bali No.3, Merdeka, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 40113</p>
                 </div>
                 <div class="col-md-2 col-md-push-1 fh5co-widget">

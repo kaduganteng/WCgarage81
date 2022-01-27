@@ -17,6 +17,7 @@ class CreateEventTable extends Migration
             $table->increments('id');
             $table->date('tgl_event');
             $table->string('nama');
+            $table->string('lokasi');
             $table->string('foto_event');
             $table->string('rinciankegiatan');
             $table->timestamps();

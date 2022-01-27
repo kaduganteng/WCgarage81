@@ -12,7 +12,7 @@ class Cafe81Controller extends Controller
 {
     public function index()
 
-    {
+    {   
         $menubdg = Menucaffebdg::get();
         return view('cafe81.index', [
             'menubdg' => $menubdg
@@ -20,7 +20,7 @@ class Cafe81Controller extends Controller
     }
 
     public function menubdg()
-    {
+    {   
         $menubdg = Menucaffebdg::get();
         return view('cafe81.menubdg', [
             'menubdg' => $menubdg,
@@ -36,5 +36,8 @@ class Cafe81Controller extends Controller
                 'galeribdg' => $galeribdg
             ]
         );
+    }
+        public function tentangbdg(){
+        return view('cafe81.tentangbdg');
     }
 }

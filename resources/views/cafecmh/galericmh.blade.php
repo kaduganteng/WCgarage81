@@ -1,7 +1,6 @@
 @extends('layouts.cafecmh')
 @section('section')
-<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner"
-    style="background-image: url(images/hero_1.jpg);" data-stellar-background-ratio="0.5">
+<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url(images/cmhgaleri.jpg);" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
@@ -39,7 +38,7 @@
                     <div class="fh5co-bg-img" style="background-image: url(images/signature.jpg);" data-trigger="zoomerang"></div>
                 </div>
                 <div class="col-md-6 col-sm-6 fh5co-gallery_item">
-                    <div class="fh5co-bg-img fh5co-gallery_big" style="background-image: url(images/spageti.jpg);" data-trigger="zoomerang"></div>
+                    <div class="fh5co-bg-img fh5co-gallery_big" style="background-image: url(images/kucing.gif);" data-trigger="zoomerang"></div>
                 </div>
                 <div class="col-md-3 col-sm-3 fh5co-gallery_item">
                     <div class="fh5co-bg-img" style="background-image: url(images/jagong.jpg);" data-trigger="zoomerang"></div>

@@ -29,4 +29,8 @@ class KopiportalController extends Controller
             'galeriportal' => $galeriportal
         ]);
     }
+    public function tentangportal(){
+    return view('kopiportal.tentangportal');
+    }
 }
+

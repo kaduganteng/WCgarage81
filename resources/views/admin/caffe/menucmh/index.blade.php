@@ -260,6 +260,9 @@
           <div class="card-body">
             <div class="form-group">
               <label for="exampleInputFile">Masukan Foto Menu</label>
+               <div class="input-group" >
+                              <img src="{{ asset('upload/' . $m->foto_menu) }}" class="img-fluid mb-2" alt="white sample" width="100px" height="100px" />
+                            </div>
               <div class="input-group">
                 <input type="file" class="form-control" name="foto_menu" id="foto_menu">
               </div>
@@ -287,7 +290,7 @@
             </div>
             <div class="form-group">
               <label for="exampleInputName">Keterangan</label>
-              <textarea name="keterangan" id="keteranganedit" cols="30" rows="10">{{ empty($m) ? '' : $m->keterangan }}</textarea>
+              <textarea name="keterangan" id="keteranganedit{{ $m->id }}" cols="30" rows="10">{{ empty($m) ? '' : $m->keterangan }}</textarea>
               {{-- <input type="text" class="form-control" name="keterangan" id="keteranganedit" value="{{ @$m->keterangan }}" placeholder="Tambahkan keterangan menu"> --}}
             </div>
             <div class="form-group">
@@ -295,31 +298,26 @@
 
               <input type="text" class="form-control" name="harga" id="harga" value="{{ @$m->harga }}" placeholder="Masukan Harga">
             </div>
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
+           
+          <button type="submit" class="btn btn-info">
+                            <ion-icon name="save-outline"></ion-icon>
+                        </button>
           </div>
           <!-- /.card-body -->
 
-          <div class="card-footer">
-            <button type="submit" class="btn btn-primary">
-              <ion-icon name="save-outline"></ion-icon>Selesai
-            </button>
-          </div>
         </form>
       </div>
+       <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+
+            </div>
     </div>
     <!-- /.card-body -->
-    <div class="card-footer">
-      Footer
-    </div>
+   
     <!-- /.card-footer-->
   </div>
+  
   <!-- /.card -->
-
-  </section>
-
 </div>
 @endforeach
 
@@ -334,13 +332,14 @@
       console.error(error);
     });
 </script>
-<script>
+@foreach ($menucmh as $m)
+    <script>
   ClassicEditor
-    .create(document.querySelector('#keteranganedit'))
+    .create(document.querySelector('#keteranganedit{{ $m->id }}'))
     .catch(error => {
       console.error(error);
     });
 </script>
-
+@endforeach
 
 @endsection

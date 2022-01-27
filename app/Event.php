@@ -11,6 +11,7 @@ class   Event extends Model
         'tgl_event',
         'nama',
         'foto_event',
+        'lokasi',
         'rinciankegiatan'
     ];
 }

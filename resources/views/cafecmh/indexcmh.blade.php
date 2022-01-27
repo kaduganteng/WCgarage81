@@ -1,7 +1,6 @@
 @extends('layouts.cafecmh')
 @section('section')
-<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner"
-    style="background-image: url(images/hero_1.jpeg);" data-stellar-background-ratio="0.5">
+<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url(images/cmhindex.jpg);" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
@@ -24,7 +23,7 @@
     <div id="fh5co-about" class="fh5co-section">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-pull-4 img-wrap animate-box" data-animate-effect="fadeInLeft">
+                <div class="col-md-6 col-md-pull-0 img-wrap animate-box" data-animate-effect="fadeInLeft" class="img-responsive">
                     <img src="images/cmh.png">
                 </div>
                 <div class="col-md-5 col-md-push-1 animate-box">
@@ -138,7 +137,6 @@
                                                                 class="btn btn-primary btn-outline">Lihat</a></p>
                                                     </div>
 
-
                                                 </div>
                                             </div>
                                         </div>
@@ -155,10 +153,28 @@
     <!--Menu Terlaris Garage 81-->
     <!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!--Instagram-->
-    <div data-mc-src="d2cb3992-e907-4a6d-ab81-b89a77391ada#instagram"></div>
-
-    <script src="https://cdn2.woxo.tech/a.js#61cd5af958bb730016c7f4e2" async data-usrc>
+    <div class="container">
+    <div data-mc-src="d2cb3992-e907-4a6d-ab81-b89a77391ada#instagram">
+    </div>
+    </div>
+        
+    <script 
+      src="https://cdn2.woxo.tech/a.js#61cd5af958bb730016c7f4e2" 
+      async data-usrc>
     </script>
     <!--Instagram-->
+
+    <!--Gmaps Garage 81-->
+        <div class="container">
+                <div class="section-heading gmaps">
+        <h2> Lokasi Kami </h2>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.0186991764285!2d107.533053015276!3d-6.888363269321044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e5654cd90751%3A0x58da50c962c311bc!2sCafe%20Garage%2081!5e0!3m2!1sid!2sid!4v1642592591519!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen loading="lazy">
+            </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!--Gmaps Garage 81-->
 </body>
 @endsection

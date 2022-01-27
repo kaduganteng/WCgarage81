@@ -84,16 +84,19 @@ class CaffeController extends Controller
     public function edit(Request $request, $id)
     {
         if ($request->isMethod('post')) {
-            $m = $request->all();
+            $menubdg = Menucaffebdg::findOrFail($id);
+            $awal = $menubdg->foto_menu;
+            $tujuan = 'upload/';
+            $dt = [
+                'foto_menu' => $awal,
+                'kategori_id' => $request['kategori_id'],
+                'nama' => $request['nama'],
+                'keterangan' => $request['keterangan'],
+                'harga' => $request['harga']
+            ];
 
-            $menubdg = Menucaffebdg::findOrFail($id)->update([
-                'foto' => $request->foto,
-                'kategori_id' => $request->kategori_id,
-                'nama' => $request->nama,
-                'keterangan' => $request->keterangan,
-                'harga' => $request->harga
-
-            ]);
+            $request->foto_menu->move($tujuan, $awal);
+            $menubdg->update($dt);
             Alert::success('Sukses !', 'Data Berhasil Di Edit');
             return redirect()->route('menubdg');
         }
@@ -180,16 +183,19 @@ class CaffeController extends Controller
     public function edit2(Request $request, $id)
     {
         if ($request->isMethod('post')) {
-            $m = $request->all();
+            $menucmh = Menucaffecmh::findOrFail($id);
+            $awal = $menucmh->foto_menu;
+            $tujuan = 'upload/';
+            $dt = [
+                'foto_menu' => $awal,
+                'kategori_id' => $request['kategori_id'],
+                'nama' => $request['nama'],
+                'keterangan' => $request['keterangan'],
+                'harga' => $request['harga']
+            ];
 
-            $menucmh = Menucaffecmh::findOrFail($id)->update([
-                'foto' => $request->foto,
-                'kategori_id' => $request->kategori_id,
-                'nama' => $request->nama,
-                'keterangan' => $request->keterangan,
-                'harga' => $request->harga
-
-            ]);
+            $request->foto_menu->move($tujuan, $awal);
+            $menucmh->update($dt);
             Alert::success('Sukses !', 'Data Berhasil Di Edit');
             return redirect()->route('menucmh');
         }

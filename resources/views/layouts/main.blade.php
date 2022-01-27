@@ -201,6 +201,39 @@
                                 </li>
                             </ul>
                         </li>
+                        <li class="nav-item">
+
+
+                            <a href="#" class="nav-link" style="color:rgb(255, 255, 255);">
+                            <i class="nav-icon fas fa-list-alt"></i>
+                               <p>
+                                 List Menu
+                                   <i class="fas fa-angle-left right"></i>
+                               </p>
+                           </a>
+                                <ul class="nav nav-treeview">
+                               <li class="nav-item">
+                                  <a href="{{ route('listbdg') }}" class="nav-link" style="color:rgb(255, 255, 255);">
+                                       <i class="far fa-circle nav-icon"></i>
+                                       <p>Bandung</p>
+                                   </a>
+                               </li>
+                               <li class="nav-item">
+                                   <a href="{{ route('listcmh') }}" class="nav-link">
+                                       <i class="far fa-circle nav-icon"></i>
+                                       <p>Cimahi</p>
+                                   </a>
+                               </li>
+                               <li class="nav-item">
+                                   <a href="{{ route('listkopi') }}" class="nav-link">
+                                       <i class="far fa-circle nav-icon"></i>
+                                       <p>Kopi Portal</p>
+                                   </a>
+                               </li>
+                           </ul>
+                                       
+
+                       </li>
                         <li class="nav-header">KOMUNITAS</li>
                         <li class="nav-item">
                             <a href="{{ route('galeri') }}" class="nav-link" style="color:rgb(255, 255, 255);">
@@ -210,13 +243,39 @@
 
                                 </p>
                             </a>
-                            <a href="{{ route('event') }}" class="nav-link" style="color:rgb(255, 255, 255);">
-                                <i class="nav-icon fas fa-calendar-week"></i>
-                                <p>
-                                    Event Portal
+                           
+                        </li>
+                        <li class="nav-item">
 
+
+                             <a href="#" class="nav-link" style="color:rgb(255, 255, 255);">
+                                <i class="nav-icon fas fa-calendar week"></i>
+                                <p>
+                                  Event Portal
+                                    <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
+                                 <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                   <a href="{{ route('event') }}" class="nav-link" style="color:rgb(255, 255, 255);">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Bandung</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('eventcmh') }}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Cimahi</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('eventkopi') }}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Kopi Portal</p>
+                                    </a>
+                                </li>
+                            </ul>
+                                        
 
                         </li>
                         <li class="nav-item">
