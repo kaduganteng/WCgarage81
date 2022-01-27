@@ -34,7 +34,8 @@
                     <div class="card-tools">
                         <div class="input-group input-group-sm" style="width: 150px;">
 
-                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalgaleri">
+                            <button type="button" class="btn btn-info" data-toggle="modal"
+                                data-target="#exampleModalgaleri">
                                 Tambah Foto
                             </button>
 
@@ -46,8 +47,10 @@
 
                         @foreach ($gbdg as $g)
                         <div class="item col-sm-2">
-                            <a href="{{ asset('upload/' . $g->foto_bdg) }}" class="fancybox" data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
-                                <img src="{{ asset('upload/' . $g->foto_bdg) }}" class="img-fluid mb-2" alt="white sample" width="200px" height="200px" />
+                            <a href="{{ asset('upload/' . $g->foto_bdg) }}" class="fancybox" data-fancybox="ggblg"
+                                data-gallery="gallery" height="50px" width="50px">
+                                <img src="{{ asset('upload/' . $g->foto_bdg) }}" class="img-fluid mb-2"
+                                    alt="white sample" width="200px" height="200px" />
                             </a>
                             <a href="{{ route('menubdg.destroygal', $g->id) }}">
                                 <button class="btn btn-danger">
@@ -77,14 +80,16 @@
 
                                 <div class="card-tools">
                                     <div class="input-group input-group-sm" style="width: 150px;">
-                                        <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+                                        <input type="text" name="table_search" class="form-control float-right"
+                                            placeholder="Search">
 
                                         <div class="input-group-append">
                                             <button type="submit" class="btn btn-default">
                                                 <i class="fas fa-search"></i>
                                             </button>
                                         </div>
-                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalmenu">
+                                        <button type="button" class="btn btn-info" data-toggle="modal"
+                                            data-target="#exampleModalmenu">
                                             Tambah Menu
                                         </button>
                                     </div>
@@ -113,8 +118,12 @@
                                         <tr>
                                             <td>{{ $no++ }}</td>
                                             <td>
-                                                <a href="{{ asset('upload/' . $m->foto_menu) }}" class="fancybox" data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
-                                                    <img src="{{ asset('upload/' . $m->foto_menu) }}" class="img-fluid mb-2" alt="white sample" width="100px" height="100px" />
+                                                <a href="{{ asset('upload/' . $m->foto_menu) }}" class="fancybox"
+                                                    data-fancybox="ggblg" data-gallery="gallery" height="50px"
+                                                    width="50px">
+                                                    <img src="{{ asset('upload/' . $m->foto_menu) }}"
+                                                        class="img-fluid mb-2" alt="white sample" width="100px"
+                                                        height="100px" />
                                                 </a>
                                             </td>
                                             <td>{{ $m->kategori_id }}</td>
@@ -127,7 +136,8 @@
                                                         <ion-icon name="trash-outline"></ion-icon>
                                                     </button></a>
 
-                                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModaledit{{ $m->id }}">
+                                                <button type="button" class="btn btn-success" data-toggle="modal"
+                                                    data-target="#exampleModaledit{{ $m->id }}">
                                                     <ion-icon name="create-outline"></ion-icon>
                                                 </button>
                                             </td>
@@ -190,7 +200,8 @@
                 <h5 class="modal-title" id="exampleModalLabel">Masukan Menu </h5>
             </div>
             <div class="modal-body">
-                <form action="{{ empty($databdg) ? route('menubdg.store') : route('menubdg.update', $databdg->id) }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ empty($databdg) ? route('menubdg.store') : route('menubdg.update', $databdg->id) }}"
+                    method="POST" enctype="multipart/form-data">
                     @csrf
 
                     <div class="form-group">
@@ -205,7 +216,8 @@
                             <div class="input-group">
                                 <select name="kategori_id" class="form-control">
                                     @if (!empty(@$databdg->kategori_id))
-                                    <option value="{{ @$databdg->kategori_id }}" {{ !empty($databdg->nama_kategori) ? 'selected' : '' }}>
+                                    <option value="{{ @$databdg->kategori_id }}" {{ !empty($databdg->nama_kategori) ?
+                                        'selected' : '' }}>
                                         {{ $databdg->nama_kategori }}
                                     </option>
                                     @endif
@@ -218,17 +230,20 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputName">Nama Menu</label>
-                        <input type="text" class="form-control" name="nama" id="nama" value="{{ @$databdg->nama }}" placeholder="Masukan nama menu">
+                        <input type="text" class="form-control" name="nama" id="nama" value="{{ @$databdg->nama }}"
+                            placeholder="Masukan nama menu">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputName">Keterangan</label>
-                        <textarea name="keterangan" id="keterangan" cols="30" rows="10">{{ empty($databdg) ? '' : $databdg->keterangan }}</textarea>
+                        <textarea name="keterangan" id="keterangan" cols="30"
+                            rows="10">{{ empty($databdg) ? '' : $databdg->keterangan }}</textarea>
                         {{-- <input type="text" class="form-control" name="keterangan" id="keterangan"
-              value="{{ @$databdg->keterangan }}" placeholder="Tambahkan keterangan menu"> --}}
+                            value="{{ @$databdg->keterangan }}" placeholder="Tambahkan keterangan menu"> --}}
                     </div>
                     <div class="form-group">
                         <label for="exampleInputName">Harga Menu</label>
-                        <input type="text" class="form-control" name="harga" id="harga" value="{{ @$databdg->harga }}" placeholder="Masukan Harga">
+                        <input type="text" class="form-control" name="harga" id="harga" value="{{ @$databdg->harga }}"
+                            placeholder="Masukan Harga">
                     </div>
 
                     <button type="submit" class="btn btn-info">
@@ -248,7 +263,8 @@
 
 {{-- modal edit --}}
 @foreach ($menubdg as $m)
-<div class="modal fade" id="exampleModaledit{{ $m->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModaledit{{ $m->id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -261,7 +277,8 @@
                     <div class="form-group">
                         <label for="exampleInputFile">Masukan Foto Menu</label>
                         <div class="input-group">
-                            <input type="file" class="form-control" name="foto_menu" id="foto_menu" value="{{ @$m->foto_menu }}">
+                            <input type="file" class="form-control" name="foto_menu" id="foto_menu"
+                                value="{{ @$m->foto_menu }}">
                         </div>
                     </div>
                     <div class="form-group">
@@ -270,7 +287,8 @@
                             <div class="input-group">
                                 <select name="kategori_id" class="form-control">
                                     @if (!empty(@$databdg->kategori_id))
-                                    <option value="{{ @$databdg->kategori_id }}" {{ !empty($databdg->nama_kategori) ? 'selected' : '' }}>
+                                    <option value="{{ @$databdg->kategori_id }}" {{ !empty($databdg->nama_kategori) ?
+                                        'selected' : '' }}>
                                         {{ $databdg->nama_kategori }}
                                     </option>
                                     @endif
@@ -283,17 +301,20 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputName">Nama Menu</label>
-                        <input type="text" class="form-control" name="nama" id="nama" value="{{ @$m->nama }}" placeholder="Masukan nama menu">
+                        <input type="text" class="form-control" name="nama" id="nama" value="{{ @$m->nama }}"
+                            placeholder="Masukan nama menu">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputName">Keterangan</label>
-                        <textarea name="keterangan" id="keteranganedit" cols="30" rows="10">{{ empty($m) ? '' : $m->keterangan }}</textarea>
+                        <textarea name="keterangan" id="keteranganedit" cols="30"
+                            rows="10">{{ empty($m) ? '' : $m->keterangan }}</textarea>
                         {{-- <input type="text" class="form-control" name="keterangan" id="keteranganedit"
-            value="{{ @$m->keterangan }}" placeholder="Tambahkan keterangan menu"> --}}
+                            value="{{ @$m->keterangan }}" placeholder="Tambahkan keterangan menu"> --}}
                     </div>
                     <div class="form-group">
                         <label for="exampleInputName">Harga Menu</label>
-                        <input type="text" class="form-control" name="harga" id="harga" value="{{ @$m->harga }}" placeholder="Masukan Harga">
+                        <input type="text" class="form-control" name="harga" id="harga" value="{{ @$m->harga }}"
+                            placeholder="Masukan Harga">
                     </div>
 
                     <button type="submit" class="btn btn-info">
@@ -329,7 +350,7 @@
 </script>
 <script>
     ClassicEditor
-        .create(document.querySelector('#keteranganedit{{$m->id}}'))
+        .create(document.querySelector('#keteranganedit'))
         .catch(error => {
             console.error(error);
         });

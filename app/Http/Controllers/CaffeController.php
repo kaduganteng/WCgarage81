@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Storage;
 use App\Galeribdg;
 use App\Galericmh;
 use App\Katagoricimahi;
@@ -45,17 +46,22 @@ class CaffeController extends Controller
     public function store(Request $request)
     {
         $foto_menu = $request->file('foto_menu');
-        $nama_file = time() . "_" . $foto_menu->getClientOriginalName();
-        // tujuan upload
-        $tujuan = 'upload/';
-        $foto_menu->move($tujuan, $nama_file);
+        // $nama_file = time() . "_" . $foto_menu->getClientOriginalName();
+        $name_file = $request->file('foto_menu')->getClientOriginalName();
+
+        $path = $request->file('foto_menu')->store('public\uploads');
+        // D:\WC81-app2\public\uploads\tiket
+        // // tujuan upload
+        // $tujuan = 'upload/';
+        // $foto_menu->move($tujuan, $nama_file);
         $menubdg = Menucaffebdg::create([
-            'foto_menu' => $nama_file,
+            'foto_menu' => $path,
             'kategori_id' => $request->kategori_id,
             'nama' => $request->nama,
             'keterangan' => $request->keterangan,
             'harga' => $request->harga
         ]);
+        // dd($menubdg);
         Alert::success('Sukses !', 'Data Berhasil Di Tambahkan');
         return redirect()->back();
     }
