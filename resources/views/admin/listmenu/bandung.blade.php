@@ -19,14 +19,14 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="adminlte/css/adminlte.min.css">
     <style type="text/css">
-        body {
+        .container {
             align-content: center;
         }
     </style>
 </head>
 
 <body>
-    <div class="fitur" style="align-content: center">
+    <div class="container" style="align-content: center">
         <div class="card-body" style="align-content: center">
             <div class="col-7">
                 <div class="card shadow mb-4 ">
