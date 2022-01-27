@@ -44,7 +44,7 @@
             <div class="container">
                 <div class="row">
                     @foreach ($galeriportal as $g)
-                    <div class="item col-sm-2">
+                    <div class="item col-sm-2 ">
                         <a href="{{ asset('upload/'. $g->foto_bdg ) }}" class="fancybox" data-fancybox="ggblg"
                             data-gallery="gallery" height="100px" width="100px">
                             <img src="{{ asset('upload/'. $g->foto_bdg) }}" class="img-fluid mb-2" alt="white sample"
