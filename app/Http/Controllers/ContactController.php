@@ -17,9 +17,10 @@ class ContactController extends Controller
     public function store(Request $request)
     {
         $saranform = SaranModel::create([
-            'nama' => $request->nama,
+            'nama'  => $request->nama,
             'email' => $request->email,
-            'saran' => $request->saran
+            'saran' => $request->saran,
+            'waktu' => $request->waktu
 
         ]);
         Notification::route("mail", $saranform->email)->notify(new Notifreplay);

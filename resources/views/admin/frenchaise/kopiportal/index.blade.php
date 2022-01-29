@@ -16,9 +16,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <a href="{{ route('kopiportal') }}">
-                        <h1>Homepage Kopi Portal </h1>
-                    </a>
+
                 </div>
 
             </div>
@@ -30,27 +28,27 @@
         <div class="col-12">
             <div class="card ">
                 <div class="card-header">
-                    <h4 class="card-title">Gallery</h4>
-                    <div class="card-tools">
-                        <div class="input-group input-group-sm" style="width: 150px;">
-                            <div class="input-group-append">
-                                <div class="input-group input-group-sm" style="width: 150px;">
-                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalgaleri">
-                                        Tambah Foto
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <h3>Gallery</h3>
+                    <a href="kopiportal">
+                        <button type="button" class="btn btn-success">
+                            <ion-icon name="refresh"></ion-icon>Refresh
+                        </button>
+                    </a>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalgaleri">
+                        <ion-icon name="add"></ion-icon>
+                        Tambah Foto
+                    </button>
                 </div>
-                <div class="card-body">
+                <div class="card-body" style="overflow: scroll;">
                     <div class="row">
 
                         @foreach ($gkopi as $g)
                         <div class="item col-sm-2">
 
-                            <a href="{{ asset('upload/' . $g->foto_kopip) }}" class="fancybox" data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
-                                <img src="{{ asset('upload/' . $g->foto_kopip) }}" class="img-fluid mb-2" alt="white sample" width="200px" height="200px" />
+                            <a href="{{ asset('upload/' . $g->foto_kopip) }}" class="fancybox" data-fancybox="ggblg"
+                                data-gallery="gallery" height="50px" width="50px">
+                                <img src="{{ asset('upload/' . $g->foto_kopip) }}" class="img-fluid mb-2"
+                                    alt="white sample" width="200px" height="200px" />
                             </a>
                             <a href="{{ route('kopiportal.destroygal', $g ->id) }}">
                                 <button class="btn btn-danger">
@@ -76,23 +74,28 @@
                         <!-- /.card -->
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Kopi Portal</h3>
+                                <h3>Daftar MenuCaffe Kopi Portal</Kbd></h3>
+                                <a href="menucmh">
+                                    <button type="button" class="btn btn-success">
+                                        <ion-icon name="refresh"></ion-icon>Refresh
+                                    </button>
+                                </a>
+                                <button type="button" class="btn btn-info" data-toggle="modal"
+                                    data-target="#exampleModalmenu">
+                                    <ion-icon name="add"></ion-icon>
+                                    Tambah Menu
+                                </button>
 
                                 <div class="card-tools">
-                                    <div class="input-group input-group-sm" style="width: 150px;">
-                                        <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                                    <div class="input-group input-group-sm" style="width: 250px;">
+                                        <input type="text" name="table_search" class="form-control float-right"
+                                            placeholder="Search">
 
                                         <div class="input-group-append">
                                             <button type="submit" class="btn btn-default">
                                                 <i class="fas fa-search"></i>
                                             </button>
-                                        </div>
-                                        <div class="input-group-append">
-                                            <div class="input-group input-group-sm" style="width: 150px;">
-                                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalmenu">
-                                                    Tambah Menu
-                                                </button>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -120,8 +123,12 @@
                                         <tr>
                                             <td>{{ $no++ }}</td>
                                             <td>
-                                                <a href="{{ asset('upload/' . $kp->foto_menu) }}" class="fancybox" data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
-                                                    <img src="{{ asset('upload/' . $kp->foto_menu) }}" class="img-fluid mb-2" alt="white sample" width="100px" height="100px" />
+                                                <a href="{{ asset('upload/' . $kp->foto_menu) }}" class="fancybox"
+                                                    data-fancybox="ggblg" data-gallery="gallery" height="50px"
+                                                    width="50px">
+                                                    <img src="{{ asset('upload/' . $kp->foto_menu) }}"
+                                                        class="img-fluid mb-2" alt="white sample" width="100px"
+                                                        height="100px" />
                                             </td>
                                             <td>{{ $kp->kategori_id }}</td>
                                             <td>{{ $kp->nama }}</td>
@@ -132,7 +139,8 @@
                                                     <button class="btn btn-danger">
                                                         <ion-icon name="trash-outline"></ion-icon>
                                                     </button></a>
-                                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModaledit{{ $kp->id }}">
+                                                <button type="button" class="btn btn-success" data-toggle="modal"
+                                                    data-target="#exampleModaledit{{ $kp->id }}">
                                                     <ion-icon name="create-outline"></ion-icon>
                                                 </button>
 
@@ -196,7 +204,9 @@
                 <h5 class="modal-title" id="exampleModalLabel">Masukan Menu </h5>
             </div>
             <div class="modal-body">
-                <form action="{{ empty($dataportal) ? route('kopiportal.store') : route('kopiportal.update', $dataportal->id) }}" method="POST" enctype="multipart/form-data">
+                <form
+                    action="{{ empty($dataportal) ? route('kopiportal.store') : route('kopiportal.update', $dataportal->id) }}"
+                    method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="card-body">
                         <div class="form-group">
@@ -211,7 +221,8 @@
                                 <div class="input-group">
                                     <select name="kategori_id" class="form-control">
                                         @if (!empty(@$databdg->kategori_id))
-                                        <option value="{{ @$databdg->kategori_id }}" {{ !empty($databdg->nama_kategori) ? 'selected' : '' }}>
+                                        <option value="{{ @$databdg->kategori_id }}" {{ !empty($databdg->nama_kategori)
+                                            ? 'selected' : '' }}>
                                             {{ $databdg->nama_kategori }}
                                         </option>
                                         @endif
@@ -226,18 +237,21 @@
 
                         <div class="form-group">
                             <label for="exampleInputName">Nama Menu</label>
-                            <input type="text" class="form-control" name="nama" id="nama" value="{{ @$dataportal->nama }}" placeholder="Masukan nama menu">
+                            <input type="text" class="form-control" name="nama" id="nama"
+                                value="{{ @$dataportal->nama }}" placeholder="Masukan nama menu">
                         </div>
                         <div class="form-group">
 
                             <label for="exampleInputName">Keterangan</label>
-                            <textarea name="keterangan" id="keterangan" cols="30" rows="10">{{ empty($databdg) ? '' : $databdg->keterangan }}</textarea>
+                            <textarea name="keterangan" id="keterangan" cols="30"
+                                rows="10">{{ empty($databdg) ? '' : $databdg->keterangan }}</textarea>
                             {{-- <input type="text" class="form-control" name="keterangan" id="keterangan"
                                 value="{{ @$databdg->keterangan }}" placeholder="Tambahkan keterangan menu"> --}}
                         </div>
                         <div class="form-group">
                             <label for="exampleInputName">Harga Menu</label>
-                            <input type="text" class="form-control" name="harga" id="harga" value="{{ @$dataportal->harga }}" placeholder="Masukan Harga">
+                            <input type="text" class="form-control" name="harga" id="harga"
+                                value="{{ @$dataportal->harga }}" placeholder="Masukan Harga">
                         </div>
                         <div class="form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -263,7 +277,8 @@
 
 {{-- Modal Edit Kopi --}}
 @foreach ($kopiportal as $kp)
-<div class="modal fade" id="exampleModaledit{{ $kp->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModaledit{{ $kp->id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -275,13 +290,14 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label for="exampleInputFile">Masukan Foto Menu</label>
-                             <div class="input-group" >
-                              <img src="{{ asset('upload/' . $kp->foto_menu) }}" class="img-fluid mb-2" alt="white sample" width="100px" height="100px" />
+                            <div class="input-group">
+                                <img src="{{ asset('upload/' . $kp->foto_menu) }}" class="img-fluid mb-2"
+                                    alt="white sample" width="100px" height="100px" />
                             </div>
                             <div class="input-group">
                                 <input type="file" class="form-control" name="foto_menu" id="foto_menu">
                             </div>
-                            
+
                         </div>
                         <div class="form-group">
                             <div class="form-group">
@@ -289,7 +305,8 @@
                                 <div class="input-group">
                                     <select name="kategori_id" class="form-control">
                                         @if (!empty(@$dataportal->kategori_id))
-                                        <option value="{{ @$dataportal->kategori_id }}" {{ !empty($dataportal->nama_kategori) ? 'selected' : '' }}>
+                                        <option value="{{ @$dataportal->kategori_id }}" {{ !empty($dataportal->
+                                            nama_kategori) ? 'selected' : '' }}>
                                             {{ $dataportal->nama_kategori }}
                                         </option>
                                         @endif
@@ -304,27 +321,30 @@
 
                         <div class="form-group">
                             <label for="exampleInputName">Nama Menu</label>
-                            <input type="text" class="form-control" name="nama" id="nama" value="{{ @$kp->nama }}" placeholder="Masukan nama menu">
+                            <input type="text" class="form-control" name="nama" id="nama" value="{{ @$kp->nama }}"
+                                placeholder="Masukan nama menu">
                         </div>
                         <div class="form-group">
 
                             <label for="exampleInputName">Keterangan</label>
-                            <textarea name="keterangan" id="keteranganedit{{ $kp->id }}" cols="30" rows="10">{{ empty($kp) ? '' : $kp->keterangan }}</textarea>
+                            <textarea name="keterangan" id="keteranganedit{{ $kp->id }}" cols="30"
+                                rows="10">{{ empty($kp) ? '' : $kp->keterangan }}</textarea>
                             {{-- <input type="text" class="form-control" name="keterangan" id="keteranganedit"
                                 value="{{ @$databdg->keterangan }}" placeholder="Tambahkan keterangan menu"> --}}
                         </div>
                         <div class="form-group">
                             <label for="exampleInputName">Harga Menu</label>
-                            <input type="text" class="form-control" name="harga" id="harga" value="{{ @$kp->harga }}" placeholder="Masukan Harga">
+                            <input type="text" class="form-control" name="harga" id="harga" value="{{ @$kp->harga }}"
+                                placeholder="Masukan Harga">
                         </div>
-                      
+
                         <button type="submit" class="btn btn-info">
                             <ion-icon name="save-outline"></ion-icon>
                         </button>
                     </div>
-                  
-                   
-                   
+
+
+
                 </form>
             </div>
             <div class="modal-footer">
@@ -345,7 +365,7 @@
         });
 </script>
 @foreach ($kopiportal as $kp)
-    <script>
+<script>
     ClassicEditor
         .create(document.querySelector('#keteranganedit{{ $kp->id }}'))
         .catch(error => {

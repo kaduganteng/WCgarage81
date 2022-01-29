@@ -24,79 +24,90 @@
     <!-- ISI KONTEN    -->
     <section class="content">
         <div class="container">
-            <div class="col-md-4 col-sm-6 mb-3 " style="">
-                <!-- /.card -->
-                <div class="card shadow mb-4">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 mb-3 " style="">
+                    <!-- /.card -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header">
+                            <h2 style="text-align: center">Event Bandung</h2>
+                        </div>
+                        <!-- /.card-header -->
+                        @foreach ($event as $e)
+                        <a style="text-align: center" href="{{ asset('upload/' . $e->foto_event) }}" class="fancybox"
+                            data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
+                            <img src="{{ asset('upload/' . $e->foto_event) }}" class="img-fluid mb-2" alt="white sample"
+                                width="400px" height="400px" />
+                        </a>
+                        <div class="card-body">
 
-                    <div class="card-header">
+                            <strong><i class="fas fa-book mr-1"></i> Nama Event</strong>
 
-                        <h1 style="text-align: center">Event Bandung</h1>
+                            <p class="text-muted">
+                                {{ $e->nama }}
+                            </p>
 
+                            <hr>
 
+                            <strong><i class="fas fa-map-marker-alt mr-1"></i>Lokasi</strong>
 
+                            <p class="text-muted">{{ $e->lokasi }}</p>
+
+                            <hr>
+
+                            <strong><i class="fas fa-pencil-alt mr-1"></i>Waktu Kegiatan</strong>
+
+                            <p class="text-muted">
+                                <span class="tag tag-danger">{{ $e->tgl_event }}</span>
+                            </p>
+
+                            <hr>
+
+                            <strong><i class="far fa-file-alt mr-1"></i>Rincian Kegiatan</strong>
+
+                            <p class="text-muted">{!! $e->rinciankegiatan !!}</p>
+                            <hr>
+                            <td>
+
+                                <a href="{{ route('event.destroy', $e->id) }}">
+                                    <button class="btn btn-danger" class="btn">
+                                        <ion-icon name="trash-outline"></ion-icon>
+                                    </button></a>
+
+                                <button type="button" class="btn btn-success" data-toggle="modal"
+                                    data-target="#exampleModaledit{{ $e->id }}">
+                                    <ion-icon name="create-outline"></ion-icon>
+                                </button>
+
+                            </td>
+                        </div>
+                        @endforeach
+                        <button type="button" class="btn btn-info" style="text-align: center" data-toggle="modal"
+                            data-target="#exampleModalmenu">
+                            Tambah Event</button>
+                        <!-- /.card-body -->
                     </div>
                     <!-- /.card-header -->
-                    @foreach ($event as $e)
 
-                    <a style="text-align: center" href="{{ asset('upload/' . $e->foto_event) }}" class="fancybox"
-                        data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
-                        <img src="{{ asset('upload/' . $e->foto_event) }}" class="img-fluid mb-2" alt="white sample"
-                            width="400px" height="400px" />
-                    </a>
-
-
-                    <div class="card-body">
-
-                        <strong><i class="fas fa-book mr-1"></i> Nama Event</strong>
-
-                        <p class="text-muted">
-                            {{ $e->nama }}
-                        </p>
-
-                        <hr>
-
-                        <strong><i class="fas fa-map-marker-alt mr-1"></i>Lokasi</strong>
-
-                        <p class="text-muted">{{ $e->lokasi }}</p>
-
-                        <hr>
-
-                        <strong><i class="fas fa-pencil-alt mr-1"></i>Waktu Kegiatan</strong>
-
-                        <p class="text-muted">
-                            <span class="tag tag-danger">{{ $e->tgl_event }}</span>
-                        </p>
-
-                        <hr>
-
-                        <strong><i class="far fa-file-alt mr-1"></i>Rincian Kegiatan</strong>
-
-                        <p class="text-muted">{!! $e->rinciankegiatan !!}</p>
-                        <hr>
-                        <td>
-
-                            <a href="{{ route('event.destroy', $e->id) }}">
-                                <button class="btn btn-danger" class="btn">
-                                    <ion-icon name="trash-outline"></ion-icon>
-                                </button></a>
-
-                            <button type="button" class="btn btn-success" data-toggle="modal"
-                                data-target="#exampleModaledit{{ $e->id }}">
-                                <ion-icon name="create-outline"></ion-icon>
-                            </button>
-
-                        </td>
-                    </div>
-                    @endforeach
-                    <button type="button" class="btn btn-info" style="text-align: center" data-toggle="modal"
-                        data-target="#exampleModalmenu">
-                        Tambah Event</button>
                     <!-- /.card-body -->
                 </div>
-                <!-- /.card-header -->
 
-                <!-- /.card-body -->
+                <div class="col-xl-4 col-md-5">
+                    <div class="card shadow mb-4">
+                        <!-- Card Header - Dropdown -->
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 ">KETERANGAN</h6>
+                        </div>
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <p>Event ini akan muncul di bagian portal, lalu apabila user tertarik user akan di arahkan
+                                ke laman masing-masing
+                                lokasi event berlangung dengan cara mengklik detail</b>.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
         </div>
 
     </section>
