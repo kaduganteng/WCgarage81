@@ -4,7 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class counter extends Model
+class Counter extends Model
 {
-    //
+    protected $table = "counters";
+    protected $fillable = [
+        'views'
+
+    ];
 }

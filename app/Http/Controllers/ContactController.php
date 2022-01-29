@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\SaranModel;
+use App\Notifications\Notifreplay;
 use Illuminate\Http\Request;
+use Notification;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class ContactController extends Controller
@@ -20,7 +22,7 @@ class ContactController extends Controller
             'saran' => $request->saran
 
         ]);
-        Alert::success('Terima Kasih', 'Saran anda kami terima');
+        Notification::route("mail", $saranform->email)->notify(new Notifreplay);
         return redirect()->back();
     }
     public function destroy($id)

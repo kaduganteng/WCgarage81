@@ -7,7 +7,8 @@
     <title>@yield('tittle')</title>
 
     <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="adminlte/plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
@@ -36,10 +37,6 @@
                 </li>
             </ul>
 
-
-
-
-
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
                 <!-- Navbar Search -->
@@ -50,7 +47,8 @@
                     <div class="navbar-search-block">
                         <form class="form-inline">
                             <div class="input-group input-group-sm">
-                                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                                <input class="form-control form-control-navbar" type="search" placeholder="Search"
+                                    aria-label="Search">
                                 <div class="input-group-append">
                                     <button class="btn btn-navbar" type="submit">
                                         <i class="fas fa-search"></i>
@@ -72,7 +70,8 @@
                 </li>
                 @else
                 <li class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }} <span class="caret"></span>
                     </a>
 
@@ -96,7 +95,8 @@
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="admin" class="brand-link">
-                <img src="adminlte/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <img src="adminlte/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+                    style="opacity: .8">
                 <span class="brand-text font-weight-light">Garage Coffe 81</span>
             </a>
 
@@ -108,14 +108,17 @@
                         <img src="adminlte//img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            v-pre>
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
                     </div>
                 </div>
-                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                    data-accordion="false">
                     <li class="nav-item">
-                        <a href="{{ route('dashboard') }}" style="color:rgb(255, 255, 255);" class="nav-link {{ Request::is('admin/homeadmin') || Request::is('admin/homeadmin/*') ? 'active' : '' }}">
+                        <a href="{{ route('dashboard') }}" style="color:rgb(255, 255, 255);"
+                            class="nav-link {{ Request::is('admin/homeadmin') || Request::is('admin/homeadmin/*') ? 'active' : '' }}">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>
                                 Dashboard
@@ -128,7 +131,8 @@
                 <!-- SidebarSearch Form -->
                 <div class="form-inline">
                     <div class="input-group" data-widget="sidebar-search">
-                        <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+                        <input class="form-control form-control-sidebar" type="search" placeholder="Search"
+                            aria-label="Search">
                         <div class="input-group-append">
                             <button class="btn btn-sidebar">
                                 <i class="fas fa-search fa-fw"></i>
@@ -139,9 +143,10 @@
 
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
+                            with font-awesome or any other icon font library -->
                         <li class="nav-header">MENU DAN KATEGORI</li>
                         <li class="nav-item">
                             <a href="#" class="nav-link" style="color:rgb(255, 255, 255);">
@@ -205,35 +210,35 @@
 
 
                             <a href="#" class="nav-link" style="color:rgb(255, 255, 255);">
-                            <i class="nav-icon fas fa-list-alt"></i>
-                               <p>
-                                 List Menu
-                                   <i class="fas fa-angle-left right"></i>
-                               </p>
-                           </a>
-                                <ul class="nav nav-treeview">
-                               <li class="nav-item">
-                                  <a href="{{ route('listbdg') }}" class="nav-link" style="color:rgb(255, 255, 255);">
-                                       <i class="far fa-circle nav-icon"></i>
-                                       <p>Bandung</p>
-                                   </a>
-                               </li>
-                               <li class="nav-item">
-                                   <a href="{{ route('listcmh') }}" class="nav-link">
-                                       <i class="far fa-circle nav-icon"></i>
-                                       <p>Cimahi</p>
-                                   </a>
-                               </li>
-                               <li class="nav-item">
-                                   <a href="{{ route('listkopi') }}" class="nav-link">
-                                       <i class="far fa-circle nav-icon"></i>
-                                       <p>Kopi Portal</p>
-                                   </a>
-                               </li>
-                           </ul>
-                                       
+                                <i class="nav-icon fas fa-list-alt"></i>
+                                <p>
+                                    List Menu
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('listbdg') }}" class="nav-link" style="color:rgb(255, 255, 255);">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Bandung</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('listcmh') }}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Cimahi</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('listkopi') }}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Kopi Portal</p>
+                                    </a>
+                                </li>
+                            </ul>
 
-                       </li>
+
+                        </li>
                         <li class="nav-header">KOMUNITAS</li>
                         <li class="nav-item">
                             <a href="{{ route('galeri') }}" class="nav-link" style="color:rgb(255, 255, 255);">
@@ -243,21 +248,21 @@
 
                                 </p>
                             </a>
-                           
+
                         </li>
                         <li class="nav-item">
 
 
-                             <a href="#" class="nav-link" style="color:rgb(255, 255, 255);">
+                            <a href="#" class="nav-link" style="color:rgb(255, 255, 255);">
                                 <i class="nav-icon fas fa-calendar week"></i>
                                 <p>
-                                  Event Portal
+                                    Event Portal
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
-                                 <ul class="nav nav-treeview">
+                            <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                   <a href="{{ route('event') }}" class="nav-link" style="color:rgb(255, 255, 255);">
+                                    <a href="{{ route('event') }}" class="nav-link" style="color:rgb(255, 255, 255);">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Bandung</p>
                                     </a>
@@ -275,7 +280,7 @@
                                     </a>
                                 </li>
                             </ul>
-                                        
+
 
                         </li>
                         <li class="nav-item">
@@ -288,7 +293,9 @@
                             </a>
                         </li>
                         </li>
-
+                    </ul>
+                </nav>
+            </div>
         </aside>
 
         <!-- Content Wrapper. Contains page content -->

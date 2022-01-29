@@ -2,6 +2,11 @@
 @section('tittle','Admin Garage 81')
 @section('content')
 
+<head>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
 <!-- ISI CONTENT ADMIN -->
 <div class="content">
 
@@ -31,6 +36,11 @@
 
           </small>
         </p>
+        <a href="{{ route('saranin.destroy', $s->id) }}">
+          <button class="btn btn-info">
+            <ion-icon name="trash-outline"></ion-icon>
+          </button>
+        </a>
         @endforeach
         <div class="chart-area">
           <canvas id="myAreaChart"></canvas>
