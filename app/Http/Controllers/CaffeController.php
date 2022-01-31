@@ -8,6 +8,7 @@ use App\Katagoricimahi;
 use App\KategoriMenu;
 use App\Menucaffebdg;
 use App\Menucaffecmh;
+use DB;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -22,6 +23,7 @@ class CaffeController extends Controller
 
     public function index()
     {
+        DB::table('menubdg')->increment('views');
         $kategori = KategoriMenu::all();
         $menubdg = Menucaffebdg::get();
         $gbdg = Galeribdg::get();

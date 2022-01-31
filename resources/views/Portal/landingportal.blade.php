@@ -8,6 +8,7 @@
                 <div class="display-t js-fullheight">
                     <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
                         <h1>Portal Manajemen</h1>
+                      
                         <h2>Garage 81 | Garasi 81 | Kopi Portal </a></h2>
                     </div>
                 </div>

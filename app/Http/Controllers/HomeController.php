@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,6 +14,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        DB::table('counters')->increment('views');
+        $counterview = DB::table('counters')->limit(1)->get();
+        return view('home', [
+            'counterview' => $counterview
+        ]);
     }
 }

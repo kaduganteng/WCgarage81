@@ -63,7 +63,7 @@
 
                         <!-- /.col -->
                         <div class="text-center mb-3">
-                            <button type="submit" class="btn btn-primary btn-block"><i
+                            <button type="submit" class="btn btn-info btn-block"><i
                                     class="bi bi-box-arrow-in-down-right"></i>
                                 LogIn</button>
                         </div>
