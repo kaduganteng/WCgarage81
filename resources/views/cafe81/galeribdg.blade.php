@@ -27,30 +27,26 @@
     <div id="fh5co-gallery" class="fh5co-section">
         <div class="container">
             <div class="row">
-    <div class="col-md-12 fh5co-heading animate-box">
-        <h2>Galeri</h2>
-        <div class="row">
-            <div class="col-md-9">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam,
-                    itaque, nesciunt similique commodi omnis. Ad magni perspiciatis, voluptatum repellat.</p>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
+                <div class="col-md-12 fh5co-heading animate-box">
+                    <h2>Galeri</h2>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam,
+                                itaque, nesciunt similique commodi omnis. Ad magni perspiciatis, voluptatum repellat.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
     @foreach ($galeribdg as $g)
-    <div id="fh5co-gallery" class="fh5co-section">
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-5 col-sm-5 fh5co-gallery_item">
+                    <div class="col-md-3 col-sm-3 fh5co-gallery_item">
+                        <div class="fh5co-bg-img">
                         <a href="{{ asset('upload/'. $g->foto_bdg ) }}" class="fancybox" data-fancybox="ggblg"
                             data-gallery="gallery" height="150px" width="100px">
-                            <img src="{{ asset('upload/'. $g->foto_bdg) }}" data-trigger="zoomerang" class="img-fluid mb-2" alt="white sample"/>
+                            <img src="{{ asset('upload/'. $g->foto_bdg) }}" data-trigger="zoomerang" class="img-responsive" alt="galerigarasi81"/>
                         </a>
                     </div>
-                </div>
-            </div>
-        </div>
+                    </div>
  @endforeach
     </div>    
 </body>
