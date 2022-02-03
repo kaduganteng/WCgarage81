@@ -1,7 +1,7 @@
 @extends('layouts.cafecmh')
 @section('section')
 
-<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url(images/x.jpg);" data-stellar-background-ratio="0.5">
+<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url(images/tentangcmh.jpg);" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
@@ -20,7 +20,7 @@
 <div id="fh5co-about" class="fh5co-section">
     <div class="container">
         <div class="row">
-            <div class="col-md-4 col-md-pull-3 img-wrap animate-box" data-animate-effect="fadeInLeft">
+            <div class="col-md-4 col-md-pull-0 img-wrap animate-box" data-animate-effect="fadeInLeft">
                 <img src="images/garagelogo.jpg" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
             </div>
 <div class="col-md-7 col-md-push-1 animate-box">

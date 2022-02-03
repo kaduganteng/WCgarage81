@@ -63,7 +63,7 @@
             <div class="container">
                 <div class="row row-pb-md">
                     <div class="col-md-4 fh5co-widget">
-                        <h4>Portal</h4>
+                        <h4>Portal Manajemen</h4>
                         <p>Jl. Bali No.3, Merdeka, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 40113</p>
                     </div>
                     <div class="col-md-2 col-md-push-1 fh5co-widget">

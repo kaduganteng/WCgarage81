@@ -23,7 +23,7 @@
     <div id="fh5co-about" class="fh5co-section">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-pull-4 img-wrap animate-box" data-animate-effect="fadeInLeft">
+                <div class="col-md-6 col-md-pull-0 img-wrap animate-box" data-animate-effect="fadeInLeft">
                     <img src="images/frn.png">
                 </div>
                 <div class="col-md-5 col-md-push-1 animate-box">
@@ -61,7 +61,7 @@
                 <div class="menuspesial">
                     <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
                         <div class="fh5co-item">
-                            <a href="{{ route('cafecmh') }}">
+                            <a href="{{ route('cafe81') }}">
                                 <img src="images/ayamlada.jpg" class="img-responsive">
                                 <h3>Nasi Ayam Lada Hitam</h3>
                                 <span class="fh5co-price">Rp.20.000</span>
@@ -71,7 +71,7 @@
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-15 fh5co-item-wrap animate-box">
                         <div class="fh5co-item margin_top">
-                            <a href="{{ route('cafecmh') }}">
+                            <a href="{{ route('cafe81') }}">
                                 <img src="images/jagong.jpg" class="img-responsive">
                                 <h3>Beef Hot Pot</h3>
                                 <span class="fh5co-price">Rp.27.000</span>
@@ -82,7 +82,7 @@
                     <div class="clearfix visible-sm-block visible-xs-block"></div>
                     <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
                         <div class="fh5co-item">
-                            <a href="{{ route('cafecmh') }}">
+                            <a href="{{ route('cafe81') }}">
                                 <img src="images/nasgor.jpg" class="img-responsive">
                                 <h3>Nasi Goreng</h3>
                                 <span class="fh5co-price">Rp.30.000</span>
@@ -92,7 +92,7 @@
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
                         <div class="fh5co-item margin_top">
-                            <a href="{{ route('cafecmh') }}">
+                            <a href="{{ route('cafe81') }}">
                                 <img src="images/spageti.jpg" class="img-responsive">
                                 <h3>Spagheti BBQ</h3>
                                 <span class="fh5co-price">Rp.25.000</span>
@@ -171,7 +171,7 @@
     <div class="container">
         <div class="section-heading gmaps"> 
     <h2> Lokasi Kami </h2>
-        <div class="embed-responsive embed-responsive-16by9">
+        <div class="embed-responsive embed-responsive-4by3">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.802245020897!2d107.61473781530074!3d-6.914232169593771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e71d2ba0ef41%3A0x3b67257e4e181cce!2sGarasi%2081%20Bandung!5e0!3m2!1sid!2sid!4v1642593765069!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
     </iframe>
                 </div>

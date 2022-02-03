@@ -22,6 +22,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 // DASHBOARD
 
 Route::get('/admin', 'DashboardController@index')->name('dashboard');
+Route::get('/short', 'DashboardController@short')->name('short');
+Route::get('/kirimemail', 'MailController@index');
 
 // KATEGORI
 
@@ -131,7 +133,7 @@ Route::match(['get', 'post'], '/editeventkopi{id}', 'EventController@editkopi');
 //  MASUKAN DAN SARAN
 
 Route::get('/saran', 'SaranController@index')->name('saran');
-
+Route::get('/saran.delete.{id}', 'SaranController@destroy')->name('saranin.destroy');
 
 
 // Route FrontEnd

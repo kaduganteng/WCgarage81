@@ -49,7 +49,8 @@
                   <div class="text-x font-weight-bold text-success text-uppercase mb-1">
                     Caffe Bandung</div>
                   <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $s->jml }} Menu </div>
-                  <a href="{{ route('menubdg') }}"><button type="button" class="btn btn-success mt-3 btn-sm shadow-sm"><i class="fas fa-info-circle"></i>
+                  <a href="{{ route('menubdg') }}"><button type="button"
+                      class="btn btn-success mt-3 btn-sm shadow-sm"><i class="fas fa-info-circle"></i>
                       Detail</button></a>
                 </div>
                 <div class="col-auto">
@@ -73,7 +74,8 @@
                   <div class="text-x font-weight-bold text-info text-uppercase mb-1">
                     Caffe Cimahi</div>
                   <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $c->jml }} Menu </div>
-                  <a href="{{ route('menucmh') }}"><button type="button" class="btn btn-info mt-3 btn-sm shadow-sm"><i class="fas fa-info-circle"></i>
+                  <a href="{{ route('menucmh') }}"><button type="button" class="btn btn-info mt-3 btn-sm shadow-sm"><i
+                        class="fas fa-info-circle"></i>
                       Detail</button></a>
                 </div>
                 <div class="col-auto">
@@ -97,7 +99,8 @@
                   <div class="text-x font-weight-bold text-primary text-uppercase mb-1">
                     Kopi Portal</div>
                   <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $k->jml }} Menu </div>
-                  <a href="{{ route('kopiportal') }}"><button type="button" class="btn btn-primary mt-3 btn-sm shadow-sm"><i class="fas fa-info-circle"></i>
+                  <a href="{{ route('kopiportal') }}"><button type="button"
+                      class="btn btn-primary mt-3 btn-sm shadow-sm"><i class="fas fa-info-circle"></i>
                       Detail</button></a>
                 </div>
                 <div class="col-auto">
@@ -126,10 +129,7 @@
         </div>
         <!-- Card Body -->
         <div class="card-body">
-         Data Pengunjung Web
-   
           <div class="chart-area">
-
             <canvas id="myAreaChart"></canvas>
           </div>
         </div>

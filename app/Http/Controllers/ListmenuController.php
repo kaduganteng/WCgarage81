@@ -8,6 +8,7 @@ use App\ListmenuModel;
 use App\Listmenuportal;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
+
 class ListmenuController extends Controller
 {
     public function index()
@@ -71,7 +72,7 @@ class ListmenuController extends Controller
     public function index3()
     {
         $listmenu = Listmenuportal::get();
-        return view('admin.listmenu.bandung', [
+        return view('admin.listmenu.portal', [
             'listmenu' => $listmenu
         ]);
     }
@@ -96,5 +97,4 @@ class ListmenuController extends Controller
         Alert::warning('Gambar Berhasil Dihapus !', 'Gambar Yang Berhasil Di Hapus Tidak Dapat Dikembalikan');
         return redirect()->back();
     }
-
 }
