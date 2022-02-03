@@ -46,7 +46,7 @@
     <!--Menu Spesial Garage 81-->
     <div id="fh5co-featured-menu" class="fh5co-section">
         <div class="container">
-            <div class="row">
+            <div class="col-md-12 fh5co-heading animate-box">
                 <div class="section-heading">
                     <h2>Menu Special</h2>
                     <div class="row">

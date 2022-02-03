@@ -70,7 +70,7 @@
     <div id="fh5co-about" class="fh5co-section">
     <div class="container">
         <div class="row">
-            <div class="col-md-5 col-md-push-0 animate-box" data-animate-effect="fadeInLeft">
+            <div class="col-md-5 col-md-push-1 animate-box" data-animate-effect="fadeInLeft">
                 <div class="section-heading">
                 <h2>Latar Belakang</h2>
                 <p>Portal Manajemen adalah perusahaan yang bergerak di bidang kuliner khususnya di bisnis Kopi. Yang mempunyai beberapa 
@@ -81,7 +81,7 @@
                 </p>
             </div>
             </div>
-    <div class="col-md-5 col-md-push-1 animate-box">
+    <div class="col-md-5 col-md-push-2 animate-box">
     <div class="section-heading">
         <h2>Visi & Misi</h2>
         <h3>Visi</h3>
@@ -166,18 +166,17 @@
                         <h2>Events</h2>
                         <p>Lorem ipsum dolor sit amet, couatur. Aliquam quaerat pariatur repellendus veniam nemo, saepe,
                             culpa eius aspernatur cumque suscipit quae nobis illo tempora. Eum veniam necessitatibus,
-                            blanditiis
-                            facilis quidem dolore! Dolorem, molestiae.</p>
+                            blanditiis facilis quidem dolore! Dolorem, molestiae.</p>
                     </div>
                 </div>
                 @foreach ($event as $evn)
                 <div class="row">
-                    <div class="col-md-4 col-sm-5 col-xs-5 col-xxs-12 fh5co-item-wrap">
+                    <div class="col-md-4 col-md-push-0">
                         <div class="fh5co-blog animate-box">
                             <a href="{{ asset('upload/' . $evn->foto_event) }}" class="fancybox blog-bg"
                                 data-fancybox="ggblg" data-gallery="event" height="50px" width="50px">
-                                <img src="{{ asset('upload/' . $evn->foto_event) }}" class="img-fluid mb-0 blog"
-                                alt="white sample" width="360px" height="340px"/>
+                                <img src="{{ asset('upload/' . $evn->foto_event) }}" class="img-fluid mb-1 blog"
+                                alt="white sample" width="359.98px" height="300px"/>
                             </a>
                             <div class="blog-text">
                                 <span class="posted_on">{{ $evn->tgl_event }}</span>
@@ -194,7 +193,5 @@
             </div>
         </div>
         <!--Acara Garage 81-->
-    
-
 
     @endsection

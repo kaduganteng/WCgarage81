@@ -267,7 +267,7 @@
         <h5 class="modal-title" id="exampleModalLabel">Edit Menu </h5>
       </div>
       <div class="modal-body">
-        <form action="{{ url('/editbdg' . $m->id) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ url('/editcmh' . $m->id) }}" method="POST" enctype="multipart/form-data">
           @csrf
           <div class="card-body">
             <div class="form-group">
@@ -352,7 +352,7 @@
 @foreach ($menucmh as $m)
 <script>
   ClassicEditor
-        .create(document.querySelector('#keteranganedit'))
+        .create(document.querySelector('#keteranganedit{{ $m->id }}'))
         .catch(error => {
             console.error(error);
         });

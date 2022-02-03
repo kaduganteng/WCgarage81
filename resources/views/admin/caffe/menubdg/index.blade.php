@@ -360,7 +360,7 @@
 @foreach ($menubdg as $m)
 <script>
     ClassicEditor
-        .create(document.querySelector('#keteranganedit'))
+        .create(document.querySelector('#keteranganedit{{ $m->id }}'))
         .catch(error => {
             console.error(error);
         });

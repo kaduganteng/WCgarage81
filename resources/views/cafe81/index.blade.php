@@ -46,11 +46,11 @@
     <!--Menu Spesial Garage 81-->
     <div id="fh5co-featured-menu" class="fh5co-section">
         <div class="container">
-            <div class="row">
+            <div class="col-md-12 fh5co-heading animate-box">
                 <div class="section-heading">
                     <h2>Menu Special</h2>
                     <div class="row">
-                        <div class="col-md-8">
+                        <div class="col-md-9">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit
                                 itaque totam, a maiores nihil, nulla magnam porro minima offiiis! Doloribus aliquam
                                 voluptates corporis et tempora consequuntur ipsam,
@@ -156,7 +156,7 @@
     <!--Menu Terlaris Garage 81-->
     <!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!--Instagram-->
-    <div class="container">
+    <div class="container" class="animate-box" data-animate-effect="fadeInLeft">
     <div data-mc-src="29d00edc-e38a-4910-b28a-f4d5b32e8fa7#instagram">
     </div>
     </div>
