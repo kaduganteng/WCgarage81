@@ -179,10 +179,10 @@
                             </a>
                             <div class="blog-text">
                                 <span class="posted_on">{{ $evn->tgl_event }}</span>
-                                <h3><a href="#">{{ $evn->nama }}</a></h3>
+                                <h3><a href="{{ route('kopiprt') }}">{{ $evn->nama }}</a></h3>
                                 <p>{!! $evn->rinciankegiatan !!}</p>
                                 <ul class="stuff">
-                                    <li><a href="#"><i class="icon-arrow-right22"></i></a></li>
+                                    <li><a href="{{ route('landing') }}"><i class="icon-arrow-right22"></i></a></li>
                                 </ul>
                             </div>
                         </div>

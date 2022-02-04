@@ -39,7 +39,7 @@
 
 
     @foreach ($galeribdg as $g)
-                    <div class="col-md-3 col-sm-3 fh5co-gallery_item">
+                    <div class="col-md-3 col-sm-3 fh5co-gallery_item animate-box">
                         <div class="fh5co-bg-img">
                         <a href="{{ asset('upload/'. $g->foto_bdg ) }}" class="fancybox" data-fancybox="ggblg"
                             data-gallery="gallery" height="150px" width="100px">
@@ -47,7 +47,7 @@
                         </a>
                     </div>
                     </div>
- @endforeach
+     @endforeach
     </div>    
 </body>
 @endsection

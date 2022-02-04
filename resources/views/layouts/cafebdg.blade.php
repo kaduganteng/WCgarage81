@@ -131,7 +131,7 @@
     </footer>
     </div>
 
-    <div class="gototop js-top">
+    <div class="gototop js-top animate-box">
         <a href="https://api.whatsapp.com/send?phone=+6285938529515&amp;text=hello" class="float" target="_blank"><i class="icon-whatsapp"></i></a>
     </div>
 

@@ -16,7 +16,7 @@
                     <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
                         <h1>Menu Kami</h1>
                         <div class="h2tagline">
-                            <h2>Cafe</h2>
+                            <h2>Kopi Portal</h2>
                         </div>
                     </div>
                 </div>
@@ -48,10 +48,10 @@
                             <a href="{{ asset('upload/' . $m->foto_menu) }}" class="fancybox" data-fancybox="ggblg"
                                 data-gallery="gallery" height="50px" width="50px">
                                 <img src="{{ asset('upload/' . $m->foto_menu) }}" class="img-fluid m-auto"
-                                    alt="white sample" width="200px" height="170px"/>
+                                    alt="white sample" width="200px" height="190px"/>
                                 <h3>{{ $m->nama }}</h3>
                                 <span class="fh5co-price">{{ $m->harga }}</span>
-                                <p style="text-align: justify"> {!! $m->keterangan !!} </p>
+                                <p class="col-md-pull-4" style="text-align: justify"> {!! $m->keterangan !!} </p>
                             </a>
                         </div>
                     </div>

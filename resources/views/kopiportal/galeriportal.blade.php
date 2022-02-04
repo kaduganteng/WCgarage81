@@ -37,34 +37,17 @@
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-    <div class="container">
-        <div id="fh5co-featured-menu" class="fh5co-section">
-            <div class="container">
-                <div class="row">
+
                     @foreach ($galeriportal as $g)
-                    <div class="item col-sm-2 ">
-                        <a href="{{ asset('upload/'. $g->foto_bdg ) }}" class="fancybox" data-fancybox="ggblg"
-                            data-gallery="gallery" height="100px" width="100px">
-                            <img src="{{ asset('upload/'. $g->foto_bdg) }}" class="img-fluid mb-2" alt="white sample"
-                                width="300px" height="1000px" />
+                    <div class="col-md-3 col-sm-3 fh5co-gallery_item animate-box">
+                        <div class="fh5co-bg-img">
+                        <a href="{{ asset('upload/'. $g->foto_kopip ) }}" class="fancybox" data-fancybox="ggblg"
+                            data-gallery="gallery" height="150px" width="100px">
+                            <img src="{{ asset('upload/'. $g->foto_kopip) }}" data-trigger="zoomerang" class="img-responsive" alt="galerigarasi81" />
                         </a>
                     </div>
+                    </div>
                     @endforeach
-
-
                 </div>
-            </div>
-        </div>
-    </div>
 </body>
-
-
-<script src="adminlte/plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap -->
-<script src="adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE App -->
-<script src="adminlte/js/adminlte.min.js"></script>
-<script src="dist/js/lightbox-plus-jquery.min.js"></script>
 @endsection
