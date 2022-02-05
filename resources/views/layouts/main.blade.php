@@ -152,7 +152,7 @@
                             <a href="#" class="nav-link" style="color:rgb(255, 255, 255);">
                                 <i class="nav-icon fas fa-edit"></i>
                                 <p>
-                                    Menu
+                                    Cafe
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Galeribdg;
 use App\GaleriModel;
+use App\ListmenuModel;
 use Illuminate\Http\Request;
 use App\Menucaffebdg;
 
@@ -14,8 +15,9 @@ class Cafe81Controller extends Controller
 
     {   
         $menubdg = Menucaffebdg::get();
+        $listmenu = ListmenuModel::get();
         return view('cafe81.index', [
-            'menubdg' => $menubdg
+            'menubdg' => $menubdg, 'listmenu' => $listmenu
         ]);
     }
 

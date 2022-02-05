@@ -155,7 +155,7 @@ Route::get('/cafebdg.tentangbdg', 'Cafe81Controller@tentangbdg')->name('tentangb
 //Route Caffe Cimahi 
 Route::get('/cafecmh', 'CafecmhController@index')->name('cafecmh');
 Route::get('/cafecmh.menu', 'CafecmhController@menucmh')->name('menucmhfe');
-Route::get('/cafecmh.galeri', 'CafecmhController@galericmh')->name('galericmhfe');
+Route::get('/cafecmh.galericmh', 'CafecmhController@galericmh')->name('galericmhfe');
 Route::get('/cafecmh.tentangcmh', 'CafecmhController@tentangcmh')->name('tentangcmh');
 
 //Route Kopi Portal

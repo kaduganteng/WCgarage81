@@ -49,8 +49,7 @@
                                                     alt="white sample" width="200px" height="170px">
                                                 <h3>{{ $m->nama }}</h3>
                                                 <span class="fh5co-price">{{ $m->harga }}</sup></span>
-                                                <section> {!! $m->keterangan !!}
-                                                </section>
+                                                <p> {!! $m->keterangan !!}</p>
                                             </a>
                                         </div>
                                     </div>
@@ -60,10 +59,5 @@
                             </div>
                         </div>
                     </div>
-            </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </body>
 @endsection
