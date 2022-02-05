@@ -18,7 +18,7 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="/"><b>Garage </b>81</a>
+            <a href="/"><b>Portal </b>Management</a>
         </div>
         <!-- /.login-logo -->
         <div class="card">

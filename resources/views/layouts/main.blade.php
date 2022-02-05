@@ -218,7 +218,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="{{ route('listbdg') }}" class="nav-link" style="color:rgb(255, 255, 255);">
+                                    <a href="{{ route('listbdg') }}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Bandung</p>
                                     </a>
@@ -262,7 +262,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="{{ route('event') }}" class="nav-link" style="color:rgb(255, 255, 255);">
+                                    <a href="{{ route('event') }}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Bandung</p>
                                     </a>
