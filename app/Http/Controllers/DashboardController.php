@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\counter;
 use App\Kopiportal;
 use Illuminate\Http\Request;
 use App\Menucaffebdg;
 use App\Menucaffecmh;
 use DB;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class DashboardController extends Controller
 {
@@ -36,13 +38,20 @@ class DashboardController extends Controller
 
         $stok3 = Kopiportal::select(DB::raw("count(kopiportal.id) as jml"))->get();
 
-
+        $counters = counter::get();
 
         return view('admin.dashboard.dashboard', [
             'stok' =>  $stok,
             'stok2' => $stok2,
             'stok3' => $stok3,
+            'counters' => $counters
 
         ]);
+    }
+    public function destroy($id)
+    {
+        $destroy = counter::destroy($id);
+        Alert::warning('Data di Reset!', 'Data di ubah kembali menjadi 0');
+        return redirect()->back();
     }
 }

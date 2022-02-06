@@ -13,14 +13,7 @@
     <!-- ISI JUDUL KONTEN    -->
     <section class="content-header">
         <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                    <a href="{{ route('menubdg') }}">
-                        <h1>Caffe Garage 81 Bandung </h1>
-                    </a>
-                </div>
-
-            </div>
+          
         </div><!-- /.container-fluid -->
     </section>
 
@@ -30,18 +23,18 @@
         <div class="col-12">
             <div class="card ">
                 <div class="card-header">
-                    <h4 class="card-title">Gallery</h4>
-                    <div class="card-tools">
-                        <div class="input-group input-group-sm" style="width: 150px;">
-
-                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalgaleri">
-                                Tambah Foto
-                            </button>
-
-                        </div>
-                    </div>
+                     <h3>Gallery</h3>
+          <a href="menubdg">
+            <button type="button" class="btn btn-success">
+              <ion-icon name="refresh"></ion-icon>Refresh
+            </button>
+          </a>
+          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalgaleri">
+            <ion-icon name="add"></ion-icon>
+            Tambah Foto
+          </button>
                 </div>
-                <div class="card-body">
+                <div class="card-body" style="overflow: scroll;">
                     <div class="row">
 
                         @foreach ($gbdg as $g)
@@ -73,24 +66,31 @@
                         <!-- /.card -->
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Daftar MenuCaffe Garage Bandung</h3>
+                                <h3>Daftar MenuCaffe Garage Bandung</h3>
+                <a href="menubdg">
+                  <button type="button" class="btn btn-success">
+                    <ion-icon name="refresh"></ion-icon>Refresh
+                  </button>
+                </a>
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalmenu">
+                  <ion-icon name="add"></ion-icon>
+                  Tambah Menu
+                </button>
+                <div class="card-tools">
+                  <div class="input-group input-group-sm" style="width: 250px;">
+                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
 
-                                <div class="card-tools">
-                                    <div class="input-group input-group-sm" style="width: 150px;">
-                                        <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
-                                        <div class="input-group-append">
-                                            <button type="submit" class="btn btn-default">
-                                                <i class="fas fa-search"></i>
-                                            </button>
-                                        </div>
-                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalmenu">
-                                            Tambah Menu
-                                        </button>
-                                    </div>
-                                </div>
-
-                            </div>
+                    <div class="input-group-append">
+                      <button type="submit" class="btn btn-default">
+                        <i class="fas fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                    <div>
+                        <div>
+                            
                             <!-- /.card-header -->
                             <div class="card-body table-responsive p-0">
                                 <table class="table table-hover text-nowrap">

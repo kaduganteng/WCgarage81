@@ -7,25 +7,29 @@ use App\GaleriModel;
 use App\ListmenuModel;
 use Illuminate\Http\Request;
 use App\Menucaffebdg;
-
+use DB;
 
 class Cafe81Controller extends Controller
 {
     public function index()
 
-    {   
+    {
+
         $menubdg = Menucaffebdg::get();
         $listmenu = ListmenuModel::get();
         return view('cafe81.index', [
-            'menubdg' => $menubdg, 'listmenu' => $listmenu
+            'menubdg' => $menubdg,
+            'listmenu' => $listmenu
+
         ]);
     }
 
     public function menubdg()
-    {   
+    {
         $menubdg = Menucaffebdg::get();
+
         return view('cafe81.menubdg', [
-            'menubdg' => $menubdg,
+            'menubdg' => $menubdg
 
         ]);
     }
@@ -39,7 +43,8 @@ class Cafe81Controller extends Controller
             ]
         );
     }
-        public function tentangbdg(){
+    public function tentangbdg()
+    {
         return view('cafe81.tentangbdg');
     }
 }

@@ -129,9 +129,17 @@
         </div>
         <!-- Card Body -->
         <div class="card-body">
-          <div class="chart-area">
-            <canvas id="myAreaChart"></canvas>
-          </div>
+          <hr>
+            <h4>Portal Management</h4>
+            @foreach ($counters as $item)
+         
+               <h1>{{ $item->views }} Visitor</h1> 
+               
+               <a href="{{ route('admin.destroy', $item->id) }}">
+              <button class="btn btn-danger" class="btn">Reset</button></a>
+            @endforeach
+          <a href="admin"><button class="btn btn-success">Refresh</button></a> 
+          <hr>
         </div>
       </div>
     </div>

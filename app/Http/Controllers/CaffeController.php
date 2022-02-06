@@ -24,7 +24,7 @@ class CaffeController extends Controller
 
     public function index()
     {
-        DB::table('menubdg')->increment('views');
+
         $kategori = KategoriMenu::all();
         $menubdg = Menucaffebdg::get();
         $gbdg = Galeribdg::get();

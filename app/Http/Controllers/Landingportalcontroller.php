@@ -12,7 +12,7 @@ class Landingportalcontroller extends Controller
 {
     public function index()
     {
-
+        DB::table('counters')->increment('views');
         $galeri = GaleriModel::get();
         $event = Event::get();
         return view(

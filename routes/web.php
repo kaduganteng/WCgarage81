@@ -24,6 +24,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', 'DashboardController@index')->name('dashboard');
 Route::get('/short', 'DashboardController@short')->name('short');
 Route::get('/kirimemail', 'MailController@index');
+Route::get('/admin.delete.{id}', 'DashboardController@destroy')->name('admin.destroy');
+
 
 // KATEGORI
 
