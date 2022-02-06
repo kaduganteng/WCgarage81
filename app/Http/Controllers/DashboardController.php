@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\CountingportalModel;
 use App\Kopiportal;
 use Illuminate\Http\Request;
 use App\Menucaffebdg;
@@ -41,7 +42,7 @@ class DashboardController extends Controller
         return view('admin.dashboard.dashboard', [
             'stok' =>  $stok,
             'stok2' => $stok2,
-            'stok3' => $stok3,
+            'stok3' => $stok3
 
         ]);
     }
