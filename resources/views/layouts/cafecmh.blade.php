@@ -7,8 +7,7 @@
     <title>Portal Manajemen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
-    <meta name="keywords"
-        content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+    <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
     <meta name="author" content="freehtml5.co" />
 
     <meta property="og:title" content="" />
@@ -21,8 +20,7 @@
     <meta name="twitter:url" content="" />
     <meta name="twitter:card" content="" />
 
-    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,500,600i,700"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,500,600i,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
 
     <!-- Animate.css -->
@@ -66,23 +64,22 @@
                             <li><a href="{{ route('cafecmh') }}">Home</a></li>
                             <li><a href="{{ route('menucmhfe') }}">Menu</a></li>
                             <li><a href="{{ route('galericmhfe') }}">Galeri</a></li>
-                            <li><a href="{{ route('cafecmh') }}">Tentang Kami</a></li>
+                            <li><a href="{{ route('tentangcmh') }}">Tentang Kami</a></li>
                         </ul>
                     </div>
                 </div>
-
-            </div>
+             </div>  
+      </nav>
             <!-- </div> -->
-        </nav>
+         @yield('section')
     </div>
-    <div class="body">
-        @yield('section')
-    </div>
+
+    <!--Footer-->
     <footer id="fh5co-footer" role="contentinfo" class="fh5co-section">
         <div class="container">
             <div class="row row-pb-md">
                 <div class="col-md-4 fh5co-widget">
-                    <h4>Portal</h4>
+                    <h4>Portal Manajemen</h4>
                     <p>Jl. Bali No.3, Merdeka, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 40113</p>
                 </div>
                 <div class="col-md-2 col-md-push-1 fh5co-widget">
@@ -96,7 +93,7 @@
 
                 <div class="col-md-2 col-md-push-1 fh5co-widget">
                     <h4>Brand Kami</h4>
-                    <ul class="fh5co-footer-links">   
+                    <ul class="fh5co-footer-links">
                         <li><a href="{{ route('cafecmh') }}">Garage 81 Cimahi</a></li>
                         <li><a href="{{ route('cafe81') }}">Garasi 81 Bandung</a></li>
                         <li><a href="{{ route('kopiprt') }}">Kopi Portal</a></li>
@@ -121,10 +118,10 @@
                         <small class="block">Designed by BKK Corp</a></small>
                     </p>
                     <p>
-                        <ul class="fh5co-social-icons">  
-                            <li><a href="#"><img src={{url('/images/twit.png')}} width="23px" height="23px"></a></li>
-                            <li><a href="#"><img src={{url('/images/icon_ins.png')}} width="23px" height="23px"></a></li>
-                             <li><a href="#"><img src={{url('/images/fb.png')}} width="18px" height="18px"></a></li>
+                    <ul class="fh5co-social-icons">
+                        <li><a href="#"><img src={{url('/images/twit.png')}} width="23px" height="23px"></a></li>
+                        <li><a href="#"><img src={{url('/images/icon_ins.png')}} width="23px" height="23px"></a></li>
+                        <li><a href="#"><img src={{url('/images/fb.png')}} width="18px" height="18px"></a></li>
                     </ul>
                     </p>
                 </div>
@@ -134,7 +131,7 @@
     </footer>
     </div>
 
-    <div class="gototop js-top">
+    <div class="gototop js-top animate-box">
         <a href="https://api.whatsapp.com/send?phone=+6285938529515&amp;text=hello" class="float" target="_blank"><i class="icon-whatsapp"></i></a>
     </div>
 
@@ -152,17 +149,6 @@
     <script src="portal/js/jquery.flexslider-min.js"></script>
     <!-- Main -->
     <script src="portal/js/main.js"></script>
-
-    <script>
-        Zoomerang
-            .config({
-                maxHeight: 600,
-                maxWidth: 900,
-                bgColor: '#000',
-                bgOpacity: .85
-            })
-            .listen('[data-trigger="zoomerang"]')
-    </script>
     
 </body>
 

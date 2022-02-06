@@ -22,25 +22,7 @@
     <!-- ISI KONTEN    -->
     <section class="content">
         <div class="card">
-            <div class="card-header">
-                <h3 class="card-title">Daftar Kategori</h3>
 
-                <div class="card-tools">
-                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                        <i class="fas fa-minus"></i>
-                    </button>
-                    <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <div class="card-tools">
-                    <div class="input-group input-group-sm" style="width: 150px;">
-                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
-                            Tambah kategori
-                        </button>
-                    </div>
-                </div>
-            </div>
             <div class="card-body">
                 <div class="row">
                     <div class="col-lg-12">
@@ -48,10 +30,20 @@
                         <!-- /.card -->
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Kategori Menu Kopi Portal</h3>
+                                <h3>Kategori Menu Kopi Portal </h3>
+                                <a href="menucmh">
+                                    <button type="button" class="btn btn-success">
+                                        <ion-icon name="refresh"></ion-icon>Refresh
+                                    </button>
+                                </a>
+                                <button type="button" class="btn btn-info" data-toggle="modal"
+                                    data-target="#exampleModal">
+                                    <ion-icon name="add"></ion-icon>
+                                    Tambah Menu
+                                </button>
 
                                 <div class="card-tools">
-                                    <div class="input-group input-group-sm" style="width: 150px;">
+                                    <div class="input-group input-group-sm" style="width: 250px;">
                                         <input type="text" name="table_search" class="form-control float-right"
                                             placeholder="Search">
 
@@ -69,7 +61,7 @@
                                 <table class="table table-hover text-nowrap">
                                     <thead>
                                         <tr>
-                                            <th>No</th>
+                                            <th>ID Kategori</th>
                                             <th>Nama Kategori</th>
                                             <th>Opsi</th>
                                         </tr>
@@ -86,7 +78,7 @@
                                             <td>
                                                 <a href="{{ route('kategorikopi.destroy',$k->id) }}">
                                                     <button class="btn btn-danger" class="btn">
-                                                        <ion-icon name="close-circle-outline"></ion-icon>
+                                                        <ion-icon name="trash-outline"></ion-icon>
                                                     </button></a>
                                             </td>
                                         </tr>

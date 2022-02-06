@@ -18,7 +18,7 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="/"><b>Garage </b>81</a>
+            <a href="/"><b>Portal </b>Management</a>
         </div>
         <!-- /.login-logo -->
         <div class="card">
@@ -63,7 +63,7 @@
 
                         <!-- /.col -->
                         <div class="text-center mb-3">
-                            <button type="submit" class="btn btn-primary btn-block"><i
+                            <button type="submit" class="btn btn-info btn-block"><i
                                     class="bi bi-box-arrow-in-down-right"></i>
                                 LogIn</button>
                         </div>

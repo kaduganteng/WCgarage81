@@ -72,16 +72,20 @@ class FrenchaiseController extends Controller
     public function edit(Request $request, $id)
     {
         if ($request->isMethod('post')) {
-            $kp = $request->all();
-            $kopiportal = Kopiportal::findOrFail($id)->update([
-                'foto_menu' => $request->foto,
-                'kategori_id' => $request->kategori_id,
-                'nama' => $request->nama,
-                'keterangan' => $request->keterangan,
-                'harga' => $request->harga
+            // $kp = $request->all();
+            $kopiportal = Kopiportal::findOrFail($id);
+            $awal = $kopiportal->foto_menu;
+            $tujuan = 'upload/';
+            $dt = [
+                'foto_menu' => $awal,
+                'kategori_id' => $request['kategori_id'],
+                'nama' => $request['nama'],
+                'keterangan' => $request['keterangan'],
+                'harga' => $request['harga']
+            ];
 
-
-            ]);
+            $request->foto_menu->move($tujuan, $awal);
+            $kopiportal->update($dt);
             Alert::success('Sukses !', 'Data Berhasil Di Edit');
             return redirect()->route('kopiportal');
         }

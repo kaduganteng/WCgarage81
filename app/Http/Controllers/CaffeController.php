@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use Storage;
 use App\Galeribdg;
 use App\Galericmh;
 use App\Katagoricimahi;
 use App\KategoriMenu;
 use App\Menucaffebdg;
 use App\Menucaffecmh;
+use DB;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -22,6 +24,7 @@ class CaffeController extends Controller
 
     public function index()
     {
+
         $kategori = KategoriMenu::all();
         $menubdg = Menucaffebdg::get();
         $gbdg = Galeribdg::get();
@@ -44,6 +47,14 @@ class CaffeController extends Controller
 
     public function store(Request $request)
     {
+        // $foto_menu = $request->file('foto_menu');
+        // // $nama_file = time() . "_" . $foto_menu->getClientOriginalName();
+        // $name_file = $request->file('foto_menu')->getClientOriginalName();
+        // $path = $request->file('foto_menu')->store('public\uploads');
+        // D:\WC81-app2\public\uploads\tiket
+        // // tujuan upload
+        // $tujuan = 'upload/';
+        // $foto_menu->move($tujuan, $nama_file);
         $foto_menu = $request->file('foto_menu');
         $nama_file = time() . "_" . $foto_menu->getClientOriginalName();
         // tujuan upload
@@ -56,6 +67,7 @@ class CaffeController extends Controller
             'keterangan' => $request->keterangan,
             'harga' => $request->harga
         ]);
+        // dd($menubdg);
         Alert::success('Sukses !', 'Data Berhasil Di Tambahkan');
         return redirect()->back();
     }
@@ -78,16 +90,19 @@ class CaffeController extends Controller
     public function edit(Request $request, $id)
     {
         if ($request->isMethod('post')) {
-            $m = $request->all();
+            $menubdg = Menucaffebdg::findOrFail($id);
+            $awal = $menubdg->foto_menu;
+            $tujuan = 'upload/';
+            $dt = [
+                'foto_menu' => $awal,
+                'kategori_id' => $request['kategori_id'],
+                'nama' => $request['nama'],
+                'keterangan' => $request['keterangan'],
+                'harga' => $request['harga']
+            ];
 
-            $menubdg = Menucaffebdg::findOrFail($id)->update([
-                'foto' => $request->foto,
-                'kategori_id' => $request->kategori_id,
-                'nama' => $request->nama,
-                'keterangan' => $request->keterangan,
-                'harga' => $request->harga
-
-            ]);
+            $request->foto_menu->move($tujuan, $awal);
+            $menubdg->update($dt);
             Alert::success('Sukses !', 'Data Berhasil Di Edit');
             return redirect()->route('menubdg');
         }
@@ -174,16 +189,19 @@ class CaffeController extends Controller
     public function edit2(Request $request, $id)
     {
         if ($request->isMethod('post')) {
-            $m = $request->all();
+            $menucmh = Menucaffecmh::findOrFail($id);
+            $awal = $menucmh->foto_menu;
+            $tujuan = 'upload/';
+            $dt = [
+                'foto_menu' => $awal,
+                'kategori_id' => $request['kategori_id'],
+                'nama' => $request['nama'],
+                'keterangan' => $request['keterangan'],
+                'harga' => $request['harga']
+            ];
 
-            $menucmh = Menucaffecmh::findOrFail($id)->update([
-                'foto' => $request->foto,
-                'kategori_id' => $request->kategori_id,
-                'nama' => $request->nama,
-                'keterangan' => $request->keterangan,
-                'harga' => $request->harga
-
-            ]);
+            $request->foto_menu->move($tujuan, $awal);
+            $menucmh->update($dt);
             Alert::success('Sukses !', 'Data Berhasil Di Edit');
             return redirect()->route('menucmh');
         }
