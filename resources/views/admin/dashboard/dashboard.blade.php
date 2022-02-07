@@ -138,12 +138,18 @@
                     <div class="card-body">
                         <div class="chart-area">
 
-                            <h1>
-                                @foreach ($project as $project)
-                                    {{ $project->views }}
+                            <div class="card-body">
+                                <hr>
+                                <h4>Portal Management</h4>
+                                @foreach ($counters as $item)
+
+                                    <h1>{{ $item->views }} Visitor</h1>
+
+
                                 @endforeach
-                            </h1>
-                            <canvas id="myAreaChart"></canvas>
+                                <a href="admin"><button class="btn btn-success">Refresh</button></a>
+                                <hr>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -166,38 +172,6 @@
             </div>
         </div>
 
-
-
-
-<<<<<<< HEAD
-        <!-- /.card -->
-=======
-    <!-- Area Chart -->
-    <div class="col-xl-8 col-md-7">
-      <div class="card shadow mb-4">
-        <!-- Card Header - Dropdown -->
-        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-          <h6 class="m-0"><i>Statistik Web</i></h6>
-        </div>
-        <!-- Card Body -->
-        <div class="card-body">
-          <hr>
-            <h4>Portal Management</h4>
-            @foreach ($counters as $item)
-         
-               <h1>{{ $item->views }} Visitor</h1> 
-               
-               <a href="{{ route('admin.destroy', $item->id) }}">
-              <button class="btn btn-danger" class="btn">Reset</button></a>
-            @endforeach
-          <a href="admin"><button class="btn btn-success">Refresh</button></a> 
-          <hr>
-        </div>
-      </div>
-    </div>
->>>>>>> 3a8c13be2b4d3ed809a58b69489c61e0f61699d9
-
-        </section>
     </div>
 
 @endsection
