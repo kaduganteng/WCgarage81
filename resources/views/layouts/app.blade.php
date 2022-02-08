@@ -17,12 +17,18 @@
     <link rel="stylesheet" href="portal/css/bootstrap.css">
     <!-- Flexslider  -->
     <link rel="stylesheet" href="portal/css/flexslider.css">
-
     <!-- Theme style  -->
     <link rel="stylesheet" href="portal/css/style.css">
-
+    
+    <link rel="stylesheet" href="portal/css/lightslider.css">
     <!-- Modernizr JS -->
     <script src="portal/js/modernizr-2.6.2.min.js"></script>
+<!--script-link----------->
+<script src={{asset('portal/js/script.js')}}></script>
+<!--Jquery-------------------->
+<script src={{asset('/portal/js/Jquery.js')}}></script>
+<!--lightslider.js--------------->
+<script src={{asset('/portal/js/lightslider.js')}}></script>
     <!-- FOR IE9 below -->
     <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -133,6 +139,7 @@
     <script src="portal/js/jquery.flexslider-min.js"></script>
     <!-- Main -->
     <script src="portal/js/main.js"></script>
+    <script src="portal/js/script.js"></script>
 
 </body>
 

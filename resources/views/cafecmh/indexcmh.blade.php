@@ -44,6 +44,7 @@
     <!--Deskripsi garage 81 -->
     <!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!--Menu Spesial Garage 81-->
+
     <div id="fh5co-featured-menu" class="fh5co-section">
         <div class="container">
             <div class="col-md-12 fh5co-heading animate-box">
@@ -117,43 +118,53 @@
                             totam, a maiores nihil, nulla magnam porro minima officiis!</p>
                     </div>
                 </div>
+
                 <div class="col-md-6 col-md-push-1 animate-box">
                     <aside id="fh5co-slider-wrwap">
                         <div class="flexslider">
                             <ul class="slides">
-                                @foreach ($menucmh as $menu)
-                                <li style="background-image: {{ asset('upload/'. $menu->foto_menu ) }};">
-                                    <div class="overlay-gradient"></div>
+
+                                @foreach ($listcmh as $menu)
+                                <li style="background-image:">
+                                    <div class="overlay-gradient">
                                     <div class="container-fluid">
-                                        <div class="row">
-                                            <div
-                                                class="col-md-12 col-md-offset-0 col-md-pull-10 slider-text slider-text-bg">
-                                                <div class="slider-text-inner">
-
-                                                    <div class="desc">
-                                                        <h2>{{ $menu->nama }}</h2>
-                                                        <p>{!!$menu->keterangan !!}</p>
-                                                        <p><a href="{{ route('menucmhfe') }}"
-                                                                class="btn btn-primary btn-outline">Lihat</a></p>
-                                                    </div>
-
+                                        <img src="{{ asset('upload/'. $menu->foto_list ) }}" class="img-rounded"><br>
+                                        <a href="{{ route('menucmhfe') }}" class="btn btn-primary btn-outline">Selengkapnya</a><br>
+                                    </div>
+                                    </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-6 col-md-pull-1 col-sm-pull-10 slider-text slider-text-bg">
+                                            <div class="slider-text-inner">
+                                                <div class="desc">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </li>
+                                </div>
+                            </li> 
+
                                 @endforeach
-                            </ul>
+                             </ul>
                         </div>
                     </aside>
                 </div>
             </div>
         </div>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <!--Menu Terlaris Garage 81-->
     <!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!--Instagram-->
-    <div class="container">
+    <div class="container animate-box">
     <div data-mc-src="d2cb3992-e907-4a6d-ab81-b89a77391ada#instagram">
     </div>
     </div>

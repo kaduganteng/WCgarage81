@@ -24,23 +24,15 @@ body {
     align-items: center;
 }
 
-.h1judul {
-    font-size: 20px;
-    color: #4cae4c;
-    line-height: 2.5px;
-}
-
 .slider {
-    margin-top: 6em;
-    border-style: none;
     border-style: 0;
     width: 1900px;
     height: 600px;
-    overflow: hidden;
+    overflow: visible;
     overflow-x: hidden;
 }
 
-.slidas {
+.slides {
     width: 1000px;
     height: 520px;
     place-content: center;
@@ -56,29 +48,18 @@ body {
 }
 
 .slide {
-    width: 30%;
+    width: 20%;
     transition: 1s;
-    display: inline-flex;
+    display: flex;
 }
 
 .slide img {
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
-    width: 900px;
-    height: 550px;
-    display: block;
-    border-radius: 10%;
+    width: 1600px;
+    height: 250px;
+    display: flex;
+    border-radius: 5%;
     place-content: center;
-    padding-inline: 3%;
-    cursor: auto;
-}
-
-@media screen and (max-width: 280px) {
-    .slide img .slide .slidas .slider {
-        position: relative;
-    }
+    margin-inline-end: 10%;
 }
 
 
@@ -106,11 +87,7 @@ body {
 }
 
 .manual-btn:hover {
-    background-color: #a45d5d;
-}
-
-.auto-btn:hover {
-    background-color: #a45d5d;
+    background-color: #fc0000;
 }
 
 #radio1:checked~.first {
@@ -118,23 +95,23 @@ body {
 }
 
 #radio2:checked~.first {
-    margin-left: -25%;
+    margin-left: -10%;
 }
 
 #radio3:checked~.first {
-    margin-left: -200%;
+    margin-left: -175%;
 }
 
 #radio4:checked~.first {
-    margin-left: -385%;
+    margin-left: -345%;
 }
 
 #radio5:checked~.first {
-    margin-left: -560%;
+    margin-left: -520%;
 }
 
 #radio6:checked~.first {
-    margin-left: -730%;
+    margin-left: -660%;
 }
 
 
@@ -150,38 +127,38 @@ body {
 }
 
 .navigation-auto div {
-    border: 2px solid rgb(255, 255, 255);
+    border: 2px solid #f10707;
     padding: 5px;
     border-radius: 10px;
-    transition: 0.5s;
+    transition: 1s;
 }
 
 .navigation-auto div:not(:last-child) {
     margin-right: 40px;
 }
 
-#radio1:checked~.navigation-auto .auto-btn1 {
-    background-color: #a45d5d;
+#radio1:checked .navigation-auto .auto-btn1 {
+    background-color: #ad2121;
 }
 
-#radio2:checked~.navigation-auto .auto-btn2 {
-    background-color: #a45d5d;
+#radio2:checked .navigation-auto .auto-btn2 {
+    background-color: #ad2121;
 }
 
-#radio3:checked~.navigation-auto .auto-btn3 {
-    background-color: #a45d5d;
+#radio3:checked .navigation-auto .auto-btn3 {
+    background-color: #ad2121;
 }
 
-#radio4:checked~.navigation-auto .auto-btn4 {
-    background-color: #a45d5d;
+#radio4:checked .navigation-auto .auto-btn4 {
+    background-color: #ad2121;
 }
 
-#radio5:checked~.navigation-auto .auto-btn5 {
-    background-color: #a45d5d;
+#radio4:checked .navigation-auto .auto-btn5 {
+    background-color: #ad2121;
 }
 
-#radio6:checked~.navigation-auto .auto-btn6 {
-    background-color: #a45d5d;
+#radio4:checked .navigation-auto .auto-btn6 {
+    background-color: #ad2121;
 }
 
 

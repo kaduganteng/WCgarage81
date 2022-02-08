@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Galericmh;
+use App\listcmh;
+use App\Listmenucmh;
 use App\Menucaffecmh;
 use Illuminate\Http\Request;
 
@@ -11,10 +13,11 @@ class CafecmhController extends Controller
     public function index()
     {
         $menucmh = Menucaffecmh::get();
+        $listcmh = Listmenucmh::get();
         return view(
             'cafecmh.indexcmh',
             [
-                'menucmh' => $menucmh
+                'menucmh' => $menucmh, 'listcmh' => $listcmh
             ]
         );
     }

@@ -130,7 +130,7 @@
                                 @foreach ($listmenu as $menu)
                                 <li style="background-image:">
                                     <div class="overlay-gradient">
-                                        <div class="">
+                                        <div class="container-fluid">
                                         <img src="{{ asset('upload/'. $menu->foto_list ) }}" class="img-rounded"><br>
                                         <a href="{{ route('menubdgfe') }}" class="btn btn-primary btn-outline">Selengkapnya</a><br>
                                     </div>

@@ -1,9 +1,21 @@
 @extends('layouts.app')
 @section('section')
 
+<head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<!--Owl Carousel-->
+<script src="https://github.com/OwlCarousel2/OwlCarousel2.git"> </script>
+<link rel="stylesheet" href="portal/css/owl.carousel.min.css">
+<link rel="stylesheet" href="portal/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="portal/css/owl.theme.default.css">
+
+
+
+</head>
+
+</head>
 
 <header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url(images/frn.png);" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
@@ -96,68 +108,20 @@
             </div>
                 </div>
 <!--Visi Misi Portal-->
-        <div class="slider">
-        <div class="animate-box">
-            <div class="slidas">
-                 
-                <!--radio button start-->
-                <input type="radio" name="radio-btn" id="radio1">
-                <input type="radio" name="radio-btn" id="radio2">
-                <input type="radio" name="radio-btn" id="radio3">
-                <input type="radio" name="radio-btn" id="radio4">
-                <input type="radio" name="radio-btn" id="radio5">
-               
-                <!--radio button end-->
-                <!--slide image mulai-->
-                <div class="slide first lg">
-                    <div class="container">
-                        <div class="slide">
-                            @foreach ($galeri as $g)
-                                <a href="{{ asset('upload/' . $g->foto_galeri) }}" class="fancybox"
-                                    data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
-                                    <img src="{{ asset('upload/' . $g->foto_galeri) }}" class="img-fluid mb-2"
-                                        alt="white sample" width="200px" height="200px" />
-                                </a>
-                                @endforeach
-                        </div>
-                    </div>
-                </div>
-            </div>
-                <!--slide image end-->
-                <!--otomatis navigasi mulai-->
-                <div class="navigation-auto">
-                    <div class="auto-btn1"></div>
-                    <div class="auto-btn2"></div>
-                    <div class="auto-btn3"></div>
-                    <div class="auto-btn4"></div>
-                    <div class="auto-btn5"></div>
-                </div>
-                <!--otomatis navigasi end-->
-            </div>
-            <!--manual navigasi mulai-->
-            <div class="navigation-manual">
-                <label for="radio1" class="manual-btn"></label>
-                <label for="radio2" class="manual-btn"></label>
-                <label for="radio3" class="manual-btn"></label>
-                <label for="radio4" class="manual-btn"></label>
-                <label for="radio5" class="manual-btn"></label>
-            </div>
-            <!--manual navigasi end-->
-        </div>
-         
-        
-        <!-- image slider berakhir-->
 
-        <script type="text/javascript">
-            var counter = 1;
-            setInterval(function() {
-                document.getElementById('radio' + counter).checked = true;
-                counter++;
-                if (counter > 6) {
-                    counter = 1;
-                }
-            }, 5000);
-        </script>
+<!-- Image Slider Portal-->
+<div class="owl-carousel owl-dots animate-box slide">
+        @foreach ($galeri as $g)
+        <a href="{{ asset('upload/' . $g->foto_galeri) }}" class="fancybox"
+            data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
+            <img src="{{ asset('upload/' . $g->foto_galeri) }}" class="img-fluid mb-2"
+                alt="white sample" width="200px" height="200px" />
+        </a>
+        @endforeach
+    </div>
+</div>
+<!-- Image Slider Portal-->
+
         <!--Acara Garage 81-->
         <div id="fh5co-blog" class="fh5co-section">
             <div class="container">
@@ -194,4 +158,10 @@
         </div>
         <!--Acara Garage 81-->
 
-    @endsection
+
+<!--script-link----------->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="portal/js/owl.carousel.min.js"></script>
+<script src="portal/js/scriptslider.js"></script>
+<script src="portal/js/autoplay.js"></script>
+@endsection
