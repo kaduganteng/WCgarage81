@@ -11,10 +11,6 @@
 <link rel="stylesheet" href="portal/css/owl.theme.default.min.css">
 <link rel="stylesheet" href="portal/css/owl.theme.default.css">
 
-
-
-</head>
-
 </head>
 
 <header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url(images/frn.png);" data-stellar-background-ratio="0.5">
@@ -110,16 +106,16 @@
 <!--Visi Misi Portal-->
 
 <!-- Image Slider Portal-->
-<div class="owl-carousel owl-dots animate-box slide">
-        @foreach ($galeri as $g)
-        <a href="{{ asset('upload/' . $g->foto_galeri) }}" class="fancybox"
-            data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
-            <img src="{{ asset('upload/' . $g->foto_galeri) }}" class="img-fluid mb-2"
+        <div class="owl-carousel animate-box slide slides owl-lazy animate-box align-content-center">
+            @foreach ($galeri as $g)
+            <a href="{{ asset('upload/' . $g->foto_galeri) }}" class="fancybox" class="img-rounded"
+                data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
+                <img src="{{ asset('upload/' . $g->foto_galeri) }}" class="img-fluid mb-2"
                 alt="white sample" width="200px" height="200px" />
-        </a>
+            </a>
         @endforeach
-    </div>
-</div>
+        </div>
+            </div>
 <!-- Image Slider Portal-->
 
         <!--Acara Garage 81-->

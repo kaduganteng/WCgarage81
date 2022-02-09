@@ -32,17 +32,6 @@ body {
     overflow-x: hidden;
 }
 
-.slides {
-    width: 1000px;
-    height: 520px;
-    place-content: center;
-    margin-left: -700px;
-    margin-top: 40px;
-    display: flex;
-    scroll-behavior: smooth;
-    scroll-snap-align: unset;
-}
-
 .slides input {
     display: none;
 }

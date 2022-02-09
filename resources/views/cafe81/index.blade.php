@@ -167,7 +167,7 @@
     <!--List Menu Terlaris Garage 81-->
     <!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!--Instagram-->
-    <div class="container" class="fh5co-section" class="animate-box" data-animate-effect="fadeInLeft">
+    <div class="container animate-box">
     <div data-mc-src="29d00edc-e38a-4910-b28a-f4d5b32e8fa7#instagram">
     </div>
     </div>
@@ -179,7 +179,7 @@
     <!--Instagram-->
 
     <!--Gmaps Garasi 81-->
-    <div class="container">
+    <div class="container animate-box">
         <div class="section-heading gmaps animate-box"> 
     <h2> Lokasi Kami </h2>
         <div class="embed-responsive embed-responsive-4by3">
@@ -187,8 +187,6 @@
     </iframe>
                 </div>
             </div>
-        </div>
-    </div>
     <br>
     <br>
     <br>

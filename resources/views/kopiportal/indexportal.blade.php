@@ -154,7 +154,7 @@
     <!--Menu Terlaris Garage 81-->
     <!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!--Instagram-->
-    <div class="container">
+    <div class="container animate-box">
     <div data-mc-src="db82410c-6235-4909-8a89-6a19dd851b7b#instagram">
     </div>
     </div>
@@ -166,7 +166,7 @@
     <!--Instagram-->
 
       <!--Gmaps Garasi 81-->
-      <div class="container">
+      <div class="container animate-box">
         <div class="section-heading gmaps"> 
     <h2> Lokasi Pertama Kami </h2>
         <div class="embed-responsive embed-responsive-4by3">
@@ -175,19 +175,17 @@
                 </div>
             </div>
         </div>
-    </div>
 <!--Gmaps Garasi 81--> 
 
 <!--Gmaps Garasi 81-->
-      <div class="container">
+      <div class="container animate-box">
         <div class="section-heading gmaps"> 
     <h2> Lokasi Kedua Kami </h2>
         <div class="embed-responsive embed-responsive-4by3">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.52596876537558!2d107.70174892976127!3d-6.960214667064228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c34f45266fb3%3A0x3cf9003607b2b64c!2sSekolah%20Islam%20Al%20Azhar%20Summarecon%20Bandung!5e0!3m2!1sid!2sid!4v1643104191754!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>    </iframe>
                 </div>
             </div>
-        </div>
-    </div>
+      </div>
 <!--Gmaps Garasi 81-->
 </body>
 @endsection
