@@ -14,7 +14,7 @@ class Cafe81Controller extends Controller
     public function index()
 
     {
-
+        DB::table('counterbdg')->increment('views');
         $menubdg = Menucaffebdg::get();
         $listmenu = ListmenuModel::get();
         return view('cafe81.index', [

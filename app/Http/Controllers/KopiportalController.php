@@ -10,6 +10,7 @@ class KopiportalController extends Controller
 {
     public function index()
     {
+        DB::table('counterkopi')->increment('views');
         $menuportal = Kopiportal::get();
         return view('kopiportal.indexportal', [
             'menuportal' => $menuportal
@@ -29,8 +30,8 @@ class KopiportalController extends Controller
             'galeriportal' => $galeriportal
         ]);
     }
-    public function tentangportal(){
-    return view('kopiportal.tentangportal');
+    public function tentangportal()
+    {
+        return view('kopiportal.tentangportal');
     }
 }
-

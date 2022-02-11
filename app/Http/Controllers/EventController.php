@@ -71,9 +71,9 @@ class EventController extends Controller
 
     public function indexcmh()
     {
-        $event = Eventcmh::get();
+        $eventcmh = Eventcmh::get();
         return view('admin.event.cimahi', [
-            'event' => $event
+            'event' => $eventcmh
         ]);
     }
 
@@ -89,7 +89,7 @@ class EventController extends Controller
         $nama_file = time() . "_" . $foto_event->getClientOriginalExtension();
         $tujuan = 'upload/';
         $foto_event->move($tujuan, $nama_file);
-        $event = Eventcmh::create([
+        $eventcmh = Eventcmh::create([
             'foto_event' => $nama_file,
             'tgl_event' => $request->tgl_event,
             'nama' => $request->nama,
@@ -109,8 +109,8 @@ class EventController extends Controller
     public function editcmh(Request $request, $id)
     {
         if ($request->isMethod('post')) {
-            $event = Eventcmh::findOrFail($id);
-            $awal = $event->foto_event;
+            $eventcmh = Eventcmh::findOrFail($id);
+            $awal = $eventcmh->foto_event;
             $tujuan = 'upload/';
             $dt = [
 
@@ -130,9 +130,9 @@ class EventController extends Controller
 
     public function indexkop()
     {
-        $event = Evenkopi::get();
+        $eventkopi = Evenkopi::get();
         return view('admin.event.kopi', [
-            'event' => $event
+            'event' => $eventkopi
         ]);
     }
 

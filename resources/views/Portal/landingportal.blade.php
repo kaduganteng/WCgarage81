@@ -143,13 +143,58 @@
                                 <h3><a href="{{ route('kopiprt') }}">{{ $evn->nama }}</a></h3>
                                 <p>{!! $evn->rinciankegiatan !!}</p>
                                 <ul class="stuff">
-                                    <li><a href="{{ route('landing') }}"><i class="icon-arrow-right22"></i></a></li>
+                                    <li><a href="{{ route('cafe81') }}"><i class="icon-arrow-right22"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    @endforeach
+                    
                 </div>
+                @endforeach
+                 @foreach ($eventcmh as $evn)
+                <div class="row">
+                    <div class="col-md-4 col-md-push-0">
+                        <div class="fh5co-blog animate-box">
+                            <a href="{{ asset('upload/' . $evn->foto_event) }}" class="fancybox blog-bg"
+                                data-fancybox="ggblg" data-gallery="event" height="50px" width="50px">
+                                <img src="{{ asset('upload/' . $evn->foto_event) }}" class="img-fluid mb-1 blog"
+                                alt="white sample" width="359.98px" height="300px"/>
+                            </a>
+                            <div class="blog-text">
+                                <span class="posted_on">{{ $evn->tgl_event }}</span>
+                                <h3><a href="{{ route('kopiprt') }}">{{ $evn->nama }}</a></h3>
+                                <p>{!! $evn->rinciankegiatan !!}</p>
+                                <ul class="stuff">
+                                    <li><a href="{{ route('cafe81') }}"><i class="icon-arrow-right22"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                @endforeach
+                 @foreach ($eventkopi as $evn)
+                <div class="row">
+                    <div class="col-md-4 col-md-push-0">
+                        <div class="fh5co-blog animate-box">
+                            <a href="{{ asset('upload/' . $evn->foto_event) }}" class="fancybox blog-bg"
+                                data-fancybox="ggblg" data-gallery="event" height="50px" width="50px">
+                                <img src="{{ asset('upload/' . $evn->foto_event) }}" class="img-fluid mb-1 blog"
+                                alt="white sample" width="359.98px" height="300px"/>
+                            </a>
+                            <div class="blog-text">
+                                <span class="posted_on">{{ $evn->tgl_event }}</span>
+                                <h3><a href="{{ route('kopiprt') }}">{{ $evn->nama }}</a></h3>
+                                <p>{!! $evn->rinciankegiatan !!}</p>
+                                <ul class="stuff">
+                                    <li><a href="{{ route('cafe81') }}"><i class="icon-arrow-right22"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                @endforeach
             </div>
         </div>
         <!--Acara Garage 81-->

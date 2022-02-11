@@ -31,7 +31,7 @@
                             <h1 style="text-align: center">Event Cimahi</h1>
                         </div>
                         <!-- /.card-header -->
-                        @foreach ($event as $e)
+                        @foreach ($eventcmh as $e)
 
                         <a style="text-align: center" href="{{ asset('upload/' . $e->foto_event) }}" class="fancybox"
                             data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
@@ -163,7 +163,7 @@
 </div>
 
 {{-- Modal Edit Event --}}
-@foreach ($event as $e)
+@foreach ($eventcmh as $e)
 <div class="modal fade" id="exampleModaledit{{ $e->id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog">
@@ -235,7 +235,7 @@
             console.error(error);
         });
 </script>
-@foreach ($event as $e)
+@foreach ($eventcmh as $e)
 <script>
     ClassicEditor
         .create(document.querySelector('#rinciankegiatanedit{{ $e->id }}'))

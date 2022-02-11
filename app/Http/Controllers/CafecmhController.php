@@ -7,11 +7,13 @@ use App\listcmh;
 use App\Listmenucmh;
 use App\Menucaffecmh;
 use Illuminate\Http\Request;
+use DB;
 
 class CafecmhController extends Controller
 {
     public function index()
     {
+        DB::table('countercmhs')->increment('views');
         $menucmh = Menucaffecmh::get();
         $listcmh = Listmenucmh::get();
         return view(
@@ -40,7 +42,8 @@ class CafecmhController extends Controller
             'galericmh' => $galericmh
         ]);
     }
-    public function tentangcmh(){
+    public function tentangcmh()
+    {
         return view('cafecmh.tentangcmh');
     }
 }
