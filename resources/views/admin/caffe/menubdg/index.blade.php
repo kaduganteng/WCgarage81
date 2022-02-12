@@ -258,8 +258,8 @@
             <div class="modal-body">
                 <form action="{{ url('/editbdg' . $m->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
-    <div class="card-body">
-  <div class="form-group">
+          <div class="card-body">
+             <div class="form-group">
                         <label for="exampleInputFile">Masukan Foto Menu</label>
                          <div class="input-group" >
                               <img src="{{ asset('upload/' . $m->foto_menu) }}" class="img-fluid mb-2" alt="white sample" width="100px" height="100px" />
@@ -316,12 +316,7 @@
 </div>
 @endforeach
 
-<script src="adminlte/plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap -->
-<script src="adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE App -->
-<script src="adminlte/js/adminlte.min.js"></script>
-<script src="dist/js/lightbox-plus-jquery.min.js"></script>
+
 
 @endsection
 @section('scripts')

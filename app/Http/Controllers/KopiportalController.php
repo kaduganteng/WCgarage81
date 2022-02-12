@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\GaleriKopip;
 use App\Kopiportal;
 use Illuminate\Http\Request;
+use DB;
 
 class KopiportalController extends Controller
 {

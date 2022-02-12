@@ -138,46 +138,42 @@
                     <!-- Card Body -->
                     <div class="card-body">
                         <div class="chart-area">
-                      
                             <div class="card-body">
-                                 <div class="row">
-                                 <div class="body">
-                                <h4>Portal Management</h4>
-                                @foreach ($counters as $item)
+                                <div class="row">  
+                                    <div class="body">
+                                        <h5>Portal Management</h5>
+                                        @foreach ($counters as $item)
 
-                                    <h2><i class="fas fa-eye"></i>{{ $item->views }} Visitor</h2>
+                                        <h4><i class="fas fa-eye"></i>{{ $item->views }} Visitor</h4>
+                                        @endforeach
 
+                                    </div>
+                                    <div class="body">
+                                        <h5>Garasi Bandung</h5>
+                                        @foreach ($counterbdg as $item)
 
-                                @endforeach
-                            </div>
-                               <div class="body">
-                                    <h4>Web Bandung</h4>
-                                     @foreach ($counterbdg as $item)
+                                        <h4><i class="fas fa-eye"></i>{{ $item->views }} Visitor</h4>
+                                        @endforeach
+                                    </div>
+                                    <div class="body">
+                                        <h5>Garasi Cimahi</h5>
+                                        @foreach ($countercmh as $item)
 
-                                    <h2><i class="fas fa-eye"></i>{{ $item->views }} Visitor</h2>
+                                        <h4><i class="fas fa-eye"></i>{{ $item->views }} Visitor</h4>
+                                        @endforeach
+                                    </div>
+                                    <div class="body">
+                                        <h5>Kopi Portal</h5>
+                                        @foreach ($counterkopi as $item)
 
-
-                                      @endforeach
+                                        <h4><i class="fas fa-eye"></i>{{ $item->views }} Visitor</h4>
+                                        @endforeach
+                                    </div>
                                </div>
-                                <div class="body">
-                                    <h4>            Web Cimahi</h4>
-                                @foreach ($countercmh as $item)
-
-                                    <h2><i class="fas fa-eye"></i>{{ $item->views }} Visitor</h2>
-
-
-                                @endforeach
-                                </div>
-                                 <div class="body">
-                                    <h4>Web Portal</h4>
-                                @foreach ($counterkopi as $item)
-
-                                    <h2><i class="fas fa-eye"></i>{{ $item->views }} Visitor</h2>
-
-
-                                @endforeach
-                                 </div>
-                                 </div>
+                               
+                                 
+                                
+                              
                            
                                 
                                 <hr>

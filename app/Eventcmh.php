@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Eventcmh extends Model
 {
-    protected $table = "eventkopi";
+    protected $table = "eventcmh";
     protected $fillable = [
         'tgl_event',
         'nama',
