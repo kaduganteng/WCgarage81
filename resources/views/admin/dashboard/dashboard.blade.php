@@ -12,9 +12,8 @@
         <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     </head>
     <style>
-        .row {
-            display: flex;
-            flex-direction: row;
+        .body{
+            padding-inline-end: 90px;
         }
 
     </style>
@@ -27,7 +26,8 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Dashboard </h1>
+                        <h1>Dashboard Admin  </h1>
+                        <hr>
                     </div>
 
                 </div>
@@ -132,7 +132,7 @@
                 <div class="card shadow mb-4">
                     <!-- Card Header - Dropdown -->
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                        <h6 class="m-0"><i>Data Pengunjung Web (akumulatif)</i></h6>    
+                        <h6 class="m-0"><i>DATA PENGUNJUNG WEB (akumulatif)</i></h6>    
                     </div>
                     
                     <!-- Card Body -->
@@ -169,15 +169,13 @@
                                         <h4><i class="fas fa-eye"></i>{{ $item->views }} Visitor</h4>
                                         @endforeach
                                     </div>
-                               </div>
-                               
-                                 
-                                
-                              
-                           
-                                
+                                </div> 
                                 <hr>
-                                    <a href="admin"><button class="btn btn-success">Refresh</button></a>
+                               <a href="admin">
+                                    <button type="button" class="btn btn-success">
+                                         <ion-icon name="refresh"></ion-icon>Refresh
+                                    </button>
+                                 </a>
                             </div>
                         </div>
                     </div>
