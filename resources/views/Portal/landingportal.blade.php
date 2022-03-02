@@ -21,7 +21,6 @@
                 <div class="display-t js-fullheight">
                     <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
                         <h1>Portal Manajemen</h1>
-                      
                         <h2>Garage 81 | Garasi 81 | Kopi Portal </a></h2>
                     </div>
                 </div>
@@ -109,7 +108,7 @@
         <div class="owl-carousel animate-box slide slides owl-lazy animate-box align-content-center">
             @foreach ($galeri as $g)
             <a href="{{ asset('upload/' . $g->foto_galeri) }}" class="fancybox" class="img-rounded"
-                data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
+                data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px"> 
                 <img src="{{ asset('upload/' . $g->foto_galeri) }}" class="img-fluid mb-2"
                 alt="white sample" width="200px" height="200px" />
             </a>
