@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="portal/css/owl.carousel.min.css">
 <link rel="stylesheet" href="portal/css/owl.theme.default.min.css">
 <link rel="stylesheet" href="portal/css/owl.theme.default.css">
+<link rel="shortcut icon" href="{{ asset('public/favicon.ico') }}">
 
 </head>
 
@@ -41,8 +42,7 @@
                     </div>
                     <h2>Garage 81 Cimahi</h2>
                     <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum hic fuga tempore cum dignissimos
-                        dicta!
+                        Jl. Taman Urip Sumoharjo F36. Baros, Kota Cimahi, Jawa Barat 
                     </p>
                     </a>
                 </div>
@@ -53,8 +53,7 @@
                     </div>
                     <h2>Garasi 81 Bandung</h2>
                     <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum hic fuga tempore cum dignissimos
-                        dicta!
+                        Jl. Bali No.3, Merdeka, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 
                     </p>
                     </a>
                 </div>
@@ -63,10 +62,10 @@
                         <a href="{{ route('kopiprt') }}">
                             <img src="/images/kopiprtlogo.jpg">
                     </div>
+                    <br>
                     <h2>Kopi Portal</h2>
                     <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum hic fuga tempore cum dignissimos
-                        dicta!
+                        Ruko Crystal CRC 27 Jl. Edelweiss Summarecon, Gedebage, Kota Bandung
                     </p>
                     </a>
                 </div>
@@ -122,7 +121,7 @@
             <div class="container">
                 <div class="row animate-box">
                     <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-                        <h2>Events</h2>
+                        <h2>Acara</h2>
                         <p>Lorem ipsum dolor sit amet, couatur. Aliquam quaerat pariatur repellendus veniam nemo, saepe,
                             culpa eius aspernatur cumque suscipit quae nobis illo tempora. Eum veniam necessitatibus,
                             blanditiis facilis quidem dolore! Dolorem, molestiae.</p>
