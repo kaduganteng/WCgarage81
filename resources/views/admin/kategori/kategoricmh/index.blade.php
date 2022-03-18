@@ -23,23 +23,8 @@
     <section class="content">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Daftar Kategori</h3>
 
-                <div class="card-tools">
-                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                        <i class="fas fa-minus"></i>
-                    </button>
-                    <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <div class="card-tools">
-                    <div class="input-group input-group-sm" style="width: 150px;">
-                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
-                            Tambah kategori
-                        </button>
-                    </div>
-                </div>
+
             </div>
             <div class="card-body">
                 <div class="row">
@@ -48,11 +33,21 @@
                         <!-- /.card -->
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Kategori Menu Caffe Cimahi </h3>
-
+                                <h3 class="kategorimenucmh">Kategori Menu Caffe Cimahi </h3>
+                                <a href="menucmh">
+                                    <button type="button" class="btn btn-success">
+                                        <ion-icon name="refresh"></ion-icon>Refresh
+                                    </button>
+                                </a>
+                                <button type="button" class="btn btn-info" data-toggle="modal"
+                                    data-target="#exampleModal">
+                                    <ion-icon name="add"></ion-icon>
+                                    Tambah Menu
+                                </button>
                                 <div class="card-tools">
-                                    <div class="input-group input-group-sm" style="width: 150px;">
-                                        <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+                                    <div class="input-group input-group-sm" style="width: 250px;">
+                                        <input type="text" name="table_search" class="form-control float-right"
+                                            placeholder="Search">
 
                                         <div class="input-group-append">
                                             <button type="submit" class="btn btn-default">
@@ -119,7 +114,8 @@
                         <form action="{{ route('kategoricmh.store') }}" method="POST">
                             @csrf
                             <div class="form-group">
-                                <input type="text" class="form-control" name="kategori" id="kategori" placeholder="Masukan Kategori Baru">
+                                <input type="text" class="form-control" name="kategori" id="kategori"
+                                    placeholder="Masukan Kategori Baru">
                             </div>
                             <button type="sumbit" class="btn btn-info">Simpan</button>
                         </form>

@@ -71,9 +71,9 @@ class EventController extends Controller
 
     public function indexcmh()
     {
-        $event = Eventcmh::get();
+        $eventcmh = Eventcmh::get();
         return view('admin.event.cimahi', [
-            'event' => $event
+            'eventcmh' => $eventcmh
         ]);
     }
 
@@ -89,7 +89,7 @@ class EventController extends Controller
         $nama_file = time() . "_" . $foto_event->getClientOriginalExtension();
         $tujuan = 'upload/';
         $foto_event->move($tujuan, $nama_file);
-        $event = Eventcmh::create([
+        $eventcmh = Eventcmh::create([
             'foto_event' => $nama_file,
             'tgl_event' => $request->tgl_event,
             'nama' => $request->nama,
@@ -109,8 +109,8 @@ class EventController extends Controller
     public function editcmh(Request $request, $id)
     {
         if ($request->isMethod('post')) {
-            $event = Eventcmh::findOrFail($id);
-            $awal = $event->foto_event;
+            $eventcmh = Eventcmh::findOrFail($id);
+            $awal = $eventcmh->foto_event;
             $tujuan = 'upload/';
             $dt = [
 
@@ -122,7 +122,7 @@ class EventController extends Controller
             ];
 
             $request->foto_event->move($tujuan, $awal);
-            $event->update($dt);
+            $eventcmh->update($dt);
             Alert::success('Sukses !', 'Data Berhasil Di Edit');
             return redirect()->route('event');
         }
@@ -130,9 +130,9 @@ class EventController extends Controller
 
     public function indexkop()
     {
-        $event = Evenkopi::get();
+        $eventkopi = Evenkopi::get();
         return view('admin.event.kopi', [
-            'event' => $event
+            'eventkopi' => $eventkopi
         ]);
     }
 
@@ -148,7 +148,7 @@ class EventController extends Controller
         $nama_file = time() . "_" . $foto_event->getClientOriginalExtension();
         $tujuan = 'upload/';
         $foto_event->move($tujuan, $nama_file);
-        $event = Evenkopi::create([
+        $eventkopi = Evenkopi::create([
             'foto_event' => $nama_file,
             'tgl_event' => $request->tgl_event,
             'nama' => $request->nama,
@@ -168,8 +168,8 @@ class EventController extends Controller
     public function editkopi(Request $request, $id)
     {
         if ($request->isMethod('post')) {
-            $event = Evenkopi::findOrFail($id);
-            $awal = $event->foto_event;
+            $eventkopi = Evenkopi::findOrFail($id);
+            $awal = $eventkopi->foto_event;
             $tujuan = 'upload/';
             $dt = [
 
@@ -181,7 +181,7 @@ class EventController extends Controller
             ];
 
             $request->foto_event->move($tujuan, $awal);
-            $event->update($dt);
+            $eventkopi->update($dt);
             Alert::success('Sukses !', 'Data Berhasil Di Edit');
             return redirect()->route('event');
         }

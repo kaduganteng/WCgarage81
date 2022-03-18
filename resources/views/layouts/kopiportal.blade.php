@@ -81,7 +81,7 @@
         <div class="container">
             <div class="row row-pb-md">
                 <div class="col-md-4 fh5co-widget">
-                    <h4>Portal</h4>
+                    <h4>Portal Manajemen</h4>
                     <p>Jl. Bali No.3, Merdeka, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 40113</p>
                 </div>
                 <div class="col-md-2 col-md-push-1 fh5co-widget">
@@ -133,7 +133,7 @@
     </footer>
     </div>
 
-    <div class="gototop js-top">
+    <div class="gototop js-top animate-box">
         <a href="https://api.whatsapp.com/send?phone=+6285938529515&amp;text=hello" class="float" target="_blank"><i class="icon-whatsapp"></i></a>
     </div>
 

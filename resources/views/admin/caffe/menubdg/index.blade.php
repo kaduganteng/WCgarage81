@@ -13,14 +13,7 @@
     <!-- ISI JUDUL KONTEN    -->
     <section class="content-header">
         <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                    <a href="{{ route('menubdg') }}">
-                        <h1>Caffe Garage 81 Bandung </h1>
-                    </a>
-                </div>
-
-            </div>
+          
         </div><!-- /.container-fluid -->
     </section>
 
@@ -30,18 +23,18 @@
         <div class="col-12">
             <div class="card ">
                 <div class="card-header">
-                    <h4 class="card-title">Gallery</h4>
-                    <div class="card-tools">
-                        <div class="input-group input-group-sm" style="width: 150px;">
-
-                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalgaleri">
-                                Tambah Foto
-                            </button>
-
-                        </div>
-                    </div>
+                     <h3>Gallery</h3>
+          <a href="menubdg">
+            <button type="button" class="btn btn-success">
+              <ion-icon name="refresh"></ion-icon>Refresh
+            </button>
+          </a>
+          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalgaleri">
+            <ion-icon name="add"></ion-icon>
+            Tambah Foto
+          </button>
                 </div>
-                <div class="card-body">
+                <div class="card-body" style="overflow: scroll;">
                     <div class="row">
 
                         @foreach ($gbdg as $g)
@@ -63,94 +56,102 @@
             </div>
         </div>
     </div>
-    <section class="content">
-        <div class="card">
+   <section class="content">
+    <div class="card">
 
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-12">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-12">
 
-                        <!-- /.card -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">Daftar MenuCaffe Garage Bandung</h3>
+            <!-- /.card -->
+            <div class="card">
+              <div class="card-header">
+                <h3>Daftar Menu Caffe Garage Bandung</h3>
+                <a href="menucmh">
+                  <button type="button" class="btn btn-success">
+                    <ion-icon name="refresh"></ion-icon>Refresh
+                  </button>
+                </a>
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalmenu">
+                  <ion-icon name="add"></ion-icon>
+                  Tambah Menu
+                </button>
+                <div class="card-tools">
+                  <div class="input-group input-group-sm" style="width: 250px;">
+                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
 
-                                <div class="card-tools">
-                                    <div class="input-group input-group-sm" style="width: 150px;">
-                                        <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
-                                        <div class="input-group-append">
-                                            <button type="submit" class="btn btn-default">
-                                                <i class="fas fa-search"></i>
-                                            </button>
-                                        </div>
-                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalmenu">
-                                            Tambah Menu
-                                        </button>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <!-- /.card-header -->
-                            <div class="card-body table-responsive p-0">
-                                <table class="table table-hover text-nowrap">
-                                    <thead>
-                                        <tr>
-                                            <th>No</th>
-                                            <th>Foto Menu</th>
-                                            <th>Kategori</th>
-                                            <th>Nama</th>
-                                            <th>Keterangan</th>
-                                            <th>Harga</th>
-                                            <th>Opsi</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @php
-                                        $no = 1;
-                                        @endphp
-                                        @foreach ($menubdg as $m)
-                                        <tr>
-                                            <td>{{ $no++ }}</td>
-                                            <td>
-                                                <a href="{{ asset('upload/' . $m->foto_menu) }}" class="fancybox" data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
-                                                    <img src="{{ asset('upload/' . $m->foto_menu) }}" class="img-fluid mb-2" alt="white sample" width="100px" height="100px" />
-                                                </a>
-                                            </td>
-                                            <td>{{ $m->kategori_id }}</td>
-                                            <td>{{ $m->nama }}</td>
-                                            <td>{!! $m->keterangan !!}</td>
-                                            <td>{{ $m->harga }}</td>
-                                            <td>
-                                                <a href="{{ route('menubdg.destroy', $m->id) }}">
-                                                    <button class="btn btn-danger" class="btn">
-                                                        <ion-icon name="trash-outline"></ion-icon>
-                                                    </button></a>
-
-                                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModaledit{{ $m->id }}">
-                                                    <ion-icon name="create-outline"></ion-icon>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        @endforeach
-
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- /.card-body -->
-                        </div>
+                    <div class="input-group-append">
+                      <button type="submit" class="btn btn-default">
+                        <i class="fas fa-search"></i>
+                      </button>
                     </div>
+                  </div>
                 </div>
-            </div>
-            <!-- /.card-body -->
-            <div class="card-footer">
-                Footer
-            </div>
-            <!-- /.card-footer-->
-        </div>
-        <!-- /.card -->
 
-    </section>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                  <thead>
+                    <tr>
+                      <th>No</th>
+                      <th>Foto Menu</th>
+                      <th>Kategori</th>
+                      <th>Nama</th>
+                      <th>Keterangan</th>
+                      <th>Harga</th>
+                      <th>Opsi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @php
+                    $no = 1;
+                    @endphp
+                    @foreach ($menubdg as $m)
+                    <tr>
+                      <td>{{ $no++ }}</td>
+                      <td>
+                        <a href="{{ asset('upload/' . $m->foto_menu) }}" class="fancybox" data-fancybox="ggblg"
+                          data-gallery="gallery" height="50px" width="50px">
+                          <img src="{{ asset('upload/' . $m->foto_menu) }}" class="img-fluid mb-2" alt="white sample"
+                            width="100px" height="100px" />
+                        </a>
+                      </td>
+                      <td>{{ $m->kategori_id }}</td>
+                      <td>{{ $m->nama }}</td>
+                      <td>{!! $m->keterangan !!}</td>
+                      <td>{{ $m->harga }}</td>
+                      <td>
+                        <a href="{{ route('menucmh.destroy', $m->id) }}">
+                          <button class="btn btn-danger" class="btn">
+                            <ion-icon name="trash-outline"></ion-icon>
+                          </button></a>
+
+                        <button type="button" class="btn btn-success" data-toggle="modal"
+                          data-target="#exampleModaledit{{ $m->id }}">
+                          <ion-icon name="create-outline"></ion-icon>
+                        </button>
+                      </td>
+                    </tr>
+                    @endforeach
+
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.card-body -->
+      <div class="card-footer">
+        Footer
+      </div>
+      <!-- /.card-footer-->
+    </div>
+    <!-- /.card -->
+
+  </section>
 </div>
 {{-- modal galeri menu bdg --}}
 <div class="modal fade" id="exampleModalgaleri" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -257,8 +258,8 @@
             <div class="modal-body">
                 <form action="{{ url('/editbdg' . $m->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
-    <div class="card-body">
-  <div class="form-group">
+          <div class="card-body">
+             <div class="form-group">
                         <label for="exampleInputFile">Masukan Foto Menu</label>
                          <div class="input-group" >
                               <img src="{{ asset('upload/' . $m->foto_menu) }}" class="img-fluid mb-2" alt="white sample" width="100px" height="100px" />
@@ -315,12 +316,7 @@
 </div>
 @endforeach
 
-<script src="adminlte/plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap -->
-<script src="adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE App -->
-<script src="adminlte/js/adminlte.min.js"></script>
-<script src="dist/js/lightbox-plus-jquery.min.js"></script>
+
 
 @endsection
 @section('scripts')

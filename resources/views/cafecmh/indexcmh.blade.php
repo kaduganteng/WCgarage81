@@ -1,6 +1,13 @@
 @extends('layouts.cafecmh')
 @section('section')
-<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url(images/cmh.png);" data-stellar-background-ratio="0.5">
+
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+</head>
+
+<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url(images/cmhindex.jpg);" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
@@ -23,7 +30,7 @@
     <div id="fh5co-about" class="fh5co-section">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-pull-4 img-wrap animate-box" data-animate-effect="fadeInLeft">
+                <div class="col-md-6 col-md-pull-0 img-wrap animate-box" data-animate-effect="fadeInLeft" class="img-responsive">
                     <img src="images/cmh.png">
                 </div>
                 <div class="col-md-5 col-md-push-1 animate-box">
@@ -44,9 +51,10 @@
     <!--Deskripsi garage 81 -->
     <!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!--Menu Spesial Garage 81-->
+
     <div id="fh5co-featured-menu" class="fh5co-section">
         <div class="container">
-            <div class="row">
+            <div class="col-md-12 fh5co-heading animate-box">
                 <div class="section-heading">
                     <h2>Menu Special</h2>
                     <div class="row">
@@ -117,43 +125,52 @@
                             totam, a maiores nihil, nulla magnam porro minima officiis!</p>
                     </div>
                 </div>
+
                 <div class="col-md-6 col-md-push-1 animate-box">
                     <aside id="fh5co-slider-wrwap">
                         <div class="flexslider">
                             <ul class="slides">
-                                @foreach ($menucmh as $menu)
-                                <li style="background-image: {{ asset('upload/'. $menu->foto_menu ) }};">
-                                    <div class="overlay-gradient"></div>
+                                @foreach ($listcmh as $menu)
+                                <li style="background-image:">
+                                    <div class="overlay-gradient">
                                     <div class="container-fluid">
-                                        <div class="row">
-                                            <div
-                                                class="col-md-12 col-md-offset-0 col-md-pull-10 slider-text slider-text-bg">
-                                                <div class="slider-text-inner">
-
-                                                    <div class="desc">
-                                                        <h2>{{ $menu->nama }}</h2>
-                                                        <p>{!!$menu->keterangan !!}</p>
-                                                        <p><a href="{{ route('menucmhfe') }}"
-                                                                class="btn btn-primary btn-outline">Lihat</a></p>
-                                                    </div>
-
+                                        <img src="{{ asset('upload/'. $menu->foto_list ) }}" class="img-rounded" class="fancybox" ><br>
+                                        <a href="{{ route('menucmhfe') }}" class="btn btn-primary btn-outline">Selengkapnya</a><br>
+                                    </div>
+                                    </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-6 col-md-pull-1 col-sm-pull-10 slider-text slider-text-bg">
+                                            <div class="slider-text-inner">
+                                                <div class="desc">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </li>
+                                </div>
+                            </li> 
+
                                 @endforeach
-                            </ul>
+                             </ul>
                         </div>
                     </aside>
                 </div>
             </div>
         </div>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <!--Menu Terlaris Garage 81-->
     <!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!--Instagram-->
-    <div class="container">
+    <div class="container animate-box">
     <div data-mc-src="d2cb3992-e907-4a6d-ab81-b89a77391ada#instagram">
     </div>
     </div>
@@ -165,16 +182,14 @@
     <!--Instagram-->
 
     <!--Gmaps Garage 81-->
-        <div class="container">
+        <div class="container animate-box">
                 <div class="section-heading gmaps">
         <h2> Lokasi Kami </h2>
-        <div class="embed-responsive embed-responsive-16by9">
+        <div class="embed-responsive embed-responsive-4by3">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.0186991764285!2d107.533053015276!3d-6.888363269321044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e5654cd90751%3A0x58da50c962c311bc!2sCafe%20Garage%2081!5e0!3m2!1sid!2sid!4v1642592591519!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen loading="lazy">
             </iframe>
                 </div>
             </div>
-        </div>
-    </div>
      <!--Gmaps Garage 81-->
 </body>
 @endsection

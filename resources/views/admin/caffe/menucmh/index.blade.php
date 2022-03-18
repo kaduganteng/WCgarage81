@@ -7,7 +7,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-
 <!-- ISI CONTENT ADMIN -->
 <div class="content">
 
@@ -15,38 +14,38 @@
   <section class="content-header">
     <div class="container-fluid">
       <div class="row mb-2">
-        <div class="col-sm-6">
-          <a href="{{ route('menucmh') }}">
-            <h1>Homepage Menu Caffe Garage 81 Cimahi </h1>
-          </a>
-        </div>
+
 
       </div>
     </div><!-- /.container-fluid -->
   </section>
 
   <!-- ISI KONTEN    -->
+
   <div class="card-body">
     <div class="col-12">
       <div class="card ">
         <div class="card-header">
-          <h4 class="card-title">Gallery</h4>
-          <div class="card-tools">
-            <div class="input-group input-group-sm" style="width: 150px;">
-              <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalgaleri">
-                Tambah Foto
-              </button>
-            </div>
-          </div>
+          <h3>Gallery</h3>
+          <a href="menucmh">
+            <button type="button" class="btn btn-success">
+              <ion-icon name="refresh"></ion-icon>Refresh
+            </button>
+          </a>
+          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalgaleri">
+            <ion-icon name="add"></ion-icon>
+            Tambah Foto
+          </button>
         </div>
-        <div class="card-body">
+        <div class="card-body" style="overflow: scroll;">
           <div class="row">
 
             @foreach ($gcmh as $g)
             <div class="item col-sm-2">
-
-              <a href="{{ asset('upload/' . $g->foto_cmh) }}" class="fancybox" data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
-                <img src="{{ asset('upload/' . $g->foto_cmh) }}" class="img-fluid mb-2" alt="white sample" width="200px" height="200px" />
+              <a href="{{ asset('upload/' . $g->foto_bdg) }}" class="fancybox" data-fancybox="ggblg"
+                data-gallery="gallery" height="50px" width="50px">
+                <img src="{{ asset('upload/' . $g->foto_bdg) }}" class="img-fluid mb-2" alt="white sample" width="200px"
+                  height="200px" />
               </a>
               <a href="{{ route('menucmh.destroygal', $g->id) }}">
                 <button class="btn btn-danger">
@@ -72,23 +71,24 @@
             <!-- /.card -->
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Caffe Garage Cimahi</h3>
-
+                <h3>Daftar MenuCaffe Garage Cimahi</h3>
+                <a href="menucmh">
+                  <button type="button" class="btn btn-success">
+                    <ion-icon name="refresh"></ion-icon>Refresh
+                  </button>
+                </a>
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalmenu">
+                  <ion-icon name="add"></ion-icon>
+                  Tambah Menu
+                </button>
                 <div class="card-tools">
-                  <div class="input-group input-group-sm" style="width: 150px;">
+                  <div class="input-group input-group-sm" style="width: 250px;">
                     <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
 
                     <div class="input-group-append">
                       <button type="submit" class="btn btn-default">
                         <i class="fas fa-search"></i>
                       </button>
-                    </div>
-                    <div class="card-tools">
-                      <div class="input-group input-group-sm" style="width: 150px;">
-                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalmenu">
-                          Tambah Menu
-                        </button>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -116,8 +116,11 @@
                     <tr>
                       <td>{{ $no++ }}</td>
                       <td>
-                        <a href="{{ asset('upload/' . $m->foto_menu) }}" class="fancybox" data-fancybox="ggblg" data-gallery="gallery" height="50px" width="50px">
-                          <img src="{{ asset('upload/' . $m->foto_menu) }}" class="img-fluid mb-2" alt="white sample" width="100px" height="100px" />
+                        <a href="{{ asset('upload/' . $m->foto_menu) }}" class="fancybox" data-fancybox="ggblg"
+                          data-gallery="gallery" height="50px" width="50px">
+                          <img src="{{ asset('upload/' . $m->foto_menu) }}" class="img-fluid mb-2" alt="white sample"
+                            width="100px" height="100px" />
+                        </a>
                       </td>
                       <td>{{ $m->kategori_id }}</td>
                       <td>{{ $m->nama }}</td>
@@ -127,14 +130,12 @@
                         <a href="{{ route('menucmh.destroy', $m->id) }}">
                           <button class="btn btn-danger" class="btn">
                             <ion-icon name="trash-outline"></ion-icon>
-                          </button>
+                          </button></a>
 
-                        </a>
-
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModaledit{{ $m->id }}">
+                        <button type="button" class="btn btn-success" data-toggle="modal"
+                          data-target="#exampleModaledit{{ $m->id }}">
                           <ion-icon name="create-outline"></ion-icon>
                         </button>
-
                       </td>
                     </tr>
                     @endforeach
@@ -157,7 +158,7 @@
 
   </section>
 </div>
-{{-- Modla Galeri Cimahi --}}
+{{-- modal galeri menu bdg --}}
 <div class="modal fade" id="exampleModalgaleri" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -174,7 +175,7 @@
           <div class="form-group">
             <label for="exampleInputFile">Masukan Foto Baru</label>
             <div class="input-group">
-              <input type="file" class="form-control" name="foto_cmh" id="foto_cmh">
+              <input type="file" class="form-control" name="foto_bdg" id="foto_bdg">
             </div>
           </div>
           <button type="sumbit" class="btn btn-info">Simpan</button>
@@ -187,8 +188,7 @@
     </div>
   </div>
 </div>
-
-{{-- Modal Menu Cimahi --}}
+{{-- modal menu --}}
 <div class="modal fade" id="exampleModalmenu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -196,7 +196,8 @@
         <h5 class="modal-title" id="exampleModalLabel">Masukan Menu </h5>
       </div>
       <div class="modal-body">
-        <form action="{{ empty($datacmh) ? route('menucmh.store') : route('menucmh.update', $datacmh->id) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ empty($databdg) ? route('menucmh.store') : route('menucmh.update', $databdg->id) }}"
+          method="POST" enctype="multipart/form-data">
           @csrf
 
           <div class="form-group">
@@ -210,6 +211,12 @@
               <label for="exampleInputEmail1">Pilih Kategori</label>
               <div class="input-group">
                 <select name="kategori_id" class="form-control">
+                  @if (!empty(@$databdg->kategori_id))
+                  <option value="{{ @$databdg->kategori_id }}" {{ !empty($databdg->nama_kategori) ?
+                    'selected' : '' }}>
+                    {{ $databdg->nama_kategori }}
+                  </option>
+                  @endif
                   @foreach ($kategori as $k)
                   <option value="{{ $k->id }}">{{ $k->nama_kategori }}</option>
                   @endforeach
@@ -219,17 +226,20 @@
           </div>
           <div class="form-group">
             <label for="exampleInputName">Nama Menu</label>
-            <input type="text" class="form-control" name="nama" id="nama" value="{{ @$datacmh->nama }}" placeholder="Masukan nama menu">
+            <input type="text" class="form-control" name="nama" id="nama" value="{{ @$databdg->nama }}"
+              placeholder="Masukan nama menu">
           </div>
           <div class="form-group">
             <label for="exampleInputName">Keterangan</label>
-            <textarea name="keterangan" id="keterangan" cols="30" rows="10">{{ empty($datacmh) ? '' : $datacmh->keterangan }}</textarea>
+            <textarea name="keterangan" id="keterangan" cols="30"
+              rows="10">{{ empty($databdg) ? '' : $databdg->keterangan }}</textarea>
             {{-- <input type="text" class="form-control" name="keterangan" id="keterangan"
-              value="{{ @$datacmh->keterangan }}" placeholder="Tambahkan keterangan menu"> --}}
+              value="{{ @$databdg->keterangan }}" placeholder="Tambahkan keterangan menu"> --}}
           </div>
           <div class="form-group">
             <label for="exampleInputName">Harga Menu</label>
-            <input type="text" class="form-control" name="harga" id="harga" value="{{ @$datacmh->harga }}" placeholder="Masukan Harga">
+            <input type="text" class="form-control" name="harga" id="harga" value="{{ @$databdg->harga }}"
+              placeholder="Masukan Harga">
           </div>
 
           <button type="submit" class="btn btn-info">
@@ -246,9 +256,11 @@
   </div>
 </div>
 
-{{-- Modal Edit Cimahi --}}
+
+{{-- modal edit --}}
 @foreach ($menucmh as $m)
-<div class="modal fade" id="exampleModaledit{{ $m->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModaledit{{ $m->id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -260,11 +272,12 @@
           <div class="card-body">
             <div class="form-group">
               <label for="exampleInputFile">Masukan Foto Menu</label>
-               <div class="input-group" >
-                              <img src="{{ asset('upload/' . $m->foto_menu) }}" class="img-fluid mb-2" alt="white sample" width="100px" height="100px" />
-                            </div>
               <div class="input-group">
-                <input type="file" class="form-control" name="foto_menu" id="foto_menu">
+                <img src="{{ asset('upload/' . $m->foto_menu) }}" class="img-fluid mb-2" alt="white sample"
+                  width="100px" height="100px" />
+              </div>
+              <div class="input-group">
+                <input type="file" class="form-control" name="foto_menu" id="foto_menu" value="{{ @$m->foto_menu }}">
               </div>
             </div>
             <div class="form-group">
@@ -272,9 +285,11 @@
                 <label for="exampleInputEmail1">Pilih Kategori</label>
                 <div class="input-group">
                   <select name="kategori_id" class="form-control">
-                    @if (!empty(@$datacmh->kategori_id))
-                    <option value="{{ @$datacmh->kategori_id }}" {{ !empty($datacmh->nama_kategori) ? 'selected' : '' }}>
-                      {{ $datacmh->nama_kategori }}
+                    @if (!empty(@$databdg->kategori_id))
+                    <option value="{{ @$databdg->kategori_id }}" {{ !empty($databdg->nama_kategori)
+                      ?
+                      'selected' : '' }}>
+                      {{ $databdg->nama_kategori }}
                     </option>
                     @endif
                     @foreach ($kategori as $k)
@@ -286,60 +301,58 @@
             </div>
             <div class="form-group">
               <label for="exampleInputName">Nama Menu</label>
-              <input type="text" class="form-control" name="nama" id="nama" value="{{ @$m->nama }}" placeholder="Masukan nama menu">
+              <input type="text" class="form-control" name="nama" id="nama" value="{{ @$m->nama }}"
+                placeholder="Masukan nama menu">
             </div>
             <div class="form-group">
               <label for="exampleInputName">Keterangan</label>
-              <textarea name="keterangan" id="keteranganedit{{ $m->id }}" cols="30" rows="10">{{ empty($m) ? '' : $m->keterangan }}</textarea>
-              {{-- <input type="text" class="form-control" name="keterangan" id="keteranganedit" value="{{ @$m->keterangan }}" placeholder="Tambahkan keterangan menu"> --}}
+              <textarea name="keterangan" id="keteranganedit{{ $m->id }}" cols="30"
+                rows="10">{{ empty($m) ? '' : $m->keterangan }}</textarea>
+              {{-- <input type="text" class="form-control" name="keterangan" id="keteranganedit"
+                value="{{ @$m->keterangan }}" placeholder="Tambahkan keterangan menu"> --}}
             </div>
             <div class="form-group">
               <label for="exampleInputName">Harga Menu</label>
-
-              <input type="text" class="form-control" name="harga" id="harga" value="{{ @$m->harga }}" placeholder="Masukan Harga">
+              <input type="text" class="form-control" name="harga" id="harga" value="{{ @$m->harga }}"
+                placeholder="Masukan Harga">
             </div>
-           
-          <button type="submit" class="btn btn-info">
-                            <ion-icon name="save-outline"></ion-icon>
-                        </button>
-          </div>
-          <!-- /.card-body -->
 
+            <button type="submit" class="btn btn-info">
+              <ion-icon name="save-outline"></ion-icon>
+            </button>
         </form>
       </div>
-       <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
-
-            </div>
     </div>
-    <!-- /.card-body -->
-   
-    <!-- /.card-footer-->
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+
+    </div>
   </div>
-  
-  <!-- /.card -->
+</div>
 </div>
 @endforeach
 
 
-</div>
+
 @endsection
 @section('scripts')
 <script>
   ClassicEditor
-    .create(document.querySelector('#keterangan'))
-    .catch(error => {
-      console.error(error);
-    });
+        .create(document.querySelector('#keterangan'))
+        .catch(error => {
+            console.error(error);
+        });
 </script>
 @foreach ($menucmh as $m)
-    <script>
+<script>
   ClassicEditor
-    .create(document.querySelector('#keteranganedit{{ $m->id }}'))
-    .catch(error => {
-      console.error(error);
-    });
+        .create(document.querySelector('#keteranganedit{{ $m->id }}'))
+        .catch(error => {
+            console.error(error);
+        });
 </script>
 @endforeach
+
 
 @endsection

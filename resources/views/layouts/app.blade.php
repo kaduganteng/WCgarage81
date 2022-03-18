@@ -17,12 +17,18 @@
     <link rel="stylesheet" href="portal/css/bootstrap.css">
     <!-- Flexslider  -->
     <link rel="stylesheet" href="portal/css/flexslider.css">
-
     <!-- Theme style  -->
     <link rel="stylesheet" href="portal/css/style.css">
-
+    
+    <link rel="stylesheet" href="portal/css/lightslider.css">
     <!-- Modernizr JS -->
     <script src="portal/js/modernizr-2.6.2.min.js"></script>
+<!--script-link----------->
+<script src={{asset('portal/js/script.js')}}></script>
+<!--Jquery-------------------->
+<script src={{asset('/portal/js/Jquery.js')}}></script>
+<!--lightslider.js--------------->
+<script src={{asset('/portal/js/lightslider.js')}}></script>
     <!-- FOR IE9 below -->
     <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -63,7 +69,7 @@
             <div class="container">
                 <div class="row row-pb-md">
                     <div class="col-md-4 fh5co-widget">
-                        <h4>Portal</h4>
+                        <h4>Portal Manajemen</h4>
                         <p>Jl. Bali No.3, Merdeka, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 40113</p>
                     </div>
                     <div class="col-md-2 col-md-push-1 fh5co-widget">
@@ -115,7 +121,7 @@
         </footer>
     </div>
 
-    <div class="gototop js-top">
+    <div class="gototop js-top animate-box">
         <a href="https://api.whatsapp.com/send?phone=+6285938529515&amp;text=hello" class="float" target="_blank"><i class="icon-whatsapp"></i></a>
     </div>
 
@@ -133,6 +139,7 @@
     <script src="portal/js/jquery.flexslider-min.js"></script>
     <!-- Main -->
     <script src="portal/js/main.js"></script>
+    <script src="portal/js/script.js"></script>
 
 </body>
 
